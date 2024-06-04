@@ -1,0 +1,71 @@
+aspect FilterUtils {
+    syn Set<TypeDecl> TypeDecl.fieldTypes() = Collections.EMPTY_SET; // fel? kan supertyp ha fält?
+    eq ClassDecl.fieldTypes() { // should include supertype fields as well
+        Set<TypeDecl> res = new HashSet<>();
+        for (TypeDecl td : supertypesIncludingSelf()) {
+            if (!(td instanceof ClassDecl)) continue;
+
+            ClassDecl cd = (ClassDecl) td;
+            for (BodyDecl bd : cd.getBodyDeclList()) {
+                if (bd instanceof FieldDecl) {
+                    FieldDecl fd = (FieldDecl) bd;
+                    for (FieldDeclarator field : fd.getDeclaratorList()) {
+                        res.add(field.type());
+                    }
+                }
+            }
+        }
+        return res;
+    }
+
+    syn TypeDecl DeclarationSite.type2() = assignConvertedType();
+    eq MethodDecl.type2() = type();
+    eq Declarator.type2() = type();
+    eq ParameterDeclaration.type2() = type();
+    eq FieldDeclarator.type2() = type();
+    eq VariableDeclarator.type2() = type();
+    eq CatchParameterDeclaration.type2() = type();
+    eq InferredParameterDeclaration.type2() = type();
+    eq NullType.type2() = type();
+    eq ClassDecl.type2() = this;
+    eq InterfaceDecl.type2() = this;
+    eq TypeDecl.type2() = this;
+    eq EnumConstant.type2() = type();
+    eq TempVertex.type2() = type3();
+
+    // FEL
+    inh TypeDecl TempVertex.type3();
+    eq Dot.temp().type3() = getLeft().type();
+    eq Dot.dotExpressionTemp().type3() = rightmostDot().getRight().type();
+
+    syn Set<AllocationSite> InvocationTarget.allPointerSets() {
+        Set<AllocationSite> res = new HashSet<>();
+        program().printStream.println("Analyzing pointers in method " + this + " in file " + compilationUnit().pathName());
+        for (Pointer pointer : pointers()) {
+            long t0 = System.currentTimeMillis();
+            res.addAll(pointer.pointsToSet());
+            long t = (System.currentTimeMillis() - t0) / 1000;
+            program().printStream.println("Type: " + pointer.typ() + ", time: " + t);
+            program().printStream.println("Pointer " + pointer + " points to " + pointer.pointsToSet());
+        }
+        return res;
+    }
+    syn TypeDecl Pointer.typ() = type();
+
+    syn lazy Set<PointsToEdge> Pointer.unfilteredGeneratedEdges() {
+        Set<InvocationTarget> activeMethods = enclosingMethods().stream().flatMap(m -> m.selectedMethods().stream()).collect(Collectors.toSet());
+        return new Solver(activeInclusionEdges(), activePointsToEdges(), null).solution();
+    }
+
+    syn Set<AllocationSite> Pointer.unfilteredPointsToSet() {
+        if (type().isPrimitive()) {
+            return Collections.emptySet();
+        }
+
+        return unfilteredGeneratedEdges()
+        .stream()
+        .filter(edge -> edge.from == this)
+        .map(edge -> edge.to)
+        .collect(Collectors.toSet());
+    }
+}

@@ -1,0 +1,143 @@
+import org.apache.tools.ant.taskdefs.condition.Os
+
+plugins {
+  id 'java'
+  id 'org.jastadd' version '1.13.3'
+}
+
+defaultTasks 'jar'
+
+if (!file('extendj/jastadd_modules').exists()) {
+  throw new GradleException('ExtendJ seems to be missing. Please run "git submodule init", then "git submodule update".')
+}
+
+
+
+jastadd {
+  configureModuleBuild()
+
+  modules {
+    include("extendj/jastadd_modules") // Include core ExtendJ modules.
+
+    module "cat", {
+      imports "java11 frontend" // ExtendJ dependency for cat module.
+      jastadd {
+        basedir "src/jastadd/"
+        include "**/*.ast"
+        include "**/*.jadd"
+        include "**/*.jrag"
+      }
+    }
+  }
+
+  // Target module to build:
+  module = 'cat'
+  jastaddOptions = [ "--rewrite=cnta",
+                     "--safeLazy",
+                     "--visitCheck=false",
+                     "--optimize-imports",
+                    //  "--cacheCycle=false",
+                     "--tracing=api"
+                     ,
+                     "--dnc",
+                     "--optimisation-config=CacheConfig.json"
+                     ]
+  astPackage = 'org.extendj.ast'
+  parser.name = 'JavaParser'
+  scanner.name = 'OriginalScanner'
+}
+
+sourceSets.main {
+  java {
+    srcDir 'extendj/src/frontend-main'
+    srcDir 'src/java'
+  }
+  resources {
+    srcDir 'src/java/magpiebridge/resources'
+    srcDir 'extendj/src/res'
+    srcDir jastadd.buildInfoDir
+    srcDir 'resources'
+  }
+  repositories {
+    mavenLocal()
+    flatDir { dirs "tools" }
+  }
+  dependencies {
+    jastadd2 name: "jastadd2"
+  }
+}
+
+
+
+dependencies{
+    testImplementation 'junit:junit:4.12'
+    implementation 'junit:junit:4.12'
+    implementation 'com.sparkjava:spark-core:2.9.3'
+}
+
+sourceSets.test{
+  java{
+    srcDir 'src/java/test/'
+  }
+}
+
+test {
+  useJUnit()
+  dependsOn 'cleanTest'
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
+
+
+
+jar {
+  duplicatesStrategy = DuplicatesStrategy.INCLUDE
+    manifest {
+        attributes 'Main-Class': 'org.extendj.Cat'
+    }
+    from { configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    exclude 'META-INF/*.RSA', 'META-INF/*.SF','META-INF/*.DSA'
+    baseName = 'cat'
+}
+
+task printClasspath {
+    doLast {
+        def classpath = sourceSets.main.compileClasspath.files
+        def classpathString = classpath.collect { it.absolutePath }.join(':')
+        println "Classpath used to compile the project:"
+        println classpathString
+    }
+}
+
+
+
+
+jar.destinationDirectory = projectDir
+
+// Java -source and -target version.
+sourceCompatibility = targetCompatibility = '1.8'
+
+task sourceZip(type: Zip) {
+  description 'Builds a Zip file with the entire repisotory (including the ExtendJ submodule).'
+  destinationDirectory = projectDir
+  archiveFileName = "cat-src.zip"
+
+  from (projectDir) {
+    exclude '**/.git'
+    exclude '**/.gitignore'
+    exclude '**/.gitattributes'
+    exclude '**/.gitmodules'
+    exclude 'build'
+    exclude 'bin'
+    exclude '.gradle'
+    exclude '.classpath'
+    exclude '.settings'
+    exclude '.project'
+    exclude '*.jar'
+    exclude '*.zip'
+    exclude '**/*.swp'
+  }
+
+  into 'cat'
+}

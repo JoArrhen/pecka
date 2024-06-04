@@ -1,0 +1,45 @@
+aspect Collection {
+    // --- List ---
+    syn boolean TypeDecl.isList() = false; 
+    eq InterfaceDecl.isList() = getID().equals("List");
+    eq ParInterfaceDecl.isList() = getID().equals("List");
+    eq ClassDecl.isList() {
+        for (Access implemented : getImplementsList()) {
+            if (implemented.type().isList()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // For add(T x), not add(int i, T x)
+    MethodAccess contributes new FieldLoadEdge(parentDot().leftmostDot().temp(), getArgList().getChild(0).getDeclaration(), "-COLLECTION_ACCESS")
+        when getID().equals("add") && decl().hostType().isList() && getArgList().getNumChild() == 1 && hasParentDot()
+            && getArgList().getChild(0).hasDeclaration() // last cond: do not handle autoboxing
+        to InvocationTarget.inclusionEdges() for each enclosingMethods();
+
+    MethodAccess contributes new FieldStoreEdge(parentDot().topDot().dotExpressionTemp(), parentDot().leftmostDot().temp(), "-COLLECTION_ACCESS")
+        when getID().equals("get") && decl().hostType().isList() && hasParentDot()
+        to InvocationTarget.inclusionEdges() for each enclosingMethods();
+    // --- Map ---
+    syn boolean TypeDecl.isMap() = false; 
+    eq InterfaceDecl.isMap() = getID().equals("Map");
+    eq ParInterfaceDecl.isMap() = getID().equals("Map");
+    eq ClassDecl.isMap() {
+        for (Access implemented : getImplementsList()) {
+            if (implemented.type().isMap()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    MethodAccess contributes new FieldLoadEdge(parentDot().leftmostDot().temp(), getArgList().getChild(1).getDeclaration(), "-COLLECTION_ACCESS")
+        when getID().equals("put") && decl().hostType().isMap() && hasParentDot()
+            && getArgList().getChild(0).hasDeclaration() && getArgList().getChild(1).hasDeclaration()
+        to InvocationTarget.inclusionEdges() for each enclosingMethods();
+
+    MethodAccess contributes new FieldStoreEdge(parentDot().topDot().dotExpressionTemp(), parentDot().leftmostDot().temp(), "-COLLECTION_ACCESS")
+        when getID().equals("get") && decl().hostType().isMap() && hasParentDot()
+        to InvocationTarget.inclusionEdges() for each enclosingMethods();
+}

@@ -1,0 +1,2609 @@
+[
+  {
+    "method_singature": "antlr.debug.LLkDebuggingParser::setupDebugging(antlr.TokenStream)"
+    "vars": {
+      "lexer": ["TokenStream"]
+    }
+  },
+  {
+    "method_singature": "antlr.MakeGrammar::createOptionalRuleRef(java.lang.String, antlr.Token)"
+    "vars": {
+      "start": []
+      "rule": []
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::beginSubRule(antlr.Token, antlr.Token, boolean)"
+    "vars": {
+      "start": ["String", "", "Null", "RuleSymbol", "Object", "BlockContext", "Lookahead", "TokenStream", "GrammarFile", "Integer", "Option", "Alternative", "TokenSymbol", "Rule", "CommonToken", "ExceptionHandler", "Token", "ASTNULLType", "Grammar", "IntRange", "StringLiteralSymbol", "ExceptionSpec", "AST", "RuleRefElement"]
+      "label": ["String", "Null", "", "Integer", "ASTNULLType", "Grammar", "Lookahead", "RuleSymbol", "Token", "TokenSymbol", "ExceptionHandler", "Option", "Alternative", "Rule", "CommonToken", "TokenStream", "GrammarFile", "Object", "BlockContext", "StringLiteralSymbol", "RuleRefElement", "AST", "ExceptionSpec", "IntRange"]
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::defineRuleName(antlr.Token, java.lang.String, boolean, java.lang.String)"
+    "vars": {
+      "r": ["Null", "TokenStream", "Lookahead", "", "String", "GrammarFile", "BlockContext", "Object", "RuleSymbol", "Integer", "Rule", "CommonToken", "Option", "TokenSymbol", "Alternative", "ExceptionHandler", "Token", "ASTNULLType", "Grammar", "IntRange", "StringLiteralSymbol", "ExceptionSpec", "RuleRefElement", "AST"]
+      "access": ["String", "", "Null"]
+      "docComment": ["String", "", "Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRHashString::equals(java.lang.Object)"
+    "vars": {
+      "o": ["", "Object"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.DebuggingCharScanner::removeParserMatchListener(antlr.debug.ParserMatchListener)"
+    "vars": {
+      "l": ["ParserMatchListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::refTreeSpecifier(antlr.Token)"
+    "vars": {
+      "treeSpec": []
+    }
+  },
+  {
+    "method_singature": "antlr.CppCodeGenerator::genASTDeclaration(antlr.AlternativeElement)"
+    "vars": {
+      "el": ["AST", "", "StringLiteralSymbol", "Null", "String", "Integer", "TokenSymbol", "Grammar", "RuleSymbol", "Alternative", "RuleRefElement", "Lookahead", "Token", "CommonToken", "TokenStream", "ExceptionSpec", "Option", "IntRange", "ASTNULLType", "ExceptionHandler", "Rule", "Object", "BlockContext", "GrammarFile"]
+    }
+  },
+  {
+    "method_singature": "antlr.ASTIterator::next(antlr.collections.AST)"
+    "vars": {
+      "template": ["AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.collections.impl.IndexedVector::removeElement(java.lang.Object)"
+    "vars": {
+      "key": ["Object"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.DebuggingCharScanner::removeTraceListener(antlr.debug.TraceListener)"
+    "vars": {
+      "l": ["TraceListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.CppCodeGenerator::genLineNo(antlr.Token)"
+    "vars": {
+      "t": ["CommonToken"]
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::refInitAction(antlr.Token)"
+    "vars": {
+      "action": ["Null", "Grammar", "TokenSymbol", "String", "", "Alternative", "Integer", "RuleSymbol", "AST", "StringLiteralSymbol", "RuleRefElement", "Lookahead", "Token", "CommonToken", "TokenStream", "ExceptionSpec", "Option", "IntRange", "ASTNULLType", "ExceptionHandler", "Rule", "BlockContext", "Object", "GrammarFile"]
+    }
+  },
+  {
+    "method_singature": "antlr.MakeGrammar::createNextTokenRule(antlr.Grammar, antlr.collections.impl.Vector, java.lang.String)"
+    "vars": {
+      "rname": [""]
+      "g": ["ParserGrammar", "TreeWalkerGrammar", "Null", "LexerGrammar"]
+      "lexRules": ["Vector", "Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.RuleBlock::setOption(antlr.Token, antlr.Token)"
+    "vars": {
+      "value": ["Token"]
+      "key": ["Token"]
+    }
+  },
+  {
+    "method_singature": "antlr.Parser::removeMessageListener(antlr.debug.MessageListener)"
+    "vars": {
+      "l": []
+    }
+  },
+  {
+    "method_singature": "antlr.CSharpCodeGenerator::gen(antlr.BlockEndElement)"
+    "vars": {
+      "end": []
+    }
+  },
+  {
+    "method_singature": "antlr.collections.AST::equalsListPartial(antlr.collections.AST)"
+    "vars": {
+      "t": ["Null", "ASTNULLType", "AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.Parser::reportError(antlr.RecognitionException)"
+    "vars": {
+      "ex": ["RecognitionException"]
+    }
+  },
+  {
+    "method_singature": "antlr.Parser::removeSyntacticPredicateListener(antlr.debug.SyntacticPredicateListener)"
+    "vars": {
+      "l": []
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::refCharLiteral(antlr.Token, antlr.Token, boolean, int, boolean)"
+    "vars": {
+      "lit": ["", "Null", "String", "RuleSymbol", "Integer", "IntRange", "StringLiteralSymbol", "Option", "ExceptionSpec", "Token", "Lookahead", "TokenStream", "Grammar", "CommonToken", "TokenSymbol", "AST", "Alternative", "RuleRefElement", "BlockContext", "Object", "GrammarFile", "Rule", "ExceptionHandler", "ASTNULLType"]
+      "label": ["String", "", "Integer", "Null", "RuleSymbol", "IntRange", "StringLiteralSymbol", "Option", "ExceptionSpec", "Token", "TokenStream", "Lookahead", "Grammar", "CommonToken", "Alternative", "TokenSymbol", "AST", "RuleRefElement", "BlockContext", "Object", "GrammarFile", "Rule", "ExceptionHandler", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.LLkGrammarAnalyzer::look(int, antlr.AlternativeBlock)"
+    "vars": {
+      "blk": ["", "AlternativeBlock", "RuleBlock", "Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.CommonAST::initialize(antlr.collections.AST)"
+    "vars": {
+      "t": ["Null", "AST", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.CppCodeGenerator::genASTDeclaration(antlr.AlternativeElement, java.lang.String, java.lang.String)"
+    "vars": {
+      "node_type": ["String", "", "Integer", "Null", "RuleSymbol", "Lookahead", "RuleRefElement", "Alternative", "StringLiteralSymbol", "AST", "TokenSymbol", "Grammar", "CommonToken", "Token", "ExceptionSpec", "Option", "TokenStream", "IntRange", "ASTNULLType", "ExceptionHandler", "GrammarFile", "Object", "BlockContext", "Rule"]
+      "el": ["Grammar", "", "String", "Lookahead", "ASTNULLType", "Integer", "Null", "Token", "RuleSymbol", "TokenSymbol", "ExceptionHandler", "Alternative", "Option", "CommonToken", "Rule", "BlockContext", "Object", "GrammarFile", "TokenStream", "RuleBlock", "AST", "StringLiteralSymbol", "RuleRefElement", "AlternativeBlock", "ExceptionSpec", "IntRange"]
+      "var_name": ["", "Lookahead", "TokenStream", "Null", "String", "GrammarFile", "Object", "BlockContext", "RuleSymbol", "Rule", "Integer", "CommonToken", "Option", "Alternative", "TokenSymbol", "ExceptionHandler", "Token", "ASTNULLType", "Grammar", "IntRange", "StringLiteralSymbol", "ExceptionSpec", "RuleRefElement", "AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.BaseAST::equalsTreePartial(antlr.collections.AST)"
+    "vars": {
+      "sub": ["AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.collections.AST::equalsTreePartial(antlr.collections.AST)"
+    "vars": {
+      "t": ["AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.LLkDebuggingParser::addParserMatchListener(antlr.debug.ParserMatchListener)"
+    "vars": {
+      "l": ["ParserMatchListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::setArgOfRuleRef(antlr.Token)"
+    "vars": {
+      "argaction": []
+    }
+  },
+  {
+    "method_singature": "antlr.MakeGrammar::refArgAction(antlr.Token)"
+    "vars": {
+      "action": ["TokenStream", "Null", "", "String", "Lookahead", "Integer", "Grammar", "Option", "ExceptionSpec", "RuleSymbol", "StringLiteralSymbol", "Token", "IntRange", "Alternative", "TokenSymbol", "AST", "RuleRefElement", "CommonToken", "ExceptionHandler", "Rule", "BlockContext", "Object", "GrammarFile", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.MakeGrammar::refWildcard(antlr.Token, antlr.Token, int)"
+    "vars": {
+      "t": ["Null", "", "String", "StringLiteralSymbol", "Token", "Option", "ExceptionSpec", "RuleSymbol", "Integer", "Grammar", "Lookahead", "TokenStream", "IntRange", "RuleRefElement", "Alternative", "TokenSymbol", "AST", "CommonToken", "ExceptionHandler", "GrammarFile", "BlockContext", "Object", "Rule", "ASTNULLType"]
+      "label": ["", "Null", "String", "Token", "RuleSymbol", "Grammar", "Lookahead", "Integer", "CommonToken", "RuleRefElement", "Alternative", "StringLiteralSymbol", "AST", "TokenSymbol", "IntRange", "TokenStream", "ExceptionSpec", "Option", "ASTNULLType", "Rule", "GrammarFile", "BlockContext", "Object", "ExceptionHandler"]
+    }
+  },
+  {
+    "method_singature": "antlr.BaseAST::initialize(antlr.Token)"
+    "vars": {
+      "t": []
+    }
+  },
+  {
+    "method_singature": "antlr.CSharpCodeGenerator::genErrorTryForElement(antlr.AlternativeElement)"
+    "vars": {
+      "el": ["RuleRefElement"]
+    }
+  },
+  {
+    "method_singature": "antlr.LLkAnalyzer::look(int, antlr.AlternativeBlock)"
+    "vars": {
+      "blk": ["AlternativeBlock", "", "RuleBlock", "Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.DebuggingCharScanner::addParserListener(antlr.debug.ParserListener)"
+    "vars": {
+      "l": ["ParserListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.BlockContext::addAlternativeElement(antlr.AlternativeElement)"
+    "vars": {
+      "e": ["AlternativeElement"]
+    }
+  },
+  {
+    "method_singature": "antlr.CppCodeGenerator::genMatch(antlr.GrammarAtom)"
+    "vars": {
+      "atom": []
+    }
+  },
+  {
+    "method_singature": "antlr.debug.DebuggingCharScanner::addSemanticPredicateListener(antlr.debug.SemanticPredicateListener)"
+    "vars": {
+      "l": ["SemanticPredicateListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.collections.impl.Vector::removeElement(java.lang.Object)"
+    "vars": {
+      "o": ["Null", "String", "", "Token", "AlternativeElement", "CommonToken", "Integer", "Lookahead", "LLCell", "Grammar", "RuleSymbol", "Alternative", "TokenSymbol", "AST", "StringLiteralSymbol", "RuleRefElement", "IntRange", "TokenStream", "Option", "ExceptionSpec", "ASTNULLType", "Rule", "BlockContext", "Object", "RuleEndElement", "GrammarFile", "ExceptionHandler"]
+    }
+  },
+  {
+    "method_singature": "antlr.ASTFactory::addASTChild(antlr.ASTPair, antlr.collections.AST)"
+    "vars": {
+      "currentAST": ["ASTPair"]
+      "child": ["AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.Alternative::addElement(antlr.AlternativeElement)"
+    "vars": {
+      "e": ["AlternativeElement", "RuleRefElement"]
+    }
+  },
+  {
+    "method_singature": "antlr.collections.impl.IndexedVector::appendElement(java.lang.Object, java.lang.Object)"
+    "vars": {
+      "value": ["String", "", "Null", "RuleSymbol", "Grammar", "Lookahead", "Integer", "CommonToken", "Token", "RuleRefElement", "Alternative", "StringLiteralSymbol", "AST", "TokenSymbol", "IntRange", "ExceptionSpec", "Option", "TokenStream", "ASTNULLType", "GrammarFile", "Object", "BlockContext", "Rule", "ExceptionHandler"]
+      "key": ["String", "Null", ""]
+    }
+  },
+  {
+    "method_singature": "antlr.build.Tool::error(java.lang.String, java.lang.Exception)"
+    "vars": {
+      "msg": [""]
+      "e": ["Exception"]
+    }
+  },
+  {
+    "method_singature": "antlr.JavaCodeGenerator::genElementAST(antlr.AlternativeElement)"
+    "vars": {
+      "el": ["RuleBlock", "Null", "AlternativeBlock", ""]
+    }
+  },
+  {
+    "method_singature": "antlr.CSharpCodeGenerator::genTokenDefinitions(antlr.TokenManager)"
+    "vars": {
+      "tm": ["String", "Option", "ExceptionSpec", "", "Null", "RuleSymbol", "Integer", "StringLiteralSymbol", "Token", "Lookahead", "TokenStream", "ImportVocabTokenManager", "Grammar", "IntRange", "TokenSymbol", "AST", "Alternative", "RuleRefElement", "CommonToken", "SimpleTokenManager", "ExceptionHandler", "BlockContext", "Object", "GrammarFile", "Rule", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.ASTNULLType::setNextSibling(antlr.collections.AST)"
+    "vars": {
+      "n": ["Null", "AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.BaseAST::doWorkForFindAll(antlr.collections.impl.Vector, antlr.collections.AST, boolean)"
+    "vars": {
+      "v": ["Vector"]
+      "target": ["AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.TreeParser::reportError(antlr.RecognitionException)"
+    "vars": {
+      "ex": ["RecognitionException"]
+    }
+  },
+  {
+    "method_singature": "antlr.MakeGrammar::beginTree(antlr.Token)"
+    "vars": {
+      "tok": ["Null", "", "String", "Integer", "ASTNULLType", "Lookahead", "Grammar", "RuleSymbol", "Token", "TokenSymbol", "ExceptionHandler", "Rule", "CommonToken", "Option", "Alternative", "TokenStream", "GrammarFile", "BlockContext", "Object", "RuleRefElement", "StringLiteralSymbol", "AST", "ExceptionSpec", "IntRange"]
+    }
+  },
+  {
+    "method_singature": "antlr.MakeGrammar::refTokensSpecElementOption(antlr.Token, antlr.Token, antlr.Token)"
+    "vars": {
+      "tok": ["Integer", "Null", "String", "", "RuleSymbol", "ExceptionSpec", "Option", "Token", "StringLiteralSymbol", "TokenStream", "Lookahead", "Grammar", "IntRange", "TokenSymbol", "Alternative", "AST", "RuleRefElement", "CommonToken", "ExceptionHandler", "Object", "BlockContext", "GrammarFile", "Rule", "ASTNULLType"]
+      "value": ["Null", "", "String", "Token", "RuleSymbol", "Grammar", "Lookahead", "Integer", "CommonToken", "RuleRefElement", "Alternative", "StringLiteralSymbol", "AST", "TokenSymbol", "IntRange", "TokenStream", "ExceptionSpec", "Option", "ASTNULLType", "Rule", "GrammarFile", "BlockContext", "Object", "ExceptionHandler"]
+      "option": ["String", "Grammar", "RuleSymbol", "Null", "", "Lookahead", "Integer", "CommonToken", "Token", "RuleRefElement", "StringLiteralSymbol", "Alternative", "TokenSymbol", "AST", "IntRange", "Option", "ExceptionSpec", "TokenStream", "ASTNULLType", "GrammarFile", "BlockContext", "Object", "Rule", "ExceptionHandler"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::refAction(antlr.Token)"
+    "vars": {
+      "action": ["", "Null", "String", "Token", "Grammar", "RuleSymbol", "Lookahead", "Integer", "CommonToken", "RuleRefElement", "Alternative", "StringLiteralSymbol", "AST", "TokenSymbol", "IntRange", "TokenStream", "ExceptionSpec", "Option", "ASTNULLType", "Rule", "GrammarFile", "Object", "BlockContext", "ExceptionHandler"]
+    }
+  },
+  {
+    "method_singature": "antlr.JavaCodeGenerator::genBlockPreamble(antlr.AlternativeBlock)"
+    "vars": {
+      "blk": ["Null", "RuleBlock", "AlternativeBlock", ""]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.ParserEventSupport::addSyntacticPredicateListener(antlr.debug.SyntacticPredicateListener)"
+    "vars": {
+      "l": ["ParserListener", "SyntacticPredicateListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.LLkGrammarAnalyzer::deterministic(antlr.AlternativeBlock)"
+    "vars": {
+      "blk": ["RuleBlock", "Null", "AlternativeBlock", ""]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.ParserEventSupport::addDoneListener(antlr.debug.ListenerBase)"
+    "vars": {
+      "l": ["ParserTokenListener", "ParserListener", "NewLineListener", "SyntacticPredicateListener", "MessageListener", "TraceListener", "ParserMatchListener", "SemanticPredicateListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.preprocessor.Preprocessor::reportError(antlr.RecognitionException)"
+    "vars": {
+      "e": ["RecognitionException"]
+    }
+  },
+  {
+    "method_singature": "antlr.Parser::removeTraceListener(antlr.debug.TraceListener)"
+    "vars": {
+      "l": []
+    }
+  },
+  {
+    "method_singature": "antlr.CSharpCodeGenerator::genMatchUsingAtomText(antlr.GrammarAtom)"
+    "vars": {
+      "atom": []
+    }
+  },
+  {
+    "method_singature": "antlr.CodeGenerator::getASTCreateString(antlr.GrammarAtom, java.lang.String)"
+    "vars": {
+      "str": ["String", "", "Null"]
+      "atom": ["Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.HTMLCodeGenerator::genCommonBlock(antlr.AlternativeBlock)"
+    "vars": {
+      "blk": ["RuleBlock", "Null", "SynPredBlock", "AlternativeBlock", ""]
+    }
+  },
+  {
+    "method_singature": "antlr.JavaCodeGenerator::setupGrammarParameters(antlr.Grammar)"
+    "vars": {
+      "g": ["String", "Null", "Integer", "", "RuleSymbol", "ExceptionSpec", "Option", "Token", "StringLiteralSymbol", "TokenStream", "Lookahead", "Grammar", "IntRange", "TokenSymbol", "Alternative", "AST", "RuleRefElement", "CommonToken", "ExceptionHandler", "BlockContext", "Object", "GrammarFile", "Rule", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.DiagnosticCodeGenerator::genTokenTypes(antlr.TokenManager)"
+    "vars": {
+      "tm": ["Null", "", "String", "ExceptionHandler", "Integer", "TokenSymbol", "Lookahead", "GrammarFile", "TokenStream", "RuleSymbol", "BlockContext", "Object", "Alternative", "Option", "CommonToken", "Rule", "Token", "Grammar", "ASTNULLType", "StringLiteralSymbol", "ExceptionSpec", "IntRange", "RuleRefElement", "AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.SimpleTokenManager::define(antlr.TokenSymbol)"
+    "vars": {
+      "ts": ["Integer", "Null", "", "String", "Lookahead", "RuleSymbol", "TokenSymbol", "ASTNULLType", "Grammar", "Token", "Option", "Alternative", "Rule", "CommonToken", "TokenStream", "GrammarFile", "Object", "BlockContext", "ExceptionHandler", "StringLiteralSymbol", "RuleRefElement", "AST", "IntRange", "ExceptionSpec"]
+    }
+  },
+  {
+    "method_singature": "antlr.JavaCodeGenerator::mapTreeVariable(antlr.AlternativeElement, java.lang.String)"
+    "vars": {
+      "e": ["AlternativeBlock", "", "RuleBlock", "Null", "AlternativeElement"]
+      "name": ["", "Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.BaseAST::setFirstChild(antlr.collections.AST)"
+    "vars": {
+      "c": ["Null", "AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::refExceptionHandler(antlr.Token, antlr.Token)"
+    "vars": {
+      "action": ["String", "", "Null", "Integer", "Option", "RuleSymbol", "ExceptionSpec", "StringLiteralSymbol", "Token", "TokenStream", "Lookahead", "Grammar", "IntRange", "Alternative", "TokenSymbol", "AST", "RuleRefElement", "CommonToken", "ExceptionHandler", "BlockContext", "Object", "GrammarFile", "Rule", "ASTNULLType"]
+      "exTypeAndName": ["", "Null", "String", "StringLiteralSymbol", "IntRange", "RuleSymbol", "Integer", "Grammar", "Lookahead", "TokenStream", "Token", "Option", "ExceptionSpec", "CommonToken", "RuleRefElement", "Alternative", "TokenSymbol", "AST", "Rule", "GrammarFile", "BlockContext", "Object", "ExceptionHandler", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::refExceptionHandler(antlr.Token, antlr.Token)"
+    "vars": {
+      "action": ["String", "Integer", "Null", "", "Lookahead", "CommonToken", "Grammar", "RuleSymbol", "Token", "TokenSymbol", "StringLiteralSymbol", "AST", "Alternative", "RuleRefElement", "IntRange", "Option", "ExceptionSpec", "TokenStream", "ASTNULLType", "Object", "BlockContext", "GrammarFile", "Rule", "ExceptionHandler"]
+      "exTypeAndName": ["AST", "", "StringLiteralSymbol", "Null", "Integer", "String", "TokenSymbol", "Grammar", "Alternative", "RuleSymbol", "RuleRefElement", "Lookahead", "Token", "CommonToken", "TokenStream", "ExceptionSpec", "Option", "IntRange", "ASTNULLType", "ExceptionHandler", "Rule", "Object", "BlockContext", "GrammarFile"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::setSubruleOption(antlr.Token, antlr.Token)"
+    "vars": {
+      "value": ["RuleRefElement", "Null", "String", "", "Integer", "StringLiteralSymbol", "Alternative", "TokenSymbol", "AST", "RuleSymbol", "Grammar", "Lookahead", "Token", "CommonToken", "TokenStream", "Option", "ExceptionSpec", "IntRange", "ASTNULLType", "ExceptionHandler", "Rule", "GrammarFile", "Object", "BlockContext"]
+      "key": ["", "Null", "Token", "String", "StringLiteralSymbol", "RuleSymbol", "ExceptionSpec", "Option", "Integer", "Grammar", "Lookahead", "TokenStream", "IntRange", "RuleRefElement", "Alternative", "AST", "TokenSymbol", "CommonToken", "ExceptionHandler", "GrammarFile", "Object", "BlockContext", "Rule", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.Parser::removeParserMatchListener(antlr.debug.ParserMatchListener)"
+    "vars": {
+      "l": []
+    }
+  },
+  {
+    "method_singature": "antlr.debug.ParserEventSupport::removeParserMatchListener(antlr.debug.ParserMatchListener)"
+    "vars": {
+      "l": ["ParserMatchListener", "ParserListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.LLkDebuggingParser::removeParserListener(antlr.debug.ParserListener)"
+    "vars": {
+      "l": ["ParserListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.DebuggingCharScanner::removeParserTokenListener(antlr.debug.ParserTokenListener)"
+    "vars": {
+      "l": ["ParserTokenListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::_refToken(antlr.Token, antlr.Token, antlr.Token, antlr.Token, boolean, int, boolean)"
+    "vars": {
+      "args": ["", "Null", "String", "Lookahead", "ExceptionHandler", "Integer", "TokenSymbol", "Rule", "CommonToken", "Option", "Alternative", "TokenStream", "GrammarFile", "BlockContext", "Object", "RuleSymbol", "ASTNULLType", "Grammar", "Token", "StringLiteralSymbol", "ExceptionSpec", "IntRange", "RuleRefElement", "AST"]
+      "t": ["String", "", "Integer", "Null", "RuleSymbol", "IntRange", "StringLiteralSymbol", "Option", "ExceptionSpec", "Token", "TokenStream", "Lookahead", "Grammar", "CommonToken", "Alternative", "TokenSymbol", "AST", "RuleRefElement", "Object", "BlockContext", "GrammarFile", "Rule", "ExceptionHandler", "ASTNULLType"]
+      "label": ["", "Null", "String", "Token", "StringLiteralSymbol", "ExceptionSpec", "RuleSymbol", "Option", "Integer", "Grammar", "Lookahead", "TokenStream", "IntRange", "RuleRefElement", "Alternative", "AST", "TokenSymbol", "CommonToken", "ExceptionHandler", "GrammarFile", "BlockContext", "Object", "Rule", "ASTNULLType"]
+      "assignId": ["", "Null", "Integer", "Option", "String", "TokenSymbol", "Alternative", "Lookahead", "Rule", "CommonToken", "TokenStream", "GrammarFile", "RuleSymbol", "BlockContext", "Object", "ExceptionHandler", "ASTNULLType", "Grammar", "Token", "StringLiteralSymbol", "IntRange", "ExceptionSpec", "RuleRefElement", "AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.LLkAnalyzer::setGrammar(antlr.Grammar)"
+    "vars": {
+      "g": ["String", "Null", "Integer", "", "Lookahead", "RuleSymbol", "Alternative", "TokenSymbol", "Grammar", "StringLiteralSymbol", "AST", "RuleRefElement", "CommonToken", "Token", "Option", "ExceptionSpec", "TokenStream", "IntRange", "ASTNULLType", "ExceptionHandler", "Object", "BlockContext", "GrammarFile", "Rule"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::beginTree(antlr.Token)"
+    "vars": {
+      "tok": ["String", "Integer", "", "Null", "Option", "TokenSymbol", "Alternative", "Lookahead", "Rule", "CommonToken", "RuleSymbol", "BlockContext", "Object", "TokenStream", "GrammarFile", "ExceptionHandler", "ASTNULLType", "Grammar", "Token", "StringLiteralSymbol", "IntRange", "ExceptionSpec", "AST", "RuleRefElement"]
+    }
+  },
+  {
+    "method_singature": "antlr.Grammar::setGrammarAnalyzer(antlr.LLkGrammarAnalyzer)"
+    "vars": {
+      "a": ["LLkAnalyzer", "Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::setArgOfRuleRef(antlr.Token)"
+    "vars": {
+      "argaction": []
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::startTreeWalker(java.lang.String, antlr.Token, java.lang.String, java.lang.String)"
+    "vars": {
+      "file": ["Null", "", "String", "Integer", "ASTNULLType", "Lookahead", "Grammar", "RuleSymbol", "Token", "TokenSymbol", "ExceptionHandler", "Rule", "CommonToken", "Option", "Alternative", "TokenStream", "GrammarFile", "BlockContext", "Object", "RuleRefElement", "StringLiteralSymbol", "AST", "ExceptionSpec", "IntRange"]
+      "superClass": ["String", "Null", ""]
+      "name": ["Null", "", "TokenStream", "String", "Lookahead", "Integer", "Grammar", "ExceptionSpec", "RuleSymbol", "Option", "Token", "StringLiteralSymbol", "IntRange", "TokenSymbol", "Alternative", "AST", "RuleRefElement", "CommonToken", "ExceptionHandler", "Rule", "BlockContext", "Object", "GrammarFile", "ASTNULLType"]
+      "doc": ["String", "", "Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.BaseAST::addChild(antlr.collections.AST)"
+    "vars": {
+      "node": ["AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.CppCodeGenerator::genInitFactory(antlr.Grammar)"
+    "vars": {
+      "g": ["Null", "LexerGrammar", "TreeWalkerGrammar", "ParserGrammar"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.ParserEventSupport::addParserTokenListener(antlr.debug.ParserTokenListener)"
+    "vars": {
+      "l": ["ParserTokenListener", "ParserListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.FileLineFormatter::setFormatter(antlr.FileLineFormatter)"
+    "vars": {
+      "f": ["FileLineFormatter"]
+    }
+  },
+  {
+    "method_singature": "antlr.collections.impl.Vector::appendElement(java.lang.Object)"
+    "vars": {
+      "o": ["Null", "TokenSymbol", "", "String", "Integer", "ExceptionHandler", "Lookahead", "Object", "BlockContext", "RuleSymbol", "GrammarFile", "TokenStream", "CommonToken", "Rule", "Alternative", "Option", "Token", "Grammar", "ASTNULLType", "ExceptionSpec", "StringLiteralSymbol", "IntRange", "AST", "RuleRefElement"]
+    }
+  },
+  {
+    "method_singature": "antlr.collections.impl.IndexedVector::getElement(java.lang.Object)"
+    "vars": {
+      "key": ["", "String", "Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.TreeParser::match(antlr.collections.AST, int)"
+    "vars": {
+      "t": ["AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.DiagnosticCodeGenerator::getASTCreateString(antlr.GrammarAtom, java.lang.String)"
+    "vars": {
+      "str": ["String", "", "Null"]
+      "atom": ["Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.ParserMatchEvent::setTarget(java.lang.Object)"
+    "vars": {
+      "target": ["", "Character", "Object", "Integer", "BitSet"]
+    }
+  },
+  {
+    "method_singature": "antlr.MakeGrammar::setBlock(antlr.AlternativeBlock, antlr.AlternativeBlock)"
+    "vars": {
+      "b": []
+      "src": []
+    }
+  },
+  {
+    "method_singature": "antlr.TreeWalkerGrammar::setOption(java.lang.String, antlr.Token)"
+    "vars": {
+      "value": ["", "Null", "IntRange", "String", "Integer", "RuleSymbol", "StringLiteralSymbol", "Token", "ExceptionSpec", "Option", "Grammar", "TokenStream", "Lookahead", "CommonToken", "Alternative", "RuleRefElement", "TokenSymbol", "AST", "GrammarFile", "Object", "BlockContext", "Rule", "ExceptionHandler", "ASTNULLType"]
+      "key": ["", "String", "Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.ParserEventSupport::removeParserListener(antlr.debug.ParserListener)"
+    "vars": {
+      "l": ["ParserListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.DebuggingCharScanner::addParserTokenListener(antlr.debug.ParserTokenListener)"
+    "vars": {
+      "l": ["ParserTokenListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.LLkDebuggingParser::addSemanticPredicateListener(antlr.debug.SemanticPredicateListener)"
+    "vars": {
+      "l": ["SemanticPredicateListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::setFileOption(antlr.Token, antlr.Token, java.lang.String)"
+    "vars": {
+      "filename": ["String", "", "Null", "CommonToken", "Lookahead", "Integer", "Grammar", "RuleSymbol", "Token", "TokenSymbol", "Alternative", "StringLiteralSymbol", "AST", "RuleRefElement", "IntRange", "ExceptionSpec", "Option", "TokenStream", "ASTNULLType", "BlockContext", "Object", "GrammarFile", "Rule", "ExceptionHandler"]
+      "value": ["", "RuleSymbol", "Null", "ExceptionSpec", "String", "Option", "Integer", "Token", "StringLiteralSymbol", "Lookahead", "TokenStream", "Grammar", "IntRange", "AST", "TokenSymbol", "Alternative", "RuleRefElement", "CommonToken", "ExceptionHandler", "BlockContext", "Object", "GrammarFile", "Rule", "ASTNULLType"]
+      "key": ["Null", "String", "", "Lookahead", "RuleSymbol", "Integer", "TokenSymbol", "Token", "Grammar", "ASTNULLType", "GrammarFile", "TokenStream", "Object", "BlockContext", "Alternative", "Option", "CommonToken", "Rule", "ExceptionHandler", "StringLiteralSymbol", "RuleRefElement", "AST", "IntRange", "ExceptionSpec"]
+    }
+  },
+  {
+    "method_singature": "antlr.CommonASTWithHiddenTokens::initialize(antlr.Token)"
+    "vars": {
+      "tok": ["Token"]
+    }
+  },
+  {
+    "method_singature": "antlr.collections.impl.BitSet::equals(java.lang.Object)"
+    "vars": {
+      "obj": ["Null", "String", "", "Token", "BitSet", "Integer", "Lookahead", "CommonToken", "Grammar", "RuleSymbol", "TokenSymbol", "StringLiteralSymbol", "AST", "Alternative", "RuleRefElement", "IntRange", "TokenStream", "Object", "Option", "ExceptionSpec", "ASTNULLType", "Rule", "BlockContext", "GrammarFile", "ExceptionHandler"]
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::refHeaderAction(antlr.Token, antlr.Token)"
+    "vars": {
+      "act": ["Null", "String", "", "TokenSymbol", "ExceptionHandler", "Integer", "Lookahead", "Object", "BlockContext", "RuleSymbol", "GrammarFile", "TokenStream", "CommonToken", "Rule", "Alternative", "Option", "Token", "Grammar", "ASTNULLType", "ExceptionSpec", "StringLiteralSymbol", "IntRange", "AST", "RuleRefElement"]
+      "name": ["Null", "Option", "String", "Integer", "", "TokenSymbol", "Alternative", "Rule", "Lookahead", "CommonToken", "TokenStream", "GrammarFile", "RuleSymbol", "BlockContext", "Object", "ExceptionHandler", "ASTNULLType", "Grammar", "Token", "StringLiteralSymbol", "IntRange", "ExceptionSpec", "RuleRefElement", "AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.MakeGrammar::refInitAction(antlr.Token)"
+    "vars": {
+      "action": ["", "String", "Lookahead", "Null", "TokenSymbol", "ExceptionHandler", "Integer", "Rule", "CommonToken", "Option", "Alternative", "Object", "BlockContext", "RuleSymbol", "TokenStream", "GrammarFile", "ASTNULLType", "Grammar", "Token", "ExceptionSpec", "StringLiteralSymbol", "IntRange", "AST", "RuleRefElement"]
+    }
+  },
+  {
+    "method_singature": "antlr.CppCodeGenerator::genErrorTryForElement(antlr.AlternativeElement)"
+    "vars": {
+      "el": ["RuleRefElement"]
+    }
+  },
+  {
+    "method_singature": "antlr.BaseAST::setNextSibling(antlr.collections.AST)"
+    "vars": {
+      "n": ["AST", "Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.Grammar::setCodeGenerator(antlr.CodeGenerator)"
+    "vars": {
+      "gen": []
+    }
+  },
+  {
+    "method_singature": "antlr.CodeGenerator::gen(antlr.BlockEndElement)"
+    "vars": {
+      "end": []
+    }
+  },
+  {
+    "method_singature": "antlr.CSharpCodeGenerator::genAlt(antlr.Alternative, antlr.AlternativeBlock)"
+    "vars": {
+      "blk": ["RuleBlock", "Null", "", "AlternativeBlock"]
+      "alt": ["Integer", "Null", "String", "Lookahead", "", "TokenSymbol", "RuleSymbol", "Grammar", "ASTNULLType", "Token", "Alternative", "Option", "CommonToken", "Rule", "Object", "BlockContext", "GrammarFile", "TokenStream", "ExceptionHandler", "AST", "StringLiteralSymbol", "RuleRefElement", "IntRange", "ExceptionSpec"]
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::startLexer(java.lang.String, antlr.Token, java.lang.String, java.lang.String)"
+    "vars": {
+      "file": ["", "Null", "RuleSymbol", "String", "Lookahead", "Integer", "TokenSymbol", "Token", "ASTNULLType", "Grammar", "TokenStream", "GrammarFile", "Object", "BlockContext", "Option", "Alternative", "Rule", "CommonToken", "ExceptionHandler", "StringLiteralSymbol", "RuleRefElement", "AST", "IntRange", "ExceptionSpec"]
+      "superClass": ["", "String", "Null"]
+      "name": ["Null", "", "String", "TokenSymbol", "Alternative", "Option", "Integer", "CommonToken", "Rule", "Lookahead", "GrammarFile", "TokenStream", "RuleSymbol", "BlockContext", "Object", "ExceptionHandler", "Grammar", "ASTNULLType", "Token", "StringLiteralSymbol", "IntRange", "ExceptionSpec", "RuleRefElement", "AST"]
+      "doc": ["", "String", "Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.DebuggingCharScanner::addMessageListener(antlr.debug.MessageListener)"
+    "vars": {
+      "l": ["MessageListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.Parser::removeParserListener(antlr.debug.ParserListener)"
+    "vars": {
+      "l": []
+    }
+  },
+  {
+    "method_singature": "antlr.debug.ParserEventSupport::removeTraceListener(antlr.debug.TraceListener)"
+    "vars": {
+      "l": ["ParserListener", "TraceListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::refArgAction(antlr.Token)"
+    "vars": {
+      "action": ["Null", "", "String", "TokenStream", "Integer", "Lookahead", "Grammar", "RuleSymbol", "ExceptionSpec", "Option", "Token", "StringLiteralSymbol", "IntRange", "TokenSymbol", "Alternative", "AST", "RuleRefElement", "CommonToken", "ExceptionHandler", "Rule", "Object", "BlockContext", "GrammarFile", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.DefaultToolErrorHandler::dumpSets(String[], int, antlr.Grammar, boolean, int, Lookahead[])"
+    "vars": {
+      "output": [""]
+      "grammar": ["Null", "StringLiteralSymbol", "String", "Token", "", "Integer", "Option", "RuleSymbol", "ExceptionSpec", "Grammar", "TokenStream", "Lookahead", "IntRange", "Alternative", "RuleRefElement", "TokenSymbol", "AST", "CommonToken", "ExceptionHandler", "GrammarFile", "Object", "BlockContext", "Rule", "ASTNULLType"]
+      "sets": [""]
+    }
+  },
+  {
+    "method_singature": "antlr.Tool::reportException(java.lang.Exception, java.lang.String)"
+    "vars": {
+      "e": ["IOException"]
+      "message": ["Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.Parser::removeSemanticPredicateListener(antlr.debug.SemanticPredicateListener)"
+    "vars": {
+      "l": []
+    }
+  },
+  {
+    "method_singature": "antlr.debug.ParserEventSupport::addMessageListener(antlr.debug.MessageListener)"
+    "vars": {
+      "l": ["ParserListener", "MessageListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.ParserEventSupport::fireEvent(int, antlr.debug.ListenerBase)"
+    "vars": {
+      "l": ["String", "Null", "CommonToken", "", "Integer", "Lookahead", "RuleSymbol", "Grammar", "Token", "Alternative", "TokenSymbol", "StringLiteralSymbol", "AST", "RuleRefElement", "IntRange", "Option", "ExceptionSpec", "TokenStream", "ASTNULLType", "BlockContext", "Object", "GrammarFile", "Rule", "ExceptionHandler"]
+    }
+  },
+  {
+    "method_singature": "antlr.JavaCodeGenerator::getASTCreateString(antlr.GrammarAtom, java.lang.String)"
+    "vars": {
+      "astCtorArgs": ["String", "Null", "", "Lookahead", "TokenSymbol", "Integer", "ExceptionHandler", "CommonToken", "Rule", "Alternative", "Option", "BlockContext", "Object", "RuleSymbol", "GrammarFile", "TokenStream", "Grammar", "ASTNULLType", "Token", "ExceptionSpec", "StringLiteralSymbol", "IntRange", "AST", "RuleRefElement"]
+      "atom": ["Null", "AlternativeBlock", "", "RuleBlock"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRParser::reportError(antlr.RecognitionException)"
+    "vars": {
+      "e": ["RecognitionException"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::refTokenRange(antlr.Token, antlr.Token, antlr.Token, int, boolean)"
+    "vars": {
+      "label": ["String", "Null", "", "Lookahead", "TokenSymbol", "Integer", "ExceptionHandler", "CommonToken", "Rule", "Alternative", "Option", "Object", "BlockContext", "RuleSymbol", "GrammarFile", "TokenStream", "Grammar", "ASTNULLType", "Token", "ExceptionSpec", "StringLiteralSymbol", "IntRange", "AST", "RuleRefElement"]
+      "t1": ["Null", "", "String", "RuleSymbol", "Object", "BlockContext", "Lookahead", "TokenStream", "GrammarFile", "Integer", "Option", "Alternative", "TokenSymbol", "Rule", "CommonToken", "ExceptionHandler", "Token", "ASTNULLType", "Grammar", "IntRange", "StringLiteralSymbol", "ExceptionSpec", "AST", "RuleRefElement"]
+      "t2": ["", "Null", "String", "StringLiteralSymbol", "IntRange", "RuleSymbol", "Integer", "Grammar", "Lookahead", "TokenStream", "Token", "Option", "ExceptionSpec", "CommonToken", "RuleRefElement", "Alternative", "TokenSymbol", "AST", "Rule", "GrammarFile", "BlockContext", "Object", "ExceptionHandler", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.ParserEventSupport::removeParserTokenListener(antlr.debug.ParserTokenListener)"
+    "vars": {
+      "l": ["ParserTokenListener", "ParserListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.TokenStreamSelector::addInputStream(antlr.TokenStream, java.lang.String)"
+    "vars": {
+      "stream": ["TokenStream"]
+      "key": ["String"]
+    }
+  },
+  {
+    "method_singature": "antlr.collections.impl.LList::push(java.lang.Object)"
+    "vars": {
+      "o": ["Null", "String", "GrammarFile", "TokenStream", "Lookahead", "", "RuleSymbol", "BlockContext", "Object", "TokenSymbol", "Alternative", "Integer", "Option", "CommonToken", "Rule", "ExceptionHandler", "Token", "Grammar", "ASTNULLType", "IntRange", "StringLiteralSymbol", "ExceptionSpec", "RuleRefElement", "AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.LLkAnalyzer::look(int, antlr.GrammarAtom)"
+    "vars": {
+      "atom": []
+    }
+  },
+  {
+    "method_singature": "antlr.BaseAST::equalsList(antlr.collections.AST)"
+    "vars": {
+      "t": ["AST", "Null", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.MakeGrammar::labelElement(antlr.AlternativeElement, antlr.Token)"
+    "vars": {
+      "el": []
+      "label": []
+    }
+  },
+  {
+    "method_singature": "antlr.debug.LLkDebuggingParser::removeParserMatchListener(antlr.debug.ParserMatchListener)"
+    "vars": {
+      "l": ["ParserMatchListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRTokdefParser::reportError(antlr.RecognitionException)"
+    "vars": {
+      "e": ["RecognitionException"]
+    }
+  },
+  {
+    "method_singature": "antlr.TreeParser::traceIn(java.lang.String, antlr.collections.AST)"
+    "vars": {
+      "rname": []
+      "t": ["AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.ParserGrammar::setOption(java.lang.String, antlr.Token)"
+    "vars": {
+      "value": ["Lookahead", "Null", "", "String", "Integer", "CommonToken", "Grammar", "RuleSymbol", "Token", "AST", "StringLiteralSymbol", "TokenSymbol", "Alternative", "RuleRefElement", "IntRange", "ExceptionSpec", "Option", "TokenStream", "ASTNULLType", "BlockContext", "Object", "GrammarFile", "Rule", "ExceptionHandler"]
+      "key": ["String", "", "Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::refHeaderAction(antlr.Token, antlr.Token)"
+    "vars": {
+      "act": ["", "Null", "Lookahead", "String", "RuleSymbol", "Grammar", "CommonToken", "Integer", "Token", "Alternative", "StringLiteralSymbol", "RuleRefElement", "TokenSymbol", "AST", "IntRange", "ExceptionSpec", "Option", "TokenStream", "ASTNULLType", "GrammarFile", "Object", "BlockContext", "Rule", "ExceptionHandler"]
+      "name": ["Integer", "", "Null", "String", "Lookahead", "RuleSymbol", "TokenSymbol", "ASTNULLType", "Grammar", "Token", "Option", "Alternative", "Rule", "CommonToken", "TokenStream", "GrammarFile", "BlockContext", "Object", "ExceptionHandler", "StringLiteralSymbol", "RuleRefElement", "AST", "IntRange", "ExceptionSpec"]
+    }
+  },
+  {
+    "method_singature": "antlr.MakeGrammar::refSemPred(antlr.Token)"
+    "vars": {
+      "pred": ["Null", "", "RuleSymbol", "String", "Lookahead", "Integer", "TokenSymbol", "Token", "ASTNULLType", "Grammar", "TokenStream", "GrammarFile", "BlockContext", "Object", "Option", "Alternative", "Rule", "CommonToken", "ExceptionHandler", "StringLiteralSymbol", "RuleRefElement", "AST", "IntRange", "ExceptionSpec"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.ParserEventSupport::addTraceListener(antlr.debug.TraceListener)"
+    "vars": {
+      "l": ["TraceListener", "ParserListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.LLkDebuggingParser::removeTraceListener(antlr.debug.TraceListener)"
+    "vars": {
+      "l": ["TraceListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.ASTNULLType::findAllPartial(antlr.collections.AST)"
+    "vars": {
+      "subtree": []
+    }
+  },
+  {
+    "method_singature": "antlr.CppCodeGenerator::gen(antlr.AlternativeBlock)"
+    "vars": {
+      "blk": ["RuleBlock", "Null", "AlternativeBlock"]
+    }
+  },
+  {
+    "method_singature": "antlr.CppCodeGenerator::genCommonBlock(antlr.AlternativeBlock, boolean)"
+    "vars": {
+      "blk": ["Null", "RuleBlock", "AlternativeBlock", ""]
+    }
+  },
+  {
+    "method_singature": "antlr.RuleBlock::findExceptionSpec(antlr.Token)"
+    "vars": {
+      "label": ["", "Token", "Null", "String", "StringLiteralSymbol", "Integer", "RuleSymbol", "ExceptionSpec", "Option", "Grammar", "TokenStream", "Lookahead", "IntRange", "Alternative", "RuleRefElement", "TokenSymbol", "AST", "CommonToken", "ExceptionHandler", "GrammarFile", "Object", "BlockContext", "Rule", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.Parser::addParserTokenListener(antlr.debug.ParserTokenListener)"
+    "vars": {
+      "l": []
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::setFileOption(antlr.Token, antlr.Token, java.lang.String)"
+    "vars": {
+      "filename": ["String", "", "Integer", "Null", "RuleSymbol", "IntRange", "StringLiteralSymbol", "Option", "ExceptionSpec", "Token", "TokenStream", "Lookahead", "Grammar", "CommonToken", "Alternative", "TokenSymbol", "AST", "RuleRefElement", "BlockContext", "Object", "GrammarFile", "Rule", "ExceptionHandler", "ASTNULLType"]
+      "value": ["Null", "", "TokenStream", "String", "Lookahead", "Integer", "Grammar", "ExceptionSpec", "RuleSymbol", "Option", "Token", "StringLiteralSymbol", "IntRange", "TokenSymbol", "Alternative", "AST", "RuleRefElement", "CommonToken", "ExceptionHandler", "Rule", "Object", "BlockContext", "GrammarFile", "ASTNULLType"]
+      "key": ["Null", "Integer", "String", "TokenSymbol", "", "AST", "StringLiteralSymbol", "Alternative", "RuleSymbol", "Grammar", "RuleRefElement", "Lookahead", "Token", "CommonToken", "TokenStream", "Option", "ExceptionSpec", "IntRange", "ASTNULLType", "ExceptionHandler", "Rule", "BlockContext", "Object", "GrammarFile"]
+    }
+  },
+  {
+    "method_singature": "antlr.MakeGrammar::beginExceptionSpec(antlr.Token)"
+    "vars": {
+      "label": ["", "Null", "String", "TokenSymbol", "Integer", "ExceptionHandler", "Lookahead", "RuleSymbol", "BlockContext", "Object", "TokenStream", "GrammarFile", "Option", "Alternative", "Rule", "CommonToken", "Token", "ASTNULLType", "Grammar", "ExceptionSpec", "StringLiteralSymbol", "IntRange", "AST", "RuleRefElement"]
+    }
+  },
+  {
+    "method_singature": "antlr.ImportVocabTokenManager::define(antlr.TokenSymbol)"
+    "vars": {
+      "ts": ["", "String", "Grammar", "Null", "TokenSymbol", "RuleSymbol", "Integer", "Alternative", "StringLiteralSymbol", "AST", "RuleRefElement", "Lookahead", "Token", "CommonToken", "TokenStream", "ExceptionSpec", "Option", "IntRange", "ASTNULLType", "ExceptionHandler", "Rule", "BlockContext", "Object", "GrammarFile"]
+    }
+  },
+  {
+    "method_singature": "antlr.CppCodeGenerator::genElementAST(antlr.AlternativeElement)"
+    "vars": {
+      "el": ["AlternativeBlock", "", "Null", "RuleBlock"]
+    }
+  },
+  {
+    "method_singature": "antlr.JavaCodeGenerator::genErrorCatchForElement(antlr.AlternativeElement)"
+    "vars": {
+      "el": ["RuleRefElement"]
+    }
+  },
+  {
+    "method_singature": "antlr.CSharpCodeGenerator::genTokenTypes(antlr.TokenManager)"
+    "vars": {
+      "tm": ["", "Null", "String", "Token", "StringLiteralSymbol", "ExceptionSpec", "RuleSymbol", "Option", "Integer", "Grammar", "Lookahead", "TokenStream", "IntRange", "RuleRefElement", "Alternative", "AST", "TokenSymbol", "CommonToken", "ExceptionHandler", "GrammarFile", "BlockContext", "Object", "Rule", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.collections.impl.BitSet::toStringWithRanges(java.lang.String, antlr.CharFormatter)"
+    "vars": {
+      "formatter": ["JavaCharFormatter"]
+      "separator": [""]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.LLkDebuggingParser::addParserListener(antlr.debug.ParserListener)"
+    "vars": {
+      "l": ["ParserListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.CodeGenerator::gen(antlr.AlternativeBlock)"
+    "vars": {
+      "blk": ["AlternativeBlock", "RuleBlock"]
+    }
+  },
+  {
+    "method_singature": "antlr.TreeBlockContext::addAlternativeElement(antlr.AlternativeElement)"
+    "vars": {
+      "e": ["AlternativeElement"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::refArgAction(antlr.Token)"
+    "vars": {
+      "action": ["Null", "", "String", "CommonToken", "Lookahead", "Integer", "RuleSymbol", "Grammar", "Token", "TokenSymbol", "Alternative", "StringLiteralSymbol", "AST", "RuleRefElement", "IntRange", "ExceptionSpec", "Option", "TokenStream", "ASTNULLType", "Object", "BlockContext", "GrammarFile", "Rule", "ExceptionHandler"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::refTokensSpecElementOption(antlr.Token, antlr.Token, antlr.Token)"
+    "vars": {
+      "tok": ["", "String", "Null", "TokenSymbol", "ExceptionHandler", "Integer", "Lookahead", "BlockContext", "Object", "RuleSymbol", "GrammarFile", "TokenStream", "CommonToken", "Rule", "Alternative", "Option", "Token", "Grammar", "ASTNULLType", "ExceptionSpec", "StringLiteralSymbol", "IntRange", "AST", "RuleRefElement"]
+      "value": ["String", "", "Integer", "Null", "RuleSymbol", "IntRange", "StringLiteralSymbol", "Option", "ExceptionSpec", "Token", "TokenStream", "Lookahead", "Grammar", "CommonToken", "Alternative", "TokenSymbol", "AST", "RuleRefElement", "BlockContext", "Object", "GrammarFile", "Rule", "ExceptionHandler", "ASTNULLType"]
+      "option": ["", "String", "TokenStream", "Null", "Lookahead", "Integer", "Grammar", "Option", "RuleSymbol", "ExceptionSpec", "StringLiteralSymbol", "Token", "IntRange", "Alternative", "TokenSymbol", "AST", "RuleRefElement", "CommonToken", "ExceptionHandler", "Rule", "BlockContext", "Object", "GrammarFile", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.JavaCodeGenerator::genASTDeclaration(antlr.AlternativeElement)"
+    "vars": {
+      "el": ["", "String", "Null", "Lookahead", "Integer", "RuleSymbol", "TokenSymbol", "StringLiteralSymbol", "AST", "Alternative", "Grammar", "RuleRefElement", "CommonToken", "Token", "Option", "ExceptionSpec", "TokenStream", "IntRange", "ASTNULLType", "ExceptionHandler", "BlockContext", "Object", "GrammarFile", "Rule"]
+    }
+  },
+  {
+    "method_singature": "antlr.ASTFactory::dupList(antlr.collections.AST)"
+    "vars": {
+      "t": ["Null", "AST", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.JavaCodeGenerator::genMatch(antlr.GrammarAtom)"
+    "vars": {
+      "atom": []
+    }
+  },
+  {
+    "method_singature": "antlr.Parser::addParserMatchListener(antlr.debug.ParserMatchListener)"
+    "vars": {
+      "l": []
+    }
+  },
+  {
+    "method_singature": "antlr.debug.LLkDebuggingParser::addParserTokenListener(antlr.debug.ParserTokenListener)"
+    "vars": {
+      "l": ["ParserTokenListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.CSharpCodeGenerator::genCommonBlock(antlr.AlternativeBlock, boolean)"
+    "vars": {
+      "blk": ["RuleBlock", "Null", "AlternativeBlock", ""]
+    }
+  },
+  {
+    "method_singature": "antlr.ASTFactory::create(antlr.Token, java.lang.String)"
+    "vars": {
+      "tok": ["Token"]
+      "className": ["String"]
+    }
+  },
+  {
+    "method_singature": "antlr.Lookahead::toString(java.lang.String, antlr.CharFormatter, antlr.Grammar)"
+    "vars": {
+      "formatter": ["JavaCharFormatter"]
+      "g": ["", "String", "Null", "Alternative", "TokenSymbol", "Integer", "Option", "CommonToken", "Rule", "Lookahead", "GrammarFile", "TokenStream", "RuleSymbol", "Object", "BlockContext", "ExceptionHandler", "Grammar", "ASTNULLType", "Token", "StringLiteralSymbol", "IntRange", "ExceptionSpec", "RuleRefElement", "AST"]
+      "separator": [""]
+    }
+  },
+  {
+    "method_singature": "antlr.JavaCodeGenerator::gen(antlr.AlternativeBlock)"
+    "vars": {
+      "blk": ["AlternativeBlock", "Null", "RuleBlock"]
+    }
+  },
+  {
+    "method_singature": "antlr.DocBookCodeGenerator::gen(antlr.BlockEndElement)"
+    "vars": {
+      "end": []
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::setGrammarOption(antlr.Token, antlr.Token)"
+    "vars": {
+      "value": ["Null", "String", "Token", "", "StringLiteralSymbol", "Integer", "ExceptionSpec", "RuleSymbol", "Option", "Grammar", "TokenStream", "Lookahead", "IntRange", "Alternative", "RuleRefElement", "TokenSymbol", "AST", "CommonToken", "ExceptionHandler", "GrammarFile", "BlockContext", "Object", "Rule", "ASTNULLType"]
+      "key": ["String", "", "Null", "Token", "Integer", "RuleSymbol", "Lookahead", "Grammar", "ASTNULLType", "TokenSymbol", "ExceptionHandler", "Object", "BlockContext", "GrammarFile", "TokenStream", "Alternative", "Option", "CommonToken", "Rule", "StringLiteralSymbol", "AST", "RuleRefElement", "ExceptionSpec", "IntRange"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRParser::notTerminal(antlr.Token)"
+    "vars": {
+      "label": ["Null", "Integer", "", "String", "Lookahead", "RuleSymbol", "TokenSymbol", "ASTNULLType", "Grammar", "Token", "Rule", "CommonToken", "Option", "Alternative", "TokenStream", "GrammarFile", "Object", "BlockContext", "ExceptionHandler", "RuleRefElement", "StringLiteralSymbol", "AST", "IntRange", "ExceptionSpec"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.ParserEventSupport::removeSyntacticPredicateListener(antlr.debug.SyntacticPredicateListener)"
+    "vars": {
+      "l": ["SyntacticPredicateListener", "ParserListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.CppCodeGenerator::genMatchUsingAtomTokenType(antlr.GrammarAtom)"
+    "vars": {
+      "atom": []
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRParser::tokensSpecOptions(antlr.Token)"
+    "vars": {
+      "t": ["Null", "String", "Integer", "", "RuleRefElement", "Alternative", "StringLiteralSymbol", "AST", "TokenSymbol", "Grammar", "RuleSymbol", "Lookahead", "Token", "CommonToken", "TokenStream", "ExceptionSpec", "Option", "IntRange", "ASTNULLType", "ExceptionHandler", "Rule", "GrammarFile", "Object", "BlockContext"]
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::refTokenRange(antlr.Token, antlr.Token, antlr.Token, int, boolean)"
+    "vars": {
+      "label": ["", "String", "RuleSymbol", "Null", "Integer", "IntRange", "StringLiteralSymbol", "ExceptionSpec", "Option", "Token", "Lookahead", "TokenStream", "Grammar", "CommonToken", "AST", "TokenSymbol", "Alternative", "RuleRefElement", "Object", "BlockContext", "GrammarFile", "Rule", "ExceptionHandler", "ASTNULLType"]
+      "t1": ["Null", "", "String", "RuleSymbol", "Integer", "IntRange", "StringLiteralSymbol", "Option", "ExceptionSpec", "Token", "Lookahead", "TokenStream", "Grammar", "CommonToken", "TokenSymbol", "AST", "Alternative", "RuleRefElement", "Object", "BlockContext", "GrammarFile", "Rule", "ExceptionHandler", "ASTNULLType"]
+      "t2": ["", "String", "Null", "StringLiteralSymbol", "RuleSymbol", "Integer", "IntRange", "Lookahead", "TokenStream", "Grammar", "ExceptionSpec", "Option", "Token", "CommonToken", "AST", "TokenSymbol", "Alternative", "RuleRefElement", "Rule", "Object", "BlockContext", "GrammarFile", "ExceptionHandler", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.ASTFactory::create(antlr.Token)"
+    "vars": {
+      "tok": ["Token"]
+    }
+  },
+  {
+    "method_singature": "antlr.DocBookCodeGenerator::genGenericBlock(antlr.AlternativeBlock, java.lang.String)"
+    "vars": {
+      "blk": ["RuleBlock", "AlternativeBlock"]
+      "blkOp": [""]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.DebuggingCharScanner::removeParserListener(antlr.debug.ParserListener)"
+    "vars": {
+      "l": ["ParserListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.collections.Stack::push(java.lang.Object)"
+    "vars": {
+      "o": ["", "Lookahead", "Null", "TokenSymbol", "String", "RuleSymbol", "Integer", "Token", "Grammar", "ASTNULLType", "Object", "BlockContext", "GrammarFile", "TokenStream", "Alternative", "Option", "CommonToken", "Rule", "ExceptionHandler", "StringLiteralSymbol", "AST", "RuleRefElement", "IntRange", "ExceptionSpec"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::refSemPred(antlr.Token)"
+    "vars": {
+      "pred": ["String", "CommonToken", "Integer", "", "Rule", "Lookahead", "Null", "TokenSymbol", "Alternative", "Option", "GrammarFile", "TokenStream", "BlockContext", "Object", "RuleSymbol", "ExceptionHandler", "Grammar", "ASTNULLType", "Token", "StringLiteralSymbol", "IntRange", "ExceptionSpec", "RuleRefElement", "AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.JavaCodeGenerator::genMatchUsingAtomTokenType(antlr.GrammarAtom)"
+    "vars": {
+      "atom": []
+    }
+  },
+  {
+    "method_singature": "antlr.collections.AST::equalsList(antlr.collections.AST)"
+    "vars": {
+      "t": ["Null", "AST", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.DocBookCodeGenerator::getASTCreateString(antlr.GrammarAtom, java.lang.String)"
+    "vars": {
+      "str": ["String", "", "Null"]
+      "atom": ["Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::setSubruleOption(antlr.Token, antlr.Token)"
+    "vars": {
+      "value": ["Null", "", "String", "ASTNULLType", "Integer", "Grammar", "Lookahead", "Token", "RuleSymbol", "TokenSymbol", "ExceptionHandler", "Rule", "CommonToken", "Option", "Alternative", "BlockContext", "Object", "TokenStream", "GrammarFile", "AST", "StringLiteralSymbol", "RuleRefElement", "ExceptionSpec", "IntRange"]
+      "key": ["Null", "String", "Lookahead", "", "TokenSymbol", "ExceptionHandler", "Integer", "CommonToken", "Rule", "Alternative", "Option", "BlockContext", "Object", "RuleSymbol", "GrammarFile", "TokenStream", "Grammar", "ASTNULLType", "Token", "ExceptionSpec", "StringLiteralSymbol", "IntRange", "AST", "RuleRefElement"]
+    }
+  },
+  {
+    "method_singature": "antlr.HTMLCodeGenerator::gen(antlr.AlternativeBlock)"
+    "vars": {
+      "blk": ["AlternativeBlock", "RuleBlock"]
+    }
+  },
+  {
+    "method_singature": "antlr.ASTIterator::isSubtree(antlr.collections.AST, antlr.collections.AST)"
+    "vars": {
+      "sub": ["Null", "ASTNULLType", "AST"]
+      "t": ["Null", "AST", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.collections.impl.Vector::setElementAt(java.lang.Object, int)"
+    "vars": {
+      "obj": ["String", "", "Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.Parser::addParserListener(antlr.debug.ParserListener)"
+    "vars": {
+      "l": []
+    }
+  },
+  {
+    "method_singature": "antlr.debug.ParserEventSupport::addParserMatchListener(antlr.debug.ParserMatchListener)"
+    "vars": {
+      "l": ["ParserListener", "ParserMatchListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::refAction(antlr.Token)"
+    "vars": {
+      "action": ["Integer", "Grammar", "Null", "String", "", "TokenStream", "Lookahead", "Token", "StringLiteralSymbol", "ExceptionSpec", "RuleSymbol", "Option", "IntRange", "Alternative", "RuleRefElement", "TokenSymbol", "AST", "CommonToken", "ExceptionHandler", "Rule", "GrammarFile", "Object", "BlockContext", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.CodeGenerator::setGrammar(antlr.Grammar)"
+    "vars": {
+      "g": ["ParserGrammar", "TreeWalkerGrammar", "LexerGrammar"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.LLkDebuggingParser::addSyntacticPredicateListener(antlr.debug.SyntacticPredicateListener)"
+    "vars": {
+      "l": ["SyntacticPredicateListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.LLkDebuggingParser::removeSemanticPredicateListener(antlr.debug.SemanticPredicateListener)"
+    "vars": {
+      "l": ["SemanticPredicateListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.MakeGrammar::refElementOption(antlr.Token, antlr.Token)"
+    "vars": {
+      "value": ["String", "Integer", "", "Lookahead", "Null", "CommonToken", "Grammar", "RuleSymbol", "Token", "TokenSymbol", "StringLiteralSymbol", "AST", "Alternative", "RuleRefElement", "IntRange", "Option", "ExceptionSpec", "TokenStream", "ASTNULLType", "Object", "BlockContext", "GrammarFile", "Rule", "ExceptionHandler"]
+      "option": ["Null", "", "String", "Token", "RuleSymbol", "Grammar", "Lookahead", "Integer", "CommonToken", "RuleRefElement", "Alternative", "StringLiteralSymbol", "AST", "TokenSymbol", "IntRange", "TokenStream", "ExceptionSpec", "Option", "ASTNULLType", "Rule", "GrammarFile", "Object", "BlockContext", "ExceptionHandler"]
+    }
+  },
+  {
+    "method_singature": "antlr.CppCodeGenerator::mapTreeVariable(antlr.AlternativeElement, java.lang.String)"
+    "vars": {
+      "e": ["AlternativeElement", "RuleBlock", "Null", "", "AlternativeBlock"]
+      "name": ["Null", ""]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::refStringLiteral(antlr.Token, antlr.Token, int, boolean)"
+    "vars": {
+      "lit": ["Null", "", "String", "ExceptionHandler", "Integer", "TokenSymbol", "Lookahead", "GrammarFile", "TokenStream", "RuleSymbol", "Object", "BlockContext", "Alternative", "Option", "CommonToken", "Rule", "Token", "Grammar", "ASTNULLType", "StringLiteralSymbol", "ExceptionSpec", "IntRange", "RuleRefElement", "AST"]
+      "label": ["String", "", "Null", "Integer", "ExceptionHandler", "TokenSymbol", "Lookahead", "GrammarFile", "TokenStream", "BlockContext", "Object", "RuleSymbol", "CommonToken", "Rule", "Alternative", "Option", "Token", "Grammar", "ASTNULLType", "StringLiteralSymbol", "ExceptionSpec", "IntRange", "RuleRefElement", "AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::setGrammarOption(antlr.Token, antlr.Token)"
+    "vars": {
+      "value": ["", "Null", "Integer", "RuleSymbol", "Lookahead", "String", "Token", "Grammar", "ASTNULLType", "TokenSymbol", "ExceptionHandler", "GrammarFile", "TokenStream", "BlockContext", "Object", "Alternative", "Option", "CommonToken", "Rule", "StringLiteralSymbol", "RuleRefElement", "AST", "ExceptionSpec", "IntRange"]
+      "key": ["Option", "String", "Null", "", "RuleSymbol", "ExceptionSpec", "Integer", "StringLiteralSymbol", "Token", "Lookahead", "TokenStream", "Grammar", "IntRange", "TokenSymbol", "AST", "Alternative", "RuleRefElement", "CommonToken", "ExceptionHandler", "Object", "BlockContext", "GrammarFile", "Rule", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.ASTNULLType::findAll(antlr.collections.AST)"
+    "vars": {
+      "tree": []
+    }
+  },
+  {
+    "method_singature": "antlr.debug.DebuggingCharScanner::addSyntacticPredicateListener(antlr.debug.SyntacticPredicateListener)"
+    "vars": {
+      "l": ["SyntacticPredicateListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.JavaCodeGenerator::genASTDeclaration(antlr.AlternativeElement, java.lang.String)"
+    "vars": {
+      "node_type": ["String", "", "Null", "BlockContext", "Object", "RuleSymbol", "Lookahead", "TokenStream", "GrammarFile", "Integer", "Rule", "CommonToken", "Option", "TokenSymbol", "Alternative", "ExceptionHandler", "Token", "ASTNULLType", "Grammar", "IntRange", "StringLiteralSymbol", "ExceptionSpec", "AST", "RuleRefElement"]
+      "el": ["String", "Option", "ExceptionSpec", "", "Null", "RuleSymbol", "Integer", "StringLiteralSymbol", "Token", "Lookahead", "TokenStream", "Grammar", "IntRange", "TokenSymbol", "AST", "Alternative", "RuleRefElement", "CommonToken", "ExceptionHandler", "Object", "BlockContext", "GrammarFile", "Rule", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.LLkDebuggingParser::addTraceListener(antlr.debug.TraceListener)"
+    "vars": {
+      "l": ["TraceListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.JavaCodeGenerator::genErrorTryForElement(antlr.AlternativeElement)"
+    "vars": {
+      "el": ["RuleRefElement"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::startLexer(java.lang.String, antlr.Token, java.lang.String, java.lang.String)"
+    "vars": {
+      "file": ["", "String", "Lookahead", "Grammar", "ASTNULLType", "Integer", "Null", "Token", "RuleSymbol", "TokenSymbol", "ExceptionHandler", "Alternative", "Option", "CommonToken", "Rule", "Object", "BlockContext", "GrammarFile", "TokenStream", "StringLiteralSymbol", "AST", "RuleRefElement", "ExceptionSpec", "IntRange"]
+      "superClass": ["", "String", "Null"]
+      "name": ["Integer", "String", "", "Null", "Lookahead", "CommonToken", "RuleSymbol", "Grammar", "Token", "TokenSymbol", "AST", "StringLiteralSymbol", "Alternative", "RuleRefElement", "IntRange", "Option", "ExceptionSpec", "TokenStream", "ASTNULLType", "BlockContext", "Object", "GrammarFile", "Rule", "ExceptionHandler"]
+      "doc": ["", "Null", "String"]
+    }
+  },
+  {
+    "method_singature": "antlr.actions.cpp.ActionLexer::reportError(antlr.RecognitionException)"
+    "vars": {
+      "e": ["MismatchedCharException", "RecognitionException"]
+    }
+  },
+  {
+    "method_singature": "antlr.MakeGrammar::addElementToCurrentAlt(antlr.AlternativeElement)"
+    "vars": {
+      "e": ["AlternativeElement"]
+    }
+  },
+  {
+    "method_singature": "antlr.collections.impl.BitSet::toString(java.lang.String, antlr.CharFormatter)"
+    "vars": {
+      "formatter": ["JavaCharFormatter"]
+      "separator": [""]
+    }
+  },
+  {
+    "method_singature": "antlr.ASTNULLType::initialize(antlr.collections.AST)"
+    "vars": {
+      "t": ["Null", "ASTNULLType", "AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.ParserMatchEvent::setValues(int, int, java.lang.Object, java.lang.String, int, boolean, boolean)"
+    "vars": {
+      "text": ["String", "", "Null"]
+      "target": ["Integer", "Object", "", "Character", "BitSet"]
+    }
+  },
+  {
+    "method_singature": "antlr.MakeGrammar::refReturnAction(antlr.Token)"
+    "vars": {
+      "returnAction": ["TokenSymbol", "Null", "Grammar", "", "String", "Alternative", "RuleSymbol", "Integer", "StringLiteralSymbol", "AST", "RuleRefElement", "Lookahead", "Token", "CommonToken", "TokenStream", "ExceptionSpec", "Option", "IntRange", "ASTNULLType", "ExceptionHandler", "Rule", "Object", "BlockContext", "GrammarFile"]
+    }
+  },
+  {
+    "method_singature": "antlr.DiagnosticCodeGenerator::genCommonBlock(antlr.AlternativeBlock)"
+    "vars": {
+      "blk": ["AlternativeBlock", "", "Null", "RuleBlock"]
+    }
+  },
+  {
+    "method_singature": "antlr.LLkAnalyzer::subruleCanBeInverted(antlr.AlternativeBlock, boolean)"
+    "vars": {
+      "blk": ["", "Lookahead", "String", "Null", "RuleSymbol", "Integer", "TokenSymbol", "Token", "Grammar", "ASTNULLType", "GrammarFile", "TokenStream", "BlockContext", "Object", "Alternative", "Option", "CommonToken", "Rule", "ExceptionHandler", "AlternativeBlock", "StringLiteralSymbol", "RuleRefElement", "RuleBlock", "AST", "IntRange", "ExceptionSpec"]
+    }
+  },
+  {
+    "method_singature": "antlr.ASTNULLType::equalsTree(antlr.collections.AST)"
+    "vars": {
+      "t": ["AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::refInitAction(antlr.Token)"
+    "vars": {
+      "action": ["String", "Null", "Integer", "RuleSymbol", "", "Lookahead", "StringLiteralSymbol", "Alternative", "RuleRefElement", "Grammar", "TokenSymbol", "AST", "CommonToken", "Token", "Option", "ExceptionSpec", "TokenStream", "IntRange", "ASTNULLType", "ExceptionHandler", "GrammarFile", "BlockContext", "Object", "Rule"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::startTreeWalker(java.lang.String, antlr.Token, java.lang.String, java.lang.String)"
+    "vars": {
+      "file": ["String", "Integer", "Null", "Lookahead", "", "RuleSymbol", "TokenSymbol", "Token", "Grammar", "ASTNULLType", "GrammarFile", "TokenStream", "BlockContext", "Object", "CommonToken", "Rule", "Alternative", "Option", "ExceptionHandler", "RuleRefElement", "StringLiteralSymbol", "AST", "IntRange", "ExceptionSpec"]
+      "superClass": ["String", "", "Null"]
+      "name": ["", "Null", "String", "Token", "Lookahead", "RuleSymbol", "Grammar", "CommonToken", "Integer", "Alternative", "StringLiteralSymbol", "RuleRefElement", "TokenSymbol", "AST", "IntRange", "TokenStream", "ExceptionSpec", "Option", "ASTNULLType", "Rule", "GrammarFile", "BlockContext", "Object", "ExceptionHandler"]
+      "doc": ["String", "", "Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.MakeGrammar::refAction(antlr.Token)"
+    "vars": {
+      "action": ["", "Null", "String", "Integer", "RuleSymbol", "Lookahead", "RuleRefElement", "StringLiteralSymbol", "Alternative", "TokenSymbol", "AST", "Grammar", "CommonToken", "Token", "Option", "ExceptionSpec", "TokenStream", "IntRange", "ASTNULLType", "ExceptionHandler", "GrammarFile", "BlockContext", "Object", "Rule"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::defineToken(antlr.Token, antlr.Token)"
+    "vars": {
+      "tokliteral": ["Null", "Integer", "String", "", "Lookahead", "RuleSymbol", "TokenSymbol", "Grammar", "Alternative", "AST", "StringLiteralSymbol", "RuleRefElement", "CommonToken", "Token", "ExceptionSpec", "Option", "TokenStream", "IntRange", "ASTNULLType", "ExceptionHandler", "Object", "BlockContext", "GrammarFile", "Rule"]
+      "tokname": ["String", "", "Object", "Null", "BlockContext", "RuleSymbol", "TokenStream", "Lookahead", "GrammarFile", "Integer", "Rule", "CommonToken", "Option", "Alternative", "TokenSymbol", "ExceptionHandler", "Token", "ASTNULLType", "Grammar", "IntRange", "StringLiteralSymbol", "ExceptionSpec", "AST", "RuleRefElement"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.InputBufferEventSupport::removeInputBufferListener(antlr.debug.InputBufferListener)"
+    "vars": {
+      "l": ["InputBufferListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.MakeGrammar::refExceptionHandler(antlr.Token, antlr.Token)"
+    "vars": {
+      "action": ["IntRange", "Null", "", "String", "Integer", "RuleSymbol", "StringLiteralSymbol", "Token", "ExceptionSpec", "Option", "Grammar", "TokenStream", "Lookahead", "CommonToken", "Alternative", "RuleRefElement", "TokenSymbol", "AST", "GrammarFile", "Object", "BlockContext", "Rule", "ExceptionHandler", "ASTNULLType"]
+      "exTypeAndName": ["String", "Integer", "Null", "Lookahead", "", "CommonToken", "RuleSymbol", "Grammar", "Token", "TokenSymbol", "AST", "StringLiteralSymbol", "Alternative", "RuleRefElement", "IntRange", "Option", "ExceptionSpec", "TokenStream", "ASTNULLType", "Object", "BlockContext", "GrammarFile", "Rule", "ExceptionHandler"]
+    }
+  },
+  {
+    "method_singature": "antlr.actions.csharp.ActionLexer::reportError(antlr.RecognitionException)"
+    "vars": {
+      "e": ["RecognitionException", "MismatchedCharException"]
+    }
+  },
+  {
+    "method_singature": "antlr.LLkAnalyzer::look(int, antlr.BlockEndElement)"
+    "vars": {
+      "end": ["BlockEndElement", "RuleEndElement"]
+    }
+  },
+  {
+    "method_singature": "antlr.collections.List::includes(java.lang.Object)"
+    "vars": {
+      "o": []
+    }
+  },
+  {
+    "method_singature": "antlr.TreeParser::traceOut(java.lang.String, antlr.collections.AST)"
+    "vars": {
+      "rname": []
+      "t": ["AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.CodeGenerator::genTokenInterchange(antlr.TokenManager)"
+    "vars": {
+      "tm": ["", "Null", "IntRange", "String", "Integer", "RuleSymbol", "StringLiteralSymbol", "Token", "ExceptionSpec", "Option", "Grammar", "TokenStream", "Lookahead", "CommonToken", "Alternative", "RuleRefElement", "TokenSymbol", "AST", "GrammarFile", "Object", "BlockContext", "Rule", "ExceptionHandler", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.collections.AST::setNextSibling(antlr.collections.AST)"
+    "vars": {
+      "n": ["Null", "AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.DebuggingCharScanner::addTraceListener(antlr.debug.TraceListener)"
+    "vars": {
+      "l": ["TraceListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::refRule(antlr.Token, antlr.Token, antlr.Token, antlr.Token, int)"
+    "vars": {
+      "args": ["String", "TokenSymbol", "Null", "", "Lookahead", "RuleSymbol", "Integer", "Token", "ASTNULLType", "Grammar", "BlockContext", "Object", "TokenStream", "GrammarFile", "Option", "Alternative", "Rule", "CommonToken", "ExceptionHandler", "AST", "StringLiteralSymbol", "RuleRefElement", "IntRange", "ExceptionSpec"]
+      "r": ["StringLiteralSymbol", "AST", "", "Null", "Integer", "TokenSymbol", "String", "Grammar", "Alternative", "RuleSymbol", "RuleRefElement", "Lookahead", "Token", "CommonToken", "TokenStream", "ExceptionSpec", "Option", "IntRange", "ASTNULLType", "ExceptionHandler", "Rule", "Object", "BlockContext", "GrammarFile"]
+      "idAssign": ["", "String", "Null", "StringLiteralSymbol", "IntRange", "Integer", "RuleSymbol", "Grammar", "TokenStream", "Lookahead", "Token", "Option", "ExceptionSpec", "CommonToken", "Alternative", "RuleRefElement", "TokenSymbol", "AST", "Rule", "GrammarFile", "Object", "BlockContext", "ExceptionHandler", "ASTNULLType"]
+      "label": ["", "Null", "String", "TokenSymbol", "Integer", "ExceptionHandler", "Lookahead", "RuleSymbol", "Object", "BlockContext", "GrammarFile", "TokenStream", "Alternative", "Option", "CommonToken", "Rule", "Token", "Grammar", "ASTNULLType", "ExceptionSpec", "StringLiteralSymbol", "IntRange", "AST", "RuleRefElement"]
+    }
+  },
+  {
+    "method_singature": "antlr.CppCodeGenerator::getASTCreateString(antlr.GrammarAtom, java.lang.String)"
+    "vars": {
+      "str": ["String", "Lookahead", "RuleSymbol", "Integer", "Null", "", "Token", "ASTNULLType", "Grammar", "TokenSymbol", "ExceptionHandler", "TokenStream", "GrammarFile", "Object", "BlockContext", "Rule", "CommonToken", "Option", "Alternative", "RuleRefElement", "StringLiteralSymbol", "AST", "ExceptionSpec", "IntRange"]
+      "atom": ["Null", "RuleBlock", "", "AlternativeBlock"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::refTreeSpecifier(antlr.Token)"
+    "vars": {
+      "treeSpec": []
+    }
+  },
+  {
+    "method_singature": "antlr.CSharpCodeGenerator::genASTDeclaration(antlr.AlternativeElement, java.lang.String)"
+    "vars": {
+      "node_type": ["Null", "", "String", "Token", "RuleSymbol", "Integer", "Lookahead", "Grammar", "ASTNULLType", "TokenSymbol", "ExceptionHandler", "Object", "BlockContext", "GrammarFile", "TokenStream", "CommonToken", "Rule", "Alternative", "Option", "StringLiteralSymbol", "AST", "RuleRefElement", "ExceptionSpec", "IntRange"]
+      "el": ["ASTNULLType", "", "Integer", "String", "Lookahead", "Grammar", "Null", "Token", "RuleSymbol", "TokenSymbol", "ExceptionHandler", "Option", "Alternative", "Rule", "CommonToken", "Object", "BlockContext", "TokenStream", "GrammarFile", "StringLiteralSymbol", "AST", "RuleRefElement", "ExceptionSpec", "IntRange"]
+    }
+  },
+  {
+    "method_singature": "antlr.BaseAST::equalsListPartial(antlr.collections.AST)"
+    "vars": {
+      "sub": ["Null", "AST", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.CSharpCodeGenerator::genRule(antlr.RuleSymbol, boolean, int, antlr.TokenManager)"
+    "vars": {
+      "s": ["Null", "", "String", "Grammar", "Lookahead", "ASTNULLType", "Integer", "Token", "RuleSymbol", "TokenSymbol", "ExceptionHandler", "CommonToken", "Rule", "Alternative", "Option", "Object", "BlockContext", "GrammarFile", "TokenStream", "AST", "StringLiteralSymbol", "RuleRefElement", "ExceptionSpec", "IntRange"]
+      "tm": ["Null", "SimpleTokenManager", "ImportVocabTokenManager"]
+    }
+  },
+  {
+    "method_singature": "antlr.CommonAST::initialize(antlr.Token)"
+    "vars": {
+      "tok": ["Token"]
+    }
+  },
+  {
+    "method_singature": "antlr.collections.AST::findAll(antlr.collections.AST)"
+    "vars": {
+      "tree": []
+    }
+  },
+  {
+    "method_singature": "antlr.CppCodeGenerator::genLineNo(antlr.GrammarElement)"
+    "vars": {
+      "el": ["RuleBlock", "Null", "AlternativeBlock", ""]
+    }
+  },
+  {
+    "method_singature": "antlr.LLkGrammarAnalyzer::subruleCanBeInverted(antlr.AlternativeBlock, boolean)"
+    "vars": {
+      "blk": ["Integer", "Grammar", "Null", "String", "", "TokenStream", "Lookahead", "AlternativeBlock", "Token", "StringLiteralSymbol", "ExceptionSpec", "RuleSymbol", "Option", "IntRange", "Alternative", "RuleRefElement", "TokenSymbol", "RuleBlock", "AST", "CommonToken", "ExceptionHandler", "Rule", "GrammarFile", "Object", "BlockContext", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.DebuggingCharScanner::addParserMatchListener(antlr.debug.ParserMatchListener)"
+    "vars": {
+      "l": ["ParserMatchListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.CppCodeGenerator::genAlt(antlr.Alternative, antlr.AlternativeBlock)"
+    "vars": {
+      "blk": ["AlternativeBlock", "", "Null", "RuleBlock"]
+      "alt": ["String", "Null", "", "Token", "Integer", "RuleSymbol", "Lookahead", "Grammar", "ASTNULLType", "TokenSymbol", "ExceptionHandler", "BlockContext", "Object", "GrammarFile", "TokenStream", "CommonToken", "Rule", "Alternative", "Option", "AST", "StringLiteralSymbol", "RuleRefElement", "ExceptionSpec", "IntRange"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::refCharLiteral(antlr.Token, antlr.Token, boolean, int, boolean)"
+    "vars": {
+      "lit": ["Null", "String", "TokenSymbol", "", "Lookahead", "RuleSymbol", "Integer", "Token", "ASTNULLType", "Grammar", "BlockContext", "Object", "TokenStream", "GrammarFile", "Option", "Alternative", "Rule", "CommonToken", "ExceptionHandler", "StringLiteralSymbol", "AST", "RuleRefElement", "IntRange", "ExceptionSpec"]
+      "label": ["Option", "String", "", "Null", "RuleSymbol", "ExceptionSpec", "Integer", "StringLiteralSymbol", "Token", "Lookahead", "TokenStream", "Grammar", "IntRange", "TokenSymbol", "AST", "Alternative", "RuleRefElement", "CommonToken", "ExceptionHandler", "Object", "BlockContext", "GrammarFile", "Rule", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.CppCodeGenerator::gen(antlr.BlockEndElement)"
+    "vars": {
+      "end": []
+    }
+  },
+  {
+    "method_singature": "antlr.collections.AST::addChild(antlr.collections.AST)"
+    "vars": {
+      "c": ["AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.DebuggingCharScanner::removeSemanticPredicateListener(antlr.debug.SemanticPredicateListener)"
+    "vars": {
+      "l": ["SemanticPredicateListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.ParserEventSupport::removeDoneListener(antlr.debug.ListenerBase)"
+    "vars": {
+      "l": ["TraceListener", "SemanticPredicateListener", "MessageListener", "ParserListener", "SyntacticPredicateListener", "NewLineListener", "ParserTokenListener", "ParserMatchListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.LLkDebuggingParser::removeMessageListener(antlr.debug.MessageListener)"
+    "vars": {
+      "l": ["MessageListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.Grammar::setTokenManager(antlr.TokenManager)"
+    "vars": {
+      "tokenManager_": ["Null", "SimpleTokenManager", "ImportVocabTokenManager"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::refWildcard(antlr.Token, antlr.Token, int)"
+    "vars": {
+      "t": ["", "Null", "String", "Token", "Grammar", "RuleSymbol", "Lookahead", "Integer", "CommonToken", "RuleRefElement", "Alternative", "StringLiteralSymbol", "AST", "TokenSymbol", "IntRange", "TokenStream", "ExceptionSpec", "Option", "ASTNULLType", "Rule", "GrammarFile", "BlockContext", "Object", "ExceptionHandler"]
+      "label": ["", "Null", "String", "Lookahead", "Grammar", "ASTNULLType", "Integer", "Token", "RuleSymbol", "TokenSymbol", "ExceptionHandler", "CommonToken", "Rule", "Alternative", "Option", "Object", "BlockContext", "GrammarFile", "TokenStream", "StringLiteralSymbol", "AST", "RuleRefElement", "ExceptionSpec", "IntRange"]
+    }
+  },
+  {
+    "method_singature": "antlr.JavaCodeGenerator::genAlt(antlr.Alternative, antlr.AlternativeBlock)"
+    "vars": {
+      "blk": ["", "AlternativeBlock", "RuleBlock", "Null"]
+      "alt": ["", "Null", "String", "Token", "RuleSymbol", "Grammar", "Lookahead", "Integer", "CommonToken", "RuleRefElement", "Alternative", "StringLiteralSymbol", "AST", "TokenSymbol", "IntRange", "TokenStream", "ExceptionSpec", "Option", "ASTNULLType", "Rule", "GrammarFile", "BlockContext", "Object", "ExceptionHandler"]
+    }
+  },
+  {
+    "method_singature": "antlr.LLkAnalyzer::removeCompetingPredictionSetsFromWildcard(Lookahead[], antlr.AlternativeElement, int)"
+    "vars": {
+      "el": []
+      "look": ["Lookahead[]"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::beginSubRule(antlr.Token, antlr.Token, boolean)"
+    "vars": {
+      "start": ["", "Null", "String", "TokenSymbol", "Alternative", "Integer", "Option", "CommonToken", "Rule", "Lookahead", "GrammarFile", "TokenStream", "RuleSymbol", "BlockContext", "Object", "ExceptionHandler", "Grammar", "ASTNULLType", "Token", "StringLiteralSymbol", "IntRange", "ExceptionSpec", "RuleRefElement", "AST"]
+      "label": ["String", "Null", "", "Grammar", "Lookahead", "Integer", "ASTNULLType", "Token", "RuleSymbol", "TokenSymbol", "ExceptionHandler", "CommonToken", "Rule", "Alternative", "Option", "Object", "BlockContext", "GrammarFile", "TokenStream", "AST", "StringLiteralSymbol", "RuleRefElement", "ExceptionSpec", "IntRange"]
+    }
+  },
+  {
+    "method_singature": "antlr.LLkAnalyzer::deterministic(antlr.AlternativeBlock)"
+    "vars": {
+      "blk": ["", "AlternativeBlock", "RuleBlock", "Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.collections.AST::equals(antlr.collections.AST)"
+    "vars": {
+      "t": ["ASTNULLType", "Null", "AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.JavaCodeGenerator::genTokenTypes(antlr.TokenManager)"
+    "vars": {
+      "tm": ["", "Null", "Token", "String", "StringLiteralSymbol", "RuleSymbol", "ExceptionSpec", "Option", "Integer", "Grammar", "Lookahead", "TokenStream", "IntRange", "RuleRefElement", "Alternative", "AST", "TokenSymbol", "CommonToken", "ExceptionHandler", "GrammarFile", "Object", "BlockContext", "Rule", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRParser::range(antlr.Token)"
+    "vars": {
+      "label": ["String", "StringLiteralSymbol", "", "Null", "Integer", "RuleSymbol", "IntRange", "TokenStream", "Lookahead", "Grammar", "ExceptionSpec", "Option", "Token", "CommonToken", "TokenSymbol", "Alternative", "AST", "RuleRefElement", "Rule", "Object", "BlockContext", "GrammarFile", "ExceptionHandler", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.ASTNULLType::equalsListPartial(antlr.collections.AST)"
+    "vars": {
+      "t": ["Null", "AST", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.collections.impl.LList::insertHead(java.lang.Object)"
+    "vars": {
+      "o": ["Null", "", "String", "Lookahead", "Integer", "RuleSymbol", "TokenSymbol", "StringLiteralSymbol", "AST", "Alternative", "Grammar", "RuleRefElement", "CommonToken", "Token", "Option", "ExceptionSpec", "TokenStream", "IntRange", "ASTNULLType", "ExceptionHandler", "Object", "BlockContext", "GrammarFile", "Rule"]
+    }
+  },
+  {
+    "method_singature": "antlr.BaseAST::equals(antlr.collections.AST)"
+    "vars": {
+      "t": ["AST", "Null", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::refMemberAction(antlr.Token)"
+    "vars": {
+      "act": ["Integer", "ASTNULLType", "", "Grammar", "String", "Lookahead", "Null", "Token", "RuleSymbol", "TokenSymbol", "ExceptionHandler", "Option", "Alternative", "Rule", "CommonToken", "BlockContext", "Object", "TokenStream", "GrammarFile", "AST", "StringLiteralSymbol", "RuleRefElement", "ExceptionSpec", "IntRange"]
+    }
+  },
+  {
+    "method_singature": "antlr.TreeParser::match(antlr.collections.AST, antlr.collections.impl.BitSet)"
+    "vars": {
+      "b": ["BitSet"]
+      "t": ["AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.ASTNULLType::equalsTreePartial(antlr.collections.AST)"
+    "vars": {
+      "t": ["AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.BaseAST::findAllPartial(antlr.collections.AST)"
+    "vars": {
+      "sub": ["AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::refCharRange(antlr.Token, antlr.Token, antlr.Token, int, boolean)"
+    "vars": {
+      "label": ["String", "Integer", "", "Null", "RuleSymbol", "IntRange", "StringLiteralSymbol", "ExceptionSpec", "Option", "Token", "TokenStream", "Lookahead", "Grammar", "CommonToken", "TokenSymbol", "Alternative", "AST", "RuleRefElement", "Object", "BlockContext", "GrammarFile", "Rule", "ExceptionHandler", "ASTNULLType"]
+      "t1": ["String", "Integer", "", "RuleSymbol", "Null", "IntRange", "StringLiteralSymbol", "ExceptionSpec", "Option", "Token", "TokenStream", "Lookahead", "Grammar", "CommonToken", "TokenSymbol", "Alternative", "AST", "RuleRefElement", "Object", "BlockContext", "GrammarFile", "Rule", "ExceptionHandler", "ASTNULLType"]
+      "t2": ["TokenStream", "Null", "", "String", "Lookahead", "Integer", "Grammar", "Option", "ExceptionSpec", "RuleSymbol", "StringLiteralSymbol", "Token", "IntRange", "Alternative", "TokenSymbol", "AST", "RuleRefElement", "CommonToken", "ExceptionHandler", "Rule", "BlockContext", "Object", "GrammarFile", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.ParserEventSupport::removeMessageListener(antlr.debug.MessageListener)"
+    "vars": {
+      "l": ["MessageListener", "ParserListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.collections.AST::equalsTree(antlr.collections.AST)"
+    "vars": {
+      "t": ["AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.LexerGrammar::setOption(java.lang.String, antlr.Token)"
+    "vars": {
+      "value": ["Null", "", "ExceptionSpec", "String", "RuleSymbol", "Option", "Integer", "Token", "StringLiteralSymbol", "Lookahead", "TokenStream", "Grammar", "IntRange", "AST", "TokenSymbol", "Alternative", "RuleRefElement", "CommonToken", "ExceptionHandler", "BlockContext", "Object", "GrammarFile", "Rule", "ASTNULLType"]
+      "key": ["", "String", "Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.MakeGrammar::refRule(antlr.Token, antlr.Token, antlr.Token, antlr.Token, int)"
+    "vars": {
+      "args": ["", "Lookahead", "String", "Integer", "Rule", "CommonToken", "Null", "Option", "TokenSymbol", "Alternative", "TokenStream", "GrammarFile", "BlockContext", "Object", "RuleSymbol", "ExceptionHandler", "ASTNULLType", "Grammar", "Token", "StringLiteralSymbol", "IntRange", "ExceptionSpec", "RuleRefElement", "AST"]
+      "r": ["String", "", "Integer", "Null", "RuleSymbol", "IntRange", "StringLiteralSymbol", "Option", "ExceptionSpec", "Token", "TokenStream", "Lookahead", "Grammar", "CommonToken", "Alternative", "TokenSymbol", "AST", "RuleRefElement", "Object", "BlockContext", "GrammarFile", "Rule", "ExceptionHandler", "ASTNULLType"]
+      "idAssign": ["", "Grammar", "Lookahead", "String", "ASTNULLType", "Integer", "Null", "Token", "RuleSymbol", "TokenSymbol", "ExceptionHandler", "Alternative", "Option", "CommonToken", "Rule", "Object", "BlockContext", "GrammarFile", "TokenStream", "AST", "StringLiteralSymbol", "RuleRefElement", "ExceptionSpec", "IntRange"]
+      "label": ["String", "Null", "", "Integer", "Alternative", "TokenSymbol", "Option", "CommonToken", "Rule", "Lookahead", "RuleSymbol", "Object", "BlockContext", "GrammarFile", "TokenStream", "ExceptionHandler", "Grammar", "ASTNULLType", "Token", "StringLiteralSymbol", "IntRange", "ExceptionSpec", "AST", "RuleRefElement"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.DebuggingInputBuffer::addInputBufferListener(antlr.debug.InputBufferListener)"
+    "vars": {
+      "l": ["InputBufferListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.LLkDebuggingParser::reportError(antlr.RecognitionException)"
+    "vars": {
+      "ex": ["RecognitionException"]
+    }
+  },
+  {
+    "method_singature": "antlr.MakeGrammar::refToken(antlr.Token, antlr.Token, antlr.Token, antlr.Token, boolean, int, boolean)"
+    "vars": {
+      "args": ["ASTNULLType", "", "Integer", "Lookahead", "String", "Grammar", "Null", "Token", "RuleSymbol", "TokenSymbol", "ExceptionHandler", "Option", "Alternative", "Rule", "CommonToken", "BlockContext", "Object", "TokenStream", "GrammarFile", "StringLiteralSymbol", "AST", "RuleRefElement", "ExceptionSpec", "IntRange"]
+      "t": ["Integer", "RuleSymbol", "", "String", "Null", "Lookahead", "Alternative", "StringLiteralSymbol", "RuleRefElement", "Grammar", "TokenSymbol", "AST", "CommonToken", "Token", "ExceptionSpec", "Option", "TokenStream", "IntRange", "ASTNULLType", "ExceptionHandler", "GrammarFile", "BlockContext", "Object", "Rule"]
+      "idAssign": ["", "Null", "String", "Integer", "ExceptionHandler", "TokenSymbol", "Lookahead", "TokenStream", "GrammarFile", "RuleSymbol", "Object", "BlockContext", "Option", "Alternative", "Rule", "CommonToken", "Token", "ASTNULLType", "Grammar", "StringLiteralSymbol", "ExceptionSpec", "IntRange", "RuleRefElement", "AST"]
+      "label": ["", "Null", "String", "Integer", "ASTNULLType", "Grammar", "Lookahead", "Token", "RuleSymbol", "TokenSymbol", "ExceptionHandler", "Rule", "CommonToken", "Option", "Alternative", "BlockContext", "Object", "TokenStream", "GrammarFile", "AST", "StringLiteralSymbol", "RuleRefElement", "ExceptionSpec", "IntRange"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRParser::terminal(antlr.Token)"
+    "vars": {
+      "label": ["String", "CommonToken", "Null", "", "Integer", "Lookahead", "RuleSymbol", "Grammar", "Token", "Alternative", "TokenSymbol", "AST", "StringLiteralSymbol", "RuleRefElement", "IntRange", "Option", "ExceptionSpec", "TokenStream", "ASTNULLType", "Object", "BlockContext", "GrammarFile", "Rule", "ExceptionHandler"]
+    }
+  },
+  {
+    "method_singature": "antlr.CppCodeGenerator::printAction(antlr.Token)"
+    "vars": {
+      "t": ["Null", "String", "", "Integer", "Grammar", "Lookahead", "ASTNULLType", "RuleSymbol", "Token", "TokenSymbol", "ExceptionHandler", "CommonToken", "Rule", "Alternative", "Option", "GrammarFile", "TokenStream", "Object", "BlockContext", "RuleRefElement", "StringLiteralSymbol", "AST", "ExceptionSpec", "IntRange"]
+    }
+  },
+  {
+    "method_singature": "antlr.ASTFactory::dup(antlr.collections.AST)"
+    "vars": {
+      "t": ["Null", "ASTNULLType", "AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.MakeGrammar::defineRuleName(antlr.Token, java.lang.String, boolean, java.lang.String)"
+    "vars": {
+      "r": ["Null", "String", "Integer", "RuleSymbol", "", "Lookahead", "StringLiteralSymbol", "Alternative", "RuleRefElement", "Grammar", "TokenSymbol", "AST", "CommonToken", "Token", "Option", "ExceptionSpec", "TokenStream", "IntRange", "ASTNULLType", "ExceptionHandler", "GrammarFile", "BlockContext", "Object", "Rule"]
+      "access": ["String", "", "Null"]
+      "docComment": ["String", "", "Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.actions.java.ActionLexer::reportError(antlr.RecognitionException)"
+    "vars": {
+      "e": ["RecognitionException", "MismatchedCharException"]
+    }
+  },
+  {
+    "method_singature": "antlr.TreeParser::matchNot(antlr.collections.AST, int)"
+    "vars": {
+      "t": ["AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.DebuggingCharScanner::removeMessageListener(antlr.debug.MessageListener)"
+    "vars": {
+      "l": ["MessageListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::refTokensSpecElementOption(antlr.Token, antlr.Token, antlr.Token)"
+    "vars": {
+      "tok": ["Null", "String", "GrammarFile", "TokenStream", "", "Lookahead", "RuleSymbol", "Object", "BlockContext", "Alternative", "TokenSymbol", "Integer", "Option", "CommonToken", "Rule", "ExceptionHandler", "Token", "Grammar", "ASTNULLType", "IntRange", "StringLiteralSymbol", "ExceptionSpec", "RuleRefElement", "AST"]
+      "value": ["Null", "", "Integer", "String", "Lookahead", "RuleSymbol", "TokenSymbol", "ASTNULLType", "Grammar", "Token", "Option", "Alternative", "Rule", "CommonToken", "TokenStream", "GrammarFile", "Object", "BlockContext", "ExceptionHandler", "StringLiteralSymbol", "RuleRefElement", "AST", "IntRange", "ExceptionSpec"]
+      "option": ["Integer", "Null", "String", "", "Lookahead", "RuleSymbol", "TokenSymbol", "Token", "Grammar", "ASTNULLType", "GrammarFile", "TokenStream", "Object", "BlockContext", "CommonToken", "Rule", "Alternative", "Option", "ExceptionHandler", "RuleRefElement", "StringLiteralSymbol", "AST", "IntRange", "ExceptionSpec"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.InputBufferEventSupport::addInputBufferListener(antlr.debug.InputBufferListener)"
+    "vars": {
+      "l": ["InputBufferListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.ToolErrorHandler::warnAltAmbiguity(antlr.Grammar, antlr.AlternativeBlock, boolean, int, Lookahead[], int, int)"
+    "vars": {
+      "blk": ["RuleBlock", "Null", "AlternativeBlock", ""]
+      "grammar": ["String", "Integer", "Null", "RuleRefElement", "", "Alternative", "StringLiteralSymbol", "AST", "TokenSymbol", "Grammar", "RuleSymbol", "Lookahead", "Token", "CommonToken", "TokenStream", "ExceptionSpec", "Option", "IntRange", "ASTNULLType", "ExceptionHandler", "Rule", "GrammarFile", "BlockContext", "Object"]
+      "sets": [""]
+    }
+  },
+  {
+    "method_singature": "antlr.CSharpCodeGenerator::genBlockInitAction(antlr.AlternativeBlock)"
+    "vars": {
+      "blk": ["Null", "RuleBlock", "", "AlternativeBlock"]
+    }
+  },
+  {
+    "method_singature": "antlr.DocBookCodeGenerator::genCommonBlock(antlr.AlternativeBlock)"
+    "vars": {
+      "blk": ["RuleBlock", "Null", "", "AlternativeBlock"]
+    }
+  },
+  {
+    "method_singature": "antlr.Parser::removeParserTokenListener(antlr.debug.ParserTokenListener)"
+    "vars": {
+      "l": []
+    }
+  },
+  {
+    "method_singature": "antlr.collections.AST::setFirstChild(antlr.collections.AST)"
+    "vars": {
+      "c": ["Null", "AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.MakeGrammar::beginSubRule(antlr.Token, antlr.Token, boolean)"
+    "vars": {
+      "start": ["Null", "String", "Integer", "", "ExceptionSpec", "RuleSymbol", "Option", "Token", "StringLiteralSymbol", "TokenStream", "Lookahead", "Grammar", "IntRange", "TokenSymbol", "Alternative", "AST", "RuleRefElement", "CommonToken", "ExceptionHandler", "Object", "BlockContext", "GrammarFile", "Rule", "ASTNULLType"]
+      "label": ["String", "", "Null", "Grammar", "RuleSymbol", "Lookahead", "Integer", "CommonToken", "Token", "RuleRefElement", "Alternative", "StringLiteralSymbol", "AST", "TokenSymbol", "IntRange", "ExceptionSpec", "Option", "TokenStream", "ASTNULLType", "GrammarFile", "Object", "BlockContext", "Rule", "ExceptionHandler"]
+    }
+  },
+  {
+    "method_singature": "antlr.CppCodeGenerator::genTokenTypes(antlr.TokenManager)"
+    "vars": {
+      "tm": ["", "Null", "ExceptionSpec", "String", "RuleSymbol", "Option", "Integer", "Token", "StringLiteralSymbol", "Lookahead", "TokenStream", "Grammar", "IntRange", "AST", "TokenSymbol", "Alternative", "RuleRefElement", "CommonToken", "ExceptionHandler", "Object", "BlockContext", "GrammarFile", "Rule", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.LLkGrammarAnalyzer::look(int, antlr.BlockEndElement)"
+    "vars": {
+      "end": ["BlockEndElement", "RuleEndElement"]
+    }
+  },
+  {
+    "method_singature": "antlr.DocBookCodeGenerator::gen(antlr.AlternativeBlock)"
+    "vars": {
+      "blk": ["RuleBlock", "AlternativeBlock"]
+    }
+  },
+  {
+    "method_singature": "antlr.collections.AST::initialize(antlr.collections.AST)"
+    "vars": {
+      "t": ["AST", "Null", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.MakeGrammar::setSubruleOption(antlr.Token, antlr.Token)"
+    "vars": {
+      "value": ["Null", "String", "Integer", "Lookahead", "", "TokenSymbol", "RuleSymbol", "ASTNULLType", "Grammar", "Token", "Option", "Alternative", "Rule", "CommonToken", "Object", "BlockContext", "TokenStream", "GrammarFile", "ExceptionHandler", "StringLiteralSymbol", "AST", "RuleRefElement", "IntRange", "ExceptionSpec"]
+      "key": ["Null", "", "String", "Integer", "ASTNULLType", "Grammar", "Lookahead", "RuleSymbol", "Token", "TokenSymbol", "ExceptionHandler", "Rule", "CommonToken", "Option", "Alternative", "TokenStream", "GrammarFile", "Object", "BlockContext", "RuleRefElement", "StringLiteralSymbol", "AST", "ExceptionSpec", "IntRange"]
+    }
+  },
+  {
+    "method_singature": "antlr.DiagnosticCodeGenerator::gen(antlr.AlternativeBlock)"
+    "vars": {
+      "blk": ["AlternativeBlock", "Null", "RuleBlock"]
+    }
+  },
+  {
+    "method_singature": "antlr.MakeGrammar::refCharRange(antlr.Token, antlr.Token, antlr.Token, int, boolean)"
+    "vars": {
+      "label": ["String", "Null", "", "Token", "Lookahead", "RuleSymbol", "Integer", "ASTNULLType", "Grammar", "TokenSymbol", "ExceptionHandler", "Object", "BlockContext", "TokenStream", "GrammarFile", "Option", "Alternative", "Rule", "CommonToken", "AST", "StringLiteralSymbol", "RuleRefElement", "ExceptionSpec", "IntRange"]
+      "t1": ["Null", "String", "", "Lookahead", "TokenSymbol", "ExceptionHandler", "Integer", "CommonToken", "Rule", "Alternative", "Option", "Object", "BlockContext", "RuleSymbol", "GrammarFile", "TokenStream", "Grammar", "ASTNULLType", "Token", "ExceptionSpec", "StringLiteralSymbol", "IntRange", "AST", "RuleRefElement"]
+      "t2": ["Null", "TokenSymbol", "String", "Lookahead", "", "RuleSymbol", "Integer", "Token", "ASTNULLType", "Grammar", "Object", "BlockContext", "TokenStream", "GrammarFile", "Option", "Alternative", "Rule", "CommonToken", "ExceptionHandler", "StringLiteralSymbol", "AST", "RuleRefElement", "IntRange", "ExceptionSpec"]
+    }
+  },
+  {
+    "method_singature": "antlr.TokenManager::define(antlr.TokenSymbol)"
+    "vars": {
+      "ts": ["", "Integer", "String", "Null", "Grammar", "Lookahead", "ASTNULLType", "RuleSymbol", "Token", "TokenSymbol", "ExceptionHandler", "Alternative", "Option", "CommonToken", "Rule", "GrammarFile", "TokenStream", "Object", "BlockContext", "StringLiteralSymbol", "RuleRefElement", "AST", "ExceptionSpec", "IntRange"]
+    }
+  },
+  {
+    "method_singature": "antlr.MakeGrammar::setRuleOption(antlr.Token, antlr.Token)"
+    "vars": {
+      "value": ["", "Lookahead", "Null", "String", "TokenSymbol", "RuleSymbol", "Integer", "Token", "ASTNULLType", "Grammar", "BlockContext", "Object", "TokenStream", "GrammarFile", "Option", "Alternative", "Rule", "CommonToken", "ExceptionHandler", "StringLiteralSymbol", "AST", "RuleRefElement", "IntRange", "ExceptionSpec"]
+      "key": ["", "Null", "String", "Lookahead", "Grammar", "ASTNULLType", "Integer", "Token", "RuleSymbol", "TokenSymbol", "ExceptionHandler", "CommonToken", "Rule", "Alternative", "Option", "BlockContext", "Object", "GrammarFile", "TokenStream", "StringLiteralSymbol", "AST", "RuleRefElement", "ExceptionSpec", "IntRange"]
+    }
+  },
+  {
+    "method_singature": "antlr.CodeGenerator::setBehavior(antlr.DefineGrammarSymbols)"
+    "vars": {
+      "behavior_": ["MakeGrammar"]
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::beginTree(antlr.Token)"
+    "vars": {
+      "tok": ["Null", "String", "Integer", "Grammar", "Lookahead", "", "TokenStream", "StringLiteralSymbol", "Token", "Option", "ExceptionSpec", "RuleSymbol", "IntRange", "RuleRefElement", "Alternative", "TokenSymbol", "AST", "CommonToken", "ExceptionHandler", "Rule", "GrammarFile", "Object", "BlockContext", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::refToken(antlr.Token, antlr.Token, antlr.Token, antlr.Token, boolean, int, boolean)"
+    "vars": {
+      "args": ["Null", "String", "Integer", "", "RuleRefElement", "Alternative", "StringLiteralSymbol", "AST", "TokenSymbol", "Grammar", "RuleSymbol", "Lookahead", "Token", "CommonToken", "TokenStream", "ExceptionSpec", "Option", "IntRange", "ASTNULLType", "ExceptionHandler", "Rule", "GrammarFile", "BlockContext", "Object"]
+      "t": ["Null", "", "String", "Integer", "ASTNULLType", "Grammar", "Lookahead", "Token", "RuleSymbol", "TokenSymbol", "ExceptionHandler", "Rule", "CommonToken", "Option", "Alternative", "BlockContext", "Object", "TokenStream", "GrammarFile", "AST", "StringLiteralSymbol", "RuleRefElement", "ExceptionSpec", "IntRange"]
+      "label": ["Null", "", "String", "Lookahead", "TokenSymbol", "Integer", "ExceptionHandler", "Alternative", "Option", "CommonToken", "Rule", "RuleSymbol", "BlockContext", "Object", "GrammarFile", "TokenStream", "Grammar", "ASTNULLType", "Token", "ExceptionSpec", "StringLiteralSymbol", "IntRange", "AST", "RuleRefElement"]
+      "assignId": ["String", "Null", "Integer", "Lookahead", "", "TokenSymbol", "RuleSymbol", "ASTNULLType", "Grammar", "Token", "Option", "Alternative", "Rule", "CommonToken", "BlockContext", "Object", "TokenStream", "GrammarFile", "ExceptionHandler", "StringLiteralSymbol", "AST", "RuleRefElement", "IntRange", "ExceptionSpec"]
+    }
+  },
+  {
+    "method_singature": "antlr.CodeGenerator::extractIdOfAction(antlr.Token)"
+    "vars": {
+      "t": []
+    }
+  },
+  {
+    "method_singature": "antlr.MakeGrammar::refMemberAction(antlr.Token)"
+    "vars": {
+      "act": ["String", "", "Null", "RuleSymbol", "Grammar", "Lookahead", "Integer", "CommonToken", "Token", "RuleRefElement", "Alternative", "StringLiteralSymbol", "AST", "TokenSymbol", "IntRange", "ExceptionSpec", "Option", "TokenStream", "ASTNULLType", "GrammarFile", "BlockContext", "Object", "Rule", "ExceptionHandler"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::refElementOption(antlr.Token, antlr.Token)"
+    "vars": {
+      "value": ["Null", "String", "Lookahead", "", "Grammar", "RuleSymbol", "CommonToken", "Integer", "Token", "StringLiteralSymbol", "Alternative", "RuleRefElement", "TokenSymbol", "AST", "IntRange", "Option", "ExceptionSpec", "TokenStream", "ASTNULLType", "GrammarFile", "Object", "BlockContext", "Rule", "ExceptionHandler"]
+      "option": ["String", "Null", "", "Integer", "Lookahead", "RuleSymbol", "TokenSymbol", "Grammar", "ASTNULLType", "Token", "CommonToken", "Rule", "Alternative", "Option", "GrammarFile", "TokenStream", "Object", "BlockContext", "ExceptionHandler", "RuleRefElement", "StringLiteralSymbol", "AST", "IntRange", "ExceptionSpec"]
+    }
+  },
+  {
+    "method_singature": "antlr.CppCodeGenerator::genMatchUsingAtomText(antlr.GrammarAtom)"
+    "vars": {
+      "atom": []
+    }
+  },
+  {
+    "method_singature": "antlr.AlternativeBlock::removeTrackingOfRuleRefs(antlr.Grammar)"
+    "vars": {
+      "g": []
+    }
+  },
+  {
+    "method_singature": "antlr.CodeGenerator::extractTypeOfAction(antlr.Token)"
+    "vars": {
+      "t": ["Token"]
+    }
+  },
+  {
+    "method_singature": "antlr.HTMLCodeGenerator::genGenericBlock(antlr.AlternativeBlock, java.lang.String)"
+    "vars": {
+      "blk": ["AlternativeBlock", "SynPredBlock", "RuleBlock"]
+      "blkOp": [""]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::refToken(antlr.Token, antlr.Token, antlr.Token, antlr.Token, boolean, int, boolean)"
+    "vars": {
+      "args": ["String", "Lookahead", "Null", "", "Integer", "ExceptionHandler", "TokenSymbol", "Option", "Alternative", "Rule", "CommonToken", "TokenStream", "GrammarFile", "RuleSymbol", "BlockContext", "Object", "ASTNULLType", "Grammar", "Token", "StringLiteralSymbol", "ExceptionSpec", "IntRange", "RuleRefElement", "AST"]
+      "t": ["", "String", "StringLiteralSymbol", "Null", "Integer", "RuleSymbol", "IntRange", "TokenStream", "Lookahead", "Grammar", "Option", "ExceptionSpec", "Token", "CommonToken", "Alternative", "TokenSymbol", "AST", "RuleRefElement", "Rule", "Object", "BlockContext", "GrammarFile", "ExceptionHandler", "ASTNULLType"]
+      "label": ["Integer", "Null", "", "String", "Option", "ExceptionSpec", "RuleSymbol", "StringLiteralSymbol", "Token", "TokenStream", "Lookahead", "Grammar", "IntRange", "Alternative", "TokenSymbol", "AST", "RuleRefElement", "CommonToken", "ExceptionHandler", "Object", "BlockContext", "GrammarFile", "Rule", "ASTNULLType"]
+      "assignId": ["Lookahead", "String", "Null", "Integer", "RuleSymbol", "", "Token", "ASTNULLType", "Grammar", "TokenSymbol", "ExceptionHandler", "TokenStream", "GrammarFile", "BlockContext", "Object", "Rule", "CommonToken", "Option", "Alternative", "RuleRefElement", "StringLiteralSymbol", "AST", "ExceptionSpec", "IntRange"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::refPreambleAction(antlr.Token)"
+    "vars": {
+      "act": ["", "String", "Null", "Integer", "CommonToken", "Rule", "Lookahead", "TokenSymbol", "Alternative", "Option", "BlockContext", "Object", "RuleSymbol", "GrammarFile", "TokenStream", "ExceptionHandler", "Grammar", "ASTNULLType", "Token", "StringLiteralSymbol", "IntRange", "ExceptionSpec", "AST", "RuleRefElement"]
+    }
+  },
+  {
+    "method_singature": "antlr.JavaCodeGenerator::gen(antlr.BlockEndElement)"
+    "vars": {
+      "end": []
+    }
+  },
+  {
+    "method_singature": "antlr.CSharpCodeGenerator::gen(antlr.AlternativeBlock)"
+    "vars": {
+      "blk": ["RuleBlock", "Null", "AlternativeBlock"]
+    }
+  },
+  {
+    "method_singature": "antlr.MakeGrammar::refPreambleAction(antlr.Token)"
+    "vars": {
+      "act": ["Integer", "String", "Null", "Lookahead", "", "TokenSymbol", "RuleSymbol", "Grammar", "ASTNULLType", "Token", "Alternative", "Option", "CommonToken", "Rule", "BlockContext", "Object", "GrammarFile", "TokenStream", "ExceptionHandler", "StringLiteralSymbol", "AST", "RuleRefElement", "IntRange", "ExceptionSpec"]
+    }
+  },
+  {
+    "method_singature": "antlr.JavaCodeGenerator::genCommonBlock(antlr.AlternativeBlock, boolean)"
+    "vars": {
+      "blk": ["Null", "RuleBlock", "AlternativeBlock", ""]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.DebuggingInputBuffer::removeInputBufferListener(antlr.debug.InputBufferListener)"
+    "vars": {
+      "l": ["InputBufferListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::refStringLiteral(antlr.Token, antlr.Token, int, boolean)"
+    "vars": {
+      "lit": ["", "Null", "String", "Lookahead", "TokenSymbol", "Integer", "ExceptionHandler", "Alternative", "Option", "CommonToken", "Rule", "RuleSymbol", "Object", "BlockContext", "GrammarFile", "TokenStream", "Grammar", "ASTNULLType", "Token", "ExceptionSpec", "StringLiteralSymbol", "IntRange", "AST", "RuleRefElement"]
+      "label": ["String", "", "Null", "Object", "BlockContext", "RuleSymbol", "TokenStream", "Lookahead", "GrammarFile", "Integer", "Rule", "CommonToken", "Option", "Alternative", "TokenSymbol", "ExceptionHandler", "Token", "ASTNULLType", "Grammar", "IntRange", "StringLiteralSymbol", "ExceptionSpec", "AST", "RuleRefElement"]
+    }
+  },
+  {
+    "method_singature": "antlr.TokenStreamSelector::push(antlr.TokenStream)"
+    "vars": {
+      "stream": ["TokenStream"]
+    }
+  },
+  {
+    "method_singature": "antlr.collections.List::append(java.lang.Object)"
+    "vars": {
+      "o": []
+    }
+  },
+  {
+    "method_singature": "antlr.debug.LLkDebuggingParser::setupDebugging(antlr.TokenStream, antlr.TokenBuffer)"
+    "vars": {
+      "lexer": ["TokenStream", "Null"]
+      "tokenBuf": ["TokenBuffer", "Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.JavaCodeGenerator::genASTDeclaration(antlr.AlternativeElement, java.lang.String, java.lang.String)"
+    "vars": {
+      "node_type": ["", "String", "Null", "Integer", "CommonToken", "Rule", "Lookahead", "TokenSymbol", "Alternative", "Option", "BlockContext", "Object", "RuleSymbol", "GrammarFile", "TokenStream", "ExceptionHandler", "Grammar", "ASTNULLType", "Token", "StringLiteralSymbol", "IntRange", "ExceptionSpec", "AST", "RuleRefElement"]
+      "el": ["ExceptionHandler", "String", "Integer", "Null", "", "TokenSymbol", "Lookahead", "TokenStream", "GrammarFile", "Object", "BlockContext", "RuleSymbol", "Rule", "CommonToken", "Option", "Alternative", "Token", "ASTNULLType", "Grammar", "StringLiteralSymbol", "ExceptionSpec", "AlternativeBlock", "IntRange", "RuleRefElement", "AST", "RuleBlock"]
+      "var_name": ["", "Lookahead", "TokenSymbol", "String", "Null", "RuleSymbol", "Integer", "Token", "Grammar", "ASTNULLType", "Object", "BlockContext", "GrammarFile", "TokenStream", "Alternative", "Option", "CommonToken", "Rule", "ExceptionHandler", "AST", "StringLiteralSymbol", "RuleRefElement", "IntRange", "ExceptionSpec"]
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::refReturnAction(antlr.Token)"
+    "vars": {
+      "returnAction": ["Null", "Integer", "String", "", "Lookahead", "RuleSymbol", "Grammar", "TokenSymbol", "Alternative", "StringLiteralSymbol", "AST", "RuleRefElement", "CommonToken", "Token", "ExceptionSpec", "Option", "TokenStream", "IntRange", "ASTNULLType", "ExceptionHandler", "BlockContext", "Object", "GrammarFile", "Rule"]
+    }
+  },
+  {
+    "method_singature": "antlr.MakeGrammar::refStringLiteral(antlr.Token, antlr.Token, int, boolean)"
+    "vars": {
+      "lit": ["String", "Null", "", "Lookahead", "Integer", "ExceptionHandler", "TokenSymbol", "CommonToken", "Rule", "Alternative", "Option", "GrammarFile", "TokenStream", "BlockContext", "Object", "RuleSymbol", "Grammar", "ASTNULLType", "Token", "StringLiteralSymbol", "ExceptionSpec", "IntRange", "RuleRefElement", "AST"]
+      "label": ["", "String", "Null", "Token", "Integer", "RuleSymbol", "Lookahead", "Grammar", "ASTNULLType", "TokenSymbol", "ExceptionHandler", "Object", "BlockContext", "GrammarFile", "TokenStream", "Alternative", "Option", "CommonToken", "Rule", "AST", "StringLiteralSymbol", "RuleRefElement", "ExceptionSpec", "IntRange"]
+    }
+  },
+  {
+    "method_singature": "antlr.collections.List::add(java.lang.Object)"
+    "vars": {
+      "o": []
+    }
+  },
+  {
+    "method_singature": "antlr.collections.AST::findAllPartial(antlr.collections.AST)"
+    "vars": {
+      "subtree": []
+    }
+  },
+  {
+    "method_singature": "antlr.debug.LLkDebuggingParser::addMessageListener(antlr.debug.MessageListener)"
+    "vars": {
+      "l": ["MessageListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::refRule(antlr.Token, antlr.Token, antlr.Token, antlr.Token, int)"
+    "vars": {
+      "r": ["", "String", "ExceptionHandler", "Integer", "Null", "TokenSymbol", "Lookahead", "GrammarFile", "TokenStream", "Object", "BlockContext", "RuleSymbol", "CommonToken", "Rule", "Alternative", "Option", "Token", "Grammar", "ASTNULLType", "StringLiteralSymbol", "ExceptionSpec", "IntRange", "RuleRefElement", "AST"]
+      "idAssign": ["String", "", "Null", "Token", "RuleSymbol", "Integer", "Lookahead", "Grammar", "ASTNULLType", "TokenSymbol", "ExceptionHandler", "Object", "BlockContext", "GrammarFile", "TokenStream", "Alternative", "Option", "CommonToken", "Rule", "StringLiteralSymbol", "AST", "RuleRefElement", "ExceptionSpec", "IntRange"]
+      "arg": ["", "Null", "String", "Lookahead", "Integer", "RuleSymbol", "StringLiteralSymbol", "AST", "TokenSymbol", "Grammar", "Alternative", "RuleRefElement", "CommonToken", "Token", "ExceptionSpec", "Option", "TokenStream", "IntRange", "ASTNULLType", "ExceptionHandler", "BlockContext", "Object", "GrammarFile", "Rule"]
+      "label": ["Null", "IntRange", "", "String", "Integer", "RuleSymbol", "StringLiteralSymbol", "Token", "ExceptionSpec", "Option", "Grammar", "TokenStream", "Lookahead", "CommonToken", "Alternative", "RuleRefElement", "TokenSymbol", "AST", "GrammarFile", "Object", "BlockContext", "Rule", "ExceptionHandler", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.ParserEventSupport::addParserListener(antlr.debug.ParserListener)"
+    "vars": {
+      "l": ["ParserListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.Lookahead::toString(java.lang.String, antlr.CharFormatter)"
+    "vars": {
+      "formatter": ["JavaCharFormatter"]
+      "separator": [""]
+    }
+  },
+  {
+    "method_singature": "antlr.CppCodeGenerator::genBlockPreamble(antlr.AlternativeBlock)"
+    "vars": {
+      "blk": ["", "AlternativeBlock", "RuleBlock", "Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.LLkDebuggingParser::removeParserTokenListener(antlr.debug.ParserTokenListener)"
+    "vars": {
+      "l": ["ParserTokenListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.TokenQueue::append(antlr.Token)"
+    "vars": {
+      "tok": ["Null", "CommonToken"]
+    }
+  },
+  {
+    "method_singature": "antlr.BaseAST::initialize(antlr.collections.AST)"
+    "vars": {
+      "t": []
+    }
+  },
+  {
+    "method_singature": "antlr.ASTFactory::createUsingCtor(antlr.Token, java.lang.String)"
+    "vars": {
+      "className": ["String"]
+      "token": ["Token"]
+    }
+  },
+  {
+    "method_singature": "antlr.collections.impl.LList::includes(java.lang.Object)"
+    "vars": {
+      "o": ["Object"]
+    }
+  },
+  {
+    "method_singature": "antlr.Parser::addTraceListener(antlr.debug.TraceListener)"
+    "vars": {
+      "l": []
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::startParser(java.lang.String, antlr.Token, java.lang.String, java.lang.String)"
+    "vars": {
+      "file": ["", "Null", "String", "StringLiteralSymbol", "IntRange", "RuleSymbol", "Integer", "Grammar", "Lookahead", "TokenStream", "Token", "Option", "ExceptionSpec", "CommonToken", "RuleRefElement", "Alternative", "TokenSymbol", "AST", "Rule", "GrammarFile", "BlockContext", "Object", "ExceptionHandler", "ASTNULLType"]
+      "superClass": ["String", "", "Null"]
+      "name": ["Null", "String", "", "Token", "Integer", "Lookahead", "CommonToken", "Grammar", "RuleSymbol", "TokenSymbol", "StringLiteralSymbol", "AST", "Alternative", "RuleRefElement", "IntRange", "TokenStream", "Option", "ExceptionSpec", "ASTNULLType", "Rule", "Object", "BlockContext", "GrammarFile", "ExceptionHandler"]
+      "doc": ["String", "", "Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.Parser::defaultDebuggingSetup(antlr.TokenStream, antlr.TokenBuffer)"
+    "vars": {
+      "tokBuf": []
+      "lexer": []
+    }
+  },
+  {
+    "method_singature": "antlr.debug.ParserEventSupport::addSemanticPredicateListener(antlr.debug.SemanticPredicateListener)"
+    "vars": {
+      "l": ["ParserListener", "SemanticPredicateListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::defineToken(antlr.Token, antlr.Token)"
+    "vars": {
+      "tokliteral": ["Integer", "Null", "String", "", "RuleSymbol", "ExceptionSpec", "Option", "Token", "StringLiteralSymbol", "TokenStream", "Lookahead", "Grammar", "IntRange", "TokenSymbol", "Alternative", "AST", "RuleRefElement", "CommonToken", "ExceptionHandler", "Object", "BlockContext", "GrammarFile", "Rule", "ASTNULLType"]
+      "tokname": ["Null", "String", "", "Lookahead", "TokenSymbol", "ExceptionHandler", "Integer", "CommonToken", "Rule", "Alternative", "Option", "Object", "BlockContext", "RuleSymbol", "GrammarFile", "TokenStream", "Grammar", "ASTNULLType", "Token", "ExceptionSpec", "StringLiteralSymbol", "IntRange", "AST", "RuleRefElement"]
+    }
+  },
+  {
+    "method_singature": "antlr.GrammarAtom::setOption(antlr.Token, antlr.Token)"
+    "vars": {
+      "value": ["Token"]
+      "option": ["Token"]
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::refMemberAction(antlr.Token)"
+    "vars": {
+      "act": ["Integer", "Grammar", "Null", "String", "", "TokenStream", "Lookahead", "Token", "StringLiteralSymbol", "ExceptionSpec", "RuleSymbol", "Option", "IntRange", "Alternative", "RuleRefElement", "TokenSymbol", "AST", "CommonToken", "ExceptionHandler", "Rule", "GrammarFile", "Object", "BlockContext", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.ToolErrorHandler::warnAltExitAmbiguity(antlr.Grammar, antlr.BlockWithImpliedExitPath, boolean, int, Lookahead[], int)"
+    "vars": {
+      "blk": []
+      "grammar": ["String", "Null", "", "Token", "Integer", "Lookahead", "CommonToken", "Grammar", "RuleSymbol", "TokenSymbol", "AST", "StringLiteralSymbol", "Alternative", "RuleRefElement", "IntRange", "TokenStream", "Option", "ExceptionSpec", "ASTNULLType", "Rule", "BlockContext", "Object", "GrammarFile", "ExceptionHandler"]
+      "sets": [""]
+    }
+  },
+  {
+    "method_singature": "antlr.DumpASTVisitor::visit(antlr.collections.AST)"
+    "vars": {
+      "node": ["Null", "AST", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.CppCodeGenerator::setupGrammarParameters(antlr.Grammar)"
+    "vars": {
+      "g": ["Null", "", "String", "Token", "RuleSymbol", "Grammar", "Lookahead", "Integer", "CommonToken", "RuleRefElement", "StringLiteralSymbol", "Alternative", "TokenSymbol", "AST", "IntRange", "TokenStream", "Option", "ExceptionSpec", "ASTNULLType", "Rule", "GrammarFile", "Object", "BlockContext", "ExceptionHandler"]
+    }
+  },
+  {
+    "method_singature": "antlr.collections.impl.LList::add(java.lang.Object)"
+    "vars": {
+      "o": ["Object"]
+    }
+  },
+  {
+    "method_singature": "antlr.DocBookCodeGenerator::genTokenTypes(antlr.TokenManager)"
+    "vars": {
+      "tm": ["TokenManager"]
+    }
+  },
+  {
+    "method_singature": "antlr.CharScanner::reportError(antlr.RecognitionException)"
+    "vars": {
+      "ex": ["MismatchedCharException"]
+    }
+  },
+  {
+    "method_singature": "antlr.TokenStreamSelector::select(antlr.TokenStream)"
+    "vars": {
+      "stream": ["Null", "", "Integer", "String", "Lookahead", "RuleSymbol", "TokenSymbol", "ASTNULLType", "Grammar", "Token", "Rule", "CommonToken", "Option", "Alternative", "TokenStream", "GrammarFile", "BlockContext", "Object", "ExceptionHandler", "RuleRefElement", "StringLiteralSymbol", "AST", "IntRange", "ExceptionSpec"]
+    }
+  },
+  {
+    "method_singature": "antlr.Parser::addSemanticPredicateListener(antlr.debug.SemanticPredicateListener)"
+    "vars": {
+      "l": []
+    }
+  },
+  {
+    "method_singature": "antlr.CSharpCodeGenerator::genElementAST(antlr.AlternativeElement)"
+    "vars": {
+      "el": ["", "AlternativeBlock", "RuleBlock", "Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.HTMLCodeGenerator::gen(antlr.BlockEndElement)"
+    "vars": {
+      "end": []
+    }
+  },
+  {
+    "method_singature": "antlr.DefaultToolErrorHandler::warnAltExitAmbiguity(antlr.Grammar, antlr.BlockWithImpliedExitPath, boolean, int, Lookahead[], int)"
+    "vars": {
+      "blk": []
+      "grammar": ["String", "", "Null", "Alternative", "TokenSymbol", "Option", "Integer", "CommonToken", "Rule", "Lookahead", "GrammarFile", "TokenStream", "RuleSymbol", "Object", "BlockContext", "ExceptionHandler", "Grammar", "ASTNULLType", "Token", "StringLiteralSymbol", "IntRange", "ExceptionSpec", "RuleRefElement", "AST"]
+      "sets": [""]
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::_refStringLiteral(antlr.Token, antlr.Token, int, boolean)"
+    "vars": {
+      "lit": ["", "Lookahead", "Integer", "String", "Rule", "CommonToken", "Null", "Option", "TokenSymbol", "Alternative", "TokenStream", "GrammarFile", "BlockContext", "Object", "RuleSymbol", "ExceptionHandler", "ASTNULLType", "Grammar", "Token", "StringLiteralSymbol", "IntRange", "ExceptionSpec", "RuleRefElement", "AST"]
+      "label": ["", "String", "Null", "Integer", "CommonToken", "Rule", "Lookahead", "TokenSymbol", "Alternative", "Option", "BlockContext", "Object", "RuleSymbol", "GrammarFile", "TokenStream", "ExceptionHandler", "Grammar", "ASTNULLType", "Token", "StringLiteralSymbol", "IntRange", "ExceptionSpec", "AST", "RuleRefElement"]
+    }
+  },
+  {
+    "method_singature": "antlr.LLkAnalyzer::removeCompetingPredictionSets(antlr.collections.impl.BitSet, antlr.AlternativeElement)"
+    "vars": {
+      "b": ["Null", "BitSet"]
+      "el": []
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::startParser(java.lang.String, antlr.Token, java.lang.String, java.lang.String)"
+    "vars": {
+      "file": ["", "String", "Null", "Token", "Integer", "RuleSymbol", "Lookahead", "Grammar", "ASTNULLType", "TokenSymbol", "ExceptionHandler", "BlockContext", "Object", "GrammarFile", "TokenStream", "Alternative", "Option", "CommonToken", "Rule", "AST", "StringLiteralSymbol", "RuleRefElement", "ExceptionSpec", "IntRange"]
+      "superClass": ["", "String", "Null"]
+      "name": ["Null", "StringLiteralSymbol", "String", "Token", "", "Integer", "Option", "RuleSymbol", "ExceptionSpec", "Grammar", "TokenStream", "Lookahead", "IntRange", "Alternative", "RuleRefElement", "TokenSymbol", "AST", "CommonToken", "ExceptionHandler", "GrammarFile", "BlockContext", "Object", "Rule", "ASTNULLType"]
+      "doc": ["String", "", "Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.CSharpCodeGenerator::genErrorCatchForElement(antlr.AlternativeElement)"
+    "vars": {
+      "el": ["RuleRefElement"]
+    }
+  },
+  {
+    "method_singature": "antlr.CSharpCodeGenerator::getASTCreateString(antlr.GrammarAtom, java.lang.String)"
+    "vars": {
+      "astCtorArgs": ["Null", "String", "RuleSymbol", "", "Integer", "Lookahead", "StringLiteralSymbol", "Alternative", "RuleRefElement", "Grammar", "TokenSymbol", "AST", "CommonToken", "Token", "Option", "ExceptionSpec", "TokenStream", "IntRange", "ASTNULLType", "ExceptionHandler", "GrammarFile", "BlockContext", "Object", "Rule"]
+      "atom": ["Null", "", "AlternativeBlock", "RuleBlock"]
+    }
+  },
+  {
+    "method_singature": "antlr.HTMLCodeGenerator::genLookaheadSetForBlock(antlr.AlternativeBlock)"
+    "vars": {
+      "blk": ["AlternativeBlock"]
+    }
+  },
+  {
+    "method_singature": "antlr.DiagnosticCodeGenerator::gen(antlr.BlockEndElement)"
+    "vars": {
+      "end": []
+    }
+  },
+  {
+    "method_singature": "antlr.ASTFactory::dupTree(antlr.collections.AST)"
+    "vars": {
+      "t": ["Null", "AST", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.CodeGenerator::setAnalyzer(antlr.LLkGrammarAnalyzer)"
+    "vars": {
+      "analyzer_": ["LLkAnalyzer"]
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::refPreambleAction(antlr.Token)"
+    "vars": {
+      "act": ["String", "Lookahead", "Null", "", "Integer", "ExceptionHandler", "TokenSymbol", "Option", "Alternative", "Rule", "CommonToken", "TokenStream", "GrammarFile", "RuleSymbol", "BlockContext", "Object", "ASTNULLType", "Grammar", "Token", "StringLiteralSymbol", "ExceptionSpec", "IntRange", "RuleRefElement", "AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::refWildcard(antlr.Token, antlr.Token, int)"
+    "vars": {
+      "t": ["String", "Null", "TokenStream", "", "Lookahead", "GrammarFile", "RuleSymbol", "Object", "BlockContext", "Integer", "Option", "Alternative", "TokenSymbol", "Rule", "CommonToken", "ExceptionHandler", "Token", "ASTNULLType", "Grammar", "IntRange", "StringLiteralSymbol", "ExceptionSpec", "RuleRefElement", "AST"]
+      "label": ["Null", "", "String", "RuleSymbol", "Integer", "IntRange", "StringLiteralSymbol", "Option", "ExceptionSpec", "Token", "Lookahead", "TokenStream", "Grammar", "CommonToken", "TokenSymbol", "AST", "Alternative", "RuleRefElement", "Object", "BlockContext", "GrammarFile", "Rule", "ExceptionHandler", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.DebuggingCharScanner::removeSyntacticPredicateListener(antlr.debug.SyntacticPredicateListener)"
+    "vars": {
+      "l": ["SyntacticPredicateListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.ASTFactory::makeASTRoot(antlr.ASTPair, antlr.collections.AST)"
+    "vars": {
+      "root": ["AST"]
+      "currentAST": ["ASTPair"]
+    }
+  },
+  {
+    "method_singature": "antlr.ASTNULLType::initialize(antlr.Token)"
+    "vars": {
+      "t": ["Token"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.LLkDebuggingParser::removeSyntacticPredicateListener(antlr.debug.SyntacticPredicateListener)"
+    "vars": {
+      "l": ["SyntacticPredicateListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.CSharpCodeGenerator::genInitFactory(antlr.Grammar)"
+    "vars": {
+      "g": ["TreeWalkerGrammar", "ParserGrammar", "LexerGrammar", "Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.collections.impl.ASTArray::add(antlr.collections.AST)"
+    "vars": {
+      "node": ["AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.collections.impl.LList::append(java.lang.Object)"
+    "vars": {
+      "o": ["Object"]
+    }
+  },
+  {
+    "method_singature": "antlr.CppCodeGenerator::genBlockInitAction(antlr.AlternativeBlock)"
+    "vars": {
+      "blk": ["RuleBlock", "Null", "AlternativeBlock", ""]
+    }
+  },
+  {
+    "method_singature": "antlr.Grammar::setOption(java.lang.String, antlr.Token)"
+    "vars": {
+      "value": ["Null", "String", "Integer", "Grammar", "", "Lookahead", "TokenStream", "StringLiteralSymbol", "Token", "Option", "RuleSymbol", "ExceptionSpec", "IntRange", "RuleRefElement", "Alternative", "TokenSymbol", "AST", "CommonToken", "ExceptionHandler", "Rule", "GrammarFile", "Object", "BlockContext", "ASTNULLType"]
+      "key": ["", "String", "Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRParser::checkForMissingEndRule(antlr.Token)"
+    "vars": {
+      "label": ["IntRange", "Null", "", "String", "Integer", "RuleSymbol", "StringLiteralSymbol", "Token", "ExceptionSpec", "Option", "Grammar", "TokenStream", "Lookahead", "CommonToken", "Alternative", "RuleRefElement", "TokenSymbol", "AST", "GrammarFile", "BlockContext", "Object", "Rule", "ExceptionHandler", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.CSharpCodeGenerator::genASTDeclaration(antlr.AlternativeElement)"
+    "vars": {
+      "el": ["Null", "TokenStream", "Lookahead", "", "String", "GrammarFile", "BlockContext", "Object", "RuleSymbol", "Integer", "Rule", "CommonToken", "Option", "TokenSymbol", "Alternative", "ExceptionHandler", "Token", "ASTNULLType", "Grammar", "IntRange", "StringLiteralSymbol", "ExceptionSpec", "RuleRefElement", "AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.MakeGrammar::refCharLiteral(antlr.Token, antlr.Token, boolean, int, boolean)"
+    "vars": {
+      "lit": ["String", "Null", "Token", "", "Lookahead", "RuleSymbol", "Integer", "ASTNULLType", "Grammar", "TokenSymbol", "ExceptionHandler", "Object", "BlockContext", "TokenStream", "GrammarFile", "Rule", "CommonToken", "Option", "Alternative", "StringLiteralSymbol", "AST", "RuleRefElement", "ExceptionSpec", "IntRange"]
+      "label": ["Null", "Integer", "String", "", "Option", "ExceptionSpec", "RuleSymbol", "StringLiteralSymbol", "Token", "TokenStream", "Lookahead", "Grammar", "IntRange", "Alternative", "TokenSymbol", "AST", "RuleRefElement", "CommonToken", "ExceptionHandler", "BlockContext", "Object", "GrammarFile", "Rule", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::refCharRange(antlr.Token, antlr.Token, antlr.Token, int, boolean)"
+    "vars": {
+      "label": ["String", "CommonToken", "Null", "", "Integer", "Lookahead", "RuleSymbol", "Grammar", "Token", "Alternative", "TokenSymbol", "StringLiteralSymbol", "AST", "RuleRefElement", "IntRange", "Option", "ExceptionSpec", "TokenStream", "ASTNULLType", "Object", "BlockContext", "GrammarFile", "Rule", "ExceptionHandler"]
+      "t1": ["Lookahead", "String", "Null", "", "Integer", "ExceptionHandler", "TokenSymbol", "Alternative", "Option", "CommonToken", "Rule", "GrammarFile", "TokenStream", "RuleSymbol", "BlockContext", "Object", "Grammar", "ASTNULLType", "Token", "StringLiteralSymbol", "ExceptionSpec", "IntRange", "RuleRefElement", "AST"]
+      "t2": ["String", "Null", "", "Lookahead", "Integer", "ExceptionHandler", "TokenSymbol", "Rule", "CommonToken", "Option", "Alternative", "TokenStream", "GrammarFile", "Object", "BlockContext", "RuleSymbol", "ASTNULLType", "Grammar", "Token", "StringLiteralSymbol", "ExceptionSpec", "IntRange", "RuleRefElement", "AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.CSharpCodeGenerator::mapTreeVariable(antlr.AlternativeElement, java.lang.String)"
+    "vars": {
+      "e": ["AlternativeElement", "Null", "RuleBlock", "", "AlternativeBlock"]
+      "name": ["", "Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.ParserEventSupport::removeSemanticPredicateListener(antlr.debug.SemanticPredicateListener)"
+    "vars": {
+      "l": ["SemanticPredicateListener", "ParserListener"]
+    }
+  },
+  {
+    "method_singature": "antlr.collections.AST::initialize(antlr.Token)"
+    "vars": {
+      "t": ["Token"]
+    }
+  },
+  {
+    "method_singature": "antlr.debug.InputBufferEventSupport::fireEvent(int, antlr.debug.ListenerBase)"
+    "vars": {
+      "l": ["Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.LLkAnalyzer::deterministicImpliedPath(antlr.BlockWithImpliedExitPath)"
+    "vars": {
+      "blk": []
+    }
+  },
+  {
+    "method_singature": "antlr.TokenManager::mapToTokenSymbol(java.lang.String, antlr.TokenSymbol)"
+    "vars": {
+      "sym": ["", "Lookahead", "Null", "String", "Integer", "CommonToken", "RuleSymbol", "Grammar", "Token", "StringLiteralSymbol", "AST", "TokenSymbol", "Alternative", "RuleRefElement", "IntRange", "ExceptionSpec", "Option", "TokenStream", "ASTNULLType", "BlockContext", "Object", "GrammarFile", "Rule", "ExceptionHandler"]
+      "name": ["", "String", "Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.LLkAnalyzer::getAltLookahead(antlr.AlternativeBlock, int, int)"
+    "vars": {
+      "blk": ["RuleBlock", "Null", "AlternativeBlock", ""]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::setRuleOption(antlr.Token, antlr.Token)"
+    "vars": {
+      "value": ["String", "Integer", "Null", "RuleRefElement", "", "Alternative", "StringLiteralSymbol", "AST", "TokenSymbol", "Grammar", "RuleSymbol", "Lookahead", "Token", "CommonToken", "TokenStream", "ExceptionSpec", "Option", "IntRange", "ASTNULLType", "ExceptionHandler", "Rule", "GrammarFile", "BlockContext", "Object"]
+      "key": ["", "Null", "String", "StringLiteralSymbol", "IntRange", "RuleSymbol", "Integer", "Grammar", "Lookahead", "TokenStream", "Token", "Option", "ExceptionSpec", "CommonToken", "RuleRefElement", "Alternative", "TokenSymbol", "AST", "Rule", "GrammarFile", "BlockContext", "Object", "ExceptionHandler", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.ASTNULLType::equals(antlr.collections.AST)"
+    "vars": {
+      "t": ["Null", "ASTNULLType", "AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.BaseAST::equalsTree(antlr.collections.AST)"
+    "vars": {
+      "t": ["AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.CSharpCodeGenerator::genMatchUsingAtomTokenType(antlr.GrammarAtom)"
+    "vars": {
+      "atom": []
+    }
+  },
+  {
+    "method_singature": "antlr.JavaCodeGenerator::genMatchUsingAtomText(antlr.GrammarAtom)"
+    "vars": {
+      "atom": []
+    }
+  },
+  {
+    "method_singature": "antlr.MakeGrammar::refTreeSpecifier(antlr.Token)"
+    "vars": {
+      "treeSpec": []
+    }
+  },
+  {
+    "method_singature": "antlr.CSharpCodeGenerator::genBlockPreamble(antlr.AlternativeBlock)"
+    "vars": {
+      "blk": ["Null", "RuleBlock", "AlternativeBlock", ""]
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::refElementOption(antlr.Token, antlr.Token)"
+    "vars": {
+      "value": ["String", "Integer", "", "Null", "Option", "TokenSymbol", "Alternative", "Lookahead", "Rule", "CommonToken", "RuleSymbol", "BlockContext", "Object", "TokenStream", "GrammarFile", "ExceptionHandler", "ASTNULLType", "Grammar", "Token", "StringLiteralSymbol", "IntRange", "ExceptionSpec", "AST", "RuleRefElement"]
+      "option": ["", "Integer", "String", "Null", "Grammar", "Lookahead", "ASTNULLType", "RuleSymbol", "Token", "TokenSymbol", "ExceptionHandler", "Alternative", "Option", "CommonToken", "Rule", "GrammarFile", "TokenStream", "Object", "BlockContext", "StringLiteralSymbol", "RuleRefElement", "AST", "ExceptionSpec", "IntRange"]
+    }
+  },
+  {
+    "method_singature": "antlr.Tool::setFileLineFormatter(antlr.FileLineFormatter)"
+    "vars": {
+      "formatter": ["FileLineFormatter"]
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::refSemPred(antlr.Token)"
+    "vars": {
+      "pred": ["Null", "", "String", "Grammar", "Lookahead", "ASTNULLType", "Integer", "Token", "RuleSymbol", "TokenSymbol", "ExceptionHandler", "CommonToken", "Rule", "Alternative", "Option", "Object", "BlockContext", "GrammarFile", "TokenStream", "AST", "StringLiteralSymbol", "RuleRefElement", "ExceptionSpec", "IntRange"]
+    }
+  },
+  {
+    "method_singature": "antlr.CSharpCodeGenerator::genASTDeclaration(antlr.AlternativeElement, java.lang.String, java.lang.String)"
+    "vars": {
+      "node_type": ["Null", "Integer", "", "String", "Lookahead", "RuleSymbol", "TokenSymbol", "ASTNULLType", "Grammar", "Token", "Rule", "CommonToken", "Option", "Alternative", "TokenStream", "GrammarFile", "Object", "BlockContext", "ExceptionHandler", "RuleRefElement", "StringLiteralSymbol", "AST", "IntRange", "ExceptionSpec"]
+      "el": ["", "Integer", "String", "Null", "RuleSymbol", "Lookahead", "RuleRefElement", "Alternative", "StringLiteralSymbol", "AST", "TokenSymbol", "Grammar", "RuleBlock", "CommonToken", "Token", "ExceptionSpec", "Option", "AlternativeBlock", "TokenStream", "IntRange", "ASTNULLType", "ExceptionHandler", "GrammarFile", "BlockContext", "Object", "Rule"]
+      "var_name": ["Null", "String", "Integer", "", "RuleRefElement", "Alternative", "StringLiteralSymbol", "AST", "TokenSymbol", "Grammar", "RuleSymbol", "Lookahead", "Token", "CommonToken", "TokenStream", "ExceptionSpec", "Option", "IntRange", "ASTNULLType", "ExceptionHandler", "Rule", "GrammarFile", "Object", "BlockContext"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRParser::ebnf(antlr.Token, boolean)"
+    "vars": {
+      "label": ["", "Null", "String", "StringLiteralSymbol", "IntRange", "Integer", "RuleSymbol", "Grammar", "TokenStream", "Lookahead", "Token", "Option", "ExceptionSpec", "CommonToken", "Alternative", "RuleRefElement", "TokenSymbol", "AST", "Rule", "GrammarFile", "BlockContext", "Object", "ExceptionHandler", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.DefaultToolErrorHandler::warnAltAmbiguity(antlr.Grammar, antlr.AlternativeBlock, boolean, int, Lookahead[], int, int)"
+    "vars": {
+      "blk": ["RuleBlock", "Null", "", "AlternativeBlock"]
+      "grammar": ["String", "Null", "GrammarFile", "TokenStream", "", "Lookahead", "Object", "BlockContext", "RuleSymbol", "CommonToken", "Integer", "Rule", "Alternative", "TokenSymbol", "Option", "ExceptionHandler", "Token", "Grammar", "ASTNULLType", "IntRange", "StringLiteralSymbol", "ExceptionSpec", "RuleRefElement", "AST"]
+      "sets": [""]
+    }
+  },
+  {
+    "method_singature": "antlr.JavaCodeGenerator::genBlockInitAction(antlr.AlternativeBlock)"
+    "vars": {
+      "blk": ["RuleBlock", "Null", "AlternativeBlock", ""]
+    }
+  },
+  {
+    "method_singature": "antlr.Parser::addMessageListener(antlr.debug.MessageListener)"
+    "vars": {
+      "l": []
+    }
+  },
+  {
+    "method_singature": "antlr.DocBookCodeGenerator::genLookaheadSetForBlock(antlr.AlternativeBlock)"
+    "vars": {
+      "blk": ["AlternativeBlock"]
+    }
+  },
+  {
+    "method_singature": "antlr.HTMLCodeGenerator::getASTCreateString(antlr.GrammarAtom, java.lang.String)"
+    "vars": {
+      "str": ["String", "", "Null"]
+      "atom": ["Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.ASTFactory::create(antlr.collections.AST)"
+    "vars": {
+      "tr": ["AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.BaseAST::findAll(antlr.collections.AST)"
+    "vars": {
+      "target": ["AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::beginExceptionSpec(antlr.Token)"
+    "vars": {
+      "label": ["", "Null", "String", "StringLiteralSymbol", "IntRange", "Integer", "RuleSymbol", "Grammar", "TokenStream", "Lookahead", "Token", "Option", "ExceptionSpec", "CommonToken", "Alternative", "RuleRefElement", "TokenSymbol", "AST", "Rule", "GrammarFile", "Object", "BlockContext", "ExceptionHandler", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.ASTNULLType::equalsList(antlr.collections.AST)"
+    "vars": {
+      "t": ["Null", "AST", "ASTNULLType"]
+    }
+  },
+  {
+    "method_singature": "antlr.DiagnosticCodeGenerator::genLookaheadSetForBlock(antlr.AlternativeBlock)"
+    "vars": {
+      "blk": ["RuleBlock", "Null", "", "AlternativeBlock"]
+    }
+  },
+  {
+    "method_singature": "antlr.MakeGrammar::refTokenRange(antlr.Token, antlr.Token, antlr.Token, int, boolean)"
+    "vars": {
+      "label": ["Null", "", "String", "Lookahead", "Integer", "RuleSymbol", "StringLiteralSymbol", "AST", "TokenSymbol", "Grammar", "Alternative", "RuleRefElement", "CommonToken", "Token", "ExceptionSpec", "Option", "TokenStream", "IntRange", "ASTNULLType", "ExceptionHandler", "Object", "BlockContext", "GrammarFile", "Rule"]
+      "t1": ["Integer", "String", "Null", "TokenSymbol", "", "AST", "StringLiteralSymbol", "RuleSymbol", "Alternative", "Grammar", "RuleRefElement", "Lookahead", "Token", "CommonToken", "TokenStream", "Option", "ExceptionSpec", "IntRange", "ASTNULLType", "ExceptionHandler", "Rule", "BlockContext", "Object", "GrammarFile"]
+      "t2": ["Null", "String", "", "Lookahead", "TokenSymbol", "Integer", "RuleSymbol", "Token", "ASTNULLType", "Grammar", "Object", "BlockContext", "TokenStream", "GrammarFile", "Rule", "CommonToken", "Option", "Alternative", "ExceptionHandler", "StringLiteralSymbol", "AST", "RuleRefElement", "IntRange", "ExceptionSpec"]
+    }
+  },
+  {
+    "method_singature": "antlr.CSharpCodeGenerator::genMatch(antlr.GrammarAtom)"
+    "vars": {
+      "atom": []
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::beginExceptionSpec(antlr.Token)"
+    "vars": {
+      "label": ["Null", "String", "", "Lookahead", "RuleSymbol", "Integer", "TokenSymbol", "Token", "Grammar", "ASTNULLType", "GrammarFile", "TokenStream", "Object", "BlockContext", "Alternative", "Option", "CommonToken", "Rule", "ExceptionHandler", "StringLiteralSymbol", "RuleRefElement", "AST", "IntRange", "ExceptionSpec"]
+    }
+  },
+  {
+    "method_singature": "antlr.ASTNULLType::addChild(antlr.collections.AST)"
+    "vars": {
+      "c": ["AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRParser::reportError(antlr.RecognitionException, java.lang.String)"
+    "vars": {
+      "s": [""]
+      "e": ["RecognitionException"]
+    }
+  },
+  {
+    "method_singature": "antlr.AlternativeBlock::setOption(antlr.Token, antlr.Token)"
+    "vars": {
+      "value": ["Token"]
+      "key": ["Token"]
+    }
+  },
+  {
+    "method_singature": "antlr.DiagnosticCodeGenerator::genBlockPreamble(antlr.AlternativeBlock)"
+    "vars": {
+      "blk": ["RuleBlock", "Null", "", "AlternativeBlock"]
+    }
+  },
+  {
+    "method_singature": "antlr.LLkGrammarAnalyzer::setGrammar(antlr.Grammar)"
+    "vars": {
+      "g": ["ExceptionHandler", "Null", "String", "Integer", "", "TokenSymbol", "Lookahead", "TokenStream", "GrammarFile", "BlockContext", "Object", "RuleSymbol", "Rule", "CommonToken", "Option", "Alternative", "Token", "ASTNULLType", "Grammar", "StringLiteralSymbol", "ExceptionSpec", "IntRange", "RuleRefElement", "AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::refReturnAction(antlr.Token)"
+    "vars": {
+      "returnAction": ["", "Null", "String", "RuleSymbol", "Lookahead", "Integer", "TokenSymbol", "Token", "ASTNULLType", "Grammar", "TokenStream", "GrammarFile", "Object", "BlockContext", "Option", "Alternative", "Rule", "CommonToken", "ExceptionHandler", "StringLiteralSymbol", "RuleRefElement", "AST", "IntRange", "ExceptionSpec"]
+    }
+  },
+  {
+    "method_singature": "antlr.DefineGrammarSymbols::setRuleOption(antlr.Token, antlr.Token)"
+    "vars": {
+      "value": ["Null", "Grammar", "TokenSymbol", "String", "", "Alternative", "Integer", "RuleSymbol", "AST", "StringLiteralSymbol", "RuleRefElement", "Lookahead", "Token", "CommonToken", "TokenStream", "ExceptionSpec", "Option", "IntRange", "ASTNULLType", "ExceptionHandler", "Rule", "BlockContext", "Object", "GrammarFile"]
+      "key": ["String", "Null", "Lookahead", "Integer", "", "TokenSymbol", "RuleSymbol", "ASTNULLType", "Grammar", "Token", "Rule", "CommonToken", "Option", "Alternative", "Object", "BlockContext", "TokenStream", "GrammarFile", "ExceptionHandler", "StringLiteralSymbol", "AST", "RuleRefElement", "IntRange", "ExceptionSpec"]
+    }
+  },
+  {
+    "method_singature": "antlr.HTMLCodeGenerator::genTokenTypes(antlr.TokenManager)"
+    "vars": {
+      "tm": ["TokenManager"]
+    }
+  },
+  {
+    "method_singature": "antlr.MakeGrammar::setArgOfRuleRef(antlr.Token)"
+    "vars": {
+      "argAction": []
+    }
+  },
+  {
+    "method_singature": "antlr.CppCodeGenerator::genErrorCatchForElement(antlr.AlternativeElement)"
+    "vars": {
+      "el": ["RuleRefElement"]
+    }
+  },
+  {
+    "method_singature": "antlr.ANTLRGrammarParseBehavior::defineRuleName(antlr.Token, java.lang.String, boolean, java.lang.String)"
+    "vars": {
+      "r": ["String", "Null", "", "Lookahead", "Integer", "RuleSymbol", "AST", "StringLiteralSymbol", "TokenSymbol", "Grammar", "Alternative", "RuleRefElement", "CommonToken", "Token", "ExceptionSpec", "Option", "TokenStream", "IntRange", "ASTNULLType", "ExceptionHandler", "BlockContext", "Object", "GrammarFile", "Rule"]
+      "access": ["String", "", "Null"]
+      "docComment": ["String", "", "Null"]
+    }
+  },
+  {
+    "method_singature": "antlr.Parser::addSyntacticPredicateListener(antlr.debug.SyntacticPredicateListener)"
+    "vars": {
+      "l": []
+    }
+  },
+  {
+    "method_singature": "antlr.debug.ParserEventSupport::fireReportError(java.lang.Exception)"
+    "vars": {
+      "e": ["RecognitionException", "MismatchedCharException"]
+    }
+  },
+  {
+    "method_singature": "antlr.CSharpCodeGenerator::setupGrammarParameters(antlr.Grammar)"
+    "vars": {
+      "g": ["", "String", "Null", "Integer", "ASTNULLType", "Lookahead", "Grammar", "RuleSymbol", "Token", "TokenSymbol", "ExceptionHandler", "Option", "Alternative", "Rule", "CommonToken", "TokenStream", "GrammarFile", "Object", "BlockContext", "StringLiteralSymbol", "RuleRefElement", "AST", "ExceptionSpec", "IntRange"]
+    }
+  },
+  {
+    "method_singature": "antlr.ASTNULLType::setFirstChild(antlr.collections.AST)"
+    "vars": {
+      "c": ["Null", "AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.CppCodeGenerator::genASTDeclaration(antlr.AlternativeElement, java.lang.String)"
+    "vars": {
+      "node_type": ["String", "", "Integer", "Null", "RuleSymbol", "IntRange", "StringLiteralSymbol", "Option", "ExceptionSpec", "Token", "TokenStream", "Lookahead", "Grammar", "CommonToken", "Alternative", "TokenSymbol", "AST", "RuleRefElement", "Object", "BlockContext", "GrammarFile", "Rule", "ExceptionHandler", "ASTNULLType"]
+      "el": ["Null", "", "ExceptionHandler", "Integer", "String", "TokenSymbol", "Lookahead", "TokenStream", "GrammarFile", "RuleSymbol", "BlockContext", "Object", "Option", "Alternative", "Rule", "CommonToken", "Token", "ASTNULLType", "Grammar", "StringLiteralSymbol", "ExceptionSpec", "IntRange", "RuleRefElement", "AST"]
+    }
+  },
+  {
+    "method_singature": "antlr.ASTVisitor::visit(antlr.collections.AST)"
+    "vars": {
+      "node": []
+    }
+  },
+  {
+    "method_singature": "antlr.SimpleTokenManager::mapToTokenSymbol(java.lang.String, antlr.TokenSymbol)"
+    "vars": {
+      "sym": ["", "Null", "String", "Lookahead", "TokenSymbol", "ExceptionHandler", "Integer", "Alternative", "Option", "CommonToken", "Rule", "RuleSymbol", "BlockContext", "Object", "GrammarFile", "TokenStream", "Grammar", "ASTNULLType", "Token", "ExceptionSpec", "StringLiteralSymbol", "IntRange", "AST", "RuleRefElement"]
+      "name": ["Null", "String", ""]
+    }
+  },
+  {
+    "method_singature": "antlr.LLkGrammarAnalyzer::look(int, antlr.GrammarAtom)"
+    "vars": {
+      "atom": []
+    }
+  }
+]

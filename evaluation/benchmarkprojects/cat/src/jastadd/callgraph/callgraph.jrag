@@ -1,0 +1,513 @@
+/* Copyright (c) 2023, Idriss Riouak <idriss.riouak@cs.lth.se>
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice,
+ * this list of conditions and the following disclaimer.
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ * this list of conditions and the following disclaimer in the documentation
+ * and/or other materials provided with the distribution.
+ *
+ * 3. Neither the name of the copyright holder nor the names of its
+ * contributors may be used to endorse or promote products derived from this
+ * software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+ */
+
+import java.util.LinkedHashSet;
+import org.extendj.Cat;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+
+aspect CallGraphWithRAGS {
+
+  
+  coll Set<InvocationTarget> InvocationTarget
+      .backwardCG()[new LinkedHashSet<>()] with add root Program;
+  InvocationTarget contributes getContribution() to InvocationTarget.backwardCG() for each cg();
+
+  syn lazy Set<InvocationTarget> InvocationTarget.reversedCG() {
+    return backwardCG();
+  }
+
+  syn lazy Set<InvocationTarget> InvocationTarget.cg()
+      circular[new LinkedHashSet<>()] {
+    Set<InvocationTarget> cg = new LinkedHashSet<>();
+    for (Invocable m : calledMethods()) {
+      processAttributeDeclarations(m.allDecls(), cg);
+    }
+    processAttributeDeclarations(implicitCalls(), cg);
+
+    return cg;
+  }
+
+  syn lazy Set<InvocationTarget> InvocationTarget.completeCallGraph()
+      circular[new LinkedHashSet<>()] {
+    Set<InvocationTarget> cg = new LinkedHashSet<>();
+    for (Invocable m : calledMethods()) {
+      processAllDeclarations(m.allDecls(), cg);
+    }
+    processAllDeclarations(implicitCalls(), cg);
+
+    return cg;
+  }
+
+public
+  void InvocationTarget.processAttributeDeclarations(
+      Set<InvocationTarget> declarations, Set<InvocationTarget> callGraph) {
+    for (InvocationTarget declaration : declarations) {
+      if (declaration.shouldBeConsiderAsMethod()) {
+        callGraph.add(declaration);
+      } else {
+        callGraph.addAll(declaration.cg());
+      }
+    }
+  }
+
+public
+  void InvocationTarget.processAllDeclarations(
+      Set<InvocationTarget> declarations, Set<InvocationTarget> callGraph) {
+    for (InvocationTarget declaration : declarations) {
+      callGraph.add(declaration);
+    }
+  }
+
+public
+  int Program.currentSccId = 0;
+
+public
+  int MethodDecl.sccID = -1;
+public
+  int ConstructorDecl.sccID = -1;
+public
+  int InstanceInitializer.sccID = -1;
+public
+  int StaticInitializer.sccID = -1;
+
+  syn lazy int InvocationTarget.getSCCID() =
+      (sccID == -1) ? computeSCCs() : sccID;
+
+public
+  int InvocationTarget.computeSCCs() {
+    Stack<InvocationTarget> stack = new Stack<>();
+    Set<InvocationTarget> visited = new LinkedHashSet<>();
+    Set<InvocationTarget> scc = new LinkedHashSet<>();
+    scc.add(this);
+    scc.addAll(cg());
+
+    for (InvocationTarget node : scc) {
+      if (!visited.contains(node)) {
+        node.dfs(stack, visited);
+      }
+    }
+
+    visited.clear();
+    while (!stack.isEmpty()) {
+      InvocationTarget node = stack.pop();
+      if (!visited.contains(node)) {
+        node.dfs(visited, program().currentSccId);
+        program().currentSccId++;
+      }
+    }
+
+    return this.sccID;
+  }
+
+public
+  void InvocationTarget.dfs(Stack<InvocationTarget> stack,
+                            Set<InvocationTarget> visited) {
+    visited.add(this);
+
+    for (InvocationTarget neighbor : cg()) {
+      if (!visited.contains(neighbor)) {
+        neighbor.dfs(stack, visited);
+      }
+    }
+
+    stack.push(this);
+  }
+
+public
+  void InvocationTarget.dfs(Set<InvocationTarget> visited, int currentSccId) {
+    visited.add(this);
+    sccID = currentSccId;
+
+    for (InvocationTarget neighbor : reversedCG()) {
+      if (!visited.contains(neighbor)) {
+        neighbor.dfs(visited, currentSccId);
+      }
+    }
+  }
+}
+
+aspect CallGraph {
+
+  /**
+   * Represents an entity that can be invoked or called.
+   */
+public
+  interface Invocable {
+  }
+
+  MethodAccess implements Invocable;
+  ClassInstanceExpr implements Invocable;
+  SuperConstructorAccess implements Invocable;
+
+  /**
+   * Represents a target that can be the subject of an invocation.
+   */
+public
+  interface InvocationTarget {
+  }
+
+  MethodDecl implements InvocationTarget;
+  ConstructorDecl implements InvocationTarget;
+  InstanceInitializer implements InvocationTarget;
+  StaticInitializer implements InvocationTarget;
+
+  coll Set<Invocable> InvocationTarget
+      .calledMethods()[new LinkedHashSet<>()] with add;
+  Invocable contributes this to InvocationTarget.calledMethods() for enclosingTarget();
+  // Collecting NTAs
+  ClassDecl contributes nta getImplicitConstructorOpt()
+      to InvocationTarget.calledMethods();
+  ConstructorDecl contributes nta getImplicitConstructorInvocation()
+      to ConstructorDecl.calledMethods();
+
+  syn InvocationTarget Program.getTarget(String pkg, String name) {
+    String packageName =
+        pkg.contains(".") ? pkg.substring(0, pkg.lastIndexOf(".")) : "";
+
+    String className = pkg.substring(pkg.lastIndexOf(".") + 1);
+    TypeDecl td = lookupType(packageName, className);
+    Iterator iter = td.methods().iterator();
+    while (iter.hasNext()) {
+      MethodDecl md = (MethodDecl)iter.next();
+      if (md.name().equals(name)) {
+        return md;
+      }
+    }
+    throw new RuntimeException("CAT: Invocation Target not found. Check the " +
+                               "package and the name of the target.");
+  }
+
+  /**
+   * Inherited attribute that represents the nearest enclosing invocation target
+   * of an invocable entity.
+   *
+   * @return The nearest enclosing invocation target or null if none.
+   */
+  inh lazy InvocationTarget Invocable.enclosingTarget();
+  eq InvocationTarget.getChild().enclosingTarget() = this;
+  eq Program.getChild().enclosingTarget() = null;
+
+  syn lazy String InvocationTarget.returnType() = "";
+  eq MethodDecl.returnType() = type().name();
+
+  syn lazy Map<String, String> InvocationTarget.paramTypes() =
+      new LinkedHashMap<>();
+  eq MethodDecl.paramTypes() {
+    Map<String, String> paramTypes = new LinkedHashMap<>();
+    for (int i = 0; i < getNumParameter(); i++) {
+      TypeDecl paramType = getParameter(i).type();
+
+      paramTypes.put(getParameter(i).name(), paramType.name());
+    }
+    return paramTypes;
+  }
+
+public
+  boolean Program.attributesOnly = false;
+
+public
+  String Program.entryPointPackage = "";
+public
+  String Program.entryPointMethod = "";
+
+public
+  boolean Program.mergeNames = false;
+
+  syn lazy boolean InvocationTarget.shouldBeConsiderAsMethod() =
+      !program().attributesOnly;
+  eq MethodDecl.shouldBeConsiderAsMethod() =
+      (!program().attributesOnly || isAnAttribute()) && hasBlock();
+
+  // syn boolean InvocationTarget.itsTypeIsCreated(InvocationTarget caller) {
+  //   TypeDecl host = hostType().getGenericHostDecl();
+  //   Set<TypeDecl> allInstances = caller.newInstances();
+  //   for (TypeDecl t : allInstances) {
+  //     if (host.subtype(t)) {
+  //       return true;
+  //     }
+  //   }
+  //   return false;
+  // }
+
+  /**
+   * Returns a set of implicit call targets for this invocation target.
+   *
+   * @return The set of implicit call targets.
+   */
+  syn lazy Set<InvocationTarget> InvocationTarget.implicitCalls() =
+      new LinkedHashSet<>();
+  eq ConstructorDecl.implicitCalls() {
+    Set<InvocationTarget> implicitCallTargets = new LinkedHashSet<>();
+    implicitCallTargets.addAll(
+        ((ClassDecl)hostType()).getInstanceInitailizer());
+    implicitCallTargets.addAll(((ClassDecl)hostType()).getStaticInitailizer());
+    return implicitCallTargets;
+  }
+
+  /*
+   * @return The signature of the invocation target.
+   */
+  syn lazy String InvocationTarget.targetSignature() =
+      (program().mergeNames
+           ? ""
+           : hostType().packageName() + "." + hostType().name()) +
+      "::" + (program().mergeNames ? name() : fullSignature());
+  eq MethodDecl.targetSignature() {
+    String signature = "";
+    String anonymous = "";
+    if (hostType() instanceof AnonymousDecl) {
+      anonymous = "." + hashCode();
+    }
+    signature = (program().mergeNames ? ""
+                                      : hostType().packageName() + "." +
+                                            hostType().name() + anonymous) +
+                "::" + (program().mergeNames ? name() : fullSignature());
+    return signature;
+  }
+  eq StaticInitializer.targetSignature() =
+      hostType().packageName() + "." + hostType().name() + "::clinit<>";
+  eq InstanceInitializer.targetSignature() =
+      hostType().packageName() + "." + hostType().name() + "::init<>";
+
+  /** Method signature, including type arguments.  */
+  syn lazy String ConstructorDecl.fullSignature() {
+    StringBuilder sb = new StringBuilder();
+    String anonymous = "";
+    if (hostType() instanceof AnonymousDecl) {
+      anonymous = "." + hashCode();
+    }
+    sb.append(anonymous);
+    sb.append(name() + "(");
+    for (int i = 0; i < getNumParameter(); i++) {
+      if (i != 0) {
+        sb.append(", ");
+      }
+      TypeDecl paramType = getParameter(i).type();
+      if (paramType instanceof PrimitiveType) {
+        sb.append(paramType.typeName());
+      } else {
+        sb.append(paramType.fullName());
+      }
+    }
+    sb.append(")");
+    return sb.toString();
+  }
+
+  syn lazy InvocationTarget InvocationTarget.getContribution() = this;
+  eq ConstructorDeclSubstituted.getContribution() = getOriginal();
+
+  /**
+   * Returns a set of all declarations of the invocable entity.
+   *
+   * @return A set containing all declarations of the invocable entity.
+   */
+  syn lazy Set<InvocationTarget> Invocable.allDecls() =
+      Collections.<InvocationTarget>singleton(decl().getContribution());
+  eq MethodAccess.allDecls() {
+    Set<InvocationTarget> decls = new LinkedHashSet<>();
+    decls.add(decl());
+    if (decl().isPrivate()) {
+      return decls;
+    }
+    MethodDecl targetDecl = decl();
+    TypeDecl host = targetDecl.hostType().getGenericHostDecl();
+    // Set<TypeDecl> allInstances = enclosingTarget().newInstances();
+    for (TypeDecl t : host.subtypes()) {
+      if (t instanceof ClassDecl || t instanceof InterfaceDecl) {
+        decls.addAll(
+            t.methods()
+                .stream()
+                .filter(md->(md.sameSignature(targetDecl) && md.hasBlock()))
+                .collect(Collectors.toList()));
+      }
+    }
+
+    return decls;
+  }
+
+  /**
+   * Indicates whether this body declaration is an instance initializer.
+   *
+   * @return True if this body declaration is an instance initializer, false
+   * otherwise.
+   */
+  syn lazy boolean BodyDecl.isInstanceInitializer() = false;
+  eq InstanceInitializer.isInstanceInitializer() = true;
+
+  /**
+   * Indicates whether this instance initializer is an instance initializer.
+   *
+   * @return True, as this declaration is an instance initializer.
+   */
+  syn lazy boolean BodyDecl.isStaticInitializer() = false;
+  eq StaticInitializer.isStaticInitializer() = true;
+
+  /**
+   * Returns a list of instance initializers declared within the class.
+   *
+   * @return A list of instance initializers.
+   */
+  syn lazy java.util.List<InstanceInitializer> ClassDecl
+      .getInstanceInitailizer() {
+    java.util.List<InstanceInitializer> init = new ArrayList<>();
+    for (BodyDecl bd : getBodyDeclList()) {
+      if (bd.isInstanceInitializer()) {
+        init.add((InstanceInitializer)bd);
+      }
+    }
+    return init;
+  }
+
+  /**
+   * Returns a list of static initializers declared within the class.
+   *
+   * @return A list of static initializers.
+   */
+  syn lazy java.util.List<StaticInitializer> ClassDecl.getStaticInitailizer() {
+    java.util.List<StaticInitializer> init = new ArrayList<>();
+    for (BodyDecl bd : getBodyDeclList()) {
+      if (bd.isStaticInitializer()) {
+        init.add((StaticInitializer)bd);
+      }
+    }
+    return init;
+  }
+
+  /**
+   * Inherited attribute that represents the type declaration where this method
+   * is declared.
+   *
+   * @return The type declaration where this method is declared.
+   */
+  inh lazy TypeDecl MethodDecl.declaredIn();
+  eq ClassDecl.getChild().declaredIn() = this;
+  eq InterfaceDecl.getChild().declaredIn() = this;
+  eq Program.getChild().declaredIn() = null;
+}
+
+aspect AttributeKind {
+
+  syn lazy String Annotation.getKind(int i) {
+    try {
+      ElementValuePair pair = getElementValuePair(i);
+      ElementConstantValue ecv = (ElementConstantValue)pair.getElementValue();
+      Expr e = ecv.getExpr();
+      Dot d = (Dot)e;
+      VarAccess va = (VarAccess)d.lastAccess();
+      return va.getID();
+    } catch (Throwable ignored) {
+      try {
+        ElementValuePair pair = getElementValuePair(i);
+        return pair.getName();
+      } catch (Throwable t) {
+      }
+      // it's not an attribute
+    }
+    return "";
+  }
+
+  syn lazy boolean Modifier.isAnAttribute() = false;
+  eq Annotation.isAnAttribute() = isCollectionAttribute() || isSynAttribute() ||
+                                  isInhAttribute() || isCircularAttribute();
+
+  syn lazy boolean Modifier.isCollectionAttribute() = false;
+  eq Annotation.isCollectionAttribute() = getKind(0).equals("COLL");
+
+  syn lazy boolean Modifier.isSynAttribute() = false;
+  eq Annotation.isSynAttribute() = getKind(0).equals("SYN");
+
+  syn lazy boolean Modifier.isInhAttribute() = false;
+  eq Annotation.isInhAttribute() = getKind(0).equals("INH");
+
+  syn lazy boolean Modifier.isCircularAttribute() = false;
+  eq Annotation.isCircularAttribute() = getKind(1).equals("isCircular");
+
+public
+  boolean InvocationTarget.hasAttributeInModifiers(
+      Iterable<Modifier> modifiers, Predicate<Modifier> attributeCheck) {
+    for (Modifier m : modifiers) {
+      if (attributeCheck.test(m)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  syn lazy boolean InvocationTarget.isAnAttribute() = false;
+  eq MethodDecl.isAnAttribute() {
+    return hasAttributeInModifiers(getModifiers().getModifiers(),
+                                   Modifier::isAnAttribute);
+  }
+
+  syn lazy boolean InvocationTarget.isSynAttribute() = false;
+  eq MethodDecl.isSynAttribute() {
+    return hasAttributeInModifiers(getModifiers().getModifiers(),
+                                   Modifier::isSynAttribute);
+  }
+
+  syn lazy boolean InvocationTarget.isInhAttribute() = false;
+  eq MethodDecl.isInhAttribute() {
+    return hasAttributeInModifiers(getModifiers().getModifiers(),
+                                   Modifier::isInhAttribute);
+  }
+
+  syn lazy boolean InvocationTarget.isCircularAttribute() = false;
+  eq MethodDecl.isCircularAttribute() {
+    return hasAttributeInModifiers(getModifiers().getModifiers(),
+                                   Modifier::isCircularAttribute);
+  }
+
+  syn lazy boolean InvocationTarget.isCollectionAttribute() = false;
+  eq MethodDecl.isCollectionAttribute() {
+    return hasAttributeInModifiers(getModifiers().getModifiers(),
+                                   Modifier::isCollectionAttribute);
+  }
+
+  syn lazy java.util.List<String> InvocationTarget.getKindOfAttribute() {
+    java.util.List<String> kinds = new ArrayList<String>();
+    if (isSynAttribute()) {
+      kinds.add("syn");
+    }
+    if (isInhAttribute()) {
+      kinds.add("inh");
+    }
+    if (isCircularAttribute()) {
+      kinds.add("circular");
+    }
+    if (isCollectionAttribute()) {
+      kinds.add("collection");
+    }
+    if (kinds.isEmpty()) {
+      kinds.add("method");
+    }
+    return kinds;
+  }
+}

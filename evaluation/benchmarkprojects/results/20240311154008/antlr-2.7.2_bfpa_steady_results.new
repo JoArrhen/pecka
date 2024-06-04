@@ -1,0 +1,12 @@
+Looking up points-to for antlr.collections.impl.BitSet::toString(java.lang.String, antlr.collections.impl.Vector) 
+ Looking up points-to for antlr.CppCodeGenerator::processActionForSpecialSymbols(java.lang.String, int, antlr.RuleBlock, antlr.ActionTransInfo) 
+ Looking up points-to for antlr.actions.cpp.ActionLexer::mk_tokenSet_10() 
+ Looking up points-to for antlr.actions.csharp.ActionLexer::mARG(boolean) 
+ Looking up points-to for antlr.DocBookCodeGenerator::genFollowSetForRuleBlock(antlr.RuleBlock) 
+ Looking up points-to for antlr.debug.ParserTokenAdapter::refresh()
+Looking up points-to for antlr.InputBuffer::fill(int) 
+ Looking up points-to for antlr.debug.DebuggingCharScanner::goToSleep() 
+ Looking up points-to for antlr.preprocessor.PreprocessorLexer::mk_tokenSet_1() 
+ Looking up points-to for antlr.LexerSharedInputState::reset() 
+ Looking up points-to for antlr.debug.LLkDebuggingParser::reportError(java.lang.String) 
+

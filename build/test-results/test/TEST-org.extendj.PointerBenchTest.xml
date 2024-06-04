@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.extendj.PointerBenchTest" tests="51" skipped="0" failures="0" errors="0" timestamp="2024-06-04T11:33:08" hostname="MBPRO.local" time="0.861">
+  <properties/>
+  <testcase name="Check that src/test/resources/exampleprograms/Alias.java gets a points-to result" classname="org.extendj.PointerBenchTest" time="0.211"/>
+  <testcase name="PointerBenchtest for PointerBench/src/cornerCases/FlowSensitivity1.java" classname="org.extendj.PointerBenchTest" time="0.091"/>
+  <testcase name="PointerBenchtest for PointerBench/src/cornerCases/FieldSensitivity2.java" classname="org.extendj.PointerBenchTest" time="0.017"/>
+  <testcase name="PointerBenchtest for PointerBench/src/cornerCases/StrongUpdate1.java" classname="org.extendj.PointerBenchTest" time="0.015"/>
+  <testcase name="PointerBenchtest for PointerBench/src/cornerCases/ContextSensitivity2.java" classname="org.extendj.PointerBenchTest" time="0.018"/>
+  <testcase name="PointerBenchtest for PointerBench/src/cornerCases/ContextSensitivity3.java" classname="org.extendj.PointerBenchTest" time="0.014"/>
+  <testcase name="PointerBenchtest for PointerBench/src/cornerCases/ObjectSensitivity2.java" classname="org.extendj.PointerBenchTest" time="0.013"/>
+  <testcase name="PointerBenchtest for PointerBench/src/cornerCases/ObjectSensitivity1.java" classname="org.extendj.PointerBenchTest" time="0.011"/>
+  <testcase name="PointerBenchtest for PointerBench/src/cornerCases/StrongUpdate2.java" classname="org.extendj.PointerBenchTest" time="0.012"/>
+  <testcase name="PointerBenchtest for PointerBench/src/cornerCases/ContextSensitivity1.java" classname="org.extendj.PointerBenchTest" time="0.012"/>
+  <testcase name="PointerBenchtest for PointerBench/src/cornerCases/FieldSensitivity1.java" classname="org.extendj.PointerBenchTest" time="0.011"/>
+  <testcase name="PointerBenchtest for PointerBench/src/basic/ReturnValue2.java" classname="org.extendj.PointerBenchTest" time="0.012"/>
+  <testcase name="PointerBenchtest for PointerBench/src/basic/Parameter2.java" classname="org.extendj.PointerBenchTest" time="0.01"/>
+  <testcase name="PointerBenchtest for PointerBench/src/basic/ReturnValue3.java" classname="org.extendj.PointerBenchTest" time="0.012"/>
+  <testcase name="PointerBenchtest for PointerBench/src/basic/Interprocedural1.java" classname="org.extendj.PointerBenchTest" time="0.013"/>
+  <testcase name="PointerBenchtest for PointerBench/src/basic/SimpleAlias1.java" classname="org.extendj.PointerBenchTest" time="0.008"/>
+  <testcase name="PointerBenchtest for PointerBench/src/basic/Loops1.java" classname="org.extendj.PointerBenchTest" time="0.013"/>
+  <testcase name="PointerBenchtest for PointerBench/src/basic/Branching1.java" classname="org.extendj.PointerBenchTest" time="0.01"/>
+  <testcase name="PointerBenchtest for PointerBench/src/basic/Loops2.java" classname="org.extendj.PointerBenchTest" time="0.01"/>
+  <testcase name="PointerBenchtest for PointerBench/src/basic/Recursion1.java" classname="org.extendj.PointerBenchTest" time="0.01"/>
+  <testcase name="PointerBenchtest for PointerBench/src/basic/Interprocedural2.java" classname="org.extendj.PointerBenchTest" time="0.008"/>
+  <testcase name="PointerBenchtest for PointerBench/src/basic/Parameter1.java" classname="org.extendj.PointerBenchTest" time="0.007"/>
+  <testcase name="PointerBenchtest for PointerBench/src/basic/ReturnValue1.java" classname="org.extendj.PointerBenchTest" time="0.008"/>
+  <testcase name="PointerBenchtest for PointerBench/src/new/FilterArrayCast.java" classname="org.extendj.PointerBenchTest" time="0.011"/>
+  <testcase name="PointerBenchtest for PointerBench/src/new/FieldList.java" classname="org.extendj.PointerBenchTest" time="0.033"/>
+  <testcase name="PointerBenchtest for PointerBench/src/new/FilterObject.java" classname="org.extendj.PointerBenchTest" time="0.009"/>
+  <testcase name="PointerBenchtest for PointerBench/src/new/SimpleMap.java" classname="org.extendj.PointerBenchTest" time="0.015"/>
+  <testcase name="PointerBenchtest for PointerBench/src/new/EnhancedFor.java" classname="org.extendj.PointerBenchTest" time="0.015"/>
+  <testcase name="PointerBenchtest for PointerBench/src/new/FilterListCast.java" classname="org.extendj.PointerBenchTest" time="0.014"/>
+  <testcase name="PointerBenchtest for PointerBench/src/new/ChainedFieldAccesses.java" classname="org.extendj.PointerBenchTest" time="0.009"/>
+  <testcase name="PointerBenchtest for PointerBench/src/new/FilterCast.java" classname="org.extendj.PointerBenchTest" time="0.009"/>
+  <testcase name="PointerBenchtest for PointerBench/src/new/FieldMap.java" classname="org.extendj.PointerBenchTest" time="0.014"/>
+  <testcase name="PointerBenchtest for PointerBench/src/new/FilterRawGenerics.java" classname="org.extendj.PointerBenchTest" time="0.012"/>
+  <testcase name="PointerBenchtest for PointerBench/src/new/StaticFieldVarAccess.java" classname="org.extendj.PointerBenchTest" time="0.007"/>
+  <testcase name="PointerBenchtest for PointerBench/src/new/FilterGenericInterface.java" classname="org.extendj.PointerBenchTest" time="0.008"/>
+  <testcase name="PointerBenchtest for PointerBench/src/new/SimpleList.java" classname="org.extendj.PointerBenchTest" time="0.011"/>
+  <testcase name="PointerBenchtest for PointerBench/src/new/MethodAccessAfterParExpr.java" classname="org.extendj.PointerBenchTest" time="0.009"/>
+  <testcase name="PointerBenchtest for PointerBench/src/new/ChainedMixedAccesses.java" classname="org.extendj.PointerBenchTest" time="0.008"/>
+  <testcase name="PointerBenchtest for PointerBench/src/new/AssignExpression.java" classname="org.extendj.PointerBenchTest" time="0.007"/>
+  <testcase name="PointerBenchtest for PointerBench/src/new/EnhancedForArray.java" classname="org.extendj.PointerBenchTest" time="0.009"/>
+  <testcase name="PointerBenchtest for PointerBench/src/collections/List1.java" classname="org.extendj.PointerBenchTest" time="0.013"/>
+  <testcase name="PointerBenchtest for PointerBench/src/collections/List2.java" classname="org.extendj.PointerBenchTest" time="0.014"/>
+  <testcase name="PointerBenchtest for PointerBench/src/collections/Array1.java" classname="org.extendj.PointerBenchTest" time="0.011"/>
+  <testcase name="PointerBenchtest for PointerBench/src/generalJava/Null1.java" classname="org.extendj.PointerBenchTest" time="0.007"/>
+  <testcase name="PointerBenchtest for PointerBench/src/generalJava/Interface1.java" classname="org.extendj.PointerBenchTest" time="0.008"/>
+  <testcase name="PointerBenchtest for PointerBench/src/generalJava/Exception2.java" classname="org.extendj.PointerBenchTest" time="0.009"/>
+  <testcase name="PointerBenchtest for PointerBench/src/generalJava/Exception1.java" classname="org.extendj.PointerBenchTest" time="0.006"/>
+  <testcase name="PointerBenchtest for PointerBench/src/generalJava/Null2.java" classname="org.extendj.PointerBenchTest" time="0.007"/>
+  <testcase name="PointerBenchtest for PointerBench/src/generalJava/OuterClass1.java" classname="org.extendj.PointerBenchTest" time="0.007"/>
+  <testcase name="PointerBenchtest for PointerBench/src/generalJava/StaticVariables1.java" classname="org.extendj.PointerBenchTest" time="0.006"/>
+  <testcase name="PointerBenchtest for PointerBench/src/generalJava/SuperClasses1.java" classname="org.extendj.PointerBenchTest" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Warning: attempting to parse classfile version 61.0 (jrt:/java.base/java/lang/Object.class). Classfile versions up to 55.x (Java SE 8) are supported by this version of the compiler.
+]]></system-err>
+</testsuite>

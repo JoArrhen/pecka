@@ -1,0 +1,71 @@
+aspect DotHelpers {
+    syn Dot Dot.topDot() = (hasParentDot()) ? parentDot().topDot() : this;
+    syn Dot Dot.leftmostDot() {
+        Dot dot = topDot();
+        while (dot.getLeft() instanceof Dot) {
+            dot = (Dot) dot.getLeft();
+        }
+        return dot;
+    }
+    syn Dot Dot.rightmostDot() {
+        Dot dot = topDot();
+        while (dot.getRight() instanceof Dot) {
+            dot = (Dot) dot.getRight();
+        }
+        return dot;
+    }
+    syn Dot Dot.nextDot() {
+        if (getRight() instanceof Dot) {
+            return (Dot) getRight();
+        }
+        if (hasParentDot()) {
+            return parentDot();
+        }
+        return null;
+    }
+
+    // Returns set of both type of field edges, which means that x.f == y
+    // since x.f subset of y /\ y subset of x.f => x.f == y
+    syn Set<InclusionEdge> Dot.fieldEqualityEdges(DeclarationSite d1, DeclarationSite d2, String field) =
+        new HashSet<>(Arrays.asList(new FieldStoreEdge(d2, d1, field), new FieldLoadEdge(d1, d2, field)));
+}
+
+aspect DotExpressionEdges {
+    /*
+    x.f.g tree:
+        .t1
+       / \
+      x   .t2
+         / \
+        f   g
+
+    This contribution checks for the next dot, which is t2 for t1.
+    It gets the left child of t2, f and says that t1.f = t2.
+    */
+
+    Dot contributes each fieldEqualityEdges(temp(), nextDot().temp(), nextDot().getLeft().name2())
+        when nextDot() != null && nextDot().getLeft() instanceof VarAccess
+        to InvocationTarget.inclusionEdges() for each enclosingMethods();
+
+    // Link base variable, x in x.f.g to t1.
+    Dot contributes new InclusionEdge(getLeft().getDeclaration(), temp())
+        when this == leftmostDot()
+        to InvocationTarget.inclusionEdges() for each enclosingMethods();
+
+    /*
+    If this is the last dot, t2 in the example, then get the right child g and say 
+    that t2.g = dotExpressionTemp which represents the entire dot expression (x.f.g)
+    */
+    Dot contributes each fieldEqualityEdges(temp(), topDot().dotExpressionTemp(), getRight().name2())
+        when this == rightmostDot() && getRight() instanceof VarAccess
+        to InvocationTarget.inclusionEdges() for each enclosingMethods();
+
+    Dot contributes new InclusionEdge(getLeft().getDeclaration(), temp())
+        when getLeft() instanceof MethodAccess
+        to InvocationTarget.inclusionEdges() for each enclosingMethods();
+
+    // Handle accessing type field: var x = Type.f;
+    Dot contributes new InclusionEdge(((VarAccess) getRight()).decl(), topDot().dotExpressionTemp())
+        when this == rightmostDot() && getRight() instanceof VarAccess 
+        to InvocationTarget.inclusionEdges() for each enclosingMethods();
+}

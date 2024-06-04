@@ -1,0 +1,109 @@
+aspect requests {
+    /*
+      Returns a string representing all points-to results for the InvocationTarget.
+    */
+    syn String InvocationTarget.pointsToResults() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Points to results for '" + targetSignature() + "':\n");
+        Map<Pointer, Set<AllocationSite>> pointsToMap = pointsToSet();
+        for (Pointer p : pointers()) {
+            java.util.List<String> types = new ArrayList<>();
+
+            if(p.typ().isPrimitive()) {
+                // We always know the type
+                types.add(p.typ().getID());
+            } else if (pointsToMap.containsKey(p)) {
+                Set<String> uniqueTypes = new HashSet<>();
+                for (AllocationSite alloc : pointsToMap.get(p)) {
+                    uniqueTypes.add(alloc.typeName());
+                }
+                types.addAll(uniqueTypes);
+            } 
+
+            sb.append(p).append(" -> ")
+                        .append(types.isEmpty() ? "?" : (String.join(", ", types)))
+                        .append("\n");
+        }
+        return sb.toString();
+    }
+
+    syn Map<String, java.util.List<String>> InvocationTarget.parameterPointers() = new HashMap<>();
+    eq MethodDecl.parameterPointers() {
+        Map<String, java.util.List<String>> res = new HashMap<>();
+        for (ParameterDeclaration param : getParameterList()) {
+            if (param.type().isPrimitive()) {
+                continue;
+            }
+            java.util.List<String> types = pointsToSet().get(param).stream().map(allocsite -> allocsite.typeName()).distinct().collect(Collectors.toList());
+            res.put(param.getID(), types);
+
+        }
+
+        return res;
+    }
+    eq ConstructorDecl.parameterPointers() {
+        Map<String, java.util.List<String>> res = new HashMap<>();
+        for (ParameterDeclaration param : getParameterList()) {
+            if (param.type().isPrimitive()) {
+                continue;
+            }
+            java.util.List<String> types = pointsToSet().get(param).stream().map(allocsite -> allocsite.typeName()).distinct().collect(Collectors.toList());
+            res.put(param.getID(), types);
+
+        }
+
+        return res;
+    }
+
+    /*
+      Counts how many allocations found in total from the pointers in the InvocationTarget after running the analysis.
+    */
+    syn long InvocationTarget.pointsToResultCount() {
+        long sum = 0;
+        for (Map.Entry<Pointer, Set<AllocationSite>> entry : pointsToSet().entrySet()) {
+            if(pointers().contains(entry.getKey())) {
+                sum += entry.getValue().size();
+            }
+
+        }
+        return sum;
+    }
+
+    /*
+      Counts how many unique types found in total from the pointers in the InvocationTarget after running the analysis.
+    */
+    syn long InvocationTarget.uniqueTypes() {
+        long sum = 0;
+        for (Map.Entry<Pointer, Set<AllocationSite>> entry : pointsToSet().entrySet()) {
+            if(pointers().contains(entry.getKey())) {
+                sum += entry.getValue().stream().map(alloc -> alloc.typeName()).distinct().count();
+            }
+        }
+        return sum;
+    }
+
+    /*
+     Returns a string representing the points to set for the pointer. Note that this uses the Pointer.pointsToSet(), running the 
+     analysis for each pointer called. To get the points-to result for a whole method, it is better to use `InvocationTarget.pointstToResults()`
+    */
+    syn String Pointer.pointsToString() {
+        String types = pointsToSet().stream()
+                                .map(allocsite -> allocsite.typeName())
+                                .distinct()
+                                .collect(Collectors.joining(", "));
+
+        StringBuilder sb = new StringBuilder();
+        sb.append(getID()).append(" -> ").append(types.isEmpty() ? "?" : types);
+        return sb.toString();
+    }
+
+
+    /*
+        Will make all pointers get a call to `pointsToSet()`. This is used for testing
+    */
+    coll Set<String> Program.allPointsToResults() [new TreeSet<>()]; // use treeset to keep it ordered
+    VarAccess contributes pointsToString() 
+        when !pointsToSet().isEmpty()
+        to Program.allPointsToResults() for program();
+
+}

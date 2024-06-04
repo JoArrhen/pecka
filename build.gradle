@@ -1,0 +1,245 @@
+import org.apache.tools.ant.taskdefs.condition.Os
+import org.gradle.api.tasks.testing.logging.TestExceptionFormat
+
+plugins {
+  id 'java'
+  id 'org.jastadd' version '1.13.3'
+  id 'eclipse'
+  id 'com.adarshr.test-logger' version '3.2.0'
+}
+
+defaultTasks 'jar'
+
+if (!file('extendj/jastadd_modules').exists()) {
+  throw new GradleException('ExtendJ seems to be missing. Please run "git submodule init", then "git submodule update".')
+}
+
+
+
+jastadd {
+  configureModuleBuild()
+
+  modules {
+    include("extendj/jastadd_modules") // Include core ExtendJ modules.
+
+      module "cat", {
+        //imports "java11 frontend" // ExtendJ dependency for cat module.
+          jastadd {
+            basedir "cat/src/jastadd/"
+              include "**/*.ast"
+              include "**/*.jadd"
+              include "**/*.jrag"
+          }
+      }
+
+    module "bfpa", {
+      imports "cat"
+        imports "java8 frontend"
+        jastadd {
+          basedir "src/main/jastadd/"
+            include "**/*.ast"
+            include "**/*.jadd"
+            include "**/*.jrag"
+        }
+    }
+
+
+  }
+
+  // Target module to build:
+  module = 'bfpa'
+  jastaddOptions = [ "--rewrite=cnta",
+                 "--safeLazy",
+                 "--visitCheck=false",
+                 //"--optimize-imports",
+                 "--tracing=api"
+                   //  ,
+                   //  "--bridges",
+                   //  "--dnc=CacheConfiguration.json"
+  ]
+  astPackage = 'org.extendj.ast'
+  parser.name = 'JavaParser'
+  scanner.name = 'OriginalScanner'
+}
+
+sourceSets.main {
+  java {
+    srcDir 'extendj/src/frontend-main'
+    srcDir 'cat/src/java'
+  }
+  resources {
+    //srcDir 'src/java/magpiebridge/resources'
+    srcDir 'extendj/src/res'
+    srcDir jastadd.buildInfoDir
+    srcDir 'cat/resources'
+  }
+  repositories {
+    mavenLocal()
+    flatDir { dirs "tools" }
+  }
+  dependencies {
+    jastadd2 name: "jastadd2"
+  }
+}
+
+dependencies{
+  testImplementation('org.assertj:assertj-core:3.25.1')
+  testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+  testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+  // Jackson JSON Processor
+  testImplementation 'com.fasterxml.jackson.core:jackson-databind:2.0.1'
+
+
+  testImplementation 'junit:junit:4.12'
+  implementation 'junit:junit:4.12'
+  implementation 'com.sparkjava:spark-core:2.9.3'
+}
+
+sourceSets.test{
+  java{
+    //srcDir 'cat/src/java/test/'
+  }
+}
+
+test {
+  useJUnitPlatform()
+  dependsOn 'cleanTest'
+  // testLogging {
+  //     // exceptionFormat TestExceptionFormat.FULL
+  //
+  //     // events "passed", "skipped", "failed"
+  //     // showStandardStreams true
+  //
+  // }
+}
+
+sourceSets {
+  report {
+    java {
+      srcDir 'src/report/java'
+        compileClasspath += sourceSets.main.output + sourceSets.test.output
+        runtimeClasspath += sourceSets.main.output + sourceSets.test.output
+    }
+  }
+}
+
+configurations {
+  reportImplementation.extendsFrom testImplementation // Use same dependencies as for tests
+  reportRuntimeOnly.extendsFrom testRuntimeOnly
+}
+
+task report(type: JavaExec) {
+    group = 'Verification'
+    description = 'Generates report for precicion and recall for the PointerBench tests'
+    classpath = sourceSets.report.runtimeClasspath
+    main = 'org.extendj.Report'
+}
+
+// Build the cat tool with all its command line options
+task cat(type: Exec) {
+    group = 'Build'
+    description = 'Build the cat jar from the submodule. Can be used for additional options such as visualising the callgraph.'
+    workingDir file('cat')
+    commandLine 'sh', '-c', './gradlew clean jar'
+    doLast {
+        copy {
+            from 'cat/cat.jar'
+            into '.'
+        }
+    }
+}
+
+compileJava {
+    options.debug = true
+    options.compilerArgs = ['-g']
+}
+
+jar {
+  duplicatesStrategy = DuplicatesStrategy.INCLUDE
+  manifest {
+    attributes 'Main-Class' : 'org.extendj.Bfpa'
+  }
+  from { configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    exclude 'META-INF/*.RSA', 'META-INF/*.SF','META-INF/*.DSA'
+    baseName = 'pecka'
+  }
+
+  task printClasspath {
+    doLast {
+      def classpath = sourceSets.main.compileClasspath.files
+      def classpathString = classpath.collect { it.absolutePath }.join(':')
+      println "Classpath used to compile the project:"
+      println classpathString
+    }
+  }
+
+  jar.destinationDirectory = projectDir
+
+  // Java -source and -target version.
+  sourceCompatibility = '1.8'
+  targetCompatibility = '1.8'
+
+  task sourceZip(type: Zip) {
+  description 'Builds a Zip file with the entire repisotory (including submodules).'
+  destinationDirectory = projectDir
+  archiveFileName = "bfpa-src.zip"
+
+  from (projectDir) {
+    exclude '**/.git'
+    exclude '**/.gitignore'
+    exclude '**/.gitattributes'
+    exclude '**/.gitmodules'
+    exclude 'build'
+    exclude 'bin'
+    exclude '.gradle'
+    exclude '.classpath'
+    exclude '.settings'
+    exclude '.project'
+    exclude '*.jar'
+    exclude '*.zip'
+    exclude '**/*.swp'
+  }
+
+  into 'bpfp'
+}
+
+// used for jdt language server
+eclipse {
+  classpath {
+    file {
+      whenMerged {
+        entries += new org.gradle.plugins.ide.eclipse.model.SourceFolder('build/generated-src/ast', null)
+        entries += new org.gradle.plugins.ide.eclipse.model.SourceFolder('src/report/java', null)
+        entries += new org.gradle.plugins.ide.eclipse.model.SourceFolder('src/test/java', null)
+      }
+    }
+  }
+}
+
+testlogger {
+  theme = 'mocha'
+  showStandardStreams = true
+  showPassedStandardStreams = false
+  showSkippedStandardStreams = true
+  showFailedStandardStreams = true
+}
+
+task generateJavadoc(type: Javadoc) {
+    title = "Project Documentation"
+    source = files(sourceSets.main.allJava.srcDirs + ['build/generated-src/'] + ['extendj/src'] + ['extendj/java8/src'])
+    classpath = configurations.compileClasspath
+    destinationDir = file("${buildDir}/docs/javadoc")
+
+    options {
+        author true
+        version true
+        links "https://docs.oracle.com/javase/8/docs/api/"
+
+        // Disable all DocLint checks, avoiding problem with unknown tags
+        addStringOption('Xdoclint:none', '-quiet')
+    }
+    exclude '**/*.properties'
+}
+
+tasks.generateJavadoc.dependsOn 'build'

@@ -1,0 +1,2480 @@
+[
+  {
+    "method_signature": "antlr.CppCodeGenerator::gen(antlr.ActionElement)",
+    "vars": {
+      "action": ["ActionElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.DiagnosticCodeGenerator::gen(antlr.ActionElement)",
+    "vars": {
+      "action": ["ActionElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.DocBookCodeGenerator::gen(antlr.ActionElement)",
+    "vars": {
+      "action": ["ActionElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.HTMLCodeGenerator::gen(antlr.ActionElement)",
+    "vars": {
+      "action": ["ActionElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::gen(antlr.ActionElement)",
+    "vars": {
+      "action": ["ActionElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.LLkAnalyzer::look(int, antlr.ActionElement)",
+    "vars": {
+      "action": ["ActionElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::mapTreeId(java.lang.String, antlr.ActionTransInfo)",
+    "vars": {
+      "transInfo": ["ActionTransInfo"],
+      "idParam": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::suitableForCaseExpression(antlr.Alternative)",
+    "vars": {
+      "a": ["Alternative"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::suitableForCaseExpression(antlr.Alternative)",
+    "vars": {
+      "a": ["Alternative"]
+    }
+  },
+  {
+    "method_signature": "antlr.AlternativeBlock::addAlternative(antlr.Alternative)",
+    "vars": {
+      "alt": ["Alternative"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::genAlt(antlr.Alternative, antlr.AlternativeBlock)",
+    "vars": {
+      "alt": ["Alternative"],
+      "blk": ["AlternativeBlock", "OneOrMoreBlock", "ZeroOrMoreBlock", "RuleBlock", "SynPredBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::getLookaheadTestExpression(antlr.Alternative, int)",
+    "vars": {
+      "alt": ["Alternative"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::lookaheadIsEmpty(antlr.Alternative, int)",
+    "vars": {
+      "alt": ["Alternative"]
+    }
+  },
+  {
+    "method_signature": "antlr.DiagnosticCodeGenerator::genAlt(antlr.Alternative)",
+    "vars": {
+      "alt": ["Alternative"]
+    }
+  },
+  {
+    "method_signature": "antlr.DiagnosticCodeGenerator::genLookaheadSetForAlt(antlr.Alternative)",
+    "vars": {
+      "alt": ["Alternative"]
+    }
+  },
+  {
+    "method_signature": "antlr.DocBookCodeGenerator::genAlt(antlr.Alternative)",
+    "vars": {
+      "alt": ["Alternative"]
+    }
+  },
+  {
+    "method_signature": "antlr.HTMLCodeGenerator::genAlt(antlr.Alternative)",
+    "vars": {
+      "alt": ["Alternative"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::genAlt(antlr.Alternative, antlr.AlternativeBlock)",
+    "vars": {
+      "alt": ["Alternative"],
+      "blk": ["AlternativeBlock", "OneOrMoreBlock", "ZeroOrMoreBlock", "RuleBlock", "SynPredBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::getLookaheadTestExpression(antlr.Alternative, int)",
+    "vars": {
+      "alt": ["Alternative"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::lookaheadIsEmpty(antlr.Alternative, int)",
+    "vars": {
+      "alt": ["Alternative"]
+    }
+  },
+  {
+    "method_signature": "antlr.LLkAnalyzer::altUsesWildcardDefault(antlr.Alternative)",
+    "vars": {
+      "alt": ["Alternative"]
+    }
+  },
+  {
+    "method_signature": "antlr.MakeGrammar::setBlock(antlr.AlternativeBlock, antlr.AlternativeBlock)",
+    "vars": {
+      "b": ["ZeroOrMoreBlock", "OneOrMoreBlock", "SynPredBlock"],
+      "src": ["AlternativeBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::gen(antlr.AlternativeBlock)",
+    "vars": {
+      "blk": ["AlternativeBlock", "SynPredBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::genBlockPreamble(antlr.AlternativeBlock)",
+    "vars": {
+      "blk": ["AlternativeBlock", "OneOrMoreBlock", "ZeroOrMoreBlock", "RuleBlock", "SynPredBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.DiagnosticCodeGenerator::gen(antlr.AlternativeBlock)",
+    "vars": {
+      "blk": ["AlternativeBlock", "SynPredBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.DiagnosticCodeGenerator::genBlockPreamble(antlr.AlternativeBlock)",
+    "vars": {
+      "blk": ["AlternativeBlock", "OneOrMoreBlock", "ZeroOrMoreBlock", "RuleBlock", "SynPredBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.DiagnosticCodeGenerator::genCommonBlock(antlr.AlternativeBlock)",
+    "vars": {
+      "blk": ["AlternativeBlock", "OneOrMoreBlock", "ZeroOrMoreBlock", "RuleBlock", "SynPredBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.DiagnosticCodeGenerator::genLookaheadSetForBlock(antlr.AlternativeBlock)",
+    "vars": {
+      "blk": ["AlternativeBlock", "OneOrMoreBlock", "ZeroOrMoreBlock", "RuleBlock", "SynPredBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.DocBookCodeGenerator::gen(antlr.AlternativeBlock)",
+    "vars": {
+      "blk": ["AlternativeBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.DocBookCodeGenerator::genCommonBlock(antlr.AlternativeBlock)",
+    "vars": {
+      "blk": ["AlternativeBlock", "OneOrMoreBlock", "ZeroOrMoreBlock", "RuleBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.DocBookCodeGenerator::genGenericBlock(antlr.AlternativeBlock, java.lang.String)",
+    "vars": {
+      "blk": ["AlternativeBlock", "OneOrMoreBlock", "ZeroOrMoreBlock"],
+      "blkOp": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.HTMLCodeGenerator::gen(antlr.AlternativeBlock)",
+    "vars": {
+      "blk": ["AlternativeBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.HTMLCodeGenerator::genCommonBlock(antlr.AlternativeBlock)",
+    "vars": {
+      "blk": ["AlternativeBlock", "OneOrMoreBlock", "ZeroOrMoreBlock", "RuleBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.HTMLCodeGenerator::genGenericBlock(antlr.AlternativeBlock, java.lang.String)",
+    "vars": {
+      "blk": ["AlternativeBlock", "OneOrMoreBlock", "ZeroOrMoreBlock"],
+      "blkOp": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::gen(antlr.AlternativeBlock)",
+    "vars": {
+      "blk": ["AlternativeBlock", "SynPredBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::genBlockInitAction(antlr.AlternativeBlock)",
+    "vars": {
+      "blk": ["AlternativeBlock", "OneOrMoreBlock", "ZeroOrMoreBlock", "RuleBlock", "SynPredBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::genBlockPreamble(antlr.AlternativeBlock)",
+    "vars": {
+      "blk": ["AlternativeBlock", "OneOrMoreBlock", "ZeroOrMoreBlock", "RuleBlock", "SynPredBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.LLkAnalyzer::deterministic(antlr.AlternativeBlock)",
+    "vars": {
+      "blk": ["AlternativeBlock", "OneOrMoreBlock", "ZeroOrMoreBlock", "RuleBlock", "SynPredBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.LLkAnalyzer::getAltLookahead(antlr.AlternativeBlock, int, int)",
+    "vars": {
+      "blk": ["AlternativeBlock", "OneOrMoreBlock", "ZeroOrMoreBlock", "RuleBlock", "SynPredBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.LLkAnalyzer::look(int, antlr.AlternativeBlock)",
+    "vars": {
+      "blk": ["AlternativeBlock", "OneOrMoreBlock", "ZeroOrMoreBlock", "RuleBlock", "SynPredBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.LLkAnalyzer::subruleCanBeInverted(antlr.AlternativeBlock, boolean)",
+    "vars": {
+      "blk": ["AlternativeBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.Alternative::addElement(antlr.AlternativeElement)",
+    "vars": {
+      "e": ["AlternativeBlock", "OneOrMoreBlock", "ZeroOrMoreBlock", "ActionElement", "BlockEndElement", "WildcardElement", "StringLiteralElement", "RuleEndElement", "CharLiteralElement", "TokenRefElement", "RuleRefElement", "CharRangeElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.BlockContext::addAlternativeElement(antlr.AlternativeElement)",
+    "vars": {
+      "e": ["AlternativeBlock", "OneOrMoreBlock", "ZeroOrMoreBlock", "ActionElement", "BlockEndElement", "WildcardElement", "StringLiteralElement", "RuleEndElement", "CharLiteralElement", "TokenRefElement", "RuleRefElement", "CharRangeElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::mapTreeVariable(antlr.AlternativeElement, java.lang.String)",
+    "vars": {
+      "e": ["TokenRefElement"],
+      "name": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.MakeGrammar::addElementToCurrentAlt(antlr.AlternativeElement)",
+    "vars": {
+      "e": ["AlternativeBlock", "OneOrMoreBlock", "ZeroOrMoreBlock", "ActionElement", "BlockEndElement", "WildcardElement", "StringLiteralElement", "RuleEndElement", "CharLiteralElement", "TokenRefElement", "RuleRefElement", "CharRangeElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::genElementAST(antlr.AlternativeElement)",
+    "vars": {
+      "el": ["AlternativeBlock", "TokenRefElement", "StringLiteralElement", "WildcardElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::genErrorCatchForElement(antlr.AlternativeElement)",
+    "vars": {
+      "el": ["RuleRefElement", "TokenRefElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::genErrorTryForElement(antlr.AlternativeElement)",
+    "vars": {
+      "el": ["RuleRefElement", "TokenRefElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::genElementAST(antlr.AlternativeElement)",
+    "vars": {
+      "el": ["AlternativeBlock", "TokenRefElement", "StringLiteralElement", "WildcardElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::genErrorCatchForElement(antlr.AlternativeElement)",
+    "vars": {
+      "el": ["RuleRefElement", "TokenRefElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::genErrorTryForElement(antlr.AlternativeElement)",
+    "vars": {
+      "el": ["RuleRefElement", "TokenRefElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.LLkAnalyzer::removeCompetingPredictionSets(antlr.collections.impl.BitSet, antlr.AlternativeElement)",
+    "vars": {
+      "el": ["CharLiteralElement"],
+      "b": ["BitSet"]
+    }
+  },
+  {
+    "method_signature": "antlr.MakeGrammar::labelElement(antlr.AlternativeElement, antlr.Token)",
+    "vars": {
+      "el": ["AlternativeBlock", "WildcardElement", "StringLiteralElement", "CharLiteralElement", "TokenRefElement", "RuleRefElement", "CharRangeElement"],
+      "label": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.collections.impl.BitSet::and(antlr.collections.impl.BitSet)",
+    "vars": {
+      "a": ["BitSet"]
+    }
+  },
+  {
+    "method_signature": "antlr.collections.impl.BitSet::andInPlace(antlr.collections.impl.BitSet)",
+    "vars": {
+      "a": ["BitSet"]
+    }
+  },
+  {
+    "method_signature": "antlr.collections.impl.BitSet::orInPlace(antlr.collections.impl.BitSet)",
+    "vars": {
+      "a": ["BitSet"]
+    }
+  },
+  {
+    "method_signature": "antlr.collections.impl.BitSet::subtractInPlace(antlr.collections.impl.BitSet)",
+    "vars": {
+      "a": ["BitSet"]
+    }
+  },
+  {
+    "method_signature": "antlr.CharScanner::match(antlr.collections.impl.BitSet)",
+    "vars": {
+      "b": ["BitSet"]
+    }
+  },
+  {
+    "method_signature": "antlr.DefineGrammarSymbols::setCharVocabulary(antlr.collections.impl.BitSet)",
+    "vars": {
+      "b": ["BitSet"]
+    }
+  },
+  {
+    "method_signature": "antlr.LexerGrammar::setCharVocabulary(antlr.collections.impl.BitSet)",
+    "vars": {
+      "b": ["BitSet"]
+    }
+  },
+  {
+    "method_signature": "antlr.Tool::checkForInvalidArguments(java.lang.String[], antlr.collections.impl.BitSet)",
+    "vars": {
+      "cmdLineArgValid": ["BitSet"],
+      "args": ["String[]"]
+    }
+  },
+  {
+    "method_signature": "antlr.CodeGenerator::markBitsetForGen(antlr.collections.impl.BitSet)",
+    "vars": {
+      "p": ["BitSet"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::genCases(antlr.collections.impl.BitSet)",
+    "vars": {
+      "p": ["BitSet"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::getLookaheadTestTerm(int, antlr.collections.impl.BitSet)",
+    "vars": {
+      "p": ["BitSet"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::genBitSet(antlr.collections.impl.BitSet, int)",
+    "vars": {
+      "p": ["BitSet"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::genCases(antlr.collections.impl.BitSet)",
+    "vars": {
+      "p": ["BitSet"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::getLookaheadTestTerm(int, antlr.collections.impl.BitSet)",
+    "vars": {
+      "p": ["BitSet"]
+    }
+  },
+  {
+    "method_signature": "antlr.Lookahead::<init>(antlr.collections.impl.BitSet)",
+    "vars": {
+      "p": ["BitSet"]
+    }
+  },
+  {
+    "method_signature": "antlr.LLkAnalyzer::look(int, antlr.BlockEndElement)",
+    "vars": {
+      "end": ["BlockEndElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.LLkAnalyzer::deterministicImpliedPath(antlr.BlockWithImpliedExitPath)",
+    "vars": {
+      "blk": ["OneOrMoreBlock", "ZeroOrMoreBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::gen(antlr.CharLiteralElement)",
+    "vars": {
+      "atom": ["CharLiteralElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.DiagnosticCodeGenerator::gen(antlr.CharLiteralElement)",
+    "vars": {
+      "atom": ["CharLiteralElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.DocBookCodeGenerator::gen(antlr.CharLiteralElement)",
+    "vars": {
+      "atom": ["CharLiteralElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.HTMLCodeGenerator::gen(antlr.CharLiteralElement)",
+    "vars": {
+      "atom": ["CharLiteralElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::gen(antlr.CharLiteralElement)",
+    "vars": {
+      "atom": ["CharLiteralElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.LLkAnalyzer::look(int, antlr.CharLiteralElement)",
+    "vars": {
+      "atom": ["CharLiteralElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::gen(antlr.CharRangeElement)",
+    "vars": {
+      "r": ["CharRangeElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.DiagnosticCodeGenerator::gen(antlr.CharRangeElement)",
+    "vars": {
+      "r": ["CharRangeElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.DocBookCodeGenerator::gen(antlr.CharRangeElement)",
+    "vars": {
+      "r": ["CharRangeElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.HTMLCodeGenerator::gen(antlr.CharRangeElement)",
+    "vars": {
+      "r": ["CharRangeElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::gen(antlr.CharRangeElement)",
+    "vars": {
+      "r": ["CharRangeElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.LLkAnalyzer::look(int, antlr.CharRangeElement)",
+    "vars": {
+      "r": ["CharRangeElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.ANTLRHashString::<init>(antlr.CharScanner)",
+    "vars": {
+      "lexer": ["PreprocessorLexer", "ANTLRLexer", "ActionLexer"]
+    }
+  },
+  {
+    "method_signature": "antlr.ANTLRHashString::<init>(java.lang.String, antlr.CharScanner)",
+    "vars": {
+      "lexer": ["PreprocessorLexer", "ANTLRLexer"],
+      "s": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.Grammar::setCodeGenerator(antlr.CodeGenerator)",
+    "vars": {
+      "gen": ["DocBookCodeGenerator", "DiagnosticCodeGenerator", "CppCodeGenerator", "JavaCodeGenerator", "HTMLCodeGenerator"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::genBlockFinish(antlr.CppBlockFinishingInfo, java.lang.String)",
+    "vars": {
+      "howToFinish": ["CppBlockFinishingInfo"],
+      "noViableAction": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.CodeGenerator::setBehavior(antlr.DefineGrammarSymbols)",
+    "vars": {
+      "behavior_": ["MakeGrammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.Tool::reportException(java.lang.Exception, java.lang.String)",
+    "vars": {
+      "e": ["FileNotFoundException"]
+    }
+  },
+  {
+    "method_signature": "antlr.ExceptionSpec::addHandler(antlr.ExceptionHandler)",
+    "vars": {
+      "handler": ["ExceptionHandler"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::genErrorHandler(antlr.ExceptionSpec)",
+    "vars": {
+      "ex": ["ExceptionSpec"]
+    }
+  },
+  {
+    "method_signature": "antlr.RuleBlock::addExceptionSpec(antlr.ExceptionSpec)",
+    "vars": {
+      "ex": ["ExceptionSpec"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::genMatch(antlr.GrammarAtom)",
+    "vars": {
+      "atom": ["CharLiteralElement", "TokenRefElement", "StringLiteralElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::genMatchUsingAtomText(antlr.GrammarAtom)",
+    "vars": {
+      "atom": ["CharLiteralElement", "TokenRefElement", "StringLiteralElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::getASTCreateString(antlr.GrammarAtom, java.lang.String)",
+    "vars": {
+      "atom": ["TokenRefElement"],
+      "str": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::genMatch(antlr.GrammarAtom)",
+    "vars": {
+      "atom": ["CharLiteralElement", "TokenRefElement", "StringLiteralElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::genMatchUsingAtomText(antlr.GrammarAtom)",
+    "vars": {
+      "atom": ["CharLiteralElement", "TokenRefElement", "StringLiteralElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::genMatchUsingAtomTokenType(antlr.GrammarAtom)",
+    "vars": {
+      "atom": ["StringLiteralElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.LLkAnalyzer::look(int, antlr.GrammarAtom)",
+    "vars": {
+      "atom": ["TokenRefElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::genLineNo(antlr.GrammarElement)",
+    "vars": {
+      "el": ["ActionElement", "RuleBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.Hierarchy::addGrammarFile(antlr.preprocessor.GrammarFile)",
+    "vars": {
+      "gf": ["GrammarFile"]
+    }
+  },
+  {
+    "method_signature": "antlr.ActionElement::<init>(antlr.Grammar, antlr.Token)",
+    "vars": {
+      "g": ["ParserGrammar", "LexerGrammar"],
+      "t": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.AlternativeBlock::<init>(antlr.Grammar)",
+    "vars": {
+      "g": ["ParserGrammar", "LexerGrammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.AlternativeBlock::<init>(antlr.Grammar, antlr.Token, boolean)",
+    "vars": {
+      "g": ["ParserGrammar", "LexerGrammar"],
+      "start": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.AlternativeBlock::removeTrackingOfRuleRefs(antlr.Grammar)",
+    "vars": {
+      "g": ["ParserGrammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.AlternativeElement::<init>(antlr.Grammar)",
+    "vars": {
+      "g": ["ParserGrammar", "LexerGrammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.AlternativeElement::<init>(antlr.Grammar, antlr.Token, int)",
+    "vars": {
+      "g": ["ParserGrammar", "LexerGrammar"],
+      "start": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.AlternativeElement::<init>(antlr.Grammar, antlr.Token)",
+    "vars": {
+      "g": ["ParserGrammar", "LexerGrammar"],
+      "start": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.BlockEndElement::<init>(antlr.Grammar)",
+    "vars": {
+      "g": ["ParserGrammar", "LexerGrammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.BlockWithImpliedExitPath::<init>(antlr.Grammar)",
+    "vars": {
+      "g": ["ParserGrammar", "LexerGrammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.CodeGenerator::setGrammar(antlr.Grammar)",
+    "vars": {
+      "g": ["ParserGrammar", "LexerGrammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::setupGrammarParameters(antlr.Grammar)",
+    "vars": {
+      "g": ["ParserGrammar", "LexerGrammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.GrammarAtom::<init>(antlr.Grammar, antlr.Token, int)",
+    "vars": {
+      "g": ["ParserGrammar", "LexerGrammar"],
+      "t": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.GrammarElement::<init>(antlr.Grammar)",
+    "vars": {
+      "g": ["ParserGrammar", "LexerGrammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.GrammarElement::<init>(antlr.Grammar, antlr.Token)",
+    "vars": {
+      "g": ["ParserGrammar", "LexerGrammar"],
+      "start": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::setupGrammarParameters(antlr.Grammar)",
+    "vars": {
+      "g": ["ParserGrammar", "LexerGrammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.LLkAnalyzer::setGrammar(antlr.Grammar)",
+    "vars": {
+      "g": ["ParserGrammar", "LexerGrammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.MakeGrammar::createNextTokenRule(antlr.Grammar, antlr.collections.impl.Vector, java.lang.String)",
+    "vars": {
+      "g": ["LexerGrammar"],
+      "rname": ["String"],
+      "lexRules": ["Vector"]
+    }
+  },
+  {
+    "method_signature": "antlr.OneOrMoreBlock::<init>(antlr.Grammar)",
+    "vars": {
+      "g": ["ParserGrammar", "LexerGrammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.GrammarFile::addGrammar(antlr.preprocessor.Grammar)",
+    "vars": {
+      "g": ["Grammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.Hierarchy::findRoot(antlr.preprocessor.Grammar)",
+    "vars": {
+      "g": ["Grammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.Option::setEnclosingGrammar(antlr.preprocessor.Grammar)",
+    "vars": {
+      "g": ["Grammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.Rule::setEnclosingGrammar(antlr.preprocessor.Grammar)",
+    "vars": {
+      "g": ["Grammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.RuleBlock::<init>(antlr.Grammar, java.lang.String, int, boolean)",
+    "vars": {
+      "g": ["ParserGrammar", "LexerGrammar"],
+      "r": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.RuleBlock::<init>(antlr.Grammar, java.lang.String)",
+    "vars": {
+      "g": ["ParserGrammar", "LexerGrammar"],
+      "r": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.RuleEndElement::<init>(antlr.Grammar)",
+    "vars": {
+      "g": ["ParserGrammar", "LexerGrammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.RuleRefElement::<init>(antlr.Grammar, antlr.Token, int)",
+    "vars": {
+      "g": ["LexerGrammar"],
+      "t": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.SynPredBlock::<init>(antlr.Grammar)",
+    "vars": {
+      "g": ["ParserGrammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.WildcardElement::<init>(antlr.Grammar, antlr.Token, int)",
+    "vars": {
+      "g": ["LexerGrammar"],
+      "t": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.ZeroOrMoreBlock::<init>(antlr.Grammar)",
+    "vars": {
+      "g": ["ParserGrammar", "LexerGrammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.Hierarchy::addGrammar(antlr.preprocessor.Grammar)",
+    "vars": {
+      "gr": ["Grammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.Option::<init>(java.lang.String, java.lang.String, antlr.preprocessor.Grammar)",
+    "vars": {
+      "gr": ["Grammar"],
+      "n": ["String"],
+      "rhs": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.Rule::<init>(java.lang.String, java.lang.String, antlr.collections.impl.IndexedVector, antlr.preprocessor.Grammar)",
+    "vars": {
+      "gr": ["Grammar"],
+      "options": ["IndexedVector"],
+      "b": ["String"],
+      "n": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.Grammar::setHierarchy(antlr.preprocessor.Hierarchy)",
+    "vars": {
+      "hier": ["Hierarchy"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.GrammarFile::setOptions(antlr.collections.impl.IndexedVector)",
+    "vars": {
+      "o": ["IndexedVector"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.Grammar::setOptions(antlr.collections.impl.IndexedVector)",
+    "vars": {
+      "options": ["IndexedVector"]
+    }
+  },
+  {
+    "method_signature": "antlr.actions.cpp.ActionLexer::<init>(antlr.InputBuffer)",
+    "vars": {
+      "ib": ["CharBuffer"]
+    }
+  },
+  {
+    "method_signature": "antlr.ANTLRLexer::<init>(antlr.InputBuffer)",
+    "vars": {
+      "ib": ["CharBuffer"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.PreprocessorLexer::<init>(antlr.InputBuffer)",
+    "vars": {
+      "ib": ["CharBuffer"]
+    }
+  },
+  {
+    "method_signature": "antlr.LexerSharedInputState::<init>(antlr.InputBuffer)",
+    "vars": {
+      "inbuf": ["CharBuffer"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::genBlockFinish(antlr.JavaBlockFinishingInfo, java.lang.String)",
+    "vars": {
+      "howToFinish": ["JavaBlockFinishingInfo"],
+      "noViableAction": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.CharLiteralElement::<init>(antlr.LexerGrammar, antlr.Token, boolean, int)",
+    "vars": {
+      "g": ["LexerGrammar"],
+      "t": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.CharRangeElement::<init>(antlr.LexerGrammar, antlr.Token, antlr.Token, int)",
+    "vars": {
+      "g": ["LexerGrammar"],
+      "t1": ["CommonToken"],
+      "t2": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::genBody(antlr.LexerGrammar)",
+    "vars": {
+      "g": ["LexerGrammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::genInclude(antlr.LexerGrammar)",
+    "vars": {
+      "g": ["LexerGrammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::gen(antlr.LexerGrammar)",
+    "vars": {
+      "g": ["LexerGrammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.DiagnosticCodeGenerator::gen(antlr.LexerGrammar)",
+    "vars": {
+      "g": ["LexerGrammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.DocBookCodeGenerator::gen(antlr.LexerGrammar)",
+    "vars": {
+      "g": ["LexerGrammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.HTMLCodeGenerator::gen(antlr.LexerGrammar)",
+    "vars": {
+      "g": ["LexerGrammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::gen(antlr.LexerGrammar)",
+    "vars": {
+      "g": ["LexerGrammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.CharScanner::<init>(antlr.LexerSharedInputState)",
+    "vars": {
+      "sharedState": ["LexerSharedInputState"]
+    }
+  },
+  {
+    "method_signature": "antlr.actions.cpp.ActionLexer::<init>(antlr.LexerSharedInputState)",
+    "vars": {
+      "state": ["LexerSharedInputState"]
+    }
+  },
+  {
+    "method_signature": "antlr.ANTLRLexer::<init>(antlr.LexerSharedInputState)",
+    "vars": {
+      "state": ["LexerSharedInputState"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.PreprocessorLexer::<init>(antlr.LexerSharedInputState)",
+    "vars": {
+      "state": ["LexerSharedInputState"]
+    }
+  },
+  {
+    "method_signature": "antlr.DefineGrammarSymbols::<init>(antlr.Tool, java.lang.String[], antlr.LLkAnalyzer)",
+    "vars": {
+      "analyzer_": ["LLkAnalyzer"],
+      "args_": ["String[]"],
+      "tool_": ["Tool"]
+    }
+  },
+  {
+    "method_signature": "antlr.MakeGrammar::<init>(antlr.Tool, java.lang.String[], antlr.LLkAnalyzer)",
+    "vars": {
+      "analyzer_": ["LLkAnalyzer"],
+      "args_": ["String[]"],
+      "tool_": ["Tool"]
+    }
+  },
+  {
+    "method_signature": "antlr.Grammar::setGrammarAnalyzer(antlr.LLkGrammarAnalyzer)",
+    "vars": {
+      "a": ["LLkAnalyzer"]
+    }
+  },
+  {
+    "method_signature": "antlr.CodeGenerator::setAnalyzer(antlr.LLkGrammarAnalyzer)",
+    "vars": {
+      "analyzer_": ["LLkAnalyzer"]
+    }
+  },
+  {
+    "method_signature": "antlr.LLkAnalyzer::lookaheadEquivForApproxAndFullAnalysis(antlr.Lookahead[], int)",
+    "vars": {
+      "bset": ["Lookahead[]"]
+    }
+  },
+  {
+    "method_signature": "antlr.DiagnosticCodeGenerator::printSet(int, int, antlr.Lookahead)",
+    "vars": {
+      "lookahead": ["Lookahead"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::getLookaheadTestExpression(antlr.Lookahead[], int)",
+    "vars": {
+      "look": ["Lookahead[]"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::getLookaheadTestExpression(antlr.Lookahead[], int)",
+    "vars": {
+      "look": ["Lookahead[]"]
+    }
+  },
+  {
+    "method_signature": "antlr.Lookahead::combineWith(antlr.Lookahead)",
+    "vars": {
+      "q": ["Lookahead"]
+    }
+  },
+  {
+    "method_signature": "antlr.Lookahead::intersection(antlr.Lookahead)",
+    "vars": {
+      "q": ["Lookahead"]
+    }
+  },
+  {
+    "method_signature": "antlr.Tool::getLanguage(antlr.MakeGrammar)",
+    "vars": {
+      "behavior": ["MakeGrammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.collections.impl.IndexedVector::appendElement(java.lang.Object, java.lang.Object)",
+    "vars": {
+      "key": ["String"],
+      "value": ["Grammar", "Rule", "Option"]
+    }
+  },
+  {
+    "method_signature": "antlr.ANTLRHashString::equals(java.lang.Object)",
+    "vars": {
+      "o": ["ANTLRHashString"]
+    }
+  },
+  {
+    "method_signature": "antlr.collections.impl.LLCell::<init>(java.lang.Object)",
+    "vars": {
+      "o": ["BlockContext"]
+    }
+  },
+  {
+    "method_signature": "antlr.collections.impl.LList::insertHead(java.lang.Object)",
+    "vars": {
+      "o": ["BlockContext"]
+    }
+  },
+  {
+    "method_signature": "antlr.collections.impl.LList::push(java.lang.Object)",
+    "vars": {
+      "o": ["BlockContext"]
+    }
+  },
+  {
+    "method_signature": "antlr.collections.impl.Vector::appendElement(java.lang.Object)",
+    "vars": {
+      "o": ["Option", "String", "StringLiteralElement", "RuleSymbol", "ExceptionHandler", "TokenRefElement", "Alternative", "Grammar", "RuleRefElement", "BitSet", "Rule"]
+    }
+  },
+  {
+    "method_signature": "antlr.collections.impl.Vector::removeElement(java.lang.Object)",
+    "vars": {
+      "o": ["RuleRefElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.collections.impl.BitSet::equals(java.lang.Object)",
+    "vars": {
+      "obj": ["BitSet"]
+    }
+  },
+  {
+    "method_signature": "antlr.collections.impl.Vector::setElementAt(java.lang.Object, int)",
+    "vars": {
+      "obj": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::gen(antlr.OneOrMoreBlock)",
+    "vars": {
+      "blk": ["OneOrMoreBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.DiagnosticCodeGenerator::gen(antlr.OneOrMoreBlock)",
+    "vars": {
+      "blk": ["OneOrMoreBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.DocBookCodeGenerator::gen(antlr.OneOrMoreBlock)",
+    "vars": {
+      "blk": ["OneOrMoreBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.HTMLCodeGenerator::gen(antlr.OneOrMoreBlock)",
+    "vars": {
+      "blk": ["OneOrMoreBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::gen(antlr.OneOrMoreBlock)",
+    "vars": {
+      "blk": ["OneOrMoreBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.LLkAnalyzer::deterministic(antlr.OneOrMoreBlock)",
+    "vars": {
+      "blk": ["OneOrMoreBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.LLkAnalyzer::look(int, antlr.OneOrMoreBlock)",
+    "vars": {
+      "blk": ["OneOrMoreBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::genBody(antlr.ParserGrammar)",
+    "vars": {
+      "g": ["ParserGrammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::genInclude(antlr.ParserGrammar)",
+    "vars": {
+      "g": ["ParserGrammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::gen(antlr.ParserGrammar)",
+    "vars": {
+      "g": ["ParserGrammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.DiagnosticCodeGenerator::gen(antlr.ParserGrammar)",
+    "vars": {
+      "g": ["ParserGrammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.DocBookCodeGenerator::gen(antlr.ParserGrammar)",
+    "vars": {
+      "g": ["ParserGrammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.HTMLCodeGenerator::gen(antlr.ParserGrammar)",
+    "vars": {
+      "g": ["ParserGrammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::gen(antlr.ParserGrammar)",
+    "vars": {
+      "g": ["ParserGrammar"]
+    }
+  },
+  {
+    "method_signature": "antlr.Parser::<init>(antlr.ParserSharedInputState)",
+    "vars": {
+      "state": ["ParserSharedInputState"]
+    }
+  },
+  {
+    "method_signature": "antlr.actions.cpp.ActionLexer::<init>(java.io.Reader)",
+    "vars": {
+      "in": ["StringReader"]
+    }
+  },
+  {
+    "method_signature": "antlr.ANTLRLexer::<init>(java.io.Reader)",
+    "vars": {
+      "in": ["BufferedReader"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.PreprocessorLexer::<init>(java.io.Reader)",
+    "vars": {
+      "in": ["BufferedReader"]
+    }
+  },
+  {
+    "method_signature": "antlr.CharBuffer::<init>(java.io.Reader)",
+    "vars": {
+      "input_": ["StringReader", "BufferedReader"]
+    }
+  },
+  {
+    "method_signature": "antlr.DiagnosticCodeGenerator::genFollowSetForRuleBlock(antlr.RuleBlock)",
+    "vars": {
+      "blk": ["RuleBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.LLkAnalyzer::look(int, antlr.RuleBlock)",
+    "vars": {
+      "blk": ["RuleBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.RuleSymbol::setBlock(antlr.RuleBlock)",
+    "vars": {
+      "rb": ["RuleBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.LLkAnalyzer::FOLLOW(int, antlr.RuleEndElement)",
+    "vars": {
+      "end": ["RuleEndElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.LLkAnalyzer::look(int, antlr.RuleEndElement)",
+    "vars": {
+      "end": ["RuleEndElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.RuleBlock::setEndElement(antlr.RuleEndElement)",
+    "vars": {
+      "re": ["RuleEndElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.Grammar::addRule(antlr.preprocessor.Rule)",
+    "vars": {
+      "r": ["Rule"]
+    }
+  },
+  {
+    "method_signature": "antlr.RuleSymbol::addReference(antlr.RuleRefElement)",
+    "vars": {
+      "e": ["RuleRefElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::GenRuleInvocation(antlr.RuleRefElement)",
+    "vars": {
+      "rr": ["RuleRefElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::gen(antlr.RuleRefElement)",
+    "vars": {
+      "rr": ["RuleRefElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.DiagnosticCodeGenerator::gen(antlr.RuleRefElement)",
+    "vars": {
+      "rr": ["RuleRefElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.DocBookCodeGenerator::gen(antlr.RuleRefElement)",
+    "vars": {
+      "rr": ["RuleRefElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.HTMLCodeGenerator::gen(antlr.RuleRefElement)",
+    "vars": {
+      "rr": ["RuleRefElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::GenRuleInvocation(antlr.RuleRefElement)",
+    "vars": {
+      "rr": ["RuleRefElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::gen(antlr.RuleRefElement)",
+    "vars": {
+      "rr": ["RuleRefElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.LLkAnalyzer::look(int, antlr.RuleRefElement)",
+    "vars": {
+      "rr": ["RuleRefElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.Grammar::define(antlr.RuleSymbol)",
+    "vars": {
+      "rs": ["RuleSymbol"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::genRuleHeader(antlr.RuleSymbol, boolean)",
+    "vars": {
+      "s": ["RuleSymbol"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::genRule(antlr.RuleSymbol, boolean, int, java.lang.String)",
+    "vars": {
+      "s": ["RuleSymbol"],
+      "prefix": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.DiagnosticCodeGenerator::genRule(antlr.RuleSymbol)",
+    "vars": {
+      "s": ["RuleSymbol"]
+    }
+  },
+  {
+    "method_signature": "antlr.DocBookCodeGenerator::genRule(antlr.RuleSymbol)",
+    "vars": {
+      "s": ["RuleSymbol"]
+    }
+  },
+  {
+    "method_signature": "antlr.HTMLCodeGenerator::genRule(antlr.RuleSymbol)",
+    "vars": {
+      "s": ["RuleSymbol"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::genRule(antlr.RuleSymbol, boolean, int)",
+    "vars": {
+      "s": ["RuleSymbol"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.GrammarFile::addHeaderAction(java.lang.String)",
+    "vars": {
+      "a": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.Grammar::setMemberAction(java.lang.String)",
+    "vars": {
+      "a": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.Grammar::setPreambleAction(java.lang.String)",
+    "vars": {
+      "a": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.Rule::setArgs(java.lang.String)",
+    "vars": {
+      "a": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.Rule::setInitAction(java.lang.String)",
+    "vars": {
+      "a": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.RuleRefElement::setArgs(java.lang.String)",
+    "vars": {
+      "a": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.LexerGrammar::processArguments(java.lang.String[])",
+    "vars": {
+      "args": ["String[]"]
+    }
+  },
+  {
+    "method_signature": "antlr.ParserGrammar::processArguments(java.lang.String[])",
+    "vars": {
+      "args": ["String[]"]
+    }
+  },
+  {
+    "method_signature": "antlr.Tool::doEverything(java.lang.String[])",
+    "vars": {
+      "args": ["String[]"]
+    }
+  },
+  {
+    "method_signature": "antlr.Tool::main(java.lang.String[])",
+    "vars": {
+      "args": ["String[]"]
+    }
+  },
+  {
+    "method_signature": "antlr.Tool::processArguments(java.lang.String[])",
+    "vars": {
+      "args": ["String[]"]
+    }
+  },
+  {
+    "method_signature": "antlr.Lookahead::<init>(java.lang.String)",
+    "vars": {
+      "c": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.CharScanner::setTokenObjectClass(java.lang.String)",
+    "vars": {
+      "cl": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.Grammar::<init>(java.lang.String, antlr.Tool, java.lang.String)",
+    "vars": {
+      "className_": ["String"],
+      "tool_": ["Tool"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::setupOutput(java.lang.String)",
+    "vars": {
+      "className": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.LexerGrammar::<init>(java.lang.String, antlr.Tool, java.lang.String)",
+    "vars": {
+      "className_": ["String"],
+      "tool_": ["Tool"]
+    }
+  },
+  {
+    "method_signature": "antlr.ParserGrammar::<init>(java.lang.String, antlr.Tool, java.lang.String)",
+    "vars": {
+      "className_": ["String"],
+      "tool_": ["Tool"]
+    }
+  },
+  {
+    "method_signature": "antlr.ANTLRLexer::escapeCharValue(java.lang.String)",
+    "vars": {
+      "cs": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.CodeGenerator::removeAssignmentFromDeclaration(java.lang.String)",
+    "vars": {
+      "d": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.CharScanner::setFilename(java.lang.String)",
+    "vars": {
+      "f": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.Parser::setFilename(java.lang.String)",
+    "vars": {
+      "f": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.GrammarFile::nameForExpandedGrammarFile(java.lang.String)",
+    "vars": {
+      "f": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.Grammar::setFileName(java.lang.String)",
+    "vars": {
+      "f": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.Tool::fileMinusPath(java.lang.String)",
+    "vars": {
+      "f": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.Tool::openOutputFile(java.lang.String)",
+    "vars": {
+      "f": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.DefineGrammarSymbols::startLexer(java.lang.String, antlr.Token, java.lang.String, java.lang.String)",
+    "vars": {
+      "file": ["String"],
+      "name": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.DefineGrammarSymbols::startParser(java.lang.String, antlr.Token, java.lang.String, java.lang.String)",
+    "vars": {
+      "file": ["String"],
+      "name": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.Hierarchy::readGrammarFile(java.lang.String)",
+    "vars": {
+      "file": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.PreservingFileWriter::<init>(java.lang.String)",
+    "vars": {
+      "file": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::genHeader(java.lang.String)",
+    "vars": {
+      "fileName": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.DefineGrammarSymbols::setFileOption(antlr.Token, antlr.Token, java.lang.String)",
+    "vars": {
+      "filename": ["String"],
+      "key": ["CommonToken"],
+      "value": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.MismatchedTokenException::<init>(java.lang.String[], antlr.Token, int, boolean, java.lang.String)",
+    "vars": {
+      "fileName_": ["String"],
+      "tokenNames_": ["String[]"],
+      "token_": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.Hierarchy::expandGrammarsInFile(java.lang.String)",
+    "vars": {
+      "fileName": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.Hierarchy::getFile(java.lang.String)",
+    "vars": {
+      "fileName": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.RecognitionException::<init>(java.lang.String, java.lang.String, int, int)",
+    "vars": {
+      "fileName_": ["String"],
+      "s": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.Hierarchy::getGrammar(java.lang.String)",
+    "vars": {
+      "gr": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.StringUtils::stripFrontBack(java.lang.String, java.lang.String, java.lang.String)",
+    "vars": {
+      "head": ["String"],
+      "src": ["String"],
+      "tail": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.CodeGenerator::encodeLexerRuleName(java.lang.String)",
+    "vars": {
+      "id": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.RuleRefElement::setIdAssign(java.lang.String)",
+    "vars": {
+      "id": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.Tool::processArguments(java.lang.String[])",
+    "vars": {
+      "incomingArgs": ["String[]"]
+    }
+  },
+  {
+    "method_signature": "antlr.AlternativeBlock::setInitAction(java.lang.String)",
+    "vars": {
+      "initAction_": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.Grammar::getIntegerOption(java.lang.String)",
+    "vars": {
+      "key": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.Grammar::getOption(java.lang.String)",
+    "vars": {
+      "key": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.Grammar::hasOption(java.lang.String)",
+    "vars": {
+      "key": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.Grammar::setOption(java.lang.String, antlr.Token)",
+    "vars": {
+      "key": ["String"],
+      "value": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.LexerGrammar::setOption(java.lang.String, antlr.Token)",
+    "vars": {
+      "key": ["String"],
+      "value": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.ParserGrammar::setOption(java.lang.String, antlr.Token)",
+    "vars": {
+      "key": ["String"],
+      "value": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.GrammarAtom::setLabel(java.lang.String)",
+    "vars": {
+      "label_": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.RuleBlock::findExceptionSpec(java.lang.String)",
+    "vars": {
+      "label": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.RuleRefElement::setLabel(java.lang.String)",
+    "vars": {
+      "label_": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.StringLiteralSymbol::setLabel(java.lang.String)",
+    "vars": {
+      "label": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.ANTLRLexer::tokenTypeForCharLiteral(java.lang.String)",
+    "vars": {
+      "lit": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::gen(antlr.StringLiteralElement)",
+    "vars": {
+      "atom": ["StringLiteralElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.DiagnosticCodeGenerator::gen(antlr.StringLiteralElement)",
+    "vars": {
+      "atom": ["StringLiteralElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.DocBookCodeGenerator::gen(antlr.StringLiteralElement)",
+    "vars": {
+      "atom": ["StringLiteralElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.HTMLCodeGenerator::gen(antlr.StringLiteralElement)",
+    "vars": {
+      "atom": ["StringLiteralElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::gen(antlr.StringLiteralElement)",
+    "vars": {
+      "atom": ["StringLiteralElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.LLkAnalyzer::look(int, antlr.StringLiteralElement)",
+    "vars": {
+      "atom": ["StringLiteralElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::genSynPred(antlr.SynPredBlock, java.lang.String)",
+    "vars": {
+      "lookaheadExpr": ["String"],
+      "blk": ["SynPredBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::genSynPred(antlr.SynPredBlock, java.lang.String)",
+    "vars": {
+      "lookaheadExpr": ["String"],
+      "blk": ["SynPredBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.Tool::reportProgress(java.lang.String)",
+    "vars": {
+      "message": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::printHeaderAction(java.lang.String)",
+    "vars": {
+      "name": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.DefineGrammarSymbols::getHeaderAction(java.lang.String)",
+    "vars": {
+      "name": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.SimpleTokenManager::mapToTokenSymbol(java.lang.String, antlr.TokenSymbol)",
+    "vars": {
+      "name": ["String"],
+      "sym": ["StringLiteralSymbol", "TokenSymbol"]
+    }
+  },
+  {
+    "method_signature": "antlr.SimpleTokenManager::<init>(java.lang.String, antlr.Tool)",
+    "vars": {
+      "name_": ["String"],
+      "tool_": ["Tool"]
+    }
+  },
+  {
+    "method_signature": "antlr.Tool::setOutputDirectory(java.lang.String)",
+    "vars": {
+      "o": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::genSemPred(java.lang.String, int)",
+    "vars": {
+      "pred": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::addSemPred(java.lang.String)",
+    "vars": {
+      "predicate": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::addSemPred(java.lang.String)",
+    "vars": {
+      "predicate": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::genSemPredMap(java.lang.String)",
+    "vars": {
+      "prefix": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::genTokenStrings(java.lang.String)",
+    "vars": {
+      "prefix": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.DefineGrammarSymbols::endRule(java.lang.String)",
+    "vars": {
+      "r": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.RuleSymbol::<init>(java.lang.String)",
+    "vars": {
+      "r": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.StringLiteralSymbol::<init>(java.lang.String)",
+    "vars": {
+      "r": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.TokenSymbol::<init>(java.lang.String)",
+    "vars": {
+      "r": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.Rule::setReturnValue(java.lang.String)",
+    "vars": {
+      "ret": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.LLkAnalyzer::look(int, java.lang.String)",
+    "vars": {
+      "rule": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.MakeGrammar::endRule(java.lang.String)",
+    "vars": {
+      "rule": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.ANTLRException::<init>(java.lang.String)",
+    "vars": {
+      "s": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.ANTLRHashString::setString(java.lang.String)",
+    "vars": {
+      "s": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.ANTLRStringBuffer::append(java.lang.String)",
+    "vars": {
+      "s": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.CharScanner::match(java.lang.String)",
+    "vars": {
+      "s": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.CharScanner::setText(java.lang.String)",
+    "vars": {
+      "s": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.CodeGenerator::extractIdOfAction(java.lang.String, int, int)",
+    "vars": {
+      "s": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.CodeGenerator::extractTypeOfAction(java.lang.String, int, int)",
+    "vars": {
+      "s": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.CodeGenerator::printAction(java.lang.String)",
+    "vars": {
+      "s": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.CodeGenerator::println(java.lang.String)",
+    "vars": {
+      "s": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.CodeGenerator::print(java.lang.String)",
+    "vars": {
+      "s": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.CommonToken::setText(java.lang.String)",
+    "vars": {
+      "s": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCharFormatter::escapeString(java.lang.String)",
+    "vars": {
+      "s": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCharFormatter::literalString(java.lang.String)",
+    "vars": {
+      "s": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::println(java.lang.String)",
+    "vars": {
+      "s": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.DocBookCodeGenerator::HTMLEncode(java.lang.String)",
+    "vars": {
+      "s": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.DocBookCodeGenerator::QuoteForId(java.lang.String)",
+    "vars": {
+      "s": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.Grammar::getSymbol(java.lang.String)",
+    "vars": {
+      "s": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.Grammar::isDefined(java.lang.String)",
+    "vars": {
+      "s": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.Grammar::setFilename(java.lang.String)",
+    "vars": {
+      "s": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.GrammarSymbol::<init>(java.lang.String)",
+    "vars": {
+      "s": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.HTMLCodeGenerator::HTMLEncode(java.lang.String)",
+    "vars": {
+      "s": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCharFormatter::escapeString(java.lang.String)",
+    "vars": {
+      "s": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCharFormatter::literalString(java.lang.String)",
+    "vars": {
+      "s": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::mangleLiteral(java.lang.String)",
+    "vars": {
+      "s": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.StringUtils::stripBack(java.lang.String, char)",
+    "vars": {
+      "s": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.StringUtils::stripFront(java.lang.String, char)",
+    "vars": {
+      "s": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.SimpleTokenManager::getTokenSymbol(java.lang.String)",
+    "vars": {
+      "sym": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.SimpleTokenManager::tokenDefined(java.lang.String)",
+    "vars": {
+      "symbol": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.Grammar::setType(java.lang.String)",
+    "vars": {
+      "t": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.Rule::setThrowsSpec(java.lang.String)",
+    "vars": {
+      "t": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.Token::setText(java.lang.String)",
+    "vars": {
+      "t": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.CharScanner::testLiteralsTable(java.lang.String, int)",
+    "vars": {
+      "text": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::textOrChar(java.lang.String)",
+    "vars": {
+      "text": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.Grammar::setTokenSection(java.lang.String)",
+    "vars": {
+      "tk": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.CommonToken::<init>(int, java.lang.String)",
+    "vars": {
+      "txt": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.Token::<init>(int, java.lang.String)",
+    "vars": {
+      "txt": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.Rule::setVisibility(java.lang.String)",
+    "vars": {
+      "v": ["String"]
+    }
+  },
+  {
+    "method_signature": "antlr.DiagnosticCodeGenerator::genSynPred(antlr.SynPredBlock)",
+    "vars": {
+      "blk": ["SynPredBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.DefineGrammarSymbols::refHeaderAction(antlr.Token, antlr.Token)",
+    "vars": {
+      "act": ["CommonToken"],
+      "name": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.DefineGrammarSymbols::refPreambleAction(antlr.Token)",
+    "vars": {
+      "act": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.MakeGrammar::refMemberAction(antlr.Token)",
+    "vars": {
+      "act": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.MakeGrammar::refPreambleAction(antlr.Token)",
+    "vars": {
+      "act": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.DefineGrammarSymbols::refAction(antlr.Token)",
+    "vars": {
+      "action": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.DefineGrammarSymbols::refExceptionHandler(antlr.Token, antlr.Token)",
+    "vars": {
+      "action": ["CommonToken"],
+      "exTypeAndName": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.MakeGrammar::refAction(antlr.Token)",
+    "vars": {
+      "action": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.MakeGrammar::refArgAction(antlr.Token)",
+    "vars": {
+      "action": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.MakeGrammar::refExceptionHandler(antlr.Token, antlr.Token)",
+    "vars": {
+      "action": ["CommonToken"],
+      "exTypeAndName": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.MakeGrammar::refInitAction(antlr.Token)",
+    "vars": {
+      "action": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.Parser::setTokenBuffer(antlr.TokenBuffer)",
+    "vars": {
+      "t": ["TokenBuffer"]
+    }
+  },
+  {
+    "method_signature": "antlr.LLkParser::<init>(antlr.TokenBuffer, int)",
+    "vars": {
+      "tokenBuf": ["TokenBuffer"]
+    }
+  },
+  {
+    "method_signature": "antlr.AlternativeBlock::setOption(antlr.Token, antlr.Token)",
+    "vars": {
+      "key": ["CommonToken"],
+      "value": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.DefineGrammarSymbols::setGrammarOption(antlr.Token, antlr.Token)",
+    "vars": {
+      "key": ["CommonToken"],
+      "value": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.MakeGrammar::setRuleOption(antlr.Token, antlr.Token)",
+    "vars": {
+      "key": ["CommonToken"],
+      "value": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.MakeGrammar::setSubruleOption(antlr.Token, antlr.Token)",
+    "vars": {
+      "key": ["CommonToken"],
+      "value": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.RuleBlock::setOption(antlr.Token, antlr.Token)",
+    "vars": {
+      "key": ["CommonToken"],
+      "value": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.ANTLRParser::checkForMissingEndRule(antlr.Token)",
+    "vars": {
+      "label": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.DefineGrammarSymbols::refStringLiteral(antlr.Token, antlr.Token, int, boolean)",
+    "vars": {
+      "label": ["CommonToken"],
+      "lit": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.MakeGrammar::refStringLiteral(antlr.Token, antlr.Token, int, boolean)",
+    "vars": {
+      "label": ["CommonToken"],
+      "lit": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.DefineGrammarSymbols::refCharLiteral(antlr.Token, antlr.Token, boolean, int, boolean)",
+    "vars": {
+      "lit": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.MakeGrammar::refCharLiteral(antlr.Token, antlr.Token, boolean, int, boolean)",
+    "vars": {
+      "lit": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.CodeGenerator::genTokenInterchange(antlr.TokenManager)",
+    "vars": {
+      "tm": ["SimpleTokenManager"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::genTokenTypes(antlr.TokenManager)",
+    "vars": {
+      "tm": ["SimpleTokenManager"]
+    }
+  },
+  {
+    "method_signature": "antlr.DiagnosticCodeGenerator::genTokenTypes(antlr.TokenManager)",
+    "vars": {
+      "tm": ["SimpleTokenManager"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::genTokenTypes(antlr.TokenManager)",
+    "vars": {
+      "tm": ["SimpleTokenManager"]
+    }
+  },
+  {
+    "method_signature": "antlr.Grammar::setTokenManager(antlr.TokenManager)",
+    "vars": {
+      "tokenManager_": ["SimpleTokenManager"]
+    }
+  },
+  {
+    "method_signature": "antlr.DefineGrammarSymbols::refSemPred(antlr.Token)",
+    "vars": {
+      "pred": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.MakeGrammar::refSemPred(antlr.Token)",
+    "vars": {
+      "pred": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::gen(antlr.TokenRefElement)",
+    "vars": {
+      "atom": ["TokenRefElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.DiagnosticCodeGenerator::gen(antlr.TokenRefElement)",
+    "vars": {
+      "atom": ["TokenRefElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.DocBookCodeGenerator::gen(antlr.TokenRefElement)",
+    "vars": {
+      "atom": ["TokenRefElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.HTMLCodeGenerator::gen(antlr.TokenRefElement)",
+    "vars": {
+      "atom": ["TokenRefElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::gen(antlr.TokenRefElement)",
+    "vars": {
+      "atom": ["TokenRefElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.MakeGrammar::refReturnAction(antlr.Token)",
+    "vars": {
+      "returnAction": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.DefineGrammarSymbols::beginSubRule(antlr.Token, antlr.Token, boolean)",
+    "vars": {
+      "start": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.MakeGrammar::beginSubRule(antlr.Token, antlr.Token, boolean)",
+    "vars": {
+      "start": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.TokenBuffer::<init>(antlr.TokenStream)",
+    "vars": {
+      "input_": ["PreprocessorLexer", "ANTLRLexer"]
+    }
+  },
+  {
+    "method_signature": "antlr.LLkParser::<init>(antlr.TokenStream, int)",
+    "vars": {
+      "lexer": ["PreprocessorLexer"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.Preprocessor::<init>(antlr.TokenStream, int)",
+    "vars": {
+      "lexer": ["PreprocessorLexer"]
+    }
+  },
+  {
+    "method_signature": "antlr.preprocessor.Preprocessor::<init>(antlr.TokenStream)",
+    "vars": {
+      "lexer": ["PreprocessorLexer"]
+    }
+  },
+  {
+    "method_signature": "antlr.SimpleTokenManager::define(antlr.TokenSymbol)",
+    "vars": {
+      "ts": ["StringLiteralSymbol", "TokenSymbol"]
+    }
+  },
+  {
+    "method_signature": "antlr.DefineGrammarSymbols::refCharRange(antlr.Token, antlr.Token, antlr.Token, int, boolean)",
+    "vars": {
+      "t1": ["CommonToken"],
+      "t2": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.MakeGrammar::refCharRange(antlr.Token, antlr.Token, antlr.Token, int, boolean)",
+    "vars": {
+      "t1": ["CommonToken"],
+      "t2": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.CodeGenerator::extractIdOfAction(antlr.Token)",
+    "vars": {
+      "t": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::genLineNo(antlr.Token)",
+    "vars": {
+      "t": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::printAction(antlr.Token)",
+    "vars": {
+      "t": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.DefineGrammarSymbols::refWildcard(antlr.Token, antlr.Token, int)",
+    "vars": {
+      "t": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.MakeGrammar::refWildcard(antlr.Token, antlr.Token, int)",
+    "vars": {
+      "t": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.TokenQueue::append(antlr.Token)",
+    "vars": {
+      "tok": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.DefineGrammarSymbols::defineToken(antlr.Token, antlr.Token)",
+    "vars": {
+      "tokliteral": ["CommonToken"],
+      "tokname": ["CommonToken"]
+    }
+  },
+  {
+    "method_signature": "antlr.actions.cpp.ActionLexer::setTool(antlr.Tool)",
+    "vars": {
+      "tool": ["Tool"]
+    }
+  },
+  {
+    "method_signature": "antlr.CodeGenerator::setTool(antlr.Tool)",
+    "vars": {
+      "tool": ["Tool"]
+    }
+  },
+  {
+    "method_signature": "antlr.LLkAnalyzer::<init>(antlr.Tool)",
+    "vars": {
+      "tool_": ["Tool"]
+    }
+  },
+  {
+    "method_signature": "antlr.AlternativeBlock::setAlternatives(antlr.collections.impl.Vector)",
+    "vars": {
+      "v": ["Vector"]
+    }
+  },
+  {
+    "method_signature": "antlr.collections.impl.VectorEnumerator::<init>(antlr.collections.impl.Vector)",
+    "vars": {
+      "v": ["Vector"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::getASTCreateString(antlr.collections.impl.Vector)",
+    "vars": {
+      "v": ["Vector"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::gen(antlr.WildcardElement)",
+    "vars": {
+      "wc": ["WildcardElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.DiagnosticCodeGenerator::gen(antlr.WildcardElement)",
+    "vars": {
+      "wc": ["WildcardElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.DocBookCodeGenerator::gen(antlr.WildcardElement)",
+    "vars": {
+      "wc": ["WildcardElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.HTMLCodeGenerator::gen(antlr.WildcardElement)",
+    "vars": {
+      "wc": ["WildcardElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::gen(antlr.WildcardElement)",
+    "vars": {
+      "wc": ["WildcardElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.LLkAnalyzer::look(int, antlr.WildcardElement)",
+    "vars": {
+      "wc": ["WildcardElement"]
+    }
+  },
+  {
+    "method_signature": "antlr.CppCodeGenerator::gen(antlr.ZeroOrMoreBlock)",
+    "vars": {
+      "blk": ["ZeroOrMoreBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.DiagnosticCodeGenerator::gen(antlr.ZeroOrMoreBlock)",
+    "vars": {
+      "blk": ["ZeroOrMoreBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.DocBookCodeGenerator::gen(antlr.ZeroOrMoreBlock)",
+    "vars": {
+      "blk": ["ZeroOrMoreBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.HTMLCodeGenerator::gen(antlr.ZeroOrMoreBlock)",
+    "vars": {
+      "blk": ["ZeroOrMoreBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.JavaCodeGenerator::gen(antlr.ZeroOrMoreBlock)",
+    "vars": {
+      "blk": ["ZeroOrMoreBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.LLkAnalyzer::deterministic(antlr.ZeroOrMoreBlock)",
+    "vars": {
+      "blk": ["ZeroOrMoreBlock"]
+    }
+  },
+  {
+    "method_signature": "antlr.LLkAnalyzer::look(int, antlr.ZeroOrMoreBlock)",
+    "vars": {
+      "blk": ["ZeroOrMoreBlock"]
+    }
+  }
+]

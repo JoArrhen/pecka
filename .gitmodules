@@ -1,0 +1,9 @@
+[submodule "cat"]
+	path = cat
+	url = git@github.com:IdrissRio/cat.git
+	branch = rags
+	ignore = all
+
+[submodule "extendj"]
+	path = extendj
+	url = https://JohanArrhen@bitbucket.org/extendj/extendj.git

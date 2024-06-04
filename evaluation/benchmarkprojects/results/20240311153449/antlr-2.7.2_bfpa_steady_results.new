@@ -1,0 +1,121 @@
+
+Usage: java -jar bfpa.jar [options] <source_files>
+Options:
+  -entryPoint <package> <method>  Specify the entry point package and method
+  -classpath <path>               Specify the classpath
+  -classpath <path>               Specify the classpath
+  -help                           Print the options for the program
+  -printSignatures                Print all method signatures for the program
+  -compileBenchmark               Run benchmark for compiling the program
+  -pointerBenchmark <n>           Run benchmark for getting all points-to resutls for n random methods
+  -niter <number>                 Specify how many iterations to run the benchmark
+  -src <path>                     Specify source directory with .java files 
+ 
+Usage: java -jar bfpa.jar [options] <source_files>
+Options:
+  -entryPoint <package> <method>  Specify the entry point package and method
+  -classpath <path>               Specify the classpath
+  -classpath <path>               Specify the classpath
+  -help                           Print the options for the program
+  -printSignatures                Print all method signatures for the program
+  -compileBenchmark               Run benchmark for compiling the program
+  -pointerBenchmark <n>           Run benchmark for getting all points-to resutls for n random methods
+  -niter <number>                 Specify how many iterations to run the benchmark
+  -src <path>                     Specify source directory with .java files 
+ 
+Usage: java -jar bfpa.jar [options] <source_files>
+Options:
+  -entryPoint <package> <method>  Specify the entry point package and method
+  -classpath <path>               Specify the classpath
+  -classpath <path>               Specify the classpath
+  -help                           Print the options for the program
+  -printSignatures                Print all method signatures for the program
+  -compileBenchmark               Run benchmark for compiling the program
+  -pointerBenchmark <n>           Run benchmark for getting all points-to resutls for n random methods
+  -niter <number>                 Specify how many iterations to run the benchmark
+  -src <path>                     Specify source directory with .java files 
+ 
+Usage: java -jar bfpa.jar [options] <source_files>
+Options:
+  -entryPoint <package> <method>  Specify the entry point package and method
+  -classpath <path>               Specify the classpath
+  -classpath <path>               Specify the classpath
+  -help                           Print the options for the program
+  -printSignatures                Print all method signatures for the program
+  -compileBenchmark               Run benchmark for compiling the program
+  -pointerBenchmark <n>           Run benchmark for getting all points-to resutls for n random methods
+  -niter <number>                 Specify how many iterations to run the benchmark
+  -src <path>                     Specify source directory with .java files 
+ 
+Usage: java -jar bfpa.jar [options] <source_files>
+Options:
+  -entryPoint <package> <method>  Specify the entry point package and method
+  -classpath <path>               Specify the classpath
+  -classpath <path>               Specify the classpath
+  -help                           Print the options for the program
+  -printSignatures                Print all method signatures for the program
+  -compileBenchmark               Run benchmark for compiling the program
+  -pointerBenchmark <n>           Run benchmark for getting all points-to resutls for n random methods
+  -niter <number>                 Specify how many iterations to run the benchmark
+  -src <path>                     Specify source directory with .java files 
+ 
+Usage: java -jar bfpa.jar [options] <source_files>
+Options:
+  -entryPoint <package> <method>  Specify the entry point package and method
+  -classpath <path>               Specify the classpath
+  -classpath <path>               Specify the classpath
+  -help                           Print the options for the program
+  -printSignatures                Print all method signatures for the program
+  -compileBenchmark               Run benchmark for compiling the program
+  -pointerBenchmark <n>           Run benchmark for getting all points-to resutls for n random methods
+  -niter <number>                 Specify how many iterations to run the benchmark
+  -src <path>                     Specify source directory with .java files 
+ 
+Usage: java -jar bfpa.jar [options] <source_files>
+Options:
+  -entryPoint <package> <method>  Specify the entry point package and method
+  -classpath <path>               Specify the classpath
+  -classpath <path>               Specify the classpath
+  -help                           Print the options for the program
+  -printSignatures                Print all method signatures for the program
+  -compileBenchmark               Run benchmark for compiling the program
+  -pointerBenchmark <n>           Run benchmark for getting all points-to resutls for n random methods
+  -niter <number>                 Specify how many iterations to run the benchmark
+  -src <path>                     Specify source directory with .java files 
+ 
+Usage: java -jar bfpa.jar [options] <source_files>
+Options:
+  -entryPoint <package> <method>  Specify the entry point package and method
+  -classpath <path>               Specify the classpath
+  -classpath <path>               Specify the classpath
+  -help                           Print the options for the program
+  -printSignatures                Print all method signatures for the program
+  -compileBenchmark               Run benchmark for compiling the program
+  -pointerBenchmark <n>           Run benchmark for getting all points-to resutls for n random methods
+  -niter <number>                 Specify how many iterations to run the benchmark
+  -src <path>                     Specify source directory with .java files 
+ 
+Usage: java -jar bfpa.jar [options] <source_files>
+Options:
+  -entryPoint <package> <method>  Specify the entry point package and method
+  -classpath <path>               Specify the classpath
+  -classpath <path>               Specify the classpath
+  -help                           Print the options for the program
+  -printSignatures                Print all method signatures for the program
+  -compileBenchmark               Run benchmark for compiling the program
+  -pointerBenchmark <n>           Run benchmark for getting all points-to resutls for n random methods
+  -niter <number>                 Specify how many iterations to run the benchmark
+  -src <path>                     Specify source directory with .java files 
+ 
+Usage: java -jar bfpa.jar [options] <source_files>
+Options:
+  -entryPoint <package> <method>  Specify the entry point package and method
+  -classpath <path>               Specify the classpath
+  -classpath <path>               Specify the classpath
+  -help                           Print the options for the program
+  -printSignatures                Print all method signatures for the program
+  -compileBenchmark               Run benchmark for compiling the program
+  -pointerBenchmark <n>           Run benchmark for getting all points-to resutls for n random methods
+  -niter <number>                 Specify how many iterations to run the benchmark
+  -src <path>                     Specify source directory with .java files 
+

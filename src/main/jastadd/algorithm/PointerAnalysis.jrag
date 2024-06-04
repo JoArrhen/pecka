@@ -1,0 +1,166 @@
+aspect CallGraph {
+    coll Set<InvocationTarget> InvocationTarget
+        .calledIn()[new LinkedHashSet<>()];
+
+    InvocationTarget contributes this to InvocationTarget.calledIn()
+    for each calledMethodDecls();
+
+    syn Set<InvocationTarget> InvocationTarget.calledInSyn() = calledIn();
+
+    // BFS to find all methods within maxDistance steps in the call graph
+    syn lazy Set<InvocationTarget> InvocationTarget.withinDistance(int maxDistance) {
+        if (maxDistance < 0) {
+            throw new IllegalArgumentException("Distance cannot be negative");
+        }
+
+        Set<InvocationTarget> active = new HashSet<>(); // also visited set
+        active.add(this);
+
+        Queue<InvocationTarget> queue = new LinkedList<>();
+        queue.add(this);
+        Queue<Integer> distances = new LinkedList<>();
+        distances.add(0);
+
+        while (!queue.isEmpty()) {
+            InvocationTarget node = queue.remove();
+            int distance = distances.remove();
+
+            if (distance < maxDistance) {
+                for (InvocationTarget next : node.calledInSyn()) {
+                    if (!active.contains(next)) {
+                        active.add(next);
+                        queue.add(next);
+                        distances.add(distance + 1);
+                    }
+                }
+
+                for (InvocationTarget next : node.calledMethodDecls()) {
+                    if (!active.contains(next)) {
+                        active.add(next);
+                        queue.add(next);
+                        distances.add(distance + 1);
+                    }
+                }
+
+                for (InvocationTarget next : node.accessedTypeConstructors()) {
+                    if (!active.contains(next)) {
+                        active.add(next);
+                        queue.add(next);
+                        distances.add(distance + 1);
+                    }
+                }
+            }
+        }
+        return active;
+    }
+
+    // All called methods in program assuming that the invocation target is reachable from main
+    syn Set<InvocationTarget> InvocationTarget
+        .reachable() circular [new LinkedHashSet<>()];
+    eq InvocationTarget.reachable() {
+        Set<InvocationTarget> active = new LinkedHashSet<>();
+        active.add(this);
+
+        for (InvocationTarget it : calledIn()) {
+            active.addAll(it.reachable());
+        }
+
+        for (InvocationTarget it : calledMethodDecls()) {
+            active.addAll(it.reachable());
+        }
+
+        for (InvocationTarget it : accessedTypeConstructors()) {
+            active.addAll(it.reachable());
+        }
+
+        return active;
+    }
+
+    syn Set<InvocationTarget> InvocationTarget.reachableNonCircular() {
+        Set<InvocationTarget> active = new HashSet<>();
+        active.add(this);
+        Queue<InvocationTarget> queue = new LinkedList<>();
+        queue.add(this);
+        
+        while (!queue.isEmpty()) {
+            InvocationTarget cur = queue.remove();
+            Set<InvocationTarget> neighbors = new HashSet<>();
+            neighbors.addAll(cur.calledInSyn());
+            neighbors.addAll(cur.calledMethodDecls());
+            neighbors.addAll(cur.accessedTypeConstructors());
+            neighbors.removeAll(active);
+
+            queue.addAll(neighbors);
+            active.addAll(neighbors);
+        }
+        return active;
+    }
+
+    syn Set<InvocationTarget> InvocationTarget
+        .backwardsActive() circular [new LinkedHashSet<>()];
+    eq InvocationTarget.backwardsActive() {
+        Set<InvocationTarget> active = new LinkedHashSet<>();
+        active.add(this);
+
+        for (InvocationTarget it : calledIn()) {
+            active.addAll(it.backwardsActive());
+        }
+
+        return active;
+    }
+
+    syn Set<InvocationTarget> InvocationTarget
+        .kBoundedBackwardsActive(int k) circular [new LinkedHashSet<>()];
+    eq InvocationTarget.kBoundedBackwardsActive(int k) {
+        if (k < 0) {
+            throw new IllegalArgumentException("k cannot be negative");
+        }
+
+        Set<InvocationTarget> active = new LinkedHashSet<>();
+        active.add(this);
+
+        if (k == 0) {
+            return active;
+        }
+
+        for (InvocationTarget it : calledIn()) {
+            active.addAll(it.kBoundedBackwardsActive(k - 1));
+        }
+
+        return active;
+    }
+        
+    syn Set<InvocationTarget> InvocationTarget
+        .forwardsActive(Set<InvocationTarget> backwardsActive) circular [new LinkedHashSet<>()];
+    eq InvocationTarget.forwardsActive(Set<InvocationTarget> backwardsActive) {
+        Set<InvocationTarget> active = new LinkedHashSet<>();
+
+        // Return early if this node was not visited in the backwards sweep
+        if (!backwardsActive.contains(this)) {
+            return active;
+        }
+
+        active.add(this);
+
+        for (InvocationTarget it : calledMethodDecls()) {
+            active.addAll(it.forwardsActive(backwardsActive));
+        }
+        return active;
+    }
+
+    syn Set<InvocationTarget> InvocationTarget.active() =
+        program()
+        .getTarget(program().entryPointPackage, program().entryPointMethod)
+        .forwardsActive(backwardsActive());
+
+    syn Set<InvocationTarget> InvocationTarget.kBoundedActive(int k) =
+        program()
+        .getTarget(program().entryPointPackage, program().entryPointMethod)
+        .forwardsActive(kBoundedBackwardsActive(k));
+
+    syn Set<InvocationTarget> InvocationTarget.calledMethodDecls() =
+        calledMethods()
+        .stream()
+        .flatMap(x -> x.allDecls().stream())
+        .collect(Collectors.toSet());
+}

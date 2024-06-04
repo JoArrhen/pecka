@@ -1,0 +1,44 @@
+import java.util.stream.StreamSupport;
+
+/*
+TODO: Fix nested arrays A[][] arr = new A[3][3];
+      Accessing field after array access arr[0].f
+*/
+
+aspect Array {
+    // Last access in dot expression, link to dotExpressionTemp
+    Dot contributes new FieldLoadEdge(temp(), topDot().dotExpressionTemp(), "-COLLECTION_ACCESS")
+        when this == rightmostDot() && isArrayAccess()
+        to InvocationTarget.inclusionEdges() for each enclosingMethods();
+
+    Dot contributes new FieldStoreEdge(topDot().dotExpressionTemp(), temp(), "-COLLECTION_ACCESS")
+        when this == rightmostDot() && isArrayAccess()
+        to InvocationTarget.inclusionEdges() for each enclosingMethods();
+
+    // Not last access in dot expression, link to temp
+    Dot contributes new FieldLoadEdge(parentDot().temp(), temp(), "-COLLECTION_ACCESS")
+        when hasParentDot() && isArrayAccess()
+        to InvocationTarget.inclusionEdges() for each enclosingMethods();
+
+    Dot contributes new FieldStoreEdge(temp(), parentDot().temp(), "-COLLECTION_ACCESS")
+        when hasParentDot() && isArrayAccess()
+        to InvocationTarget.inclusionEdges() for each enclosingMethods();
+
+//    Dot contributes new FieldLoadEdge(parentDot().temp(), temp(), "-COLLECTION_ACCESS")
+//        when hasParentDot() && getLeft() instanceof ArrayAccess
+//        to InvocationTarget.inclusionEdges() for each enclosingMethods();
+//
+//    Dot contributes new FieldStoreEdge(temp(), parentDot().temp(), "-COLLECTION_ACCESS")
+//        when hasParentDot() && getLeft() instanceof ArrayAccess
+//        to InvocationTarget.inclusionEdges() for each enclosingMethods();
+
+    // Array initializer { ... }
+    ArrayInit contributes each
+            StreamSupport.stream(getInitList().spliterator(), false)
+            .filter(init -> init.hasDeclaration())
+        // TODO: Load and store edge are probably mixed up, should take a look at later
+            //.map(init -> new FieldStoreEdge(init.getDeclaration(), this, "-COLLECTION_ACCESS"))
+            .map(init -> new FieldLoadEdge(this, init.getDeclaration(), "-COLLECTION_ACCESS"))
+            .collect(Collectors.toSet())
+        to InvocationTarget.inclusionEdges() for each enclosingMethods();
+}

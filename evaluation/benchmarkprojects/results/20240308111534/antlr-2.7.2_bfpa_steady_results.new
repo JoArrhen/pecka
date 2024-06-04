@@ -1,0 +1,1923 @@
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@306a30c7
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@721e0f4f
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@725bef66
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@1fbc7afb
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@45c8e616
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@4cdbe50f
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@66d33a
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@7cf10a6f
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@7e0babb1
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@6debcae2
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@5ba23b66
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@2ff4f00f
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@c818063
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@3f0ee7cb
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@75bd9247
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@7d417077
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@7dc36524
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@35bbe5e8
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@2c8d66b2
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@5a39699c
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@3cb5cdba
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@56cbfb61
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@1134affc
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@d041cf
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@129a8472
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@1b0375b3
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@2f7c7260
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@2d209079
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@6bdf28bb
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@6b71769e
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@2752f6e2
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@e580929
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@1cd072a9
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@7c75222b
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@4c203ea1
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@27f674d
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@1d251891
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@48140564
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@58ceff1
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@7c30a502
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@49e4cb85
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@2133c8f8
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@43a25848
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@3ac3fd8b
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@5594a1b5
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@6a5fc7f7
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@3b6eb2ec
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@1e643faf
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@6e8dacdf
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@7a79be86
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@34ce8af7
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@b684286
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@880ec60
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@3f3afe78
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@7f63425a
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@36d64342
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@39ba5a14
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@511baa65
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@340f438e
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@30c7da1e
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@5b464ce8
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@57829d67
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@19dfb72a
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@17c68925
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@7e0ea639
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@3d24753a
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@59a6e353
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@7a0ac6e3
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@71be98f5
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@6fadae5d
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@17f6480
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@2d6e8792
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@2812cbfa
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@2acf57e3
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@506e6d5e
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@96532d6
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@3796751b
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@67b64c45
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@4411d970
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@6442b0a6
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@60f82f98
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@35f983a6
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@7f690630
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@edf4efb
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@2f7a2457
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@566776ad
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@6108b2d7
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@1554909b
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@6bf256fa
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@6cd8737
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@22f71333
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@13969fbe
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@6aaa5eb0
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@3498ed
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@1a407d53
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@3d8c7aca
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@5ebec15
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@21bcffb5
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@380fb434
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@668bc3d5
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@3cda1055
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@7a5d012c
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@3fb6a447
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@79b4d0f
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@6b2fad11
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@79698539
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@73f792cf
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@2ed94a8b
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@38082d64
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@dfd3711
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@42d3bd8b
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@26ba2a48
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@5f2050f6
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@3b81a1bc
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@64616ca2
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@13fee20c
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@4e04a765
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@783e6358
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@17550481
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@735f7ae5
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@180bc464
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@1324409e
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@2c6a3f77
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@246ae04d
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@62043840
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@5315b42e
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@2ef9b8bc
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@5d624da6
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@1e67b872
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@60addb54
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@3f2a3a5
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@4cb2c100
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@6fb554cc
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@614c5515
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@77b52d12
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@2d554825
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@3567135c
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@327471b5
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@4157f54e
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@90f6bfd
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@47f6473
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@15975490
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@6b143ee9
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@1936f0f5
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@6615435c
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@4909b8da
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@3a03464
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@2d3fcdbd
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@617c74e5
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@6537cf78
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@67b6d4ae
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@34b7bfc0
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@366e2eef
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@6df97b55
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@3cbbc1e0
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@35fb3008
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@7225790e
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@54a097cc
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@36f6e879
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@5a61f5df
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@3551a94
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@531be3c5
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@52af6cff
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@735b478
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@2c9f9fb0
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@2096442d
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@9f70c54
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@234bef66
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@737996a0
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@61dc03ce
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@50f8360d
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@2cb4c3ab
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@13c78c0b
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@12843fce
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@3dd3bcd
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@97e1986
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@26f67b76
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@153f5a29
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@7f560810
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@69d9c55
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@13a57a3b
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@7ca48474
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@337d0578
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@59e84876
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@61a485d2
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@39fb3ab6
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@6276ae34
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@7946e1f4
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@3c09711b
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@5cc7c2a6
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@b97c004
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+parseCompilationUnit
+Went inside trycatch
+here
+program.javaParser: org.extendj.ast.Program$3@2ef1e4fa
+is: java.io.FileInputStream@4590c9c3
+executed program.javaParser.parse(is, sourceNaame()
+executed program.javaparseTime += elapsed
+executed program.numjavaFiles += 1
+executed u.setFromSource
+executed u.setClassSource
+Avg compile time (s): 1.452631
+Last iteration (s): 1.452631 
+

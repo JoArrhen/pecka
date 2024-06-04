@@ -1,0 +1,7 @@
+Probing, compiling and running antlr:
+
+find antlr -name "*.java" | xargs python3 insert_probes.py
+cd probed
+find -name "*.java" | xargs javac
+java antlr.build.Tool build
+java antlr.Tool <args>

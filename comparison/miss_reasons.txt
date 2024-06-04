@@ -1,0 +1,40 @@
+Did not find types {'ParserGrammar', 'LexerGrammar'} in ('antlr.LLkAnalyzer::setGrammar(antlr.Grammar)', 'g')
+
+In JavaCodeGenerator::gen
+    // Loop over all grammars
+    Enumeration grammarIter = behavior.grammars.elements();
+    while (grammarIter.hasMoreElements()) {
+        Grammar g = (Grammar)grammarIter.nextElement();
+        // Connect all the components to each other
+        g.setGrammarAnalyzer(analyzer);
+        g.setCodeGenerator(this);
+        analyzer.setGrammar(g);
+        // To get right overloading behavior across hetrogeneous grammars
+        setupGrammarParameters(g);
+        g.generate();
+        // print out the grammar with lookahead sets (and FOLLOWs)
+        // System.out.print(g.toString());
+        exitIfError();
+    }
+Uses java.util.Enumeration
+
+Did not find types {'HTMLCodeGenerator', 'DiagnosticCodeGenerator', 'CppCodeGenerator', 'DocBookCodeGenerator', 'JavaCodeGenerator'} in ('antlr.Grammar::setCodeGenerator(antlr.CodeGenerator)', 'gen')
+
+In Tool::doEverything
+    CodeGenerator codeGen;
+    String codeGenClassName = "antlr." + getLanguage(behavior) + "CodeGenerator";
+    try {
+        Class codeGenClass = Class.forName(codeGenClassName);
+        codeGen = (CodeGenerator)codeGenClass.newInstance();
+
+Objects are created with reflection, so this in the previous code snippet g.setCodeGenerator(this) cannot find any objects to point to.
+
+
+Did not find types {'FileNotFoundException'} in ('antlr.Tool::reportException(java.lang.Exception, java.lang.String)', 'e')
+
+catch (IOException e) {
+    antlrTool.reportException(e, null);
+}
+
+We do not handle exceptions
+

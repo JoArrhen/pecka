@@ -1,0 +1,213 @@
+{
+	"benchmarks": [
+		{
+			"name": "antlr-2.7.2",
+			"url": "https://www.antlr2.org/download/antlr-2.7.2.zip",
+			"checkout": "wget",
+			"description": "ANTLR is a powerful, extensible, dynamic parser generator",
+			"version": "2.7.2",
+			"commit": "",
+			"classpath": "",
+			"dir_to_analyze": "antlr/",
+			"exclude_dirs": [
+				{
+					"path": "examples/",
+					"motivation": "Contains examples."
+				}
+			],
+			"LOC": 36525,
+			"enable": true,
+			"methods": 2070,
+			"entryPackage": "antlr.Tool",
+			"entryMethod": "main"
+		},
+		{
+			"name": "weka",
+			"description": "Weka is a collection of machine learning algorithms for data mining tasks. The algorithms can either be applied directly to a dataset or called from your own Java code.",
+			"version": "Revision 7806",
+			"commit": "",
+			"classpath": "weka/lib/java-cup-11a.jar:weka/lib/jflex-1.6.0.jar:weka/lib/junit.jar:weka/lib/pentaho-1.0.2.jar:resources/packageManager-source.jar",
+			"dir_to_analyze": "@COMPILE_ARGS",
+			"LOC": 245719,
+			"enable": false,
+			"methods": 2070,
+			"entryPackage": "weka.Run",
+			"entryMethod": "main"
+		},
+		{
+			"name": "struts",
+			"description": "The Apache Struts web framework is a free open-source solution for creating Java web applications. Web applications differ from conventional websites in that web applications can create a dynamic response. Many web applications are two-tiered, with a server and a client. However, a three-tiered approach is also common by adding a layer for database access.",
+			"version": "2.3.22",
+			"commit": "",
+			"classpath": "struts/lib/aopalliance-1.0.jar:struts/lib/apache-jar-resource-bundle-1.4.jar:struts/lib/archetype-packaging-2.0.jar:struts/lib/asm-3.3.jar:struts/lib/asm-commons-3.3.jar:struts/lib/asm-tree-3.3.jar:struts/lib/bndlib-0.0.357.jar:struts/lib/cglib-nodep-2.1_3.jar:struts/lib/cobertura-maven-plugin-2.4.jar:struts/lib/commons-beanutils-1.7.0.jar:struts/lib/commons-cli-1.0.jar:struts/lib/commons-collections-3.1.jar:struts/lib/commons-digester-2.0.jar:struts/lib/commons-fileupload-1.3.1.jar:struts/lib/commons-io-2.2.jar:struts/lib/commons-lang-2.4.jar:struts/lib/commons-lang3-3.2.jar:struts/lib/commons-logging-1.1.3.jar:struts/lib/commons-validator-1.3.1.jar:struts/lib/doxia-sink-api-1.0-alpha-7.jar:struts/lib/easymock-2.4.jar:struts/lib/fest-assert-1.4.jar:struts/lib/fest-util-1.1.6.jar:struts/lib/freemarker-2.3.19.jar:struts/lib/javassist-3.11.0.GA.jar:struts/lib/jmock-1.2.0.jar:struts/lib/jsp-api-2.0.jar:struts/lib/junit-3.8.1.jar:struts/lib/junit-4.8.2.jar:struts/lib/kxml2-2.2.2.jar:struts/lib/log4j-1.2.17.jar:struts/lib/maven-apt-plugin-1.0.15.jar:struts/lib/maven-archiver-2.2.jar:struts/lib/maven-artifact-resolver-1.0.jar:struts/lib/maven-bundle-plugin-2.1.0.jar:struts/lib/maven-common-artifact-filters-1.0.jar:struts/lib/maven-compiler-plugin-2.3.2.jar:struts/lib/maven-dependency-tree-1.2.jar:struts/lib/maven-downloader-1.1.jar:struts/lib/maven-filtering-1.0.jar:struts/lib/maven-plugin-testing-harness-1.1.jar:struts/lib/maven-remote-resources-plugin-1.2.1.jar:struts/lib/maven-reporting-api-2.0.6.jar:struts/lib/maven-resources-plugin-2.5.jar:struts/lib/maven-site-plugin-3.0.jar:struts/lib/maven-site-plugin-3.3.jar:struts/lib/maven-source-plugin-2.1.2.jar:struts/lib/mockito-all-1.9.5.jar:struts/lib/mockobjects-alt-jdk1.3-0.09.jar:struts/lib/mockobjects-alt-jdk1.3-j2ee1.3-0.09.jar:struts/lib/mockobjects-core-0.09.jar:struts/lib/mockobjects-jdk1.3-0.09.jar:struts/lib/mockobjects-jdk1.3-j2ee1.3-0.09.jar:struts/lib/ognl-3.0.6.jar:struts/lib/org.apache.felix.bundlerepository-1.6.2.jar:struts/lib/org.osgi.core-1.0.0.jar:struts/lib/org.osgi.core-4.1.0.jar:struts/lib/org.osgi.service.obr-1.0.1.jar:struts/lib/oro-2.0.8.jar:struts/lib/plexus-archiver-1.0-alpha-7.jar:struts/lib/plexus-build-api-0.0.4.jar:struts/lib/plexus-compiler-api-1.5.3.jar:struts/lib/plexus-compiler-api-1.8.1.jar:struts/lib/plexus-compiler-javac-1.5.3.jar:struts/lib/plexus-compiler-javac-1.8.1.jar:struts/lib/plexus-compiler-manager-1.8.1.jar:struts/lib/plexus-interactivity-api-1.0-alpha-4.jar:struts/lib/plexus-interpolation-1.12.jar:struts/lib/plexus-interpolation-1.13.jar:struts/lib/plexus-resources-1.0-alpha-5.jar:struts/lib/plexus-utils-1.0.5.jar:struts/lib/plexus-utils-1.1.jar:struts/lib/plexus-utils-1.4.7.jar:struts/lib/plexus-utils-1.5.12.jar:struts/lib/plexus-utils-2.0.5.jar:struts/lib/plexus-velocity-1.1.8.jar:struts/lib/servlet-api-2.4.jar:struts/lib/slf4j-api-1.7.2.jar:struts/lib/slf4j-simple-1.7.2.jar:struts/lib/spring-aop-3.0.5.RELEASE.jar:struts/lib/spring-asm-3.0.5.RELEASE.jar:struts/lib/spring-aspects-3.0.5.RELEASE.jar:struts/lib/spring-beans-3.0.5.RELEASE.jar:struts/lib/spring-context-3.0.5.RELEASE.jar:struts/lib/spring-context-support-3.0.5.RELEASE.jar:struts/lib/spring-core-3.0.5.RELEASE.jar:struts/lib/spring-expression-3.0.5.RELEASE.jar:struts/lib/spring-test-3.0.5.RELEASE.jar:struts/lib/spring-web-3.0.5.RELEASE.jar:struts/lib/sslext-1.2-0.jar:struts/lib/struts-annotations-1.0.5.jar:struts/lib/testng-5.1-jdk15.jar:struts/lib/velocity-1.5.jar:struts/lib/velocity-1.6.4.jar:struts/lib/velocity-tools-1.3.jar:struts/lib/xmlpull-1.1.3.1.jar:struts/lib/xwork-xore-2.3.20.jar:xwork-core/struts/lib/aopalliance-1.0.jar:xwork-core/struts/lib/apache-jar-resource-bundle-1.4.jar:xwork-core/struts/lib/asm-3.3.jar:xwork-core/struts/lib/asm-commons-3.3.jar:xwork-core/struts/lib/asm-tree-3.3.jar:xwork-core/struts/lib/cglib-nodep-2.1_3.jar:xwork-core/struts/lib/cobertura-maven-plugin-2.4.jar:xwork-core/struts/lib/commons-cli-1.0.jar:xwork-core/struts/lib/commons-collections-3.1.jar:xwork-core/struts/lib/commons-io-2.2.jar:xwork-core/struts/lib/commons-lang-2.4.jar:xwork-core/struts/lib/commons-lang3-3.2.jar:xwork-core/struts/lib/commons-logging-1.1.3.jar:xwork-core/struts/lib/doxia-sink-api-1.0-alpha-7.jar:xwork-core/struts/lib/easymock-2.4.jar:xwork-core/struts/lib/javassist-3.11.0.GA.jar:xwork-core/struts/lib/junit-3.8.1.jar:xwork-core/struts/lib/junit-4.8.2.jar:xwork-core/struts/lib/log4j-1.2.17.jar:xwork-core/struts/lib/maven-artifact-resolver-1.0.jar:xwork-core/struts/lib/maven-common-artifact-filters-1.0.jar:xwork-core/struts/lib/maven-compiler-plugin-2.3.2.jar:xwork-core/struts/lib/maven-downloader-1.1.jar:xwork-core/struts/lib/maven-filtering-1.0.jar:xwork-core/struts/lib/maven-remote-resources-plugin-1.2.1.jar:xwork-core/struts/lib/maven-reporting-api-2.0.6.jar:xwork-core/struts/lib/maven-resources-plugin-2.5.jar:xwork-core/struts/lib/maven-site-plugin-3.3.jar:xwork-core/struts/lib/maven-source-plugin-2.1.2.jar:xwork-core/struts/lib/mockobjects-core-0.09.jar:xwork-core/struts/lib/ognl-3.0.6.jar:xwork-core/struts/lib/oro-2.0.8.jar:xwork-core/struts/lib/plexus-archiver-1.0-alpha-7.jar:xwork-core/struts/lib/plexus-compiler-api-1.8.1.jar:xwork-core/struts/lib/plexus-compiler-javac-1.8.1.jar:xwork-core/struts/lib/plexus-compiler-manager-1.8.1.jar:xwork-core/struts/lib/plexus-interactivity-api-1.0-alpha-4.jar:xwork-core/struts/lib/plexus-interpolation-1.12.jar:xwork-core/struts/lib/plexus-interpolation-1.13.jar:xwork-core/struts/lib/plexus-resources-1.0-alpha-5.jar:xwork-core/struts/lib/plexus-utils-1.5.12.jar:xwork-core/struts/lib/plexus-utils-2.0.5.jar:xwork-core/struts/lib/plexus-velocity-1.1.8.jar:xwork-core/struts/lib/slf4j-api-1.7.2.jar:xwork-core/struts/lib/slf4j-simple-1.7.2.jar:xwork-core/struts/lib/spring-aop-3.0.5.RELEASE.jar:xwork-core/struts/lib/spring-asm-3.0.5.RELEASE.jar:xwork-core/struts/lib/spring-aspects-3.0.5.RELEASE.jar:xwork-core/struts/lib/spring-beans-3.0.5.RELEASE.jar:xwork-core/struts/lib/spring-context-3.0.5.RELEASE.jar:xwork-core/struts/lib/spring-context-support-3.0.5.RELEASE.jar:xwork-core/struts/lib/spring-core-3.0.5.RELEASE.jar:xwork-core/struts/lib/spring-expression-3.0.5.RELEASE.jar:xwork-core/struts/lib/spring-test-3.0.5.RELEASE.jar:xwork-core/struts/lib/spring-web-3.0.5.RELEASE.jar:xwork-core/struts/lib/testng-5.1-jdk15.jar:xwork-core/struts/lib/velocity-1.5.jar:xwork-core/struts/lib/velocity-1.6.4.jar:xwork-core/src/test/resources/xwork:-:jar.jar:xwork-core/src/test/resources/xwork-jar.jar ",
+			"dir_to_analyze": "@COMPILE_ARGS",
+			"LOC": 81394,
+			"enable": false,
+			"methods": 2070
+		},
+		{
+			"name": "poi-3.11",
+			"description": "The Apache POI Project's mission is to create and maintain Java APIs for manipulating various file formats based upon the Office Open XML standards (OOXML) and Microsoft's OLE 2 Compound Document format (OLE2).",
+			"version": "3.11",
+			"commit": "",
+			"classpath": "poi-3.11/lib/ant-1.9.4.jar:poi-3.11/lib/ant-launcher-1.9.4.jar:poi-3.11/lib/apache-rat-0.11.jar:poi-3.11/lib/asm-all-5.0.3.jar:poi-3.11/lib/bcpkix-1.48.jar:poi-3.11/lib/bcprov-ext-1.48.jar:poi-3.11/lib/commons-codec-1.9.jar:poi-3.11/lib/commons-logging-1.1.3.jar:poi-3.11/lib/hamcrest-core-1.3.jar:poi-3.11/lib/jacocoagent.jar:poi-3.11/lib/jacocoant.jar:poi-3.11/lib/jonas-xmlbeans-5.3.0.jar:poi-3.11/lib/jsr-api-1.0.1.jar:poi-3.11/lib/junit-4.12.jar:poi-3.11/lib/log4j-1.2.17.jar:poi-3.11/lib/ooxml-schemas-1.1.jar:poi-3.11/lib/org.jacoco.agent-0.7.2.201409121644.jar:poi-3.11/lib/org.jacoco.ant-0.7.2.201409121644.jar:poi-3.11/lib/org.jacoco.core-0.7.2.201409121644.jar:poi-3.11/lib/org.jacoco.report-0.7.2.201409121644.jar:poi-3.11/lib/poi-security-1.0.jar:poi-3.11/lib/santuario-xmlsec-1.5.1.jar:poi-3.11/lib/xmlbeans-2.5.0.jar:poi-3.11/lib/xmlsec-1.3.0.jar",
+			"dir_to_analyze": "@COMPILE_ARGS",
+			"LOC": 329366,
+			"enable": false,
+			"methods": 2070,
+			"entryPackage": "org.apache.poi.hssf.extractor.ExcelExtractor",
+			"entryMethod": "main"
+		},
+		{
+			"name": "castor-1.3.3",
+			"description": "Castor is an open source data binding framework for Java",
+			"version": "1.3.3",
+			"commit": "",
+			"classpath": "./castor-1.3.3/lib/solr-solrj-4.0.0.jar:./castor-1.3.3/jpa-extensions-it/lib/castor-1.3.3-RC1-xml.jar:./castor-1.3.3/jpa-extensions-it/lib/mockito-all-1.9.5.jar:./castor-1.3.3/jpa-extensions-it/lib/spring-test-3.0.6.RELEASE.jar:./castor-1.3.3/jpa-extensions-it/lib/derby-10.8.2.2.jar:./castor-1.3.3/jpa-extensions-it/lib/spring-dao-2.0.jar:./castor-1.3.3/jpa-extensions-it/lib/castor-1.3.3-RC1-jdo.jar:./castor-1.3.3/jpa-extensions-it/lib/castor-1.3.3-RC1-xml-schema.jar:./castor-1.3.3/jpa-extensions-it/lib/persistence-api-1.0.2.jar:./castor-1.3.3/jpa-extensions-it/lib/cglib-nodep-2.2.2.jar:./castor-1.3.3/jpa-extensions-it/lib/aopalliance-1.0.jar:./castor-1.3.3/jpa-extensions-it/lib/stax-api-1.0.1.jar:./castor-1.3.3/jpa-extensions-it/lib/javacc-5.0.jar:./castor-1.3.3/jpa-extensions-it/lib/junit-4.8.2.jar:./castor-1.3.3/jpa-extensions-it/lib/spring-core-3.0.6.RELEASE.jar:./castor-1.3.3/jpa-extensions-it/lib/commons-pool-1.5.4.jar:./castor-1.3.3/jpa-extensions-it/lib/mysql-connector-java-5.1.19.jar:./castor-1.3.3/jpa-extensions-it/lib/spring-jdbc-3.0.2.RELEASE.jar:./castor-1.3.3/jpa-extensions-it/lib/commons-lang-2.6.jar:./castor-1.3.3/jpa-extensions-it/lib/commons-cli-1.2.jar:./castor-1.3.3/jpa-extensions-it/lib/commons-io-2.3.jar:./castor-1.3.3/jpa-extensions-it/lib/javax.inject-1.jar:./castor-1.3.3/jpa-extensions-it/lib/spring-orm-2.1.jar:./castor-1.3.3/jpa-extensions-it/lib/spring-context-3.0.6.RELEASE.jar:./castor-1.3.3/jpa-extensions-it/lib/log4j-1.2.17.jar:./castor-1.3.3/jpa-extensions-it/lib/spring-expression-3.0.6.RELEASE.jar:./castor-1.3.3/jpa-extensions-it/lib/castor-1.3.3-RC1-core.jar:./castor-1.3.3/jpa-extensions-it/lib/jta-1.1.jar:./castor-1.3.3/jpa-extensions-it/lib/commons-logging-1.1.1.jar:./castor-1.3.3/jpa-extensions-it/lib/stax-1.2.0.jar:./castor-1.3.3/jpa-extensions-it/lib/commons-dbcp-1.3.jar:./castor-1.3.3/jpa-extensions-it/lib/spring-aop-3.0.6.RELEASE.jar:./castor-1.3.3/jpa-extensions-it/lib/spring-orm-3.0.2.RELEASE.jar:./castor-1.3.3/jpa-extensions-it/lib/spring-beans-3.0.6.RELEASE.jar:./castor-1.3.3/jpa-extensions-it/lib/spring-asm-3.0.6.RELEASE.jar:./castor-1.3.3/jpa-extensions-it/lib/castor-1.3.3-RC1-xml-diff.jar:./castor-1.3.3/schema/target/dependency/aopalliance-1.0.jar:./castor-1.3.3/schema/target/dependency/stax-api-1.0.1.jar:./castor-1.3.3/schema/target/dependency/junit-4.8.2.jar:./castor-1.3.3/schema/target/dependency/spring-core-3.0.6.RELEASE.jar:./castor-1.3.3/schema/target/dependency/commons-lang-2.6.jar:./castor-1.3.3/schema/target/dependency/commons-cli-1.2.jar:./castor-1.3.3/schema/target/dependency/javax.inject-1.jar:./castor-1.3.3/schema/target/dependency/castor-core-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/schema/target/dependency/log4j-1.2.16.jar:./castor-1.3.3/schema/target/dependency/spring-context-3.0.6.RELEASE.jar:./castor-1.3.3/schema/target/dependency/spring-expression-3.0.6.RELEASE.jar:./castor-1.3.3/schema/target/dependency/commons-logging-1.1.1.jar:./castor-1.3.3/schema/target/dependency/stax-1.2.0.jar:./castor-1.3.3/schema/target/dependency/spring-aop-3.0.6.RELEASE.jar:./castor-1.3.3/schema/target/dependency/castor-xml-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/schema/target/dependency/spring-beans-3.0.6.RELEASE.jar:./castor-1.3.3/schema/target/dependency/spring-asm-3.0.6.RELEASE.jar:./castor-1.3.3/schema/target/dependency/castor-xml-diff-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/schema/target/dependency/commons-collections-3.2.1.jar:./castor-1.3.3/schema/target/dependency/stax-api-1.0-2.jar:./castor-1.3.3/schema/lib/castor-1.3.3-RC1-xml.jar:./castor-1.3.3/schema/lib/aopalliance-1.0.jar:./castor-1.3.3/schema/lib/stax-api-1.0.1.jar:./castor-1.3.3/schema/lib/junit-4.8.2.jar:./castor-1.3.3/schema/lib/spring-core-3.0.6.RELEASE.jar:./castor-1.3.3/schema/lib/commons-lang-2.6.jar:./castor-1.3.3/schema/lib/commons-cli-1.2.jar:./castor-1.3.3/schema/lib/javax.inject-1.jar:./castor-1.3.3/schema/lib/castor-core-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/schema/lib/log4j-1.2.16.jar:./castor-1.3.3/schema/lib/spring-context-3.0.6.RELEASE.jar:./castor-1.3.3/schema/lib/spring-expression-3.0.6.RELEASE.jar:./castor-1.3.3/schema/lib/castor-1.3.3-RC1-core.jar:./castor-1.3.3/schema/lib/commons-logging-1.1.1.jar:./castor-1.3.3/schema/lib/stax-1.2.0.jar:./castor-1.3.3/schema/lib/spring-aop-3.0.6.RELEASE.jar:./castor-1.3.3/schema/lib/castor-xml-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/schema/lib/spring-beans-3.0.6.RELEASE.jar:./castor-1.3.3/schema/lib/spring-asm-3.0.6.RELEASE.jar:./castor-1.3.3/schema/lib/castor-1.3.3-RC1-xml-diff.jar:./castor-1.3.3/schema/lib/castor-xml-diff-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/maven-plugins/target/dependency/maven-repository-metadata-2.2.1.jar:./castor-1.3.3/maven-plugins/target/dependency/maven-artifact-manager-2.2.1.jar:./castor-1.3.3/maven-plugins/target/dependency/sisu-inject-plexus-2.1.1.jar:./castor-1.3.3/maven-plugins/target/dependency/backport-util-concurrent-3.1.jar:./castor-1.3.3/maven-plugins/target/dependency/maven-settings-2.2.1.jar:./castor-1.3.3/maven-plugins/target/dependency/maven-artifact-3.0.3.jar:./castor-1.3.3/maven-plugins/target/dependency/velocity-1.5.jar:./castor-1.3.3/maven-plugins/target/dependency/tools.jar:./castor-1.3.3/maven-plugins/target/dependency/maven-model-3.0.3.jar:./castor-1.3.3/maven-plugins/target/dependency/castor-testsuite-xml-framework-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/maven-plugins/target/dependency/aopalliance-1.0.jar:./castor-1.3.3/maven-plugins/target/dependency/stax-api-1.0.1.jar:./castor-1.3.3/maven-plugins/target/dependency/junit-4.8.2.jar:./castor-1.3.3/maven-plugins/target/dependency/plexus-classworlds-2.4.jar:./castor-1.3.3/maven-plugins/target/dependency/maven-profile-2.2.1.jar:./castor-1.3.3/maven-plugins/target/dependency/castor-xml-schema-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/maven-plugins/target/dependency/spring-core-3.0.6.RELEASE.jar:./castor-1.3.3/maven-plugins/target/dependency/sisu-inject-bean-2.1.1.jar:./castor-1.3.3/maven-plugins/target/dependency/ant-1.6.5.jar:./castor-1.3.3/maven-plugins/target/dependency/wagon-provider-api-1.0-beta-6.jar:./castor-1.3.3/maven-plugins/target/dependency/commons-lang-2.6.jar:./castor-1.3.3/maven-plugins/target/dependency/sisu-guice-2.9.4-no_aop.jar:./castor-1.3.3/maven-plugins/target/dependency/oro-2.0.8.jar:./castor-1.3.3/maven-plugins/target/dependency/commons-cli-1.2.jar:./castor-1.3.3/maven-plugins/target/dependency/classworlds-1.1-alpha-2.jar:./castor-1.3.3/maven-plugins/target/dependency/javax.inject-1.jar:./castor-1.3.3/maven-plugins/target/dependency/castor-core-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/maven-plugins/target/dependency/maven-project-2.2.1.jar:./castor-1.3.3/maven-plugins/target/dependency/maven-plugin-registry-2.2.1.jar:./castor-1.3.3/maven-plugins/target/dependency/maven-plugin-api-3.0.3.jar:./castor-1.3.3/maven-plugins/target/dependency/spring-context-3.0.6.RELEASE.jar:./castor-1.3.3/maven-plugins/target/dependency/spring-expression-3.0.6.RELEASE.jar:./castor-1.3.3/maven-plugins/target/dependency/commons-logging-1.1.1.jar:./castor-1.3.3/maven-plugins/target/dependency/stax-1.2.0.jar:./castor-1.3.3/maven-plugins/target/dependency/plexus-utils-1.5.15.jar:./castor-1.3.3/maven-plugins/target/dependency/spring-aop-3.0.6.RELEASE.jar:./castor-1.3.3/maven-plugins/target/dependency/castor-codegen-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/maven-plugins/target/dependency/plexus-component-annotations-1.5.5.jar:./castor-1.3.3/maven-plugins/target/dependency/plexus-interpolation-1.11.jar:./castor-1.3.3/maven-plugins/target/dependency/castor-xml-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/maven-plugins/target/dependency/spring-beans-3.0.6.RELEASE.jar:./castor-1.3.3/maven-plugins/target/dependency/spring-asm-3.0.6.RELEASE.jar:./castor-1.3.3/maven-plugins/target/dependency/castor-xml-diff-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/maven-plugins/target/dependency/commons-collections-3.2.1.jar:./castor-1.3.3/maven-plugins/target/dependency/plexus-container-default-1.0-alpha-9-stable-1.jar:./castor-1.3.3/maven-plugins/target/dependency/stax-api-1.0-2.jar:./castor-1.3.3/cpactf/target/dependency/castor-1.3.3-RC1-xml.jar:./castor-1.3.3/cpactf/target/dependency/derby-10.8.2.2.jar:./castor-1.3.3/cpactf/target/dependency/castor-1.3.3-RC1-jdo.jar:./castor-1.3.3/cpactf/target/dependency/tyrex-1.0.1.jar:./castor-1.3.3/cpactf/target/dependency/junit-4.8.2.jar:./castor-1.3.3/cpactf/target/dependency/slf4j-api-1.4.3.jar:./castor-1.3.3/cpactf/target/dependency/poi-2.5.1-final-20040804.jar:./castor-1.3.3/cpactf/target/dependency/commons-lang-2.6.jar:./castor-1.3.3/cpactf/target/dependency/oro-2.0.8.jar:./castor-1.3.3/cpactf/target/dependency/slf4j-nop-1.4.3.jar:./castor-1.3.3/cpactf/target/dependency/junit-addons-1.4.jar:./castor-1.3.3/cpactf/target/dependency/mysql-connector-java-3.1.12.jar:./castor-1.3.3/cpactf/target/dependency/castor-1.3.3-RC1-core.jar:./castor-1.3.3/cpactf/target/dependency/xercesImpl-2.6.2.jar:./castor-1.3.3/cpactf/target/dependency/commons-collections-3.1.jar:./castor-1.3.3/cpactf/target/dependency/postgresql-8.3-603.jdbc3.jar:./castor-1.3.3/cpactf/target/dependency/commons-logging-1.1.1.jar:./castor-1.3.3/cpactf/target/dependency/xmlParserAPIs-2.6.2.jar:./castor-1.3.3/cpactf/target/dependency/mockejb-0.6-beta2.jar:./castor-1.3.3/cpactf/target/dependency/dbunit-2.2.3.jar:./castor-1.3.3/cpactf/target/dependency/cglib-full-2.0.2.jar:./castor-1.3.3/codegen-testcase-archetype/lib/castor-1.3.3-RC1-xml.jar:./castor-1.3.3/codegen-testcase-archetype/lib/castor-1.3.3-RC1-xml-schema.jar:./castor-1.3.3/codegen-testcase-archetype/lib/castor-1.3.3-RC1-codegen.jar:./castor-1.3.3/cpa-testcase-archetype/lib/castor-1.3.3-RC1-xml.jar:./castor-1.3.3/cpa-testcase-archetype/lib/castor-1.3.3-RC1-jdo.jar:./castor-1.3.3/cpa-testcase-archetype/lib/castor-1.3.3-RC1-core.jar:./castor-1.3.3/cpa/target/dependency/persistence-api-1.0.2.jar:./castor-1.3.3/cpa/target/dependency/cglib-nodep-2.2.2.jar:./castor-1.3.3/cpa/target/dependency/tyrex-1.0.1.jar:./castor-1.3.3/cpa/target/dependency/aopalliance-1.0.jar:./castor-1.3.3/cpa/target/dependency/stax-api-1.0.1.jar:./castor-1.3.3/cpa/target/dependency/javacc-5.0.jar:./castor-1.3.3/cpa/target/dependency/junit-4.8.2.jar:./castor-1.3.3/cpa/target/dependency/castor-xml-schema-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/cpa/target/dependency/spring-core-3.0.6.RELEASE.jar:./castor-1.3.3/cpa/target/dependency/commons-lang-2.6.jar:./castor-1.3.3/cpa/target/dependency/commons-cli-1.2.jar:./castor-1.3.3/cpa/target/dependency/javax.inject-1.jar:./castor-1.3.3/cpa/target/dependency/castor-core-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/cpa/target/dependency/objenesis-1.0.jar:./castor-1.3.3/cpa/target/dependency/mockito-core-1.9.0.jar:./castor-1.3.3/cpa/target/dependency/hamcrest-core-1.1.jar:./castor-1.3.3/cpa/target/dependency/log4j-1.2.16.jar:./castor-1.3.3/cpa/target/dependency/spring-context-3.0.6.RELEASE.jar:./castor-1.3.3/cpa/target/dependency/spring-expression-3.0.6.RELEASE.jar:./castor-1.3.3/cpa/target/dependency/jta-1.1.jar:./castor-1.3.3/cpa/target/dependency/commons-logging-1.1.1.jar:./castor-1.3.3/cpa/target/dependency/stax-1.2.0.jar:./castor-1.3.3/cpa/target/dependency/spring-aop-3.0.6.RELEASE.jar:./castor-1.3.3/cpa/target/dependency/castor-xml-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/cpa/target/dependency/spring-beans-3.0.6.RELEASE.jar:./castor-1.3.3/cpa/target/dependency/spring-asm-3.0.6.RELEASE.jar:./castor-1.3.3/cpa/target/dependency/commons-collections-3.2.1.jar:./castor-1.3.3/cpa/target/dependency/stax-api-1.0-2.jar:./castor-1.3.3/cpa/lib/mockito-all-1.9.5.jar:./castor-1.3.3/cpa/lib/persistence-api-1.0.2.jar:./castor-1.3.3/cpa/lib/cglib-nodep-2.2.2.jar:./castor-1.3.3/cpa/lib/aopalliance-1.0.jar:./castor-1.3.3/cpa/lib/stax-api-1.0.1.jar:./castor-1.3.3/cpa/lib/javacc-5.0.jar:./castor-1.3.3/cpa/lib/castor-xml-schema-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/cpa/lib/spring-core-3.0.6.RELEASE.jar:./castor-1.3.3/cpa/lib/commons-lang-2.6.jar:./castor-1.3.3/cpa/lib/commons-cli-1.2.jar:./castor-1.3.3/cpa/lib/javax.inject-1.jar:./castor-1.3.3/cpa/lib/castor-core-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/cpa/lib/spring-context-3.0.6.RELEASE.jar:./castor-1.3.3/cpa/lib/log4j-1.2.17.jar:./castor-1.3.3/cpa/lib/spring-expression-3.0.6.RELEASE.jar:./castor-1.3.3/cpa/lib/jta-1.1.jar:./castor-1.3.3/cpa/lib/commons-logging-1.1.1.jar:./castor-1.3.3/cpa/lib/stax-1.2.0.jar:./castor-1.3.3/cpa/lib/spring-aop-3.0.6.RELEASE.jar:./castor-1.3.3/cpa/lib/castor-xml-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/cpa/lib/spring-asm-3.0.6.RELEASE.jar:./castor-1.3.3/diff/target/dependency/aopalliance-1.0.jar:./castor-1.3.3/diff/target/dependency/stax-api-1.0.1.jar:./castor-1.3.3/diff/target/dependency/junit-4.8.2.jar:./castor-1.3.3/diff/target/dependency/spring-core-3.0.6.RELEASE.jar:./castor-1.3.3/diff/target/dependency/commons-lang-2.6.jar:./castor-1.3.3/diff/target/dependency/javax.inject-1.jar:./castor-1.3.3/diff/target/dependency/castor-core-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/diff/target/dependency/log4j-1.2.16.jar:./castor-1.3.3/diff/target/dependency/spring-context-3.0.6.RELEASE.jar:./castor-1.3.3/diff/target/dependency/spring-expression-3.0.6.RELEASE.jar:./castor-1.3.3/diff/target/dependency/commons-logging-1.1.1.jar:./castor-1.3.3/diff/target/dependency/stax-1.2.0.jar:./castor-1.3.3/diff/target/dependency/spring-aop-3.0.6.RELEASE.jar:./castor-1.3.3/diff/target/dependency/castor-xml-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/diff/target/dependency/spring-beans-3.0.6.RELEASE.jar:./castor-1.3.3/diff/target/dependency/spring-asm-3.0.6.RELEASE.jar:./castor-1.3.3/diff/target/dependency/commons-collections-3.2.1.jar:./castor-1.3.3/diff/target/dependency/stax-api-1.0-2.jar:./castor-1.3.3/diff/lib/aopalliance-1.0.jar:./castor-1.3.3/diff/lib/stax-api-1.0.1.jar:./castor-1.3.3/diff/lib/junit-4.8.2.jar:./castor-1.3.3/diff/lib/spring-core-3.0.6.RELEASE.jar:./castor-1.3.3/diff/lib/commons-lang-2.6.jar:./castor-1.3.3/diff/lib/javax.inject-1.jar:./castor-1.3.3/diff/lib/castor-core-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/diff/lib/log4j-1.2.16.jar:./castor-1.3.3/diff/lib/spring-context-3.0.6.RELEASE.jar:./castor-1.3.3/diff/lib/spring-expression-3.0.6.RELEASE.jar:./castor-1.3.3/diff/lib/commons-logging-1.1.1.jar:./castor-1.3.3/diff/lib/stax-1.2.0.jar:./castor-1.3.3/diff/lib/spring-aop-3.0.6.RELEASE.jar:./castor-1.3.3/diff/lib/castor-xml-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/diff/lib/spring-beans-3.0.6.RELEASE.jar:./castor-1.3.3/diff/lib/spring-asm-3.0.6.RELEASE.jar:./castor-1.3.3/xmlctf-framework/target/dependency/aopalliance-1.0.jar:./castor-1.3.3/xmlctf-framework/target/dependency/stax-api-1.0.1.jar:./castor-1.3.3/xmlctf-framework/target/dependency/junit-4.8.2.jar:./castor-1.3.3/xmlctf-framework/target/dependency/castor-xml-schema-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/xmlctf-framework/target/dependency/spring-core-3.0.6.RELEASE.jar:./castor-1.3.3/xmlctf-framework/target/dependency/ant-1.6.5.jar:./castor-1.3.3/xmlctf-framework/target/dependency/commons-lang-2.6.jar:./castor-1.3.3/xmlctf-framework/target/dependency/commons-cli-1.2.jar:./castor-1.3.3/xmlctf-framework/target/dependency/javax.inject-1.jar:./castor-1.3.3/xmlctf-framework/target/dependency/castor-core-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/xmlctf-framework/target/dependency/spring-context-3.0.6.RELEASE.jar:./castor-1.3.3/xmlctf-framework/target/dependency/spring-expression-3.0.6.RELEASE.jar:./castor-1.3.3/xmlctf-framework/target/dependency/commons-logging-1.1.1.jar:./castor-1.3.3/xmlctf-framework/target/dependency/stax-1.2.0.jar:./castor-1.3.3/xmlctf-framework/target/dependency/spring-aop-3.0.6.RELEASE.jar:./castor-1.3.3/xmlctf-framework/target/dependency/castor-codegen-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/xmlctf-framework/target/dependency/castor-xml-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/xmlctf-framework/target/dependency/spring-beans-3.0.6.RELEASE.jar:./castor-1.3.3/xmlctf-framework/target/dependency/spring-asm-3.0.6.RELEASE.jar:./castor-1.3.3/xmlctf-framework/target/dependency/castor-xml-diff-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/xmlctf-framework/target/dependency/commons-collections-3.2.1.jar:./castor-1.3.3/xmlctf-framework/target/dependency/stax-api-1.0-2.jar:./castor-1.3.3/core/target/dependency/junit-4.8.2.jar:./castor-1.3.3/core/target/dependency/commons-lang-2.6.jar:./castor-1.3.3/core/target/dependency/log4j-1.2.16.jar:./castor-1.3.3/core/target/dependency/commons-logging-1.1.1.jar:./castor-1.3.3/core/lib/junit-4.8.2.jar:./castor-1.3.3/core/lib/commons-lang-2.6.jar:./castor-1.3.3/core/lib/log4j-1.2.16.jar:./castor-1.3.3/core/lib/commons-logging-1.1.1.jar:./castor-1.3.3/codegen/target/dependency/velocity-1.5.jar:./castor-1.3.3/codegen/target/dependency/aopalliance-1.0.jar:./castor-1.3.3/codegen/target/dependency/stax-api-1.0.1.jar:./castor-1.3.3/codegen/target/dependency/junit-4.8.2.jar:./castor-1.3.3/codegen/target/dependency/castor-xml-schema-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/codegen/target/dependency/spring-core-3.0.6.RELEASE.jar:./castor-1.3.3/codegen/target/dependency/commons-lang-2.6.jar:./castor-1.3.3/codegen/target/dependency/oro-2.0.8.jar:./castor-1.3.3/codegen/target/dependency/commons-cli-1.2.jar:./castor-1.3.3/codegen/target/dependency/javax.inject-1.jar:./castor-1.3.3/codegen/target/dependency/castor-core-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/codegen/target/dependency/log4j-1.2.16.jar:./castor-1.3.3/codegen/target/dependency/spring-context-3.0.6.RELEASE.jar:./castor-1.3.3/codegen/target/dependency/spring-expression-3.0.6.RELEASE.jar:./castor-1.3.3/codegen/target/dependency/commons-logging-1.1.1.jar:./castor-1.3.3/codegen/target/dependency/stax-1.2.0.jar:./castor-1.3.3/codegen/target/dependency/spring-aop-3.0.6.RELEASE.jar:./castor-1.3.3/codegen/target/dependency/castor-xml-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/codegen/target/dependency/spring-beans-3.0.6.RELEASE.jar:./castor-1.3.3/codegen/target/dependency/spring-asm-3.0.6.RELEASE.jar:./castor-1.3.3/codegen/target/dependency/commons-collections-3.2.1.jar:./castor-1.3.3/codegen/target/dependency/stax-api-1.0-2.jar:./castor-1.3.3/codegen/lib/castor-jdo-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/codegen/lib/velocity-1.5.jar:./castor-1.3.3/codegen/lib/persistence-api-1.0.2.jar:./castor-1.3.3/codegen/lib/cglib-nodep-2.2.2.jar:./castor-1.3.3/codegen/lib/aopalliance-1.0.jar:./castor-1.3.3/codegen/lib/stax-api-1.0.1.jar:./castor-1.3.3/codegen/lib/javacc-5.0.jar:./castor-1.3.3/codegen/lib/junit-4.8.2.jar:./castor-1.3.3/codegen/lib/castor-xml-schema-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/codegen/lib/spring-core-3.0.6.RELEASE.jar:./castor-1.3.3/codegen/lib/commons-lang-2.6.jar:./castor-1.3.3/codegen/lib/oro-2.0.8.jar:./castor-1.3.3/codegen/lib/commons-cli-1.2.jar:./castor-1.3.3/codegen/lib/javax.inject-1.jar:./castor-1.3.3/codegen/lib/castor-core-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/codegen/lib/log4j-1.2.16.jar:./castor-1.3.3/codegen/lib/spring-context-3.0.6.RELEASE.jar:./castor-1.3.3/codegen/lib/spring-expression-3.0.6.RELEASE.jar:./castor-1.3.3/codegen/lib/jta-1.1.jar:./castor-1.3.3/codegen/lib/commons-collections-3.1.jar:./castor-1.3.3/codegen/lib/commons-logging-1.1.1.jar:./castor-1.3.3/codegen/lib/stax-1.2.0.jar:./castor-1.3.3/codegen/lib/spring-aop-3.0.6.RELEASE.jar:./castor-1.3.3/codegen/lib/castor-xml-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/codegen/lib/spring-beans-3.0.6.RELEASE.jar:./castor-1.3.3/codegen/lib/spring-asm-3.0.6.RELEASE.jar:./castor-1.3.3/ddlgen/target/dependency/aopalliance-1.0.jar:./castor-1.3.3/ddlgen/target/dependency/stax-api-1.0.1.jar:./castor-1.3.3/ddlgen/target/dependency/junit-4.8.2.jar:./castor-1.3.3/ddlgen/target/dependency/spring-core-3.0.6.RELEASE.jar:./castor-1.3.3/ddlgen/target/dependency/commons-lang-2.6.jar:./castor-1.3.3/ddlgen/target/dependency/javax.inject-1.jar:./castor-1.3.3/ddlgen/target/dependency/castor-core-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/ddlgen/target/dependency/log4j-1.2.16.jar:./castor-1.3.3/ddlgen/target/dependency/spring-context-3.0.6.RELEASE.jar:./castor-1.3.3/ddlgen/target/dependency/spring-expression-3.0.6.RELEASE.jar:./castor-1.3.3/ddlgen/target/dependency/commons-logging-1.1.1.jar:./castor-1.3.3/ddlgen/target/dependency/stax-1.2.0.jar:./castor-1.3.3/ddlgen/target/dependency/spring-aop-3.0.6.RELEASE.jar:./castor-1.3.3/ddlgen/target/dependency/castor-xml-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/ddlgen/target/dependency/spring-beans-3.0.6.RELEASE.jar:./castor-1.3.3/ddlgen/target/dependency/spring-asm-3.0.6.RELEASE.jar:./castor-1.3.3/ddlgen/target/dependency/commons-collections-3.2.1.jar:./castor-1.3.3/ddlgen/target/dependency/stax-api-1.0-2.jar:./castor-1.3.3/ddlgen/lib/aopalliance-1.0.jar:./castor-1.3.3/ddlgen/lib/stax-api-1.0.1.jar:./castor-1.3.3/ddlgen/lib/junit-4.8.2.jar:./castor-1.3.3/ddlgen/lib/spring-core-3.0.6.RELEASE.jar:./castor-1.3.3/ddlgen/lib/commons-lang-2.6.jar:./castor-1.3.3/ddlgen/lib/javax.inject-1.jar:./castor-1.3.3/ddlgen/lib/castor-core-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/ddlgen/lib/log4j-1.2.16.jar:./castor-1.3.3/ddlgen/lib/spring-context-3.0.6.RELEASE.jar:./castor-1.3.3/ddlgen/lib/spring-expression-3.0.6.RELEASE.jar:./castor-1.3.3/ddlgen/lib/commons-logging-1.1.1.jar:./castor-1.3.3/ddlgen/lib/stax-1.2.0.jar:./castor-1.3.3/ddlgen/lib/spring-aop-3.0.6.RELEASE.jar:./castor-1.3.3/ddlgen/lib/castor-xml-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/ddlgen/lib/spring-beans-3.0.6.RELEASE.jar:./castor-1.3.3/ddlgen/lib/spring-asm-3.0.6.RELEASE.jar:./castor-1.3.3/maven-resources-plugin-2.5.jar:./castor-1.3.3/lib/google-collections-1.0.jar:./castor-1.3.3/lib/jul-to-slf4j-1.7.5.jar:./castor-1.3.3/lib/gt-main-10.5.jar:./castor-1.3.3/lib/jsr305-1.3.9.jar:./castor-1.3.3/lib/google-collections.jar:./castor-1.3.3/lib/gt-referencing-10.5.jar:./castor-1.3.3/lib/gt-api-10.5.jar:./castor-1.3.3/lib/gt-epsg-hsql-10.5.jar:./castor-1.3.3/lib/aopalliance-1.0.jar:./castor-1.3.3/lib/javacc-5.0.jar:./castor-1.3.3/lib/junit-4.8.2.jar:./castor-1.3.3/lib/gt-cql-10.5.jar:./castor-1.3.3/lib/jsr250-api-1.0.jar:./castor-1.3.3/lib/guice-3.0.jar:./castor-1.3.3/lib/guava-15.0.jar:./castor-1.3.3/lib/jts-1.13.jar:./castor-1.3.3/lib/compress-lzf-0.9.8.jar:./castor-1.3.3/lib/gt-metadata-10.5.jar:./castor-1.3.3/lib/gson-2.2.4.jar:./castor-1.3.3/lib/slf4j-api-1.7.5.jar:./castor-1.3.3/lib/javax.inject-1.jar:./castor-1.3.3/lib/google-collect-snapshot-20080530.jar:./castor-1.3.3/lib/guice-multibindings-3.0.jar:./castor-1.3.3/lib/async-http-client-1.6.5.jar:./castor-1.3.3/lib/annotations-2.0.1.jar:./castor-1.3.3/lib/mockito-core-1.9.5.jar:./castor-1.3.3/lib/geodb-0.7-RC2.jar:./castor-1.3.3/lib/gt-opengis-10.5.jar:./castor-1.3.3/xml/target/dependency/xmlunit-1.3.jar:./castor-1.3.3/xml/target/dependency/spring-test-3.0.6.RELEASE.jar:./castor-1.3.3/xml/target/dependency/objenesis-1.2.jar:./castor-1.3.3/xml/target/dependency/cglib-nodep-2.2.2.jar:./castor-1.3.3/xml/target/dependency/aopalliance-1.0.jar:./castor-1.3.3/xml/target/dependency/stax-api-1.0.1.jar:./castor-1.3.3/xml/target/dependency/easymock-3.1.jar:./castor-1.3.3/xml/target/dependency/junit-4.8.2.jar:./castor-1.3.3/xml/target/dependency/multithreadedtc-1.01.jar:./castor-1.3.3/xml/target/dependency/jakarta-regexp-1.4.jar:./castor-1.3.3/xml/target/dependency/spring-core-3.0.6.RELEASE.jar:./castor-1.3.3/xml/target/dependency/ant-1.6.5.jar:./castor-1.3.3/xml/target/dependency/commons-lang-2.6.jar:./castor-1.3.3/xml/target/dependency/oro-2.0.8.jar:./castor-1.3.3/xml/target/dependency/javax.inject-1.jar:./castor-1.3.3/xml/target/dependency/castor-core-1.3.3-rc2-SNAPSHOT.jar:./castor-1.3.3/xml/target/dependency/log4j-1.2.16.jar:./castor-1.3.3/xml/target/dependency/spring-context-3.0.6.RELEASE.jar:./castor-1.3.3/xml/target/dependency/spring-expression-3.0.6.RELEASE.jar:./castor-1.3.3/xml/target/dependency/commons-logging-1.1.1.jar:./castor-1.3.3/xml/target/dependency/stax-1.2.0.jar:./castor-1.3.3/xml/target/dependency/spring-aop-3.0.6.RELEASE.jar:./castor-1.3.3/xml/target/dependency/ldapsdk-4.1.jar:./castor-1.3.3/xml/target/dependency/spring-beans-3.0.6.RELEASE.jar:./castor-1.3.3/xml/target/dependency/spring-asm-3.0.6.RELEASE.jar:./castor-1.3.3/examples/lib/castor-core-1.3.3-20120417.182456-7.jar:./castor-1.3.3/examples/lib/aopalliance-1.0.jar:./castor-1.3.3/examples/lib/stax-api-1.0.1.jar:./castor-1.3.3/examples/lib/junit-4.8.2.jar:./castor-1.3.3/examples/lib/spring-core-3.0.6.RELEASE.jar:./castor-1.3.3/examples/lib/commons-lang-2.6.jar:./castor-1.3.3/examples/lib/javax.inject-1.jar:./castor-1.3.3/examples/lib/log4j-1.2.16.jar:./castor-1.3.3/examples/lib/spring-context-3.0.6.RELEASE.jar:./castor-1.3.3/examples/lib/castor-xml-1.3.3-20120417.182543-7.jar:./castor-1.3.3/examples/lib/spring-expression-3.0.6.RELEASE.jar:./castor-1.3.3/examples/lib/commons-logging-1.1.1.jar:./castor-1.3.3/examples/lib/stax-1.2.0.jar:./castor-1.3.3/examples/lib/spring-aop-3.0.6.RELEASE.jar:./castor-1.3.3/examples/lib/ldapsdk-4.1.jar:./castor-1.3.3/examples/lib/spring-beans-3.0.6.RELEASE.jar:./castor-1.3.3/examples/lib/spring-asm-3.0.6.RELEASE.jar:./castor-1.3.3/examples/lib/mysql-connector-java-5.1.6.jar:./castor-1.3.3/anttask/target/dependency/junit-4.8.2.jar:./castor-1.3.3/anttask/target/dependency/ant-1.6.jar:./castor-1.3.3/anttask/target/dependency/log4j-1.2.16.jar:./castor-1.3.3/anttask/target/dependency/commons-logging-1.1.1.jar",
+			"dir_to_analyze": "@COMPILE_ARGS",
+			"LOC": 235745,
+			"enable": false,
+			"methods": 10000,
+			"entryPackage": "org.exolab.castor.gui.QueryAnalyser",
+			"entryMethod": "main"
+		},
+		{
+			"name": "fop-0.95",
+			"url": "https://archive.apache.org/dist/xmlgraphics/fop/source/fop-0.95-src.zip",
+			"checkout": "wget",
+			"description": "Free Open Source Software (FOPS) is a Java library for formatting XML documents into PDF",
+			"version": "0.95",
+			"commit": "",
+			"classpath": "dependencies/FOP/fop-all.jar:dependencies/FOP/aspectjrt.jar:dependencies/FOP/xmlgraphics-commons-1.3.1.jar:dependencies/FOP/xml-resolver-1.2.jar:dependencies/FOP/commons-cli-1.2.jar:dependencies/FOP/fop-0.20.5.jar:dependencies/FOP/jai_core-1.1.3.jar:dependencies/FOP/apache-ant-1.8.2.jar:dependencies/JFREECHART/junit-4.11.jar",
+			"dir_to_analyze": "",
+			"exclude_dirs": [
+				{
+					"path": "examples/",
+					"motivation": "Contains examples."
+				},
+				{
+					"path": "test/java/org/apache/fop/intermediate/AreaTreeParserTestCase.java",
+					"motivation": "Unable to find dependencies"
+				},
+				{
+					"path": "test/java/org/apache/fop/intermediate/IntermediateFormatTestSuite.java",
+					"motivation": "Unable to find dependencies"
+				}
+			],
+			"LOC": 102746,
+			"enable": false,
+			"methods": 8318,
+			"entryPackage": "org.apache.fop.cli.Main",
+			"entryMethod": "main"
+		},
+		{
+			"name": "pmd-4.2.5",
+			"url": "https://downloads.sourceforge.net/project/pmd/pmd/4.2.5/pmd-src-4.2.5.zip",
+			"checkout": "wget",
+			"description": "PMD is a Java source code analyzer that checks your Java code for design and coding style problems",
+			"version": "4.2.5",
+			"commit": "",
+			"classpath": "pmd-4.2.5/lib/asm-3.1.jar:pmd-4.2.5/lib/javacc.jar:pmd-4.2.5/lib/jaxen-1.1.1.jar:pmd-4.2.5/lib/junit-4.4.jar:dependencies/FOP/fop-all.jar:dependencies/FOP/aspectjrt.jar:dependencies/FOP/xmlgraphics-commons-1.3.1.jar:dependencies/FOP/xml-resolver-1.2.jar:dependencies/FOP/commons-cli-1.2.jar:dependencies/FOP/fop-0.20.5.jar:dependencies/FOP/jai_core-1.1.3.jar:dependencies/FOP/apache-ant-1.8.2.jar",
+			"dir_to_analyze": "",
+			"LOC": 60749,
+			"enable": false,
+			"methods": 5325,
+			"entryPackage": "net.sourceforge.pmd.PMD",
+			"entryMethod": "main"
+		},
+		{
+			"name": "jfreechart-1.0.0",
+			"url": "https://downloads.sourceforge.net/project/jfreechart/1.%20JFreeChart/1.0.0/jfreechart-1.0.0.zip",
+			"checkout": "wget",
+			"description": "JFreeChart is a Java library for creating data-driven graphics",
+			"version": "1.0.0",
+			"commit": "",
+			"classpath": "dependencies/JFREECHART/servlet.jar:dependencies/JFREECHART/orsonpdf-1.6-eval.jar:dependencies/JFREECHART/orsoncharts-1.4-eval-nofx.jar:dependencies/JFREECHART/junit-4.11.jar:dependencies/JFREECHART/jfreesvg-1.9.jar:dependencies/JFREECHART/jcommon-1.0.22.jar:dependencies/JFREECHART/hamcrest-core-1.3.jar:dependencies/FOP/fop-all.jar:dependencies/FOP/aspectjrt.jar:dependencies/FOP/xmlgraphics-commons-1.3.1.jar:dependencies/FOP/xml-resolver-1.2.jar:dependencies/FOP/commons-cli-1.2.jar:dependencies/FOP/fop-0.20.5.jar:dependencies/FOP/jai_core-1.1.3.jar:dependencies/FOP/apache-ant-1.8.2.jar",
+			"dir_to_analyze": "",
+			"LOC": 95664,
+			"enable": false,
+			"methods": 6980
+		},
+		{
+			"name": "joda-time",
+			"url": "https://github.com/JodaOrg/joda-time.git",
+			"checkout": "git",
+			"description": "Joda-Time is a Java library for working with dates and times",
+			"version": "2.10.13",
+			"commit": "e9337f0",
+			"classpath": "dependencies/JODATIME/joda-convert-1.9.2.jar:dependencies/JODATIME/junit-3.8.2.jar",
+			"dir_to_analyze": "",
+			"LOC": 86562,
+			"enable": false,
+			"methods": 9324,
+			"entryPackage": "org.joda.time.tz.ZoneInfoCompiler",
+			"entryMethod": "main"
+		},
+		{
+			"name": "commons-cli",
+			"url": "https://github.com/apache/commons-cli.git",
+			"checkout": "git",
+			"description": "Apache Commons CLI is a collection of command line utilities that are designed to make common tasks easier.",
+			"commit": "e81a871",
+			"classpath": "dependencies/FOP/fop-all.jar:dependencies/NETBEANS_XML/org-netbeans-modules-editor-lib.jar:dependencies/JFREECHART/junit-4.11.jar",
+			"dir_to_analyze": "src/",
+			"LOC": 6235,
+			"enable": false,
+			"methods": 585
+		},
+		{
+			"name": "jackson-core",
+			"url": "https://github.com/FasterXML/jackson-core.git",
+			"checkout": "git",
+			"description": "Jackson Core - XML Parser",
+			"commit": "c5b123b",
+			"classpath": ":dependencies/JACKSON-CORE/junit-4.13.1.jar:dependencies/JACKSON-CORE/hamcrest-core-1.3.jar:dependencies/JACKSON-CORE/jackson-core-2.13.2.jar",
+			"dir_to_analyze": "",
+			"LOC": 48599,
+			"enable": false,
+			"exclude_dirs": [
+				{
+					"path": "src/moditect/module-info.java",
+					"motivation": "Modules ? "
+				}
+			],
+			"methods": 3687,
+			"entryPackage": "perf.ManualReadPerfWithMedia",
+			"entryMethod": "main"
+		},
+		{
+			"name": "jackson-dataformat-xml",
+			"url": "https://github.com/FasterXML/jackson-dataformat-xml.git",
+			"checkout": "git",
+			"description": "Jackson Dataformat XML - XML Parser",
+			"commit": "1842f1e",
+			"classpath": "dependencies/JACKSON-DATAFORMAT-XML/jakarta.activation-2.0.1.jar:dependencies/JACKSON-DATAFORMAT-XML/stax-api-1.0.jar:dependencies/JACKSON-DATAFORMAT-XML/sjsxp-1.0.2.jar:dependencies/JACKSON-DATAFORMAT-XML/junit-4.13.1.jar:dependencies/JACKSON-DATAFORMAT-XML/jackson-module-jakarta-xmlbind-annotations-2.13.2.jar:dependencies/JACKSON-DATAFORMAT-XML/stax2-api-4.2.1.jar:dependencies/JACKSON-DATAFORMAT-XML/jackson-core-2.13.2.jar:dependencies/JACKSON-DATAFORMAT-XML/woodstox-core-6.2.7.jar:dependencies/JACKSON-DATAFORMAT-XML/jakarta.xml.bind-api-3.0.1.jar:dependencies/JACKSON-DATAFORMAT-XML/jackson-annotations-2.13.2.jar:dependencies/JACKSON-DATAFORMAT-XML/jackson-databind-2.13.2.jar:dependencies/JACKSON-DATAFORMAT-XML/hamcrest-core-1.3.jar:dependencies/JACKSON-DATAFORMAT-XML/jackson-dataformat-xml-2.13.2.jar",
+			"dir_to_analyze": "",
+			"LOC": 15079,
+			"enable": false,
+			"exclude_dirs": [
+				{
+					"path": "src/moditect/module-info.java",
+					"motivation": "Modules ? "
+				}
+			],
+			"methods": 1122,
+			"entryPackage": "com.fasterxml.jackson.dataformat.xml.XmlFactory",
+			"entryMethod": "createParser"
+		},
+		{
+			"name": "commons-jxpath",
+			"url": "https://github.com/apache/commons-jxpath.git",
+			"checkout": "git",
+			"description": "Apache Commons JXPath - A JXPath implementation for Java",
+			"commit": "4cfa8da",
+			"classpath": "dependencies/COMMONS-JXPATH/junit-3.8.1.jar:dependencies/COMMONS-JXPATH/commons-beanutils-1.7.0.jar:dependencies/COMMONS-JXPATH/commons-logging-1.1.1.jar:dependencies/COMMONS-JXPATH/mockejb-0.6-beta2.jar:dependencies/COMMONS-JXPATH/servlet-api-2.4.jar:dependencies/COMMONS-JXPATH/cglib-full-2.0.2.jar:dependencies/COMMONS-JXPATH/xml-apis-1.3.04.jar:dependencies/COMMONS-JXPATH/jdom-1.0.jar:dependencies/COMMONS-JXPATH/jsp-api-2.0.jar:dependencies/COMMONS-JXPATH/xercesImpl-2.4.0.jar:dependencies/COMMONS-JXPATH/mockrunner-jdk1.3-j2ee1.3-0.4.jar",
+			"dir_to_analyze": "src/",
+			"LOC": 24320,
+			"enable": false,
+			"methods": 2030,
+			"entryPackage": "org.apache.commons.jxpath.ri.JXPathContextReferenceImpl",
+			"entryMethod": "compileExpression"
+		}
+	]
+}

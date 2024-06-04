@@ -1,0 +1,4 @@
+aspect EnhancedFor {
+    EnhancedForStmt contributes new FieldStoreEdge(getVariableDecl(), getExpr().getDeclaration(), "-COLLECTION_ACCESS") to InvocationTarget.inclusionEdges() for each enclosingMethods();
+}
+    

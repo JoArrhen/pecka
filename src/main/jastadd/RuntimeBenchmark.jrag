@@ -1,0 +1,37 @@
+aspect runtimebenchmark {
+    /*
+      For this benchmark, we want to find methods where the arguments for the method could have multiple
+      runtime types. The arguments should threrefore be a superclass or an interface, making it 
+      possible to provide multiple runtimetypes.
+    */
+
+    syn boolean ParameterDeclaration.hasSubtypes() {
+        Access access = getTypeAccess();
+        TypeAccess typeaccess;
+        if (access instanceof TypeAccess) {
+            return ((TypeAccess) access).decl().subtypes().size() > 0;
+        }
+        return false;
+
+    }
+
+    syn boolean MethodDecl.hasParameterWithSubtype() {
+        for (ParameterDeclaration parameter : getParameterList()) {
+            if (parameter.hasSubtypes()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    coll Set<MethodDecl> Program.methodsOfInterest() [new HashSet<>()];
+    MethodDecl contributes this 
+    when hasParameterWithSubtype() && calledIn().size() > 0 
+    to Program.methodsOfInterest() for program();
+
+
+    // for the insertion we can find the location of the first stmt and take that line as the one
+    // we should insert above. That handles the isue with the right bracket beeing in different 
+    // places.
+
+}

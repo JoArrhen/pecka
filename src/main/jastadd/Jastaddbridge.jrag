@@ -1,0 +1,77 @@
+aspect jastaddbridge {
+    syn String VarAccess.lsp_hover() = pointsToString();
+
+    coll Set<Diagnostic> Program.lsp_diagnostics() [new HashSet<>()];
+    VarAccess contributes new Diagnostic(this, pointsToString(), Severity.Information)
+        to Program.lsp_diagnostics() for program();
+
+
+    public class Diagnostic {
+        private ASTNode node;
+        private String message;
+        private int severity = 3;
+        private int startLine;
+        private int startColumn;
+        private int endLine;
+        private int endColumn;
+        private Severity severity_level;
+
+        public Diagnostic(ASTNode node, String message, Severity severity_level) {
+            this.node = node;
+            this.message = message;
+            this.startLine = Symbol.getLine(node.getStart()) - 1;
+            this.startColumn = Symbol.getColumn(node.getStart());
+            this.endLine = Symbol.getLine(node.getEnd()) - 1;
+            this.endColumn = Symbol.getColumn(node.getEnd());
+            this.severity_level = severity_level;
+        }
+
+        public String message() {
+            return message;
+        }
+
+        public int severity() { // Diagnostic type. 1 = error, 2 = warning, 3 = info, 4 = hint
+            return severity_level.getValue();
+        }
+
+        public int startLine() {
+            return startLine;
+        }
+
+        public int startColumn() {
+            return startColumn;
+        }
+
+        public int endLine() {
+            return endLine;
+        }
+
+        public int endColumn() {
+            return endColumn;
+        }
+        @Override
+        public String toString() {
+            return "'" +
+                message + "' " +
+                "at location " + startLine + ":" + startColumn +
+                " - " + endLine + ":" + endColumn;
+        }
+
+    }
+
+    public enum Severity {
+        Error(1), Warning(2), Information(3), Hint(4);
+
+        private final int value;
+
+        Severity(int value) {
+            this.value = value;
+        }
+
+        public int getValue() {
+            return value;
+        }
+    }
+
+    
+}

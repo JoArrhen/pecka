@@ -1,0 +1,648 @@
+
+ActionElement;action;antlr/CppCodeGenerator.java;gen(ActionElement action);ActionElement
+ActionElement;action;antlr/DiagnosticCodeGenerator.java;gen(ActionElement action);ActionElement
+ActionElement;action;antlr/DocBookCodeGenerator.java;gen(ActionElement action);ActionElement
+ActionElement;action;antlr/HTMLCodeGenerator.java;gen(ActionElement action);ActionElement
+ActionElement;action;antlr/JavaCodeGenerator.java;gen(ActionElement action);ActionElement
+ActionElement;action;antlr/LLkAnalyzer.java;look(int k, ActionElement action);ActionElement
+ActionTransInfo;transInfo;antlr/CppCodeGenerator.java;mapTreeId(String idParam, ActionTransInfo transInfo);ActionTransInfo
+Alternative;a;antlr/CppCodeGenerator.java;suitableForCaseExpression(Alternative a);Alternative
+Alternative;a;antlr/JavaCodeGenerator.java;suitableForCaseExpression(Alternative a);Alternative
+Alternative;alt;antlr/AlternativeBlock.java;addAlternative(Alternative alt);Alternative
+Alternative;alt;antlr/CppCodeGenerator.java;genAlt(Alternative alt, AlternativeBlock blk);Alternative
+Alternative;alt;antlr/CppCodeGenerator.java;getLookaheadTestExpression(Alternative alt, int maxDepth);Alternative
+Alternative;alt;antlr/CppCodeGenerator.java;lookaheadIsEmpty(Alternative alt, int maxDepth);Alternative
+Alternative;alt;antlr/DiagnosticCodeGenerator.java;genAlt(Alternative alt);Alternative
+Alternative;alt;antlr/DiagnosticCodeGenerator.java;genLookaheadSetForAlt(Alternative alt);Alternative
+Alternative;alt;antlr/DocBookCodeGenerator.java;genAlt(Alternative alt);Alternative
+Alternative;alt;antlr/HTMLCodeGenerator.java;genAlt(Alternative alt);Alternative
+Alternative;alt;antlr/JavaCodeGenerator.java;genAlt(Alternative alt, AlternativeBlock blk);Alternative
+Alternative;alt;antlr/JavaCodeGenerator.java;getLookaheadTestExpression(Alternative alt, int maxDepth);Alternative
+Alternative;alt;antlr/JavaCodeGenerator.java;lookaheadIsEmpty(Alternative alt, int maxDepth);Alternative
+Alternative;alt;antlr/LLkAnalyzer.java;altUsesWildcardDefault(Alternative alt);Alternative
+AlternativeBlock;b;antlr/MakeGrammar.java;setBlock(AlternativeBlock b, AlternativeBlock src);OneOrMoreBlock
+AlternativeBlock;b;antlr/MakeGrammar.java;setBlock(AlternativeBlock b, AlternativeBlock src);SynPredBlock
+AlternativeBlock;b;antlr/MakeGrammar.java;setBlock(AlternativeBlock b, AlternativeBlock src);ZeroOrMoreBlock
+AlternativeBlock;blk;antlr/CppCodeGenerator.java;genAlt(Alternative alt, AlternativeBlock blk);AlternativeBlock
+AlternativeBlock;blk;antlr/CppCodeGenerator.java;genAlt(Alternative alt, AlternativeBlock blk);OneOrMoreBlock
+AlternativeBlock;blk;antlr/CppCodeGenerator.java;genAlt(Alternative alt, AlternativeBlock blk);RuleBlock
+AlternativeBlock;blk;antlr/CppCodeGenerator.java;genAlt(Alternative alt, AlternativeBlock blk);SynPredBlock
+AlternativeBlock;blk;antlr/CppCodeGenerator.java;genAlt(Alternative alt, AlternativeBlock blk);ZeroOrMoreBlock
+AlternativeBlock;blk;antlr/CppCodeGenerator.java;gen(AlternativeBlock blk);AlternativeBlock
+AlternativeBlock;blk;antlr/CppCodeGenerator.java;gen(AlternativeBlock blk);SynPredBlock
+AlternativeBlock;blk;antlr/CppCodeGenerator.java;genBlockPreamble(AlternativeBlock blk);AlternativeBlock
+AlternativeBlock;blk;antlr/CppCodeGenerator.java;genBlockPreamble(AlternativeBlock blk);OneOrMoreBlock
+AlternativeBlock;blk;antlr/CppCodeGenerator.java;genBlockPreamble(AlternativeBlock blk);RuleBlock
+AlternativeBlock;blk;antlr/CppCodeGenerator.java;genBlockPreamble(AlternativeBlock blk);SynPredBlock
+AlternativeBlock;blk;antlr/CppCodeGenerator.java;genBlockPreamble(AlternativeBlock blk);ZeroOrMoreBlock
+AlternativeBlock;blk;antlr/DiagnosticCodeGenerator.java;gen(AlternativeBlock blk);AlternativeBlock
+AlternativeBlock;blk;antlr/DiagnosticCodeGenerator.java;gen(AlternativeBlock blk);SynPredBlock
+AlternativeBlock;blk;antlr/DiagnosticCodeGenerator.java;genBlockPreamble(AlternativeBlock blk);AlternativeBlock
+AlternativeBlock;blk;antlr/DiagnosticCodeGenerator.java;genBlockPreamble(AlternativeBlock blk);OneOrMoreBlock
+AlternativeBlock;blk;antlr/DiagnosticCodeGenerator.java;genBlockPreamble(AlternativeBlock blk);RuleBlock
+AlternativeBlock;blk;antlr/DiagnosticCodeGenerator.java;genBlockPreamble(AlternativeBlock blk);SynPredBlock
+AlternativeBlock;blk;antlr/DiagnosticCodeGenerator.java;genBlockPreamble(AlternativeBlock blk);ZeroOrMoreBlock
+AlternativeBlock;blk;antlr/DiagnosticCodeGenerator.java;genCommonBlock(AlternativeBlock blk);AlternativeBlock
+AlternativeBlock;blk;antlr/DiagnosticCodeGenerator.java;genCommonBlock(AlternativeBlock blk);OneOrMoreBlock
+AlternativeBlock;blk;antlr/DiagnosticCodeGenerator.java;genCommonBlock(AlternativeBlock blk);RuleBlock
+AlternativeBlock;blk;antlr/DiagnosticCodeGenerator.java;genCommonBlock(AlternativeBlock blk);SynPredBlock
+AlternativeBlock;blk;antlr/DiagnosticCodeGenerator.java;genCommonBlock(AlternativeBlock blk);ZeroOrMoreBlock
+AlternativeBlock;blk;antlr/DiagnosticCodeGenerator.java;genLookaheadSetForBlock(AlternativeBlock blk);AlternativeBlock
+AlternativeBlock;blk;antlr/DiagnosticCodeGenerator.java;genLookaheadSetForBlock(AlternativeBlock blk);OneOrMoreBlock
+AlternativeBlock;blk;antlr/DiagnosticCodeGenerator.java;genLookaheadSetForBlock(AlternativeBlock blk);RuleBlock
+AlternativeBlock;blk;antlr/DiagnosticCodeGenerator.java;genLookaheadSetForBlock(AlternativeBlock blk);SynPredBlock
+AlternativeBlock;blk;antlr/DiagnosticCodeGenerator.java;genLookaheadSetForBlock(AlternativeBlock blk);ZeroOrMoreBlock
+AlternativeBlock;blk;antlr/DocBookCodeGenerator.java;gen(AlternativeBlock blk);AlternativeBlock
+AlternativeBlock;blk;antlr/DocBookCodeGenerator.java;genCommonBlock(AlternativeBlock blk);AlternativeBlock
+AlternativeBlock;blk;antlr/DocBookCodeGenerator.java;genCommonBlock(AlternativeBlock blk);OneOrMoreBlock
+AlternativeBlock;blk;antlr/DocBookCodeGenerator.java;genCommonBlock(AlternativeBlock blk);RuleBlock
+AlternativeBlock;blk;antlr/DocBookCodeGenerator.java;genCommonBlock(AlternativeBlock blk);ZeroOrMoreBlock
+AlternativeBlock;blk;antlr/DocBookCodeGenerator.java;genGenericBlock(AlternativeBlock blk, String blkOp);AlternativeBlock
+AlternativeBlock;blk;antlr/DocBookCodeGenerator.java;genGenericBlock(AlternativeBlock blk, String blkOp);OneOrMoreBlock
+AlternativeBlock;blk;antlr/DocBookCodeGenerator.java;genGenericBlock(AlternativeBlock blk, String blkOp);ZeroOrMoreBlock
+AlternativeBlock;blk;antlr/HTMLCodeGenerator.java;gen(AlternativeBlock blk);AlternativeBlock
+AlternativeBlock;blk;antlr/HTMLCodeGenerator.java;genCommonBlock(AlternativeBlock blk);AlternativeBlock
+AlternativeBlock;blk;antlr/HTMLCodeGenerator.java;genCommonBlock(AlternativeBlock blk);OneOrMoreBlock
+AlternativeBlock;blk;antlr/HTMLCodeGenerator.java;genCommonBlock(AlternativeBlock blk);RuleBlock
+AlternativeBlock;blk;antlr/HTMLCodeGenerator.java;genCommonBlock(AlternativeBlock blk);ZeroOrMoreBlock
+AlternativeBlock;blk;antlr/HTMLCodeGenerator.java;genGenericBlock(AlternativeBlock blk, String blkOp);AlternativeBlock
+AlternativeBlock;blk;antlr/HTMLCodeGenerator.java;genGenericBlock(AlternativeBlock blk, String blkOp);OneOrMoreBlock
+AlternativeBlock;blk;antlr/HTMLCodeGenerator.java;genGenericBlock(AlternativeBlock blk, String blkOp);ZeroOrMoreBlock
+AlternativeBlock;blk;antlr/JavaCodeGenerator.java;genAlt(Alternative alt, AlternativeBlock blk);AlternativeBlock
+AlternativeBlock;blk;antlr/JavaCodeGenerator.java;genAlt(Alternative alt, AlternativeBlock blk);OneOrMoreBlock
+AlternativeBlock;blk;antlr/JavaCodeGenerator.java;genAlt(Alternative alt, AlternativeBlock blk);RuleBlock
+AlternativeBlock;blk;antlr/JavaCodeGenerator.java;genAlt(Alternative alt, AlternativeBlock blk);SynPredBlock
+AlternativeBlock;blk;antlr/JavaCodeGenerator.java;genAlt(Alternative alt, AlternativeBlock blk);ZeroOrMoreBlock
+AlternativeBlock;blk;antlr/JavaCodeGenerator.java;gen(AlternativeBlock blk);AlternativeBlock
+AlternativeBlock;blk;antlr/JavaCodeGenerator.java;gen(AlternativeBlock blk);SynPredBlock
+AlternativeBlock;blk;antlr/JavaCodeGenerator.java;genBlockInitAction(AlternativeBlock blk);AlternativeBlock
+AlternativeBlock;blk;antlr/JavaCodeGenerator.java;genBlockInitAction(AlternativeBlock blk);OneOrMoreBlock
+AlternativeBlock;blk;antlr/JavaCodeGenerator.java;genBlockInitAction(AlternativeBlock blk);RuleBlock
+AlternativeBlock;blk;antlr/JavaCodeGenerator.java;genBlockInitAction(AlternativeBlock blk);SynPredBlock
+AlternativeBlock;blk;antlr/JavaCodeGenerator.java;genBlockInitAction(AlternativeBlock blk);ZeroOrMoreBlock
+AlternativeBlock;blk;antlr/JavaCodeGenerator.java;genBlockPreamble(AlternativeBlock blk);AlternativeBlock
+AlternativeBlock;blk;antlr/JavaCodeGenerator.java;genBlockPreamble(AlternativeBlock blk);OneOrMoreBlock
+AlternativeBlock;blk;antlr/JavaCodeGenerator.java;genBlockPreamble(AlternativeBlock blk);RuleBlock
+AlternativeBlock;blk;antlr/JavaCodeGenerator.java;genBlockPreamble(AlternativeBlock blk);SynPredBlock
+AlternativeBlock;blk;antlr/JavaCodeGenerator.java;genBlockPreamble(AlternativeBlock blk);ZeroOrMoreBlock
+AlternativeBlock;blk;antlr/LLkAnalyzer.java;deterministic(AlternativeBlock blk);AlternativeBlock
+AlternativeBlock;blk;antlr/LLkAnalyzer.java;deterministic(AlternativeBlock blk);OneOrMoreBlock
+AlternativeBlock;blk;antlr/LLkAnalyzer.java;deterministic(AlternativeBlock blk);RuleBlock
+AlternativeBlock;blk;antlr/LLkAnalyzer.java;deterministic(AlternativeBlock blk);SynPredBlock
+AlternativeBlock;blk;antlr/LLkAnalyzer.java;deterministic(AlternativeBlock blk);ZeroOrMoreBlock
+AlternativeBlock;blk;antlr/LLkAnalyzer.java;getAltLookahead(AlternativeBlock blk, int alt, int k);AlternativeBlock
+AlternativeBlock;blk;antlr/LLkAnalyzer.java;getAltLookahead(AlternativeBlock blk, int alt, int k);OneOrMoreBlock
+AlternativeBlock;blk;antlr/LLkAnalyzer.java;getAltLookahead(AlternativeBlock blk, int alt, int k);RuleBlock
+AlternativeBlock;blk;antlr/LLkAnalyzer.java;getAltLookahead(AlternativeBlock blk, int alt, int k);SynPredBlock
+AlternativeBlock;blk;antlr/LLkAnalyzer.java;getAltLookahead(AlternativeBlock blk, int alt, int k);ZeroOrMoreBlock
+AlternativeBlock;blk;antlr/LLkAnalyzer.java;look(int k, AlternativeBlock blk);AlternativeBlock
+AlternativeBlock;blk;antlr/LLkAnalyzer.java;look(int k, AlternativeBlock blk);OneOrMoreBlock
+AlternativeBlock;blk;antlr/LLkAnalyzer.java;look(int k, AlternativeBlock blk);RuleBlock
+AlternativeBlock;blk;antlr/LLkAnalyzer.java;look(int k, AlternativeBlock blk);SynPredBlock
+AlternativeBlock;blk;antlr/LLkAnalyzer.java;look(int k, AlternativeBlock blk);ZeroOrMoreBlock
+AlternativeBlock;blk;antlr/LLkAnalyzer.java;subruleCanBeInverted(AlternativeBlock blk, boolean forLexer);AlternativeBlock
+AlternativeBlock;src;antlr/MakeGrammar.java;setBlock(AlternativeBlock b, AlternativeBlock src);AlternativeBlock
+AlternativeElement;e;antlr/Alternative.java;addElement(AlternativeElement e);ActionElement
+AlternativeElement;e;antlr/Alternative.java;addElement(AlternativeElement e);AlternativeBlock
+AlternativeElement;e;antlr/Alternative.java;addElement(AlternativeElement e);BlockEndElement
+AlternativeElement;e;antlr/Alternative.java;addElement(AlternativeElement e);CharLiteralElement
+AlternativeElement;e;antlr/Alternative.java;addElement(AlternativeElement e);CharRangeElement
+AlternativeElement;e;antlr/Alternative.java;addElement(AlternativeElement e);OneOrMoreBlock
+AlternativeElement;e;antlr/Alternative.java;addElement(AlternativeElement e);RuleEndElement
+AlternativeElement;e;antlr/Alternative.java;addElement(AlternativeElement e);RuleRefElement
+AlternativeElement;e;antlr/Alternative.java;addElement(AlternativeElement e);StringLiteralElement
+AlternativeElement;e;antlr/Alternative.java;addElement(AlternativeElement e);TokenRefElement
+AlternativeElement;e;antlr/Alternative.java;addElement(AlternativeElement e);WildcardElement
+AlternativeElement;e;antlr/Alternative.java;addElement(AlternativeElement e);ZeroOrMoreBlock
+AlternativeElement;e;antlr/BlockContext.java;addAlternativeElement(AlternativeElement e);ActionElement
+AlternativeElement;e;antlr/BlockContext.java;addAlternativeElement(AlternativeElement e);AlternativeBlock
+AlternativeElement;e;antlr/BlockContext.java;addAlternativeElement(AlternativeElement e);BlockEndElement
+AlternativeElement;e;antlr/BlockContext.java;addAlternativeElement(AlternativeElement e);CharLiteralElement
+AlternativeElement;e;antlr/BlockContext.java;addAlternativeElement(AlternativeElement e);CharRangeElement
+AlternativeElement;e;antlr/BlockContext.java;addAlternativeElement(AlternativeElement e);OneOrMoreBlock
+AlternativeElement;e;antlr/BlockContext.java;addAlternativeElement(AlternativeElement e);RuleEndElement
+AlternativeElement;e;antlr/BlockContext.java;addAlternativeElement(AlternativeElement e);RuleRefElement
+AlternativeElement;e;antlr/BlockContext.java;addAlternativeElement(AlternativeElement e);StringLiteralElement
+AlternativeElement;e;antlr/BlockContext.java;addAlternativeElement(AlternativeElement e);TokenRefElement
+AlternativeElement;e;antlr/BlockContext.java;addAlternativeElement(AlternativeElement e);WildcardElement
+AlternativeElement;e;antlr/BlockContext.java;addAlternativeElement(AlternativeElement e);ZeroOrMoreBlock
+AlternativeElement;e;antlr/CppCodeGenerator.java;mapTreeVariable(AlternativeElement e, String name);TokenRefElement
+AlternativeElement;e;antlr/MakeGrammar.java;addElementToCurrentAlt(AlternativeElement e);ActionElement
+AlternativeElement;e;antlr/MakeGrammar.java;addElementToCurrentAlt(AlternativeElement e);AlternativeBlock
+AlternativeElement;e;antlr/MakeGrammar.java;addElementToCurrentAlt(AlternativeElement e);BlockEndElement
+AlternativeElement;e;antlr/MakeGrammar.java;addElementToCurrentAlt(AlternativeElement e);CharLiteralElement
+AlternativeElement;e;antlr/MakeGrammar.java;addElementToCurrentAlt(AlternativeElement e);CharRangeElement
+AlternativeElement;e;antlr/MakeGrammar.java;addElementToCurrentAlt(AlternativeElement e);OneOrMoreBlock
+AlternativeElement;e;antlr/MakeGrammar.java;addElementToCurrentAlt(AlternativeElement e);RuleEndElement
+AlternativeElement;e;antlr/MakeGrammar.java;addElementToCurrentAlt(AlternativeElement e);RuleRefElement
+AlternativeElement;e;antlr/MakeGrammar.java;addElementToCurrentAlt(AlternativeElement e);StringLiteralElement
+AlternativeElement;e;antlr/MakeGrammar.java;addElementToCurrentAlt(AlternativeElement e);TokenRefElement
+AlternativeElement;e;antlr/MakeGrammar.java;addElementToCurrentAlt(AlternativeElement e);WildcardElement
+AlternativeElement;e;antlr/MakeGrammar.java;addElementToCurrentAlt(AlternativeElement e);ZeroOrMoreBlock
+AlternativeElement;el;antlr/CppCodeGenerator.java;genElementAST(AlternativeElement el);AlternativeBlock
+AlternativeElement;el;antlr/CppCodeGenerator.java;genElementAST(AlternativeElement el);StringLiteralElement
+AlternativeElement;el;antlr/CppCodeGenerator.java;genElementAST(AlternativeElement el);TokenRefElement
+AlternativeElement;el;antlr/CppCodeGenerator.java;genElementAST(AlternativeElement el);WildcardElement
+AlternativeElement;el;antlr/CppCodeGenerator.java;genErrorCatchForElement(AlternativeElement el);RuleRefElement
+AlternativeElement;el;antlr/CppCodeGenerator.java;genErrorCatchForElement(AlternativeElement el);TokenRefElement
+AlternativeElement;el;antlr/CppCodeGenerator.java;genErrorTryForElement(AlternativeElement el);RuleRefElement
+AlternativeElement;el;antlr/CppCodeGenerator.java;genErrorTryForElement(AlternativeElement el);TokenRefElement
+AlternativeElement;el;antlr/JavaCodeGenerator.java;genElementAST(AlternativeElement el);AlternativeBlock
+AlternativeElement;el;antlr/JavaCodeGenerator.java;genElementAST(AlternativeElement el);StringLiteralElement
+AlternativeElement;el;antlr/JavaCodeGenerator.java;genElementAST(AlternativeElement el);TokenRefElement
+AlternativeElement;el;antlr/JavaCodeGenerator.java;genElementAST(AlternativeElement el);WildcardElement
+AlternativeElement;el;antlr/JavaCodeGenerator.java;genErrorCatchForElement(AlternativeElement el);RuleRefElement
+AlternativeElement;el;antlr/JavaCodeGenerator.java;genErrorCatchForElement(AlternativeElement el);TokenRefElement
+AlternativeElement;el;antlr/JavaCodeGenerator.java;genErrorTryForElement(AlternativeElement el);RuleRefElement
+AlternativeElement;el;antlr/JavaCodeGenerator.java;genErrorTryForElement(AlternativeElement el);TokenRefElement
+AlternativeElement;el;antlr/LLkAnalyzer.java;removeCompetingPredictionSets(BitSet b, AlternativeElement el);CharLiteralElement
+AlternativeElement;el;antlr/MakeGrammar.java;labelElement(AlternativeElement el, Token label);AlternativeBlock
+AlternativeElement;el;antlr/MakeGrammar.java;labelElement(AlternativeElement el, Token label);CharLiteralElement
+AlternativeElement;el;antlr/MakeGrammar.java;labelElement(AlternativeElement el, Token label);CharRangeElement
+AlternativeElement;el;antlr/MakeGrammar.java;labelElement(AlternativeElement el, Token label);RuleRefElement
+AlternativeElement;el;antlr/MakeGrammar.java;labelElement(AlternativeElement el, Token label);StringLiteralElement
+AlternativeElement;el;antlr/MakeGrammar.java;labelElement(AlternativeElement el, Token label);TokenRefElement
+AlternativeElement;el;antlr/MakeGrammar.java;labelElement(AlternativeElement el, Token label);WildcardElement
+BitSet;a;antlr/collections/impl/BitSet.java;and(BitSet a);BitSet
+BitSet;a;antlr/collections/impl/BitSet.java;andInPlace(BitSet a);BitSet
+BitSet;a;antlr/collections/impl/BitSet.java;orInPlace(BitSet a);BitSet
+BitSet;a;antlr/collections/impl/BitSet.java;subtractInPlace(BitSet a);BitSet
+BitSet;b;antlr/CharScanner.java;match(BitSet b);BitSet
+BitSet;b;antlr/DefineGrammarSymbols.java;setCharVocabulary(BitSet b);BitSet
+BitSet;b;antlr/LexerGrammar.java;setCharVocabulary(BitSet b);BitSet
+BitSet;b;antlr/LLkAnalyzer.java;removeCompetingPredictionSets(BitSet b, AlternativeElement el);BitSet
+BitSet;cmdLineArgValid;antlr/Tool.java;checkForInvalidArguments(String[] args, BitSet cmdLineArgValid);BitSet
+BitSet;cmdLineArgValid;Tool.java;checkForInvalidArguments(String[] args, BitSet cmdLineArgValid);BitSet
+BitSet;p;antlr/CodeGenerator.java;markBitsetForGen(BitSet p);BitSet
+BitSet;p;antlr/CppCodeGenerator.java;genCases(BitSet p);BitSet
+BitSet;p;antlr/CppCodeGenerator.java;getLookaheadTestTerm(int k, BitSet p);BitSet
+BitSet;p;antlr/JavaCodeGenerator.java;genBitSet(BitSet p, int id);BitSet
+BitSet;p;antlr/JavaCodeGenerator.java;genCases(BitSet p);BitSet
+BitSet;p;antlr/JavaCodeGenerator.java;getLookaheadTestTerm(int k, BitSet p);BitSet
+BitSet;p;antlr/Lookahead.java;Lookahead(BitSet p);BitSet
+BlockEndElement;end;antlr/LLkAnalyzer.java;look(int k, BlockEndElement end);BlockEndElement
+BlockWithImpliedExitPath;blk;antlr/LLkAnalyzer.java;deterministicImpliedPath(BlockWithImpliedExitPath blk);OneOrMoreBlock
+BlockWithImpliedExitPath;blk;antlr/LLkAnalyzer.java;deterministicImpliedPath(BlockWithImpliedExitPath blk);ZeroOrMoreBlock
+CharLiteralElement;atom;antlr/CppCodeGenerator.java;gen(CharLiteralElement atom);CharLiteralElement
+CharLiteralElement;atom;antlr/DiagnosticCodeGenerator.java;gen(CharLiteralElement atom);CharLiteralElement
+CharLiteralElement;atom;antlr/DocBookCodeGenerator.java;gen(CharLiteralElement atom);CharLiteralElement
+CharLiteralElement;atom;antlr/HTMLCodeGenerator.java;gen(CharLiteralElement atom);CharLiteralElement
+CharLiteralElement;atom;antlr/JavaCodeGenerator.java;gen(CharLiteralElement atom);CharLiteralElement
+CharLiteralElement;atom;antlr/LLkAnalyzer.java;look(int k, CharLiteralElement atom);CharLiteralElement
+CharRangeElement;r;antlr/CppCodeGenerator.java;gen(CharRangeElement r);CharRangeElement
+CharRangeElement;r;antlr/DiagnosticCodeGenerator.java;gen(CharRangeElement r);CharRangeElement
+CharRangeElement;r;antlr/DocBookCodeGenerator.java;gen(CharRangeElement r);CharRangeElement
+CharRangeElement;r;antlr/HTMLCodeGenerator.java;gen(CharRangeElement r);CharRangeElement
+CharRangeElement;r;antlr/JavaCodeGenerator.java;gen(CharRangeElement r);CharRangeElement
+CharRangeElement;r;antlr/LLkAnalyzer.java;look(int k, CharRangeElement r);CharRangeElement
+CharScanner;lexer;antlr/ANTLRHashString.java;ANTLRHashString(CharScanner lexer);ActionLexer
+CharScanner;lexer;antlr/ANTLRHashString.java;ANTLRHashString(CharScanner lexer);ANTLRLexer
+CharScanner;lexer;antlr/ANTLRHashString.java;ANTLRHashString(CharScanner lexer);PreprocessorLexer
+CharScanner;lexer;antlr/ANTLRHashString.java;ANTLRHashString(String s, CharScanner lexer);ANTLRLexer
+CharScanner;lexer;antlr/ANTLRHashString.java;ANTLRHashString(String s, CharScanner lexer);PreprocessorLexer
+CodeGenerator;gen;antlr/Grammar.java;setCodeGenerator(CodeGenerator gen);CppCodeGenerator
+CodeGenerator;gen;antlr/Grammar.java;setCodeGenerator(CodeGenerator gen);DiagnosticCodeGenerator
+CodeGenerator;gen;antlr/Grammar.java;setCodeGenerator(CodeGenerator gen);DocBookCodeGenerator
+CodeGenerator;gen;antlr/Grammar.java;setCodeGenerator(CodeGenerator gen);HTMLCodeGenerator
+CodeGenerator;gen;antlr/Grammar.java;setCodeGenerator(CodeGenerator gen);JavaCodeGenerator
+CppBlockFinishingInfo;howToFinish;antlr/CppCodeGenerator.java;genBlockFinish(CppBlockFinishingInfo howToFinish, String noViableAction);CppBlockFinishingInfo
+DefineGrammarSymbols;behavior_;antlr/CodeGenerator.java;setBehavior(DefineGrammarSymbols behavior_);MakeGrammar
+Exception;e;Tool.java;reportException(Exception e, String message);FileNotFoundException
+ExceptionHandler;handler;antlr/ExceptionSpec.java;addHandler(ExceptionHandler handler);ExceptionHandler
+ExceptionSpec;ex;antlr/JavaCodeGenerator.java;genErrorHandler(ExceptionSpec ex);ExceptionSpec
+ExceptionSpec;ex;antlr/RuleBlock.java;addExceptionSpec(ExceptionSpec ex);ExceptionSpec
+GrammarAtom;atom;antlr/CppCodeGenerator.java;genMatch(GrammarAtom atom);CharLiteralElement
+GrammarAtom;atom;antlr/CppCodeGenerator.java;genMatch(GrammarAtom atom);StringLiteralElement
+GrammarAtom;atom;antlr/CppCodeGenerator.java;genMatch(GrammarAtom atom);TokenRefElement
+GrammarAtom;atom;antlr/CppCodeGenerator.java;genMatchUsingAtomText(GrammarAtom atom);CharLiteralElement
+GrammarAtom;atom;antlr/CppCodeGenerator.java;genMatchUsingAtomText(GrammarAtom atom);StringLiteralElement
+GrammarAtom;atom;antlr/CppCodeGenerator.java;genMatchUsingAtomText(GrammarAtom atom);TokenRefElement
+GrammarAtom;atom;antlr/CppCodeGenerator.java;getASTCreateString(GrammarAtom atom, String str);TokenRefElement
+GrammarAtom;atom;antlr/JavaCodeGenerator.java;genMatch(GrammarAtom atom);CharLiteralElement
+GrammarAtom;atom;antlr/JavaCodeGenerator.java;genMatch(GrammarAtom atom);StringLiteralElement
+GrammarAtom;atom;antlr/JavaCodeGenerator.java;genMatch(GrammarAtom atom);TokenRefElement
+GrammarAtom;atom;antlr/JavaCodeGenerator.java;genMatchUsingAtomText(GrammarAtom atom);CharLiteralElement
+GrammarAtom;atom;antlr/JavaCodeGenerator.java;genMatchUsingAtomText(GrammarAtom atom);StringLiteralElement
+GrammarAtom;atom;antlr/JavaCodeGenerator.java;genMatchUsingAtomText(GrammarAtom atom);TokenRefElement
+GrammarAtom;atom;antlr/JavaCodeGenerator.java;genMatchUsingAtomTokenType(GrammarAtom atom);StringLiteralElement
+GrammarAtom;atom;antlr/LLkAnalyzer.java;look(int k, GrammarAtom atom);TokenRefElement
+GrammarElement;el;antlr/CppCodeGenerator.java;genLineNo(GrammarElement el);ActionElement
+GrammarElement;el;antlr/CppCodeGenerator.java;genLineNo(GrammarElement el);RuleBlock
+GrammarFile;gf;antlr/preprocessor/Hierarchy.java;addGrammarFile(GrammarFile gf);GrammarFile
+Grammar;g;antlr/ActionElement.java;ActionElement(Grammar g, Token t);LexerGrammar
+Grammar;g;antlr/ActionElement.java;ActionElement(Grammar g, Token t);ParserGrammar
+Grammar;g;antlr/AlternativeBlock.java;AlternativeBlock(Grammar g);LexerGrammar
+Grammar;g;antlr/AlternativeBlock.java;AlternativeBlock(Grammar g);ParserGrammar
+Grammar;g;antlr/AlternativeBlock.java;AlternativeBlock(Grammar g, Token start, boolean not);LexerGrammar
+Grammar;g;antlr/AlternativeBlock.java;AlternativeBlock(Grammar g, Token start, boolean not);ParserGrammar
+Grammar;g;antlr/AlternativeBlock.java;removeTrackingOfRuleRefs(Grammar g);ParserGrammar
+Grammar;g;antlr/AlternativeElement.java;AlternativeElement(Grammar g);LexerGrammar
+Grammar;g;antlr/AlternativeElement.java;AlternativeElement(Grammar g);ParserGrammar
+Grammar;g;antlr/AlternativeElement.java;AlternativeElement(Grammar g, Token start, int autoGenType_);LexerGrammar
+Grammar;g;antlr/AlternativeElement.java;AlternativeElement(Grammar g, Token start, int autoGenType_);ParserGrammar
+Grammar;g;antlr/AlternativeElement.java;AlternativeElement(Grammar g, Token start);LexerGrammar
+Grammar;g;antlr/AlternativeElement.java;AlternativeElement(Grammar g, Token start);ParserGrammar
+Grammar;g;antlr/BlockEndElement.java;BlockEndElement(Grammar g);LexerGrammar
+Grammar;g;antlr/BlockEndElement.java;BlockEndElement(Grammar g);ParserGrammar
+Grammar;g;antlr/BlockWithImpliedExitPath.java;BlockWithImpliedExitPath(Grammar g);LexerGrammar
+Grammar;g;antlr/BlockWithImpliedExitPath.java;BlockWithImpliedExitPath(Grammar g);ParserGrammar
+Grammar;g;antlr/CodeGenerator.java;setGrammar(Grammar g);LexerGrammar
+Grammar;g;antlr/CodeGenerator.java;setGrammar(Grammar g);ParserGrammar
+Grammar;g;antlr/CppCodeGenerator.java;setupGrammarParameters(Grammar g);LexerGrammar
+Grammar;g;antlr/CppCodeGenerator.java;setupGrammarParameters(Grammar g);ParserGrammar
+Grammar;g;antlr/GrammarAtom.java;GrammarAtom(Grammar g, Token t, int autoGenType);LexerGrammar
+Grammar;g;antlr/GrammarAtom.java;GrammarAtom(Grammar g, Token t, int autoGenType);ParserGrammar
+Grammar;g;antlr/GrammarElement.java;GrammarElement(Grammar g);LexerGrammar
+Grammar;g;antlr/GrammarElement.java;GrammarElement(Grammar g);ParserGrammar
+Grammar;g;antlr/GrammarElement.java;GrammarElement(Grammar g, Token start);LexerGrammar
+Grammar;g;antlr/GrammarElement.java;GrammarElement(Grammar g, Token start);ParserGrammar
+Grammar;g;antlr/JavaCodeGenerator.java;setupGrammarParameters(Grammar g);LexerGrammar
+Grammar;g;antlr/JavaCodeGenerator.java;setupGrammarParameters(Grammar g);ParserGrammar
+Grammar;g;antlr/LLkAnalyzer.java;setGrammar(Grammar g);LexerGrammar
+Grammar;g;antlr/LLkAnalyzer.java;setGrammar(Grammar g);ParserGrammar
+Grammar;g;antlr/MakeGrammar.java;createNextTokenRule(Grammar g, Vector lexRules, String rname);LexerGrammar
+Grammar;g;antlr/OneOrMoreBlock.java;OneOrMoreBlock(Grammar g);LexerGrammar
+Grammar;g;antlr/OneOrMoreBlock.java;OneOrMoreBlock(Grammar g);ParserGrammar
+Grammar;g;antlr/preprocessor/GrammarFile.java;addGrammar(Grammar g);Grammar
+Grammar;g;antlr/preprocessor/Hierarchy.java;findRoot(Grammar g);Grammar
+Grammar;g;antlr/preprocessor/Option.java;setEnclosingGrammar(Grammar g);Grammar
+Grammar;g;antlr/preprocessor/Rule.java;setEnclosingGrammar(Grammar g);Grammar
+Grammar;g;antlr/RuleBlock.java;RuleBlock(Grammar g, String r, int line, boolean doAutoGen_);LexerGrammar
+Grammar;g;antlr/RuleBlock.java;RuleBlock(Grammar g, String r, int line, boolean doAutoGen_);ParserGrammar
+Grammar;g;antlr/RuleBlock.java;RuleBlock(Grammar g, String r);LexerGrammar
+Grammar;g;antlr/RuleBlock.java;RuleBlock(Grammar g, String r);ParserGrammar
+Grammar;g;antlr/RuleEndElement.java;RuleEndElement(Grammar g);LexerGrammar
+Grammar;g;antlr/RuleEndElement.java;RuleEndElement(Grammar g);ParserGrammar
+Grammar;g;antlr/RuleRefElement.java;RuleRefElement(Grammar g, Token t, int autoGenType_);LexerGrammar
+Grammar;g;antlr/SynPredBlock.java;SynPredBlock(Grammar g);ParserGrammar
+Grammar;g;antlr/WildcardElement.java;WildcardElement(Grammar g, Token t, int autoGenType);LexerGrammar
+Grammar;g;antlr/ZeroOrMoreBlock.java;ZeroOrMoreBlock(Grammar g);LexerGrammar
+Grammar;g;antlr/ZeroOrMoreBlock.java;ZeroOrMoreBlock(Grammar g);ParserGrammar
+Grammar;gr;antlr/preprocessor/Hierarchy.java;addGrammar(Grammar gr);Grammar
+Grammar;gr;antlr/preprocessor/Option.java;Option(String n, String rhs, Grammar gr);Grammar
+Grammar;gr;antlr/preprocessor/Rule.java;Rule(String n, String b, IndexedVector options, Grammar gr);Grammar
+Hierarchy;hier;antlr/preprocessor/Grammar.java;setHierarchy(Hierarchy hier);Hierarchy
+IndexedVector;o;antlr/preprocessor/GrammarFile.java;setOptions(IndexedVector o);IndexedVector
+IndexedVector;options;antlr/preprocessor/Grammar.java;setOptions(IndexedVector options);IndexedVector
+IndexedVector;options;antlr/preprocessor/Rule.java;Rule(String n, String b, IndexedVector options, Grammar gr);IndexedVector
+InputBuffer;ib;antlr/actions/cpp/ActionLexer.java;ActionLexer(InputBuffer ib);CharBuffer
+InputBuffer;ib;antlr/actions/java/ActionLexer.java;ActionLexer(InputBuffer ib);CharBuffer
+InputBuffer;ib;antlr/ANTLRLexer.java;ANTLRLexer(InputBuffer ib);CharBuffer
+InputBuffer;ib;antlr/preprocessor/PreprocessorLexer.java;PreprocessorLexer(InputBuffer ib);CharBuffer
+InputBuffer;inbuf;antlr/LexerSharedInputState.java;LexerSharedInputState(InputBuffer inbuf);CharBuffer
+JavaBlockFinishingInfo;howToFinish;antlr/JavaCodeGenerator.java;genBlockFinish(JavaBlockFinishingInfo howToFinish, String noViableAction);JavaBlockFinishingInfo
+LexerGrammar;g;antlr/CharLiteralElement.java;CharLiteralElement(LexerGrammar g, Token t, boolean inverted, int autoGenType);LexerGrammar
+LexerGrammar;g;antlr/CharRangeElement.java;CharRangeElement(LexerGrammar g, Token t1, Token t2, int autoGenType);LexerGrammar
+LexerGrammar;g;antlr/CppCodeGenerator.java;genBody(LexerGrammar g);LexerGrammar
+LexerGrammar;g;antlr/CppCodeGenerator.java;genInclude(LexerGrammar g);LexerGrammar
+LexerGrammar;g;antlr/CppCodeGenerator.java;gen(LexerGrammar g);LexerGrammar
+LexerGrammar;g;antlr/DiagnosticCodeGenerator.java;gen(LexerGrammar g);LexerGrammar
+LexerGrammar;g;antlr/DocBookCodeGenerator.java;gen(LexerGrammar g);LexerGrammar
+LexerGrammar;g;antlr/HTMLCodeGenerator.java;gen(LexerGrammar g);LexerGrammar
+LexerGrammar;g;antlr/JavaCodeGenerator.java;gen(LexerGrammar g);LexerGrammar
+LexerSharedInputState;sharedState;antlr/CharScanner.java;CharScanner(LexerSharedInputState sharedState);LexerSharedInputState
+LexerSharedInputState;state;antlr/actions/cpp/ActionLexer.java;ActionLexer(LexerSharedInputState state);LexerSharedInputState
+LexerSharedInputState;state;antlr/actions/java/ActionLexer.java;ActionLexer(LexerSharedInputState state);LexerSharedInputState
+LexerSharedInputState;state;antlr/ANTLRLexer.java;ANTLRLexer(LexerSharedInputState state);LexerSharedInputState
+LexerSharedInputState;state;antlr/preprocessor/PreprocessorLexer.java;PreprocessorLexer(LexerSharedInputState state);LexerSharedInputState
+LLkAnalyzer;analyzer_;antlr/DefineGrammarSymbols.java;DefineGrammarSymbols(Tool tool_, String[] args_, LLkAnalyzer analyzer_);LLkAnalyzer
+LLkAnalyzer;analyzer_;antlr/MakeGrammar.java;MakeGrammar(Tool tool_, String[] args_, LLkAnalyzer analyzer_);LLkAnalyzer
+LLkGrammarAnalyzer;a;antlr/Grammar.java;setGrammarAnalyzer(LLkGrammarAnalyzer a);LLkAnalyzer
+LLkGrammarAnalyzer;analyzer_;antlr/CodeGenerator.java;setAnalyzer(LLkGrammarAnalyzer analyzer_);LLkAnalyzer
+Lookahead[];bset;antlr/LLkAnalyzer.java;lookaheadEquivForApproxAndFullAnalysis(Lookahead[] bset, int k);Lookahead[]
+Lookahead;lookahead;antlr/DiagnosticCodeGenerator.java;printSet(int depth, int k, Lookahead lookahead);Lookahead
+Lookahead[];look;antlr/CppCodeGenerator.java;getLookaheadTestExpression(Lookahead[] look, int k);Lookahead[]
+Lookahead[];look;antlr/JavaCodeGenerator.java;getLookaheadTestExpression(Lookahead[] look, int k);Lookahead[]
+Lookahead;q;antlr/Lookahead.java;combineWith(Lookahead q);Lookahead
+Lookahead;q;antlr/Lookahead.java;intersection(Lookahead q);Lookahead
+MakeGrammar;behavior;antlr/Tool.java;getLanguage(MakeGrammar behavior);MakeGrammar
+MakeGrammar;behavior;Tool.java;getLanguage(MakeGrammar behavior);MakeGrammar
+Object;key;antlr/collections/impl/IndexedVector.java;appendElement(Object key, Object value);String
+Object;o;antlr/ANTLRHashString.java;equals(Object o);ANTLRHashString
+Object;o;antlr/collections/impl/LLCell.java;LLCell(Object o);BlockContext
+Object;o;antlr/collections/impl/LList.java;insertHead(Object o);BlockContext
+Object;o;antlr/collections/impl/LList.java;push(Object o);BlockContext
+Object;o;antlr/collections/impl/Vector.java;appendElement(Object o);Alternative
+Object;o;antlr/collections/impl/Vector.java;appendElement(Object o);BitSet
+Object;o;antlr/collections/impl/Vector.java;appendElement(Object o);ExceptionHandler
+Object;o;antlr/collections/impl/Vector.java;appendElement(Object o);Grammar
+Object;o;antlr/collections/impl/Vector.java;appendElement(Object o);Option
+Object;o;antlr/collections/impl/Vector.java;appendElement(Object o);Rule
+Object;o;antlr/collections/impl/Vector.java;appendElement(Object o);RuleRefElement
+Object;o;antlr/collections/impl/Vector.java;appendElement(Object o);RuleSymbol
+Object;o;antlr/collections/impl/Vector.java;appendElement(Object o);String
+Object;o;antlr/collections/impl/Vector.java;appendElement(Object o);StringLiteralElement
+Object;o;antlr/collections/impl/Vector.java;appendElement(Object o);TokenRefElement
+Object;o;antlr/collections/impl/Vector.java;removeElement(Object o);RuleRefElement
+Object;obj;antlr/collections/impl/BitSet.java;equals(Object obj);BitSet
+Object;obj;antlr/collections/impl/Vector.java;setElementAt(Object obj, int i);String
+Object;value;antlr/collections/impl/IndexedVector.java;appendElement(Object key, Object value);Grammar
+Object;value;antlr/collections/impl/IndexedVector.java;appendElement(Object key, Object value);Option
+Object;value;antlr/collections/impl/IndexedVector.java;appendElement(Object key, Object value);Rule
+OneOrMoreBlock;blk;antlr/CppCodeGenerator.java;gen(OneOrMoreBlock blk);OneOrMoreBlock
+OneOrMoreBlock;blk;antlr/DiagnosticCodeGenerator.java;gen(OneOrMoreBlock blk);OneOrMoreBlock
+OneOrMoreBlock;blk;antlr/DocBookCodeGenerator.java;gen(OneOrMoreBlock blk);OneOrMoreBlock
+OneOrMoreBlock;blk;antlr/HTMLCodeGenerator.java;gen(OneOrMoreBlock blk);OneOrMoreBlock
+OneOrMoreBlock;blk;antlr/JavaCodeGenerator.java;gen(OneOrMoreBlock blk);OneOrMoreBlock
+OneOrMoreBlock;blk;antlr/LLkAnalyzer.java;deterministic(OneOrMoreBlock blk);OneOrMoreBlock
+OneOrMoreBlock;blk;antlr/LLkAnalyzer.java;look(int k, OneOrMoreBlock blk);OneOrMoreBlock
+ParserGrammar;g;antlr/CppCodeGenerator.java;genBody(ParserGrammar g);ParserGrammar
+ParserGrammar;g;antlr/CppCodeGenerator.java;genInclude(ParserGrammar g);ParserGrammar
+ParserGrammar;g;antlr/CppCodeGenerator.java;gen(ParserGrammar g);ParserGrammar
+ParserGrammar;g;antlr/DiagnosticCodeGenerator.java;gen(ParserGrammar g);ParserGrammar
+ParserGrammar;g;antlr/DocBookCodeGenerator.java;gen(ParserGrammar g);ParserGrammar
+ParserGrammar;g;antlr/HTMLCodeGenerator.java;gen(ParserGrammar g);ParserGrammar
+ParserGrammar;g;antlr/JavaCodeGenerator.java;gen(ParserGrammar g);ParserGrammar
+ParserSharedInputState;state;antlr/Parser.java;Parser(ParserSharedInputState state);ParserSharedInputState
+Reader;in;antlr/actions/cpp/ActionLexer.java;ActionLexer(Reader in);StringReader
+Reader;in;antlr/actions/java/ActionLexer.java;ActionLexer(Reader in);StringReader
+Reader;in;antlr/ANTLRLexer.java;ANTLRLexer(Reader in);BufferedReader
+Reader;in;antlr/preprocessor/PreprocessorLexer.java;PreprocessorLexer(Reader in);BufferedReader
+Reader;input_;antlr/CharBuffer.java;CharBuffer(Reader input_);BufferedReader
+Reader;input_;antlr/CharBuffer.java;CharBuffer(Reader input_);StringReader
+RuleBlock;blk;antlr/DiagnosticCodeGenerator.java;genFollowSetForRuleBlock(RuleBlock blk);RuleBlock
+RuleBlock;blk;antlr/LLkAnalyzer.java;look(int k, RuleBlock blk);RuleBlock
+RuleBlock;rb;antlr/RuleSymbol.java;setBlock(RuleBlock rb);RuleBlock
+RuleEndElement;end;antlr/LLkAnalyzer.java;FOLLOW(int k, RuleEndElement end);RuleEndElement
+RuleEndElement;end;antlr/LLkAnalyzer.java;look(int k, RuleEndElement end);RuleEndElement
+RuleEndElement;re;antlr/RuleBlock.java;setEndElement(RuleEndElement re);RuleEndElement
+Rule;r;antlr/preprocessor/Grammar.java;addRule(Rule r);Rule
+RuleRefElement;e;antlr/RuleSymbol.java;addReference(RuleRefElement e);RuleRefElement
+RuleRefElement;rr;antlr/CppCodeGenerator.java;GenRuleInvocation(RuleRefElement rr);RuleRefElement
+RuleRefElement;rr;antlr/CppCodeGenerator.java;gen(RuleRefElement rr);RuleRefElement
+RuleRefElement;rr;antlr/DiagnosticCodeGenerator.java;gen(RuleRefElement rr);RuleRefElement
+RuleRefElement;rr;antlr/DocBookCodeGenerator.java;gen(RuleRefElement rr);RuleRefElement
+RuleRefElement;rr;antlr/HTMLCodeGenerator.java;gen(RuleRefElement rr);RuleRefElement
+RuleRefElement;rr;antlr/JavaCodeGenerator.java;GenRuleInvocation(RuleRefElement rr);RuleRefElement
+RuleRefElement;rr;antlr/JavaCodeGenerator.java;gen(RuleRefElement rr);RuleRefElement
+RuleRefElement;rr;antlr/LLkAnalyzer.java;look(int k, RuleRefElement rr);RuleRefElement
+RuleSymbol;rs;antlr/Grammar.java;define(RuleSymbol rs);RuleSymbol
+RuleSymbol;s;antlr/CppCodeGenerator.java;genRuleHeader(RuleSymbol s, boolean startSymbol);RuleSymbol
+RuleSymbol;s;antlr/CppCodeGenerator.java;genRule(RuleSymbol s, boolean startSymbol, int ruleNum, String prefix);RuleSymbol
+RuleSymbol;s;antlr/DiagnosticCodeGenerator.java;genRule(RuleSymbol s);RuleSymbol
+RuleSymbol;s;antlr/DocBookCodeGenerator.java;genRule(RuleSymbol s);RuleSymbol
+RuleSymbol;s;antlr/HTMLCodeGenerator.java;genRule(RuleSymbol s);RuleSymbol
+RuleSymbol;s;antlr/JavaCodeGenerator.java;genRule(RuleSymbol s, boolean startSymbol, int ruleNum);RuleSymbol
+String;a;antlr/preprocessor/GrammarFile.java;addHeaderAction(String a);String
+String;a;antlr/preprocessor/Grammar.java;setMemberAction(String a);String
+String;a;antlr/preprocessor/Grammar.java;setPreambleAction(String a);String
+String;a;antlr/preprocessor/Rule.java;setArgs(String a);String
+String;a;antlr/preprocessor/Rule.java;setInitAction(String a);String
+String;a;antlr/RuleRefElement.java;setArgs(String a);String
+String[];args_;antlr/DefineGrammarSymbols.java;DefineGrammarSymbols(Tool tool_, String[] args_, LLkAnalyzer analyzer_);String[]
+String[];args;antlr/LexerGrammar.java;processArguments(String[] args);String[]
+String[];args_;antlr/MakeGrammar.java;MakeGrammar(Tool tool_, String[] args_, LLkAnalyzer analyzer_);String[]
+String[];args;antlr/ParserGrammar.java;processArguments(String[] args);String[]
+String[];args;antlr/Tool.java;checkForInvalidArguments(String[] args, BitSet cmdLineArgValid);String[]
+String[];args;antlr/Tool.java;doEverything(String[] args);String[]
+String[];args;antlr/Tool.java;main(String[] args);String[]
+String[];args;antlr/Tool.java;processArguments(String[] args);String[]
+String[];args;Tool.java;checkForInvalidArguments(String[] args, BitSet cmdLineArgValid);String[]
+String[];args;Tool.java;doEverything(String[] args);String[]
+String[];args;Tool.java;processArguments(String[] args);String[]
+String;b;antlr/preprocessor/Rule.java;Rule(String n, String b, IndexedVector options, Grammar gr);String
+String;blkOp;antlr/DocBookCodeGenerator.java;genGenericBlock(AlternativeBlock blk, String blkOp);String
+String;blkOp;antlr/HTMLCodeGenerator.java;genGenericBlock(AlternativeBlock blk, String blkOp);String
+String;c;antlr/Lookahead.java;Lookahead(String c);String
+String;cl;antlr/CharScanner.java;setTokenObjectClass(String cl);String
+String;className_;antlr/Grammar.java;Grammar(String className_, Tool tool_, String superClass);String
+String;className;antlr/JavaCodeGenerator.java;setupOutput(String className);String
+String;className_;antlr/LexerGrammar.java;LexerGrammar(String className_, Tool tool_, String superClass);String
+String;className_;antlr/ParserGrammar.java;ParserGrammar(String className_, Tool tool_, String superClass);String
+String;cs;antlr/ANTLRLexer.java;escapeCharValue(String cs);String
+String;d;antlr/CodeGenerator.java;removeAssignmentFromDeclaration(String d);String
+String;f;antlr/CharScanner.java;setFilename(String f);String
+String;f;antlr/Parser.java;setFilename(String f);String
+String;f;antlr/preprocessor/GrammarFile.java;nameForExpandedGrammarFile(String f);String
+String;f;antlr/preprocessor/Grammar.java;setFileName(String f);String
+String;f;antlr/Tool.java;fileMinusPath(String f);String
+String;f;antlr/Tool.java;openOutputFile(String f);String
+String;file;antlr/DefineGrammarSymbols.java;startLexer(String file, Token name, String superClass, String doc);String
+String;file;antlr/DefineGrammarSymbols.java;startParser(String file, Token name, String superClass, String doc);String
+String;file;antlr/preprocessor/Hierarchy.java;readGrammarFile(String file);String
+String;file;antlr/PreservingFileWriter.java;PreservingFileWriter(String file);String
+String;fileName;antlr/CppCodeGenerator.java;genHeader(String fileName);String
+String;filename;antlr/DefineGrammarSymbols.java;setFileOption(Token key, Token value, String filename);String
+String;fileName_;antlr/MismatchedTokenException.java;MismatchedTokenException(String[] tokenNames_, Token token_, int expecting_, boolean matchNot, String fileName_);String
+String;fileName;antlr/preprocessor/Hierarchy.java;expandGrammarsInFile(String fileName);String
+String;fileName;antlr/preprocessor/Hierarchy.java;getFile(String fileName);String
+String;fileName_;antlr/RecognitionException.java;RecognitionException(String s, String fileName_, int line_, int column_);String
+String;f;Tool.java;openOutputFile(String f);String
+String;gr;antlr/preprocessor/Hierarchy.java;getGrammar(String gr);String
+String;head;antlr/StringUtils.java;stripFrontBack(String src, String head, String tail);String
+String;id;antlr/CodeGenerator.java;encodeLexerRuleName(String id);String
+String;id;antlr/RuleRefElement.java;setIdAssign(String id);String
+String;idParam;antlr/CppCodeGenerator.java;mapTreeId(String idParam, ActionTransInfo transInfo);String
+String[];incomingArgs;antlr/preprocessor/Tool.java;processArguments(String[] incomingArgs);String[]
+String;initAction_;antlr/AlternativeBlock.java;setInitAction(String initAction_);String
+String;key;antlr/Grammar.java;getIntegerOption(String key);String
+String;key;antlr/Grammar.java;getOption(String key);String
+String;key;antlr/Grammar.java;hasOption(String key);String
+String;key;antlr/Grammar.java;setOption(String key, Token value);String
+String;key;antlr/LexerGrammar.java;setOption(String key, Token value);String
+String;key;antlr/ParserGrammar.java;setOption(String key, Token value);String
+String;label_;antlr/GrammarAtom.java;setLabel(String label_);String
+String;label;antlr/RuleBlock.java;findExceptionSpec(String label);String
+String;label_;antlr/RuleRefElement.java;setLabel(String label_);String
+String;label;antlr/StringLiteralSymbol.java;setLabel(String label);String
+String;lit;antlr/ANTLRLexer.java;tokenTypeForCharLiteral(String lit);String
+StringLiteralElement;atom;antlr/CppCodeGenerator.java;gen(StringLiteralElement atom);StringLiteralElement
+StringLiteralElement;atom;antlr/DiagnosticCodeGenerator.java;gen(StringLiteralElement atom);StringLiteralElement
+StringLiteralElement;atom;antlr/DocBookCodeGenerator.java;gen(StringLiteralElement atom);StringLiteralElement
+StringLiteralElement;atom;antlr/HTMLCodeGenerator.java;gen(StringLiteralElement atom);StringLiteralElement
+StringLiteralElement;atom;antlr/JavaCodeGenerator.java;gen(StringLiteralElement atom);StringLiteralElement
+StringLiteralElement;atom;antlr/LLkAnalyzer.java;look(int k, StringLiteralElement atom);StringLiteralElement
+String;lookaheadExpr;antlr/CppCodeGenerator.java;genSynPred(SynPredBlock blk, String lookaheadExpr);String
+String;lookaheadExpr;antlr/JavaCodeGenerator.java;genSynPred(SynPredBlock blk, String lookaheadExpr);String
+String;message;antlr/Tool.java;reportProgress(String message);String
+String;name;antlr/CppCodeGenerator.java;mapTreeVariable(AlternativeElement e, String name);String
+String;name;antlr/CppCodeGenerator.java;printHeaderAction(String name);String
+String;name;antlr/DefineGrammarSymbols.java;getHeaderAction(String name);String
+String;name;antlr/SimpleTokenManager.java;mapToTokenSymbol(String name, TokenSymbol sym);String
+String;name_;antlr/SimpleTokenManager.java;SimpleTokenManager(String name_, Tool tool_);String
+String;n;antlr/preprocessor/Option.java;Option(String n, String rhs, Grammar gr);String
+String;n;antlr/preprocessor/Rule.java;Rule(String n, String b, IndexedVector options, Grammar gr);String
+String;noViableAction;antlr/CppCodeGenerator.java;genBlockFinish(CppBlockFinishingInfo howToFinish, String noViableAction);String
+String;noViableAction;antlr/JavaCodeGenerator.java;genBlockFinish(JavaBlockFinishingInfo howToFinish, String noViableAction);String
+String;o;antlr/Tool.java;setOutputDirectory(String o);String
+String;o;Tool.java;setOutputDirectory(String o);String
+String;pred;antlr/CppCodeGenerator.java;genSemPred(String pred, int line);String
+String;predicate;antlr/CppCodeGenerator.java;addSemPred(String predicate);String
+String;predicate;antlr/JavaCodeGenerator.java;addSemPred(String predicate);String
+String;prefix;antlr/CppCodeGenerator.java;genRule(RuleSymbol s, boolean startSymbol, int ruleNum, String prefix);String
+String;prefix;antlr/CppCodeGenerator.java;genSemPredMap(String prefix);String
+String;prefix;antlr/CppCodeGenerator.java;genTokenStrings(String prefix);String
+String;r;antlr/DefineGrammarSymbols.java;endRule(String r);String
+String;r;antlr/RuleBlock.java;RuleBlock(Grammar g, String r, int line, boolean doAutoGen_);String
+String;r;antlr/RuleBlock.java;RuleBlock(Grammar g, String r);String
+String;r;antlr/RuleSymbol.java;RuleSymbol(String r);String
+String;r;antlr/StringLiteralSymbol.java;StringLiteralSymbol(String r);String
+String;r;antlr/TokenSymbol.java;TokenSymbol(String r);String
+String;ret;antlr/preprocessor/Rule.java;setReturnValue(String ret);String
+String;rhs;antlr/preprocessor/Option.java;Option(String n, String rhs, Grammar gr);String
+String;rname;antlr/MakeGrammar.java;createNextTokenRule(Grammar g, Vector lexRules, String rname);String
+String;rule;antlr/LLkAnalyzer.java;look(int k, String rule);String
+String;rule;antlr/MakeGrammar.java;endRule(String rule);String
+String;s;antlr/ANTLRException.java;ANTLRException(String s);String
+String;s;antlr/ANTLRHashString.java;ANTLRHashString(String s, CharScanner lexer);String
+String;s;antlr/ANTLRHashString.java;setString(String s);String
+String;s;antlr/ANTLRStringBuffer.java;append(String s);String
+String;s;antlr/CharScanner.java;match(String s);String
+String;s;antlr/CharScanner.java;setText(String s);String
+String;s;antlr/CodeGenerator.java;extractIdOfAction(String s, int line, int column);String
+String;s;antlr/CodeGenerator.java;extractTypeOfAction(String s, int line, int column);String
+String;s;antlr/CodeGenerator.java;printAction(String s);String
+String;s;antlr/CodeGenerator.java;println(String s);String
+String;s;antlr/CodeGenerator.java;print(String s);String
+String;s;antlr/CommonToken.java;setText(String s);String
+String;s;antlr/CppCharFormatter.java;escapeString(String s);String
+String;s;antlr/CppCharFormatter.java;literalString(String s);String
+String;s;antlr/CppCodeGenerator.java;printAction(String s);String
+String;s;antlr/CppCodeGenerator.java;println(String s);String
+String;s;antlr/CppCodeGenerator.java;print(String s);String
+String;s;antlr/DocBookCodeGenerator.java;HTMLEncode(String s);String
+String;s;antlr/DocBookCodeGenerator.java;QuoteForId(String s);String
+String;s;antlr/Grammar.java;getSymbol(String s);String
+String;s;antlr/Grammar.java;isDefined(String s);String
+String;s;antlr/Grammar.java;setFilename(String s);String
+String;s;antlr/GrammarSymbol.java;GrammarSymbol(String s);String
+String;s;antlr/HTMLCodeGenerator.java;HTMLEncode(String s);String
+String;s;antlr/JavaCharFormatter.java;escapeString(String s);String
+String;s;antlr/JavaCharFormatter.java;literalString(String s);String
+String;s;antlr/JavaCodeGenerator.java;mangleLiteral(String s);String
+String;s;antlr/RecognitionException.java;RecognitionException(String s, String fileName_, int line_, int column_);String
+String;s;antlr/StringUtils.java;stripBack(String s, char c);String
+String;s;antlr/StringUtils.java;stripFront(String s, char c);String
+String;src;antlr/StringUtils.java;stripFrontBack(String src, String head, String tail);String
+String;str;antlr/CppCodeGenerator.java;getASTCreateString(GrammarAtom atom, String str);String
+String;sym;antlr/SimpleTokenManager.java;getTokenSymbol(String sym);String
+String;symbol;antlr/SimpleTokenManager.java;tokenDefined(String symbol);String
+String;tail;antlr/StringUtils.java;stripFrontBack(String src, String head, String tail);String
+String;t;antlr/preprocessor/Grammar.java;setType(String t);String
+String;t;antlr/preprocessor/Rule.java;setThrowsSpec(String t);String
+String;t;antlr/Token.java;setText(String t);String
+String;text;antlr/CharScanner.java;testLiteralsTable(String text, int ttype);String
+String;text;antlr/CppCodeGenerator.java;textOrChar(String text);String
+String;tk;antlr/preprocessor/Grammar.java;setTokenSection(String tk);String
+String[];tokenNames_;antlr/MismatchedTokenException.java;MismatchedTokenException(String[] tokenNames_, Token token_, int expecting_, boolean matchNot, String fileName_);String[]
+String;txt;antlr/CommonToken.java;CommonToken(int t, String txt);String
+String;txt;antlr/Token.java;Token(int t, String txt);String
+String;v;antlr/preprocessor/Rule.java;setVisibility(String v);String
+SynPredBlock;blk;antlr/CppCodeGenerator.java;genSynPred(SynPredBlock blk, String lookaheadExpr);SynPredBlock
+SynPredBlock;blk;antlr/DiagnosticCodeGenerator.java;genSynPred(SynPredBlock blk);SynPredBlock
+SynPredBlock;blk;antlr/JavaCodeGenerator.java;genSynPred(SynPredBlock blk, String lookaheadExpr);SynPredBlock
+Token;act;antlr/DefineGrammarSymbols.java;refHeaderAction(Token name, Token act);CommonToken
+Token;act;antlr/DefineGrammarSymbols.java;refPreambleAction(Token act);CommonToken
+Token;act;antlr/MakeGrammar.java;refMemberAction(Token act);CommonToken
+Token;act;antlr/MakeGrammar.java;refPreambleAction(Token act);CommonToken
+Token;action;antlr/DefineGrammarSymbols.java;refAction(Token action);CommonToken
+Token;action;antlr/DefineGrammarSymbols.java;refExceptionHandler(Token exTypeAndName, Token action);CommonToken
+Token;action;antlr/MakeGrammar.java;refAction(Token action);CommonToken
+Token;action;antlr/MakeGrammar.java;refArgAction(Token action);CommonToken
+Token;action;antlr/MakeGrammar.java;refExceptionHandler(Token exTypeAndName, Token action);CommonToken
+Token;action;antlr/MakeGrammar.java;refInitAction(Token action);CommonToken
+TokenBuffer;t;antlr/Parser.java;setTokenBuffer(TokenBuffer t);TokenBuffer
+TokenBuffer;tokenBuf;antlr/LLkParser.java;LLkParser(TokenBuffer tokenBuf, int k_);TokenBuffer
+Token;exTypeAndName;antlr/DefineGrammarSymbols.java;refExceptionHandler(Token exTypeAndName, Token action);CommonToken
+Token;exTypeAndName;antlr/MakeGrammar.java;refExceptionHandler(Token exTypeAndName, Token action);CommonToken
+Token;key;antlr/AlternativeBlock.java;setOption(Token key, Token value);CommonToken
+Token;key;antlr/DefineGrammarSymbols.java;setFileOption(Token key, Token value, String filename);CommonToken
+Token;key;antlr/DefineGrammarSymbols.java;setGrammarOption(Token key, Token value);CommonToken
+Token;key;antlr/MakeGrammar.java;setRuleOption(Token key, Token value);CommonToken
+Token;key;antlr/MakeGrammar.java;setSubruleOption(Token key, Token value);CommonToken
+Token;key;antlr/RuleBlock.java;setOption(Token key, Token value);CommonToken
+Token;label;antlr/ANTLRParser.java;checkForMissingEndRule(Token label);CommonToken
+Token;label;antlr/DefineGrammarSymbols.java;refStringLiteral(Token lit, Token label, int autoGenType, boolean lastInRule);CommonToken
+Token;label;antlr/MakeGrammar.java;labelElement(AlternativeElement el, Token label);CommonToken
+Token;label;antlr/MakeGrammar.java;refStringLiteral(Token lit, Token label, int autoGenType, boolean lastInRule);CommonToken
+Token;lit;antlr/DefineGrammarSymbols.java;refCharLiteral(Token lit, Token label, boolean inverted, int autoGenType, boolean lastInRule);CommonToken
+Token;lit;antlr/DefineGrammarSymbols.java;refStringLiteral(Token lit, Token label, int autoGenType, boolean lastInRule);CommonToken
+Token;lit;antlr/MakeGrammar.java;refCharLiteral(Token lit, Token label, boolean inverted, int autoGenType, boolean lastInRule);CommonToken
+Token;lit;antlr/MakeGrammar.java;refStringLiteral(Token lit, Token label, int autoGenType, boolean lastInRule);CommonToken
+TokenManager;tm;antlr/CodeGenerator.java;genTokenInterchange(TokenManager tm);SimpleTokenManager
+TokenManager;tm;antlr/CppCodeGenerator.java;genTokenTypes(TokenManager tm);SimpleTokenManager
+TokenManager;tm;antlr/DiagnosticCodeGenerator.java;genTokenTypes(TokenManager tm);SimpleTokenManager
+TokenManager;tm;antlr/JavaCodeGenerator.java;genTokenTypes(TokenManager tm);SimpleTokenManager
+TokenManager;tokenManager_;antlr/Grammar.java;setTokenManager(TokenManager tokenManager_);SimpleTokenManager
+Token;name;antlr/DefineGrammarSymbols.java;refHeaderAction(Token name, Token act);CommonToken
+Token;name;antlr/DefineGrammarSymbols.java;startLexer(String file, Token name, String superClass, String doc);CommonToken
+Token;name;antlr/DefineGrammarSymbols.java;startParser(String file, Token name, String superClass, String doc);CommonToken
+Token;pred;antlr/DefineGrammarSymbols.java;refSemPred(Token pred);CommonToken
+Token;pred;antlr/MakeGrammar.java;refSemPred(Token pred);CommonToken
+TokenRefElement;atom;antlr/CppCodeGenerator.java;gen(TokenRefElement atom);TokenRefElement
+TokenRefElement;atom;antlr/DiagnosticCodeGenerator.java;gen(TokenRefElement atom);TokenRefElement
+TokenRefElement;atom;antlr/DocBookCodeGenerator.java;gen(TokenRefElement atom);TokenRefElement
+TokenRefElement;atom;antlr/HTMLCodeGenerator.java;gen(TokenRefElement atom);TokenRefElement
+TokenRefElement;atom;antlr/JavaCodeGenerator.java;gen(TokenRefElement atom);TokenRefElement
+Token;returnAction;antlr/MakeGrammar.java;refReturnAction(Token returnAction);CommonToken
+Token;start;antlr/AlternativeBlock.java;AlternativeBlock(Grammar g, Token start, boolean not);CommonToken
+Token;start;antlr/AlternativeElement.java;AlternativeElement(Grammar g, Token start);CommonToken
+Token;start;antlr/AlternativeElement.java;AlternativeElement(Grammar g, Token start, int autoGenType_);CommonToken
+Token;start;antlr/DefineGrammarSymbols.java;beginSubRule(Token label, Token start, boolean not);CommonToken
+Token;start;antlr/GrammarElement.java;GrammarElement(Grammar g, Token start);CommonToken
+Token;start;antlr/MakeGrammar.java;beginSubRule(Token label, Token start, boolean not);CommonToken
+TokenStream;input_;antlr/TokenBuffer.java;TokenBuffer(TokenStream input_);ANTLRLexer
+TokenStream;input_;antlr/TokenBuffer.java;TokenBuffer(TokenStream input_);PreprocessorLexer
+TokenStream;lexer;antlr/LLkParser.java;LLkParser(TokenStream lexer, int k_);PreprocessorLexer
+TokenStream;lexer;antlr/preprocessor/Preprocessor.java;Preprocessor(TokenStream lexer, int k);PreprocessorLexer
+TokenStream;lexer;antlr/preprocessor/Preprocessor.java;Preprocessor(TokenStream lexer);PreprocessorLexer
+TokenSymbol;sym;antlr/SimpleTokenManager.java;mapToTokenSymbol(String name, TokenSymbol sym);StringLiteralSymbol
+TokenSymbol;sym;antlr/SimpleTokenManager.java;mapToTokenSymbol(String name, TokenSymbol sym);TokenSymbol
+TokenSymbol;ts;antlr/SimpleTokenManager.java;define(TokenSymbol ts);StringLiteralSymbol
+TokenSymbol;ts;antlr/SimpleTokenManager.java;define(TokenSymbol ts);TokenSymbol
+Token;t1;antlr/CharRangeElement.java;CharRangeElement(LexerGrammar g, Token t1, Token t2, int autoGenType);CommonToken
+Token;t1;antlr/DefineGrammarSymbols.java;refCharRange(Token t1, Token t2, Token label, int autoGenType, boolean lastInRule);CommonToken
+Token;t1;antlr/MakeGrammar.java;refCharRange(Token t1, Token t2, Token label, int autoGenType, boolean lastInRule);CommonToken
+Token;t2;antlr/CharRangeElement.java;CharRangeElement(LexerGrammar g, Token t1, Token t2, int autoGenType);CommonToken
+Token;t2;antlr/DefineGrammarSymbols.java;refCharRange(Token t1, Token t2, Token label, int autoGenType, boolean lastInRule);CommonToken
+Token;t2;antlr/MakeGrammar.java;refCharRange(Token t1, Token t2, Token label, int autoGenType, boolean lastInRule);CommonToken
+Token;t;antlr/ActionElement.java;ActionElement(Grammar g, Token t);CommonToken
+Token;t;antlr/CharLiteralElement.java;CharLiteralElement(LexerGrammar g, Token t, boolean inverted, int autoGenType);CommonToken
+Token;t;antlr/CodeGenerator.java;extractIdOfAction(Token t);CommonToken
+Token;t;antlr/CppCodeGenerator.java;genLineNo(Token t);CommonToken
+Token;t;antlr/CppCodeGenerator.java;printAction(Token t);CommonToken
+Token;t;antlr/DefineGrammarSymbols.java;refWildcard(Token t, Token label, int autoGenType);CommonToken
+Token;t;antlr/GrammarAtom.java;GrammarAtom(Grammar g, Token t, int autoGenType);CommonToken
+Token;t;antlr/MakeGrammar.java;refWildcard(Token t, Token label, int autoGenType);CommonToken
+Token;t;antlr/RuleRefElement.java;RuleRefElement(Grammar g, Token t, int autoGenType_);CommonToken
+Token;t;antlr/WildcardElement.java;WildcardElement(Grammar g, Token t, int autoGenType);CommonToken
+Token;tok;antlr/TokenQueue.java;append(Token tok);CommonToken
+Token;token_;antlr/MismatchedTokenException.java;MismatchedTokenException(String[] tokenNames_, Token token_, int expecting_, boolean matchNot, String fileName_);CommonToken
+Token;tokliteral;antlr/DefineGrammarSymbols.java;defineToken(Token tokname, Token tokliteral);CommonToken
+Token;tokname;antlr/DefineGrammarSymbols.java;defineToken(Token tokname, Token tokliteral);CommonToken
+Token;value;antlr/AlternativeBlock.java;setOption(Token key, Token value);CommonToken
+Token;value;antlr/DefineGrammarSymbols.java;setFileOption(Token key, Token value, String filename);CommonToken
+Token;value;antlr/DefineGrammarSymbols.java;setGrammarOption(Token key, Token value);CommonToken
+Token;value;antlr/Grammar.java;setOption(String key, Token value);CommonToken
+Token;value;antlr/LexerGrammar.java;setOption(String key, Token value);CommonToken
+Token;value;antlr/MakeGrammar.java;setRuleOption(Token key, Token value);CommonToken
+Token;value;antlr/MakeGrammar.java;setSubruleOption(Token key, Token value);CommonToken
+Token;value;antlr/ParserGrammar.java;setOption(String key, Token value);CommonToken
+Token;value;antlr/RuleBlock.java;setOption(Token key, Token value);CommonToken
+Tool;tool;antlr/actions/cpp/ActionLexer.java;setTool(Tool tool);Tool
+Tool;tool;antlr/actions/java/ActionLexer.java;setTool(Tool tool);Tool
+Tool;tool;antlr/CodeGenerator.java;setTool(Tool tool);Tool
+Tool;tool_;antlr/DefineGrammarSymbols.java;DefineGrammarSymbols(Tool tool_, String[] args_, LLkAnalyzer analyzer_);Tool
+Tool;tool_;antlr/Grammar.java;Grammar(String className_, Tool tool_, String superClass);Tool
+Tool;tool_;antlr/LexerGrammar.java;LexerGrammar(String className_, Tool tool_, String superClass);Tool
+Tool;tool_;antlr/LLkAnalyzer.java;LLkAnalyzer(Tool tool_);Tool
+Tool;tool_;antlr/MakeGrammar.java;MakeGrammar(Tool tool_, String[] args_, LLkAnalyzer analyzer_);Tool
+Tool;tool_;antlr/ParserGrammar.java;ParserGrammar(String className_, Tool tool_, String superClass);Tool
+Tool;tool_;antlr/SimpleTokenManager.java;SimpleTokenManager(String name_, Tool tool_);Tool
+Vector;lexRules;antlr/MakeGrammar.java;createNextTokenRule(Grammar g, Vector lexRules, String rname);Vector
+Vector;v;antlr/AlternativeBlock.java;setAlternatives(Vector v);Vector
+Vector;v;antlr/collections/impl/VectorEnumerator.java;VectorEnumerator(Vector v);Vector
+Vector;v;antlr/CppCodeGenerator.java;getASTCreateString(Vector v);Vector
+WildcardElement;wc;antlr/CppCodeGenerator.java;gen(WildcardElement wc);WildcardElement
+WildcardElement;wc;antlr/DiagnosticCodeGenerator.java;gen(WildcardElement wc);WildcardElement
+WildcardElement;wc;antlr/DocBookCodeGenerator.java;gen(WildcardElement wc);WildcardElement
+WildcardElement;wc;antlr/HTMLCodeGenerator.java;gen(WildcardElement wc);WildcardElement
+WildcardElement;wc;antlr/JavaCodeGenerator.java;gen(WildcardElement wc);WildcardElement
+WildcardElement;wc;antlr/LLkAnalyzer.java;look(int k, WildcardElement wc);WildcardElement
+ZeroOrMoreBlock;blk;antlr/CppCodeGenerator.java;gen(ZeroOrMoreBlock blk);ZeroOrMoreBlock
+ZeroOrMoreBlock;blk;antlr/DiagnosticCodeGenerator.java;gen(ZeroOrMoreBlock blk);ZeroOrMoreBlock
+ZeroOrMoreBlock;blk;antlr/DocBookCodeGenerator.java;gen(ZeroOrMoreBlock blk);ZeroOrMoreBlock
+ZeroOrMoreBlock;blk;antlr/HTMLCodeGenerator.java;gen(ZeroOrMoreBlock blk);ZeroOrMoreBlock
+ZeroOrMoreBlock;blk;antlr/JavaCodeGenerator.java;gen(ZeroOrMoreBlock blk);ZeroOrMoreBlock
+ZeroOrMoreBlock;blk;antlr/LLkAnalyzer.java;deterministic(ZeroOrMoreBlock blk);ZeroOrMoreBlock
+ZeroOrMoreBlock;blk;antlr/LLkAnalyzer.java;look(int k, ZeroOrMoreBlock blk);ZeroOrMoreBlock

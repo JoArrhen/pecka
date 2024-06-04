@@ -1,0 +1,137 @@
+/* Copyright (c) 2023, ExtendJ Committers
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice,
+ * this list of conditions and the following disclaimer.
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ * this list of conditions and the following disclaimer in the documentation
+ * and/or other materials provided with the distribution.
+ *
+ * 3. Neither the name of the copyright holder nor the names of its
+ * contributors may be used to endorse or promote products derived from this
+ * software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+ */
+
+aspect Var {
+
+  syn boolean Access.isVar() = false;
+  eq TypeAccess.isVar() = getID().equals("var");
+
+  inh TypeDecl TypeAccess.varType();
+
+  refine TypeAnalysis eq TypeAccess.type() = isVar() ? varType() : decl();
+
+  eq Program.getChild().varType() = unknownType();
+
+  eq VarDeclStmt.getTypeAccess().varType() = inferredType();
+
+  eq VarDeclStmt.getDeclarator(int index).varType() {
+    if (getDeclarator(index).getNumDims() == 0) {
+      return inferredType();
+    }
+    return unknownType();
+  }
+
+  inh TypeDecl Stmt.unknownType();
+
+  /**
+   * Helper attrigute to infer a variable type.
+   * If the variable initi expression circularly depends on itself the
+   * type is undefined (definite assignment error).
+   */
+  syn TypeDecl VarDeclStmt.inferredType() circular [unknownType()] {
+    if (getDeclarator(0).hasInit()) {
+      return getDeclarator(0).getInit().type();
+    }
+    return unknownType();
+  }
+
+  syn boolean Expr.needTypeInferred() = false;
+  eq ArrayInit.needTypeInferred() = true;
+  eq LambdaExpr.needTypeInferred() = true;
+
+
+  refine NameCheck eq TypeAccess.nameProblems() {
+    if (isVar()) {
+      // This is the 'var' keyword from Java 10, so the name checks do not apply.
+      return Collections.emptyList();
+    }
+    return NameCheck.TypeAccess.nameProblems();
+  }
+
+  ClassDecl contributes
+      error("As of Java 10, 'var' is a restricted local variable type and cannot be used for type declarations.")
+      when name().equals("var")
+      to CompilationUnit.problems();
+
+  VarDeclStmt contributes each typeProblems() to CompilationUnit.problems();
+
+  syn Collection<Problem> VarDeclStmt.typeProblems() {
+    Collection<Problem> problems = new LinkedList<Problem>();
+    if (getTypeAccess().isVar()) {
+      if (getNumDeclarator() != 1) {
+        problems.add(error("'var' is not allowed in a compound declaration"));
+      }
+      if (getDeclarator(0).getNumDims() != 0) {
+        problems.add(error("'var' is not allowed as an element type of an array"));
+      }
+      if (!getDeclaratorList().getChild(0).hasInit()) {
+        problems.add(error("Cannot infer type of variable without initializer."));
+      } else {
+        Expr init = getDeclaratorList().getChild(0).getInit();
+        if (init.needTypeInferred()) {
+          problems.add(error("Initializer to a 'var' cannot be an expression without a decidable type"));
+        }
+        if (init.type().isNull()) {
+          problems.add(error("Initializer to a 'var' cannot be null"));
+        }
+      }
+    }
+    return problems;
+  }
+
+  /** Check if the variable is a local variable declared with the Java 10 'var' keyword. */
+  syn boolean VarAccess.isInferredTypeVariable() {
+    Variable decl = decl();
+    return decl instanceof Declarator && ((Declarator) decl).getTypeAccess().isVar();
+  }
+
+  refine DefiniteAssignment eq VarAccess.definiteAssignmentProblems() {
+    if (isInferredTypeVariable()) {
+      return Collections.emptyList();
+    }
+    return DefiniteAssignment.VarAccess.definiteAssignmentProblems();
+  }
+
+  refine Java8NameCheck eq VarAccess.nameProblems() {
+    Collection<Problem> problems = NameCheck.VarAccess.nameProblems();
+    if (isInferredTypeVariable()) {
+      Variable decl = decl();
+      ASTNode parent = getParent();
+      while (parent != null) {
+        if (parent == decl) {
+          problems.add(errorf("Cannot use inferred-type variable '%s' within its own initializer expression.", getID()));
+          break;
+        }
+        parent = parent.getParent();
+      }
+    }
+    return problems;
+  }
+}

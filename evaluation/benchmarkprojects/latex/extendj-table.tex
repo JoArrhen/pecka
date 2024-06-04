@@ -1,0 +1,13 @@
+\begin{table}[H]
+	\begin{tabular}{|l|ccc|ccc|}
+	\hline
+	\multirow{3}{*}{\textsc{Benchmark}} & \multicolumn{3}{c|}{\textsc{Start up}} & \multicolumn{3}{c|}{\textsc{Steady State}} \\ \cline{2-7}
+	& \multicolumn{1}{c|}{\intrajbaseline} & \multicolumn{2}{c|}{\intrajrelaxed} & \multicolumn{1}{c|}{\intrajbaseline} & \multicolumn{2}{c|}{\intrajrelaxed} \\ \cline{2-7}
+	& \multicolumn{1}{c|}{Time (s)} & \multicolumn{1}{c|}{Time (s)} & \textsc{Speedup} & \multicolumn{1}{c|}{Time (s)} & \multicolumn{1}{c|}{Time (s)} & \textsc{Speedup} \\ \hline
+	\code{commons-cli} & \multicolumn{1}{c|}{\eval{0.95}{0.69}} & \multicolumn{1}{c|}{\eval{0.95}{0.25}} & \same{} & \multicolumn{1}{c|}{\eval{0.48}{0.56}} & \multicolumn{1}{c|}{\eval{0.42}{0.28}} & \speedupnew{1.14} \\ \hline
+	\code{commons-jxpath} & \multicolumn{1}{c|}{\eval{1.61}{0.84}} & \multicolumn{1}{c|}{\eval{1.56}{0.26}} & \speedupnew{1.03} & \multicolumn{1}{c|}{\eval{0.79}{0.33}} & \multicolumn{1}{c|}{\eval{0.86}{0.39}} & \slowdownnew{0.91} \\ \hline
+	\code{jackson-core} & \multicolumn{1}{c|}{\eval{3.22}{2.46}} & \multicolumn{1}{c|}{\eval{3.08}{2.02}} & \speedupnew{1.05} & \multicolumn{1}{c|}{\eval{1.62}{1.04}} & \multicolumn{1}{c|}{\eval{1.64}{0.86}} & \same{} \\ \hline
+	\end{tabular}
+    \caption{\label{tab:extendj} Performance comparison of ExtendJ’s execution time during startup and steady state.}
+    
+\end{table}

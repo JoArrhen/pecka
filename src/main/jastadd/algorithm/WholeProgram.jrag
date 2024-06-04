@@ -1,0 +1,82 @@
+aspect WholeProgram {
+    // Add typeName for ASTNodes that returned the empty string
+    eq AddExpr.typeName() = type().getID();
+    eq StringLiteral.typeName() = type().getID();
+    eq ArrayCreationExpr.typeName() = type().getID();
+    eq ArrayInit.typeName() = type().getID();
+
+    syn lazy Set<PointsToEdge> Program.wholeProgramSolution() {
+        Set<InclusionEdge> inclusionEdges = allMethods().stream().flatMap(m -> m.inclusionEdges().stream()).collect(Collectors.toSet());
+        Set<PointsToEdge>  pointsToEdges =  allMethods().stream().flatMap(m -> m.pointsToEdges().stream()).collect(Collectors.toSet());
+
+        System.err.println("Starting whole program solving...");
+        System.err.println("Total edges: " + (inclusionEdges.size() + pointsToEdges.size())); 
+        Solver solver = new Solver(inclusionEdges, pointsToEdges, null);
+        Set<PointsToEdge> solution = solver.solution();
+        System.err.println("Done solving");
+        return solution;
+    }
+
+     syn lazy Map<DeclarationSite, Set<AllocationSite>> Program.paramMap() {
+        Map<DeclarationSite, Set<AllocationSite>> res = new HashMap<>();
+        for (PointsToEdge pte : wholeProgramSolution()) {
+            res.putIfAbsent(pte.from, new HashSet<>());
+            res.get(pte.from).add(pte.to);
+            if (pte.to.typeName().equals("")) System.err.println("empty typename: " + pte.to.getClass());
+        }
+        return res;
+    }
+
+    syn Map<String, java.util.List<String>> InvocationTarget.wholeProgramParameterPointers() = new HashMap<>();
+    eq MethodDecl.wholeProgramParameterPointers() {
+        Map<String, java.util.List<String>> res = new HashMap<>();
+        for (ParameterDeclaration param : getParameterList()) {
+            if (param.type().isPrimitive()) {
+                continue;
+            }
+            java.util.List<String> types = program()
+                                              .paramMap()
+                                              .getOrDefault(param, Collections.emptySet())
+                                              .stream()
+                                              .filter(allocsite -> allocsite.atype().subtype(param.type()))
+                                              .map(allocsite -> allocsite.typeName())
+                                              .distinct()
+                                              .collect(Collectors.toList());
+            res.put(param.getID(), types);
+        }
+
+        return res;
+    }
+    eq ConstructorDecl.wholeProgramParameterPointers() {
+        Map<String, java.util.List<String>> res = new HashMap<>();
+        for (ParameterDeclaration param : getParameterList()) {
+            if (param.type().isPrimitive()) {
+                continue;
+            }
+            java.util.List<String> types = program()
+                                              .paramMap()
+                                              .getOrDefault(param, Collections.emptySet()).stream()
+                                              .filter(allocsite -> allocsite.atype().subtype(param.type()))
+                                              .map(allocsite -> allocsite.typeName())
+                                              .distinct()
+                                              .collect(Collectors.toList());
+            res.put(param.getID(), types);
+        }
+
+        return res;
+    }
+
+    syn boolean InvocationTarget.hasPointerParameter() = false;
+    eq MethodDecl.hasPointerParameter() {
+        for (ParameterDeclaration pd : getParameterList()) {
+            if (!pd.type().isPrimitive()) return true;
+        }
+        return false;
+    }
+    eq ConstructorDecl.hasPointerParameter() {
+        for (ParameterDeclaration pd : getParameterList()) {
+            if (!pd.type().isPrimitive()) return true;
+        }
+        return false;
+    }
+}

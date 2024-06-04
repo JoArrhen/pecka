@@ -1,0 +1,54 @@
+aspect codeprober {
+    // Only make one ComilationUnit visible in CodeProber
+    syn ASTNode Program.pastaVisibleNextAfterRoot() {
+        final int numCUs = getNumCompilationUnit();
+        return numCUs == 0 ? null : getCompilationUnit(numCUs - 1);
+    }
+
+    syn Object Pointer.visualisePointsToHover() {
+        String YELLOW = "#FF08";
+
+        // Hover info
+        if (!pointsToSet().isEmpty()) {
+            String line = "INFO@" +
+                getStart() + ";" +
+                getEnd() + ";" +
+                pointsToString();
+            System.out.println(line);
+        } 
+        return null;
+    }
+
+    /*
+      Show all the results for the varaible accesses. 
+    */
+    coll Set<Object> Program.visualiseAllPointsToHover() [new HashSet<>()];
+    Pointer contributes visualisePointsToHover() 
+        to Program.visualiseAllPointsToHover() for program();
+
+    /*
+      Display the constraints that is generated from allocations and new-expressions, as well as the 
+      new edges generated from those.
+    */
+    syn Object Pointer.visualiseConstraints() {
+        visualiseInitialConstraits();
+
+        for (PointsToEdge p : generatedEdges()) {
+            System.out.println(p);
+            p.drawArrow();
+        }
+        return null;
+    }
+    syn Object Pointer.visualiseInitialConstraits() {
+        for (PointsToEdge p : activePointsToEdges()) {
+            System.out.println(p);
+            p.drawArrow();
+        }
+
+        for (InclusionEdge p : activeInclusionEdges()) {
+            System.out.println(p);
+            p.drawArrow();
+        }
+        return null;
+    }
+}

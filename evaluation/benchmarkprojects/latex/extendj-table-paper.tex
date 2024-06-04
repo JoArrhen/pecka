@@ -1,0 +1,19 @@
+\begin{table}[H]
+	\begin{tabular}{|l|ccc|ccc|}
+	\hline
+	\multirow{3}{*}{\textsc{Benchmark}} & \multicolumn{3}{c|}{\textsc{Start up}} & \multicolumn{3}{c|}{\textsc{Steady State}} \\ \cline{2-7}
+	& \multicolumn{1}{c|}{\intrajbaseline} & \multicolumn{2}{c|}{\intrajrelaxed} & \multicolumn{1}{c|}{\intrajbaseline} & \multicolumn{2}{c|}{\intrajrelaxed} \\ \cline{2-7}
+	& \multicolumn{1}{c|}{Time (s)} & \multicolumn{1}{c|}{Time (s)} & \textsc{Speedup} & \multicolumn{1}{c|}{Time (s)} & \multicolumn{1}{c|}{Time (s)} & \textsc{Speedup} \\ \hline
+	\code{commons-cli} & \multicolumn{1}{c|}{\eval{0.93}{nan}} & \multicolumn{1}{c|}{\eval{0.94}{nan}} & \same{} & \multicolumn{1}{c|}{\eval{0.87}{nan}} & \multicolumn{1}{c|}{\eval{0.90}{nan}} & \slowdownnew{0.96} \\ \hline
+	\code{jackson-dataformat-xml} & \multicolumn{1}{c|}{\eval{2.15}{nan}} & \multicolumn{1}{c|}{\eval{2.07}{nan}} & \speedupnew{1.04} & \multicolumn{1}{c|}{\eval{2.05}{nan}} & \multicolumn{1}{c|}{\eval{2.09}{nan}} & \same{} \\ \hline
+	\code{commons-jxpath} & \multicolumn{1}{c|}{\eval{1.63}{nan}} & \multicolumn{1}{c|}{\eval{1.53}{nan}} & \speedupnew{1.06} & \multicolumn{1}{c|}{\eval{1.57}{nan}} & \multicolumn{1}{c|}{\eval{1.63}{nan}} & \slowdownnew{0.96} \\ \hline
+	\code{antlr-2.7.2} & \multicolumn{1}{c|}{\eval{1.82}{nan}} & \multicolumn{1}{c|}{\eval{1.90}{nan}} & \slowdownnew{0.96} & \multicolumn{1}{c|}{\eval{1.90}{nan}} & \multicolumn{1}{c|}{\eval{1.76}{nan}} & \speedupnew{1.08} \\ \hline
+	\code{jackson-core} & \multicolumn{1}{c|}{\eval{3.24}{nan}} & \multicolumn{1}{c|}{\eval{3.05}{nan}} & \speedupnew{1.06} & \multicolumn{1}{c|}{\eval{3.03}{nan}} & \multicolumn{1}{c|}{\eval{2.99}{nan}} & \same{} \\ \hline
+	\code{pmd-4.2.5} & \multicolumn{1}{c|}{\eval{4.06}{nan}} & \multicolumn{1}{c|}{\eval{3.89}{nan}} & \speedupnew{1.04} & \multicolumn{1}{c|}{\eval{3.88}{nan}} & \multicolumn{1}{c|}{\eval{3.79}{nan}} & \speedupnew{1.02} \\ \hline
+	\code{joda-time} & \multicolumn{1}{c|}{\eval{4.77}{nan}} & \multicolumn{1}{c|}{\eval{4.68}{nan}} & \same{} & \multicolumn{1}{c|}{\eval{4.67}{nan}} & \multicolumn{1}{c|}{\eval{4.57}{nan}} & \speedupnew{1.02} \\ \hline
+	\code{jfreechart-1.0.0} & \multicolumn{1}{c|}{\eval{4.07}{nan}} & \multicolumn{1}{c|}{\eval{4.15}{nan}} & \same{} & \multicolumn{1}{c|}{\eval{4.15}{nan}} & \multicolumn{1}{c|}{\eval{4.12}{nan}} & \same{} \\ \hline
+	\code{fop-0.95} & \multicolumn{1}{c|}{\eval{5.51}{nan}} & \multicolumn{1}{c|}{\eval{5.17}{nan}} & \speedupnew{1.06} & \multicolumn{1}{c|}{\eval{4.97}{nan}} & \multicolumn{1}{c|}{\eval{5.13}{nan}} & \slowdownnew{0.97} \\ \hline
+	\end{tabular}
+    \caption{\label{tab:extendj} Performance comparison of ExtendJ’s execution time during startup and steady state.}
+    
+\end{table}

@@ -1,0 +1,19 @@
+\begin{table}[H]
+	\begin{tabular}{|l|ccc|ccc|}
+	\hline
+	\multirow{3}{*}{\textsc{Benchmark}} & \multicolumn{3}{c|}{\textsc{Start up}} & \multicolumn{3}{c|}{\textsc{Steady State}} \\ \cline{2-7}
+	& \multicolumn{1}{c|}{\intrajbaseline} & \multicolumn{2}{c|}{\intrajrelaxed} & \multicolumn{1}{c|}{\intrajbaseline} & \multicolumn{2}{c|}{\intrajrelaxed} \\ \cline{2-7}
+	& \multicolumn{1}{c|}{Time (s)} & \multicolumn{1}{c|}{Time (s)} & \textsc{Speedup} & \multicolumn{1}{c|}{Time (s)} & \multicolumn{1}{c|}{Time (s)} & \textsc{Speedup} \\ \hline
+	\code{commons-cli} & \multicolumn{1}{c|}{\eval{1.11}{nan}} & \multicolumn{1}{c|}{\eval{1.04}{nan}} & \speedupnew{1.07} & \multicolumn{1}{c|}{\eval{0.45}{nan}} & \multicolumn{1}{c|}{\eval{0.43}{nan}} & \speedupnew{1.06} \\ \hline
+	\code{jackson-dataformat-xml} & \multicolumn{1}{c|}{\eval{2.51}{nan}} & \multicolumn{1}{c|}{\eval{2.38}{nan}} & \speedupnew{1.05} & \multicolumn{1}{c|}{\eval{1.18}{nan}} & \multicolumn{1}{c|}{\eval{1.25}{nan}} & \slowdownnew{0.94} \\ \hline
+	\code{commons-jxpath} & \multicolumn{1}{c|}{\eval{2.03}{nan}} & \multicolumn{1}{c|}{\eval{1.73}{nan}} & \speedupnew{1.17} & \multicolumn{1}{c|}{\eval{0.78}{nan}} & \multicolumn{1}{c|}{\eval{0.66}{nan}} & \speedupnew{1.17} \\ \hline
+	\code{antlr-2.7.2} & \multicolumn{1}{c|}{\eval{2.47}{nan}} & \multicolumn{1}{c|}{\eval{2.29}{nan}} & \speedupnew{1.08} & \multicolumn{1}{c|}{\eval{1.16}{nan}} & \multicolumn{1}{c|}{\eval{1.13}{nan}} & \speedupnew{1.03} \\ \hline
+	\code{jackson-core} & \multicolumn{1}{c|}{\eval{3.81}{nan}} & \multicolumn{1}{c|}{\eval{3.79}{nan}} & \same{} & \multicolumn{1}{c|}{\eval{2.34}{nan}} & \multicolumn{1}{c|}{\eval{2.38}{nan}} & \same{} \\ \hline
+	\code{pmd-4.2.5} & \multicolumn{1}{c|}{\eval{4.63}{nan}} & \multicolumn{1}{c|}{\eval{4.35}{nan}} & \speedupnew{1.06} & \multicolumn{1}{c|}{\eval{2.42}{nan}} & \multicolumn{1}{c|}{\eval{2.43}{nan}} & \same{} \\ \hline
+	\code{joda-time} & \multicolumn{1}{c|}{\eval{7.38}{nan}} & \multicolumn{1}{c|}{\eval{7.66}{nan}} & \slowdownnew{0.96} & \multicolumn{1}{c|}{\eval{4.89}{nan}} & \multicolumn{1}{c|}{\eval{5.10}{nan}} & \slowdownnew{0.96} \\ \hline
+	\code{jfreechart-1.0.0} & \multicolumn{1}{c|}{\eval{8.36}{nan}} & \multicolumn{1}{c|}{\eval{8.21}{nan}} & \same{} & \multicolumn{1}{c|}{\eval{5.95}{nan}} & \multicolumn{1}{c|}{\eval{6.13}{nan}} & \slowdownnew{0.97} \\ \hline
+	\code{fop-0.95} & \multicolumn{1}{c|}{\eval{6.04}{nan}} & \multicolumn{1}{c|}{\eval{6.20}{nan}} & \slowdownnew{0.98} & \multicolumn{1}{c|}{\eval{3.86}{nan}} & \multicolumn{1}{c|}{\eval{3.73}{nan}} & \speedupnew{1.03} \\ \hline
+	\end{tabular}
+    \caption{\label{tab:npa} (NEW) Evaluation results for \emph{Null-Pointer Analysis} computing performance, comparing the start-up and steady-state execution times of the \intrajbaseline{} and \intrajrelaxed{}. Times are reported in seconds and speedup is reported as a ratio relative to the \intrajbaseline{} for both start-up and steady-state phases. Results are considered equivalent ({\same{}}) if the ratio is within the range [0.98, 1.02].}
+    
+\end{table}

@@ -1,0 +1,65 @@
+diff --git a/src/main/java/org/jsoup/helper/CookieUtil.java b/src/main/java/org/jsoup/helper/CookieUtil.java
+index f3750037..c1a1e259 100644
+--- a/src/main/java/org/jsoup/helper/CookieUtil.java
++++ b/src/main/java/org/jsoup/helper/CookieUtil.java
+@@ -23,7 +23,7 @@ import java.util.Set;
+  @since 1.14.1 */
+ class CookieUtil {
+     // cookie manager get() wants request headers but doesn't use them, so we just pass a dummy object here
+-    private static final Map<String, List<String>> EmptyRequestHeaders = Collections.unmodifiableMap(new HashMap<>());
++    private static final Map<String, List<String>> EmptyRequestHeaders = Collections.unmodifiableMap(new HashMap<String, List<String>>());
+     private static final String Sep = "; ";
+     private static final String CookieName = "Cookie";
+     private static final String Cookie2Name = "Cookie2";
+diff --git a/src/main/java/org/jsoup/helper/package-info.java b/src/main/java/org/jsoup/helper/package-info.java
+index 2074b7aa..c66c1af7 100644
+--- a/src/main/java/org/jsoup/helper/package-info.java
++++ b/src/main/java/org/jsoup/helper/package-info.java
+@@ -1,7 +1,7 @@
+ /**
+  Package containing classes supporting the core jsoup code.
+  */
+-@NonnullByDefault
++// @NonnullByDefault
+ package org.jsoup.helper;
+ 
+ import org.jsoup.internal.NonnullByDefault;
+diff --git a/src/main/java/org/jsoup/nodes/package-info.java b/src/main/java/org/jsoup/nodes/package-info.java
+index 7e66d2ca..25d1ebee 100644
+--- a/src/main/java/org/jsoup/nodes/package-info.java
++++ b/src/main/java/org/jsoup/nodes/package-info.java
+@@ -1,7 +1,7 @@
+ /**
+  HTML document structure nodes.
+  */
+-@NonnullByDefault
++// @NonnullByDefault
+ package org.jsoup.nodes;
+ 
+ import org.jsoup.internal.NonnullByDefault;
+diff --git a/src/main/java/org/jsoup/package-info.java b/src/main/java/org/jsoup/package-info.java
+index 835aafba..5bb9d559 100644
+--- a/src/main/java/org/jsoup/package-info.java
++++ b/src/main/java/org/jsoup/package-info.java
+@@ -1,7 +1,7 @@
+ /**
+  Contains the main {@link org.jsoup.Jsoup} class, which provides convenient static access to the jsoup functionality.
+  */
+-@NonnullByDefault
++// @NonnullByDefault
+ package org.jsoup;
+ 
+ import org.jsoup.internal.NonnullByDefault;
+diff --git a/src/main/java/org/jsoup/select/package-info.java b/src/main/java/org/jsoup/select/package-info.java
+index 5bbdb855..542b1cc9 100644
+--- a/src/main/java/org/jsoup/select/package-info.java
++++ b/src/main/java/org/jsoup/select/package-info.java
+@@ -2,7 +2,7 @@
+  Packages to support the CSS-style element selector.
+  {@link org.jsoup.select.Selector Selector defines the query syntax.}
+  */
+-@NonnullByDefault
++// @NonnullByDefault
+ package org.jsoup.select;
+ 
+ import org.jsoup.internal.NonnullByDefault;

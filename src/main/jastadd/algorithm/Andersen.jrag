@@ -1,0 +1,380 @@
+aspect PointsTo {
+    public interface DeclarationSite {
+        abstract ASTNode getNode();
+    }
+    public interface AllocationSite {
+        abstract ASTNode getNode();
+        abstract String typeName();
+    }
+
+    public interface InvocationTarget {
+        public Set<Pointer> pointers();
+        public Set<PointsToEdge> pointsToEdges();
+        public Set<InclusionEdge> inclusionEdges();
+    }
+    AllocationSite implements PFGNode;
+    DeclarationSite implements PFGNode;
+
+    ClassInstanceExpr implements AllocationSite, DeclarationSite;
+    ArrayCreationExpr implements AllocationSite, DeclarationSite;
+    ArrayInit implements AllocationSite, DeclarationSite;
+    NullLiteral implements AllocationSite, DeclarationSite;
+    NullType implements AllocationSite, DeclarationSite;
+    StringLiteral implements AllocationSite, DeclarationSite;
+    ParameterDeclaration implements AllocationSite, DeclarationSite; // Treated as alloc when not going far back enough to find the passed argument's allocation
+    AddExpr implements AllocationSite, DeclarationSite; // Creates new string object when concatenating strings
+
+    VariableDeclarator implements DeclarationSite;
+    FieldDeclarator implements DeclarationSite;
+    Variable implements DeclarationSite;
+    Dot implements DeclarationSite;
+    TempVertex implements DeclarationSite;
+    TypeAccess implements DeclarationSite;
+    ClassDecl implements DeclarationSite;
+    TypeDecl implements DeclarationSite;
+    InterfaceDecl implements DeclarationSite;
+    ThisAccess implements DeclarationSite;
+    ArrayAccess implements DeclarationSite;
+    SuperAccess implements DeclarationSite;
+    ConditionalExpr implements DeclarationSite;
+    CastExpr implements DeclarationSite;
+    ParExpr implements DeclarationSite;
+    AssignSimpleExpr implements DeclarationSite;
+
+    syn ASTNode Variable.getNode() = null;
+
+    syn ASTNode Dot.getNode() = dotExpressionTemp();
+    syn ASTNode TempVertex.getNode() = this;
+    syn ASTNode VariableDeclarator.getNode() = this;
+    syn ASTNode FieldDeclarator.getNode() = this;
+    syn ASTNode ClassInstanceExpr.getNode() = this;
+    syn ASTNode ArrayCreationExpr.getNode() = this;
+    syn ASTNode NullLiteral.getNode() = this;
+    syn ASTNode NullType.getNode() = this;
+    syn ASTNode StringLiteral.getNode() = this;
+    syn ASTNode TypeAccess.getNode() = this;
+    syn ASTNode ClassDecl.getNode() = this;
+    syn ASTNode TypeDecl.getNode() = this;
+    syn ASTNode InterfaceDecl.getNode() = this;
+    syn ASTNode ThisAccess.getNode() = this;
+    syn ASTNode ArrayAccess.getNode() = this;
+    syn ASTNode SuperAccess.getNode() = this;
+    syn ASTNode ArrayInit.getNode() = this;
+    syn ASTNode ConditionalExpr.getNode() = this;
+    syn ASTNode CastExpr.getNode() = this;
+    syn ASTNode ParExpr.getNode() = this;
+    syn ASTNode AddExpr.getNode() = this;
+    syn ASTNode AssignSimpleExpr.getNode() = this;
+    eq ParameterDeclaration.getNode() = this;
+
+    syn String ClassInstanceExpr.typeName() = type().getID();
+    syn String NullLiteral.typeName() = "Null";
+    syn String NullType.typeName() = "Null";
+    syn String ParameterDeclaration.typeName() = type().getID();
+
+    syn String AllocationSite.info() = getClass().toString() + " " + compilationUnit().pathName() + " " + lineNumber();
+    syn boolean AllocationSite.isNull() = type().isNull();
+
+    syn TypeDecl AllocationSite.atype() = type();
+
+    syn boolean ASTNode.isAllocationSite() = false;
+    syn boolean ClassInstanceExpr.isAllocationSite() = true;
+
+    coll Set<PointsToEdge> InvocationTarget.pointsToEdges() [new HashSet<>()];
+    coll Set<InclusionEdge> InvocationTarget.inclusionEdges() [new HashSet<>()];
+
+    ClassInstanceExpr contributes new PointsToEdge(this, this) to InvocationTarget.pointsToEdges() for each enclosingMethods();
+    ArrayCreationExpr contributes new PointsToEdge(this, this) to InvocationTarget.pointsToEdges() for each enclosingMethods();
+    ArrayInit contributes new PointsToEdge(this, this) to InvocationTarget.pointsToEdges() for each enclosingMethods();
+    NullLiteral contributes new PointsToEdge(this, this) to InvocationTarget.pointsToEdges() for each enclosingMethods();
+    StringLiteral contributes new PointsToEdge(this, this) to InvocationTarget.pointsToEdges() for each enclosingMethods();
+    AddExpr contributes new PointsToEdge(this, this) when type().isString() to InvocationTarget.pointsToEdges() for each enclosingMethods();
+
+    VariableDeclarator contributes new InclusionEdge(getInitializer().getDeclaration(), getDeclaration())
+        when hasInitializer() && getInitializer().hasDeclaration()
+        to InvocationTarget.inclusionEdges() for each enclosingMethods();
+
+    AssignSimpleExpr contributes new InclusionEdge(getSource().getDeclaration(), getDest().getDeclaration())
+        when getSource().hasDeclaration() && getDest().hasDeclaration()
+        to InvocationTarget.inclusionEdges() for each enclosingMethods();
+
+    FieldDeclarator contributes new InclusionEdge(getInitOpt().getChild(0).getDeclaration(), this)
+        when getInitOpt().getNumChild() > 0 && getInitOpt().getChild(0).hasDeclaration()
+        to InvocationTarget.inclusionEdges() for each enclosingMethods();
+
+    // Point to null when not including an initializer
+    VariableDeclarator contributes new PointsToEdge(this, (NullType) program().typeNull())
+        when !hasInitializer()
+        to InvocationTarget.pointsToEdges() for each enclosingMethods();
+
+    FieldDeclarator contributes new PointsToEdge(this, (NullType) program().typeNull())
+        when getInitOpt().getNumChild() == 0
+        to InvocationTarget.pointsToEdges() for each enclosingMethods();
+
+    // For each instantiation x of this type or a subtype and for the field f, add an edge f -> x.f
+    FieldDeclarator contributes each
+            ((ClassDecl) hostType())
+            .subtypesIncludingSelf()
+            .stream()
+            .filter(subtype -> subtype.isClassDecl())
+            .flatMap(subtype -> ((ClassDecl) subtype).instantiations().stream())
+            .map(inst -> new FieldStoreEdge(this, inst, name()))
+            .collect(Collectors.toSet())
+            to InvocationTarget.inclusionEdges() for each enclosingMethods();
+
+    // Include constructors of accessed types so that constraints for the type's fields are also collected
+    coll Set<InvocationTarget> InvocationTarget._accessedTypeConstructors() [new HashSet<>()];
+    syn Set<InvocationTarget> InvocationTarget.accessedTypeConstructors() = _accessedTypeConstructors();
+    TypeAccess contributes each decl().constructorSet() when hasParentDot() && inStaticContext() to InvocationTarget._accessedTypeConstructors() for each enclosingMethods();
+
+    coll Set<ClassInstanceExpr> ClassDecl.instantiations() [new HashSet<>()];
+    ClassInstanceExpr contributes 
+        this to ClassDecl.instantiations() 
+        for decl().hostType();
+
+    FieldDeclarator contributes each
+            ((ClassDecl) hostType())
+            .instantiations()
+            .stream()
+            .map(inst -> new FieldLoadEdge(inst, getDeclaration(), name())) // Seems to work??
+            //.map(inst -> new FieldStoreEdge(getDeclaration(), inst, name()))
+            .collect(Collectors.toSet())
+        to InvocationTarget.inclusionEdges() for each enclosingMethods();
+
+    // Inherit fields from superclasses
+    FieldDeclarator contributes each
+            ((ClassDecl) hostType())
+            .subtypes()
+            .stream()
+            .filter(x -> x.isClassDecl())
+            .flatMap(subtype -> ((ClassDecl) subtype).instantiations().stream())
+            .map(inst -> new FieldLoadEdge(inst, getDeclaration(), name()))
+            .collect(Collectors.toSet())
+        to InvocationTarget.inclusionEdges() for each enclosingMethods();
+
+    ThisAccess contributes each
+            ((ClassDecl) hostType())
+            .subtypesIncludingSelf()
+            .stream()
+            .filter(type -> type.isClassDecl())
+            .flatMap(subtype -> ((ClassDecl) subtype).instantiations().stream())
+            .map(inst -> new InclusionEdge(inst, this))
+            .collect(Collectors.toSet())
+        to InvocationTarget.inclusionEdges() for each enclosingMethods();
+
+    // Very imprecise, would be better to add a store for instantiations of this type
+    // but tricky to deal with e.g. super.x.f (actually this is probably not legal Java,
+    // see grammar https://docs.oracle.com/javase/specs/jls/se7/html/jls-18.html)
+    SuperAccess contributes each
+            ((ClassDecl) hostType())
+            .supertypes()
+            .stream()
+            .filter(x -> x.isClassDecl())
+            .flatMap(supertype -> ((ClassDecl) supertype).instantiations().stream())
+            .map(inst -> new InclusionEdge(inst, this))
+            .collect(Collectors.toSet())
+        to InvocationTarget.inclusionEdges() for each enclosingMethods();
+
+    ConditionalExpr contributes each
+            new HashSet<>(Arrays.asList(new InclusionEdge(getFalseExpr().getDeclaration(), this),
+                   new InclusionEdge(getTrueExpr().getDeclaration(), this)))
+        when getFalseExpr().hasDeclaration() && getTrueExpr().hasDeclaration() // Should possibly only contribute one edge sometimes, e.g. when one expr is null?
+        to InvocationTarget.inclusionEdges() for each enclosingMethods();
+
+    public interface Pointer {}
+    VarAccess implements Pointer;
+    ParameterDeclaration implements Pointer;
+    VariableDeclarator implements Pointer;
+    syn String Pointer.fileName() = compilationUnit().pathName();
+    syn String AllocationSite.fileName() = compilationUnit().pathName();
+    eq ParameterDeclaration.fileName() = compilationUnit().pathName();
+    syn boolean Pointer.isPointer() = !type().isPrimitive();
+
+    syn DeclarationSite Pointer.declaration() = this;
+    eq VarAccess.declaration() = decl();
+
+    /*
+    * Get all Nodes that implement Pointer inside the invocation target.
+    */
+    coll Set<Pointer> InvocationTarget.pointers() [new HashSet<>()];
+    Pointer contributes this
+    to InvocationTarget.pointers() for each enclosingMethods();
+
+    syn Set<PointsToEdge> Pointer.activePointsToEdges() {
+        HashSet<PointsToEdge> res = new HashSet<>();
+        Set<InvocationTarget> activeMethods = enclosingMethods().stream().flatMap(m -> m.selectedMethods().stream()).collect(Collectors.toSet());
+        for (InvocationTarget activeMethod : activeMethods) {
+            res.addAll(activeMethod.pointsToEdges());
+        }
+        return res;
+    }
+
+    coll Set<Pointer> InvocationTarget.pointers() [new HashSet<>()];
+    Pointer contributes this
+    to InvocationTarget.pointers() for each enclosingMethods();
+    
+    syn Set<InclusionEdge> Pointer.activeInclusionEdges() {
+        HashSet<InclusionEdge> res = new HashSet<>();
+        Set<InvocationTarget> activeMethods = enclosingMethods().stream().flatMap(m -> m.selectedMethods().stream()).collect(Collectors.toSet());
+        for (InvocationTarget activeMethod : activeMethods) {
+            res.addAll(activeMethod.inclusionEdges());
+        }
+        return res;
+    }
+
+    syn lazy Set<PointsToEdge> InvocationTarget.activePointsToEdges() {
+        HashSet<PointsToEdge> res = new HashSet<>();
+        for (InvocationTarget selectedMethod : selectedMethods()) {
+            res.addAll(selectedMethod.pointsToEdges());
+        }
+        return res;
+    }
+
+    syn lazy Set<InclusionEdge> InvocationTarget.activeInclusionEdges() {
+        HashSet<InclusionEdge> res = new HashSet<>();
+        for (InvocationTarget selectedMethod : selectedMethods()) {
+            res.addAll(selectedMethod.inclusionEdges());
+        }
+        return res;
+    }
+
+    enum Strategy {
+        BACKWARDS,
+        REACHABLE,
+        DISTANCE
+    }
+
+    // These values will be overridden by a default or specified value in `Options`
+    public int Program.analysisDistance = 0;
+    public Strategy Program.strategy = Strategy.DISTANCE;
+
+    /*
+        Use the reachable strategy for the analysis. It will behave the same as setting the distance
+        to infinity, or a very high distance.
+    */
+    public void Program.useReachableStrategy() {
+        strategy = Strategy.REACHABLE;
+    }
+
+    /*
+        Use the distance strategy for the analysis.
+    */
+    public void Program.useDistanceStrategy(int distance) {
+        analysisDistance = distance;
+        strategy = Strategy.DISTANCE;
+    }
+
+    /*
+        Get the set of methods that should be used for the analysis. The set depends on the strategy
+        specified by the methods `useReachableStrategy` and `useDistanceStrategy`.
+    */
+    syn lazy Set<InvocationTarget> InvocationTarget.selectedMethods() {
+        switch (program().strategy) {
+            case BACKWARDS: return backwardsActive();
+            case REACHABLE: return reachable();
+            case DISTANCE: return withinDistance(program().analysisDistance);
+            default: throw new Error("Strategy not included in selectedMethods() switch");
+        }
+    }
+}
+
+aspect Utilities {
+    syn boolean VariableDeclarator.hasInitializer() = getInitOpt().getNumChild() > 0;
+    syn Expr VariableDeclarator.getInitializer() = getInitOpt().getChild(0);
+
+    syn DeclarationSite DeclarationSite.getDeclaration() = null;
+
+    eq VariableDeclarator.getDeclaration() = this;
+    eq FieldDeclarator.getDeclaration() = this;
+    eq ParameterDeclaration.getDeclaration() = this;
+
+    syn DeclarationSite Expr.getDeclaration() = null;
+    eq Dot.getDeclaration() = topDot().dotExpressionTemp();
+    eq TypeAccess.getDeclaration() = decl();
+    eq ThisAccess.getDeclaration() = this; // TODO: this should refer to the object and not the class. This probably requires call site sensitivty
+    eq ClassDecl.getDeclaration() = this;
+    eq TypeDecl.getDeclaration() = this;
+    eq InterfaceDecl.getDeclaration() = this;
+    eq ClassInstanceExpr.getDeclaration() = this;
+    eq ArrayCreationExpr.getDeclaration() = this;
+    eq ArrayAccess.getDeclaration() = this;
+    eq SuperAccess.getDeclaration() = this;
+    eq ArrayInit.getDeclaration() = this;
+    eq ConditionalExpr.getDeclaration() = this;
+    eq NullLiteral.getDeclaration() = this;
+    eq NullType.getDeclaration() = this;
+    eq StringLiteral.getDeclaration() = this;
+    eq CastExpr.getDeclaration() = getExpr().getDeclaration();
+    eq ParExpr.getDeclaration() = getExpr().getDeclaration();
+    eq AddExpr.getDeclaration() = type().isString() ? this : null;
+    eq AssignSimpleExpr.getDeclaration() = getSource().getDeclaration();
+    //syn DeclarationSite TempVertex.getDeclaration() = this;
+    syn DeclarationSite VarAccess.getDeclaration() = decl();
+
+    syn boolean Expr.hasDeclaration() = getDeclaration() != null;
+    syn boolean DeclarationSite.hasDeclaration() = getDeclaration() != null;
+
+    syn VarAccess VariableDeclarator.getInitializerAsVarAccess() = (VarAccess) getInitOpt().getChild(0);
+    syn String ClassInstanceExpr.toString() = "alloc " + type().getID() + " line " + lineNumber();
+    syn String NullLiteral.toString() = "null";
+
+    syn String Expr.lastField() = null; // USE LASTACCESS INSTEAD
+    eq Dot.lastField() = getRight().lastField();
+    eq VarAccess.lastField() = getID();
+    syn nta TempVertex Dot.temp() = new TempVertex();
+
+    syn String Expr.name2() { throw new Error("name2 not implemented for this class: " + getClass()); }
+    eq FieldAccess.name2() = name();
+    eq TypeAccess.name2() = name();
+    eq VarAccess.name2() = name();
+    eq MethodAccess.name2() = name();
+    eq ThisAccess.name2() = decl().name();
+    eq ParExpr.name2() = "PAREXPR"; // ??
+    eq ArrayAccess.name2() = "-COLLECTION_ACCESS"; // TODO: This gets a sound result but also includes the array in a.arr[0]
+    eq Dot.name2() = lastAccess().name2();
+
+    /*
+    This represents the entire dot expression, e.g. x.f.g.h, and is the node constraints generated by assignments should use.
+    */
+    syn nta TempVertex Dot.dotExpressionTemp() {
+        if (!hasParentDot()) {
+            return new TempVertex();
+        } else {
+            throw new Error("Tried to access dotExpressionTemp in non-top dot");
+        }
+    }
+
+    syn lazy String TempVertex.toString() = "temp-" + (int) (Math.random() * 100); // lazy ensures consistent string when called several times
+
+    // In a method: method declaration. Outside a method (in field declarator): all constructors.
+    syn Set<InvocationTarget> Expr.enclosingMethods() { 
+        BodyDecl decl = enclosingBodyDecl();
+
+        if (decl instanceof FieldDecl) 
+            return hostType().constructorSet();
+
+        if (decl instanceof EnumConstant || decl instanceof MemberClassDecl || decl instanceof MemberInterfaceDecl)
+            return new HashSet<>();
+
+
+        return new HashSet<>(Arrays.asList((InvocationTarget) decl));
+
+    }
+    syn Set<InvocationTarget> Stmt.enclosingMethods() { 
+        BodyDecl decl = enclosingBodyDecl();
+        if (decl instanceof FieldDecl) 
+            return hostType().constructorSet();
+
+        return new HashSet<>(Arrays.asList((InvocationTarget) decl));
+    }
+
+    syn Set<InvocationTarget> VariableDeclarator.enclosingMethods() { BodyDecl decl = enclosingBodyDecl(); return new HashSet<>(Arrays.asList((InvocationTarget) decl)); }
+    syn Set<InvocationTarget> ParameterDeclaration.enclosingMethods() { BodyDecl decl = enclosingBodyDecl(); return new HashSet<>(Arrays.asList((InvocationTarget) decl)); }
+    syn Set<InvocationTarget> FieldDeclarator.enclosingMethods() { return hostType().constructorSet(); }
+    eq EnumInstanceExpr.enclosingMethods() = new HashSet<>();
+
+    syn Set<InvocationTarget> ClassDecl.constructorSet() = constructors().stream().map(x -> (InvocationTarget) x).collect(Collectors.toSet());
+    syn Set<InvocationTarget> TypeDecl.constructorSet() = new HashSet<>();
+
+    syn TypeDecl NullType.type() = this;
+}

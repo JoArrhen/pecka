@@ -1,0 +1,13 @@
+arguments=
+auto.sync=false
+build.scans.enabled=false
+connection.gradle.distribution=GRADLE_DISTRIBUTION(VERSION(6.8))
+connection.project.dir=
+eclipse.preferences.version=1
+gradle.user.home=
+java.home=/Users/idrissr/.sdkman/candidates/java/7.0.292-zulu
+jvm.arguments=
+offline.mode=false
+override.workspace.settings=true
+show.console.view=true
+show.executions.view=true

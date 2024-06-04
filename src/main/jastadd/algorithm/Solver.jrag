@@ -1,0 +1,398 @@
+aspect Solver {
+    /*
+    Solve the collected constraints and return the resulting points-to edges.
+    */
+    syn lazy Set<PointsToEdge> Pointer.generatedEdges() {
+        Set<InvocationTarget> activeMethods = enclosingMethods().stream().flatMap(m -> m.selectedMethods().stream()).collect(Collectors.toSet());
+        java.util.List<TypeDecl> types = new ArrayList<>();
+        types.add(type());
+
+        return new Solver(activeInclusionEdges(), activePointsToEdges(), types).solution();
+    }
+
+    syn lazy Map<Pointer, Set<AllocationSite>> InvocationTarget.pointsToSet() {
+        java.util.List<TypeDecl> types = new ArrayList<>();
+        for (Pointer p : pointers()) {
+            types.add(p.typ());
+        }
+
+        Map<Pointer, Set<AllocationSite>> res = new HashMap<>();
+        Set<PointsToEdge> solution = new Solver(activeInclusionEdges(), activePointsToEdges(), types).solution();
+        for (Pointer pointer : pointers()) {
+            Set<AllocationSite> pte = solution.stream()
+                                       .filter(edge -> edge.from == pointer.declaration())
+                                       .map(edge -> edge.to)
+                                       .filter(allocsite -> allocsite.atype().subtype(pointer.typ()))
+                                       .collect(Collectors.toSet());
+            res.put(pointer, pte);
+        }
+        return res;
+    }
+
+    syn lazy Set<AllocationSite> Pointer.pointsToSet() {
+        if (type().isPrimitive()) {
+            return Collections.emptySet();
+        }
+
+        return generatedEdges().stream()
+                               .filter(edge -> edge.from == declaration())
+                               .map(edge -> edge.to)
+                               .filter(allocsite -> allocsite.atype().subtype(typ()))
+                               .collect(Collectors.toSet());
+    }
+
+    public interface PFGNode {}
+
+    public PrintStream Program.printStream = null;
+
+    class Solver {
+        // Based on slides by Tian Tan at Nanjing University https://cs.nju.edu.cn/tiantan/software-analysis/PTA-FD.pdf
+
+        private final Map<PFGNode, Set<PFGNode>> pfg = new HashMap<>();
+        private final WorkList worklist = new WorkList(); // might need set/uniqueness property
+        private final Map<PFGNode, Set<AllocationSite>> pointsTo = new HashMap<>();
+        private Set<InclusionEdge> inclusionEdges;
+        private final Set<FieldStoreEdge> storeEdges;
+        private final Set<FieldLoadEdge> loadEdges;
+        private Set<PointsToEdge> pointsToEdges;
+        private final Map<DeclarationSite, Set<FieldLoadEdge>> loadMap = new HashMap<>();
+        private final Map<DeclarationSite, Set<FieldStoreEdge>> storeMap = new HashMap<>();
+        private final java.util.List<TypeDecl> pointerTypes;
+
+        public Solver(Set<InclusionEdge> inclusionEdges, Set<PointsToEdge> pointsToEdges, java.util.List<TypeDecl> pointerTypes) {
+            this.inclusionEdges = inclusionEdges;
+            this.pointsToEdges = pointsToEdges;
+            //this.pointsToEdges.addAll(parameterPointsToEdges(inclusionEdges));
+            this.pointerTypes = pointerTypes;
+
+            //if (pointerTypes != null) { // null when testing the filter
+            //    filter();
+            //}
+
+            this.storeEdges = this.inclusionEdges.stream().filter(x -> x instanceof FieldStoreEdge).map(x -> (FieldStoreEdge) x).collect(Collectors.toSet());
+            this.loadEdges = this.inclusionEdges.stream().filter(x -> x instanceof FieldLoadEdge).map(x -> (FieldLoadEdge) x).collect(Collectors.toSet());
+            this.inclusionEdges = this.inclusionEdges.stream().filter(x -> !(x instanceof FieldLoadEdge) && !(x instanceof FieldStoreEdge)).collect(Collectors.toSet());
+            computeFieldSets();
+        }
+
+        private void addEdge(PFGNode s, PFGNode t) {
+            if (pfg.containsKey(s) && pfg.get(s).contains(t)) return;
+            
+            pfg.putIfAbsent(s, new HashSet<>());
+            pfg.get(s).add(t);
+            if (pointsTo.containsKey(s)) {
+                worklist.add(new Pair<>(t, pointsTo.get(s)));
+            }
+        }
+
+        public Set<PointsToEdge> solution() {
+
+            for (PointsToEdge pte : pointsToEdges) {
+                worklist.add(new Pair<>(pte.from, new HashSet<>(Arrays.asList(pte.to))));
+            }
+
+            for (InclusionEdge ie : inclusionEdges) {
+                addEdge(ie.from, ie.to);
+            }
+
+            while (!worklist.isEmpty()) {
+                Pair<PFGNode, Set<AllocationSite>> item = worklist.remove();
+                PFGNode n = item.fst;
+                Set<AllocationSite> pts = item.snd;
+                pts.removeAll(pointsTo.getOrDefault(n, Collections.EMPTY_SET)); // compute delta
+                
+                // Propagate
+                if (!pts.isEmpty()) {
+                    pointsTo.putIfAbsent(n, new HashSet<>());
+                    pointsTo.get(n).addAll(pts);
+                    for (PFGNode s : pfg.getOrDefault(n, Collections.emptySet())) {
+                        worklist.add(new Pair<>(s, pts));
+                    }
+                }
+                fieldLoop(n, pts);
+
+                //if (!(n instanceof FieldAccess)) {
+                //    DeclarationSite ds = (DeclarationSite) n;
+                //    for (PFGNode oi : pts) {
+                //        for (FieldLoadEdge load : loadEdges) {
+                //            if (load.from.equals(ds)) {
+                //                addEdge(load.to, new FieldAccess(oi, load.field));
+                //            }
+                //        }
+
+                //        for (FieldStoreEdge store : storeEdges) {
+                //            if (store.to.equals(ds)) {
+                //                addEdge(new FieldAccess(oi, store.field), store.from);
+                //            }
+                //        }
+                //    }
+                //}
+            }
+
+            Set<PointsToEdge> res = new HashSet<>();
+            for (Map.Entry<PFGNode, Set<AllocationSite>> entry : pointsTo.entrySet()) {
+                PFGNode s = entry.getKey();
+                if (s instanceof DeclarationSite) {
+                    DeclarationSite ds = (DeclarationSite) s;
+                    for (AllocationSite t : entry.getValue()) {
+                        res.add(new GeneratedPointsToEdge(ds, t));
+                    }
+                }
+            }
+
+            return res;
+        }
+
+        private void fieldLoop(PFGNode n, Set<AllocationSite> pts) {
+            if (!(n instanceof FieldAccess)) {
+                DeclarationSite ds = (DeclarationSite) n;
+                for (PFGNode oi : pts) {
+                    //for (FieldLoadEdge load : loadEdges) {
+                    //    if (load.from.equals(ds)) {
+                    //        addEdge(load.to, new FieldAccess(oi, load.field));
+                    //    }
+                    //}
+                    for (FieldLoadEdge load : loadMap.getOrDefault(ds, Collections.emptySet())) {
+                        addEdge(load.to, new FieldAccess(oi, load.field));
+                    }
+                    for (FieldStoreEdge store : storeMap.getOrDefault(ds, Collections.emptySet())) {
+                        addEdge(new FieldAccess(oi, store.field), store.from);
+                    }
+
+                    //for (FieldStoreEdge store : storeEdges) {
+                    //    if (store.to.equals(ds)) {
+                    //        addEdge(new FieldAccess(oi, store.field), store.from);
+                    //    }
+                    //}
+                }
+            }
+        }
+
+        private void println(String s) {
+            if (pointerTypes.size() > 0) {
+                pointerTypes.get(0).program().printStream.println(s);
+
+            }
+        }
+
+        private void computeFieldSets() {
+            for (FieldLoadEdge load : loadEdges) {
+                DeclarationSite from = load.from;
+                DeclarationSite to = load.to;
+                loadMap.putIfAbsent(from, new HashSet<>());
+                loadMap.get(from).add(load);
+            }
+
+            for (FieldStoreEdge store : storeEdges) {
+                DeclarationSite from = store.from;
+                DeclarationSite to = store.to;
+                storeMap.putIfAbsent(to, new HashSet<>());
+                storeMap.get(to).add(store);
+            }
+        }
+
+        // In case a parameter does not have any inclusion edges pointing to it,
+        // then treat it as an allocation site.
+        // This can happen when not going back far enough to find the allocation site,
+        // or when reaching main.
+        private Set<PointsToEdge> parameterPointsToEdges(Set<InclusionEdge> inclusionEdges) {
+            Set<ParameterDeclaration> fromParameters =
+                inclusionEdges
+                .stream()
+                .filter(e -> e.from instanceof ParameterDeclaration && !((ParameterDeclaration) e.from).type().isPrimitive())
+                .map(e -> (ParameterDeclaration) e.from)
+                .collect(Collectors.toSet());
+            
+            Set<ParameterDeclaration> toParameters =
+                inclusionEdges
+                .stream()
+                .filter(e -> e.to instanceof ParameterDeclaration && !((ParameterDeclaration) e.to).type().isPrimitive())
+                .map(e -> (ParameterDeclaration) e.to)
+                .collect(Collectors.toSet());
+
+            HashSet<PointsToEdge> res = new HashSet<>();
+            for (ParameterDeclaration from : fromParameters) {
+                if (!toParameters.contains(from)) {
+                    res.add(new GeneratedPointsToEdge(from, from));
+                }
+            }
+
+            return res;
+        }
+
+        private void filter() {
+            // find edge types
+            Set<TypeDecl> candidates = new HashSet<>();
+            inclusionEdges.forEach(ie -> {
+                                        candidates.add(ie.from.type2()); 
+                                        candidates.add(ie.to.type2());
+                                    });
+
+            Set<TypeDecl> relevantTypes = new HashSet<>();
+            for (TypeDecl pointerType : pointerTypes) {
+                Set<TypeDecl> candidateTypes = new HashSet<>(candidates);
+                relevantTypes.add(pointerType);
+                candidateTypes.remove(pointerType);
+                candidateTypes.remove(pointerType.program().typeNull());
+
+                boolean fixpointReached = false;
+                while (!fixpointReached) {
+                    fixpointReached = true;
+                    Set<TypeDecl> toRemove = new HashSet<>();
+
+                    for (TypeDecl candidate : candidateTypes) {
+                        if (hasFieldContainingRelevantType(candidate, relevantTypes)
+                        || isArrayContainingRelevantType(candidate, relevantTypes)
+                        || isRawListOrMap(candidate)
+                        || isListOrMapContainingRelevantType(candidate, relevantTypes)
+                        || sharesTypeHierarchyWithAny(candidate, relevantTypes)) {
+                            fixpointReached = false;
+                            relevantTypes.add(candidate);
+                            toRemove.add(candidate);
+                        }
+                    }
+                    candidateTypes.removeAll(toRemove);
+                }
+            }
+
+            // filter edges
+            inclusionEdges = inclusionEdges.stream().filter(ie -> relevantTypes.contains(ie.from.type2()) || relevantTypes.contains(ie.to.type2()) || ie.from instanceof TempVertex && ie.to instanceof TempVertex).collect(Collectors.toSet());
+            pointsToEdges = pointsToEdges.stream().filter(pte -> relevantTypes.contains(pte.from.type2())).collect(Collectors.toSet());
+        }
+
+        private boolean hasFieldContainingRelevantType(TypeDecl type, Set<TypeDecl> relevant) {
+            return type.fieldTypes().stream().anyMatch(ft -> sharesTypeHierarchyWithAny(ft, relevant));
+        }
+
+        private boolean sharesTypeHierarchy(TypeDecl type1, TypeDecl type2) {
+            return type1.subtype(type2) || type2.subtype(type1);
+        }
+
+        private boolean sharesTypeHierarchyWithAny(TypeDecl type, Collection<TypeDecl> types) {
+            return types.stream().anyMatch(t -> sharesTypeHierarchy(type, t));
+        }
+
+        private boolean isArrayContainingRelevantType(TypeDecl type, Set<TypeDecl> relevant) {
+            if (type.isArrayDecl()) {
+                ArrayDecl ad = (ArrayDecl) type;
+                TypeDecl elementType = ad.elementType();
+                return !elementType.isPrimitive() && sharesTypeHierarchyWithAny(elementType, relevant);
+            } else {
+                return false;
+            }
+        }
+
+        private boolean isListOrMapContainingRelevantType(TypeDecl type, Set<TypeDecl> relevant) {
+            if ((type.isList() || type.isMap()) && type.isParameterizedType()) {
+                ParTypeDecl par = (ParTypeDecl) type;
+                for (TypeDecl inner : par.getParameterization().args) {
+                    if (sharesTypeHierarchyWithAny(inner, relevant)) {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        private boolean isRawListOrMap(TypeDecl type) { 
+            return type.isMap()  && type.isRawType()
+                || type.isList() && type.isRawType();
+        }
+    }
+
+    class FieldAccess implements PFGNode {
+        public final PFGNode variable;
+        public final String field;
+
+        public FieldAccess(PFGNode variable, String field) {
+            this.variable = variable;
+            this.field = field;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (getClass() != o.getClass()) return false;
+            FieldAccess fa = (FieldAccess) o;
+            return variable == fa.variable && field.equals(fa.field);
+        }
+
+        @Override
+        public int hashCode() {
+            return variable.toString().hashCode() ^ field.hashCode();
+        }
+
+        @Override
+        public String toString() {
+            return variable + "." + field;
+        }
+    }
+
+    class Pair<T1, T2> {
+        public final T1 fst;
+        public final T2 snd;
+
+        public Pair(T1 fst, T2 snd) {
+            this.fst = fst;
+            this.snd = snd;
+        }
+
+        @Override
+        public String toString() {
+            return "(" + fst + ", " + snd + ")";
+        }
+
+        @Override
+        public int hashCode() {
+            return fst.hashCode() ^ snd.hashCode();
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            Pair<T1, T2> other = (Pair<T1, T2>) o; // unchecked
+            return other.fst.equals(fst) && other.snd.equals(snd);
+        }
+    }
+
+    class WorkList {
+        private final Map<PFGNode, Set<AllocationSite>> map = new HashMap<>();
+        private final Queue<PFGNode> queue = new LinkedList<>();
+        private final Map<PFGNode, Set<AllocationSite>> done = new HashMap<>();
+
+        public void add(Pair<PFGNode, Set<AllocationSite>> e) {
+            PFGNode node = e.fst;
+            Set<AllocationSite> allocs = e.snd;
+
+            if (!(node instanceof FieldAccess)) {
+                DeclarationSite declaration = (DeclarationSite) node;
+                Set<AllocationSite> filtered_allocs = new HashSet<>();
+                for (AllocationSite alloc : allocs) {
+                    if (declaration.type2().subtype(alloc.atype()) || !alloc.isNull()) {
+                        filtered_allocs.add(alloc);
+                    }
+                }
+                allocs = filtered_allocs;
+            }
+
+            if (!map.containsKey(node)) {
+                map.put(node, new HashSet<>(allocs));
+                queue.add(node);
+            } else {
+                map.get(node).addAll(allocs);
+            }
+            if (!done.containsKey(node)) done.put(node, new HashSet<>());
+        }
+
+        public Pair<PFGNode, Set<AllocationSite>> remove() {
+            PFGNode node = queue.remove();
+            Set<AllocationSite> set = map.remove(node);
+            set.removeAll(done.get(node));
+            done.get(node).addAll(set);
+            return new Pair<>(node, set);
+        }
+
+        public boolean isEmpty() {
+            return queue.isEmpty();
+        }
+    }
+}

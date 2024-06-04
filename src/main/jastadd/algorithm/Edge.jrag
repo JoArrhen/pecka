@@ -1,0 +1,157 @@
+public abstract class Edge {
+    abstract void drawArrow();
+    protected void drawArrow(ASTNode from, ASTNode to, String color) {
+        // Do not draw temps. Maybe add location for temps later so they can be drawn
+        if (from == null || to == null) throw new Error(String.format("invalid edge: %s, %s, %s. %s", from, to, color, toString()));
+        if (from.getStart() == 0 || to.getStart() == 0) return;
+
+        String line = "LINE-PA@" +
+            from.getStart() + ";" +
+            to.getStart() + ";" +
+            color;
+        System.out.println(line);
+    }
+}
+
+public class PointsToEdge extends Edge {
+    public final DeclarationSite from;
+    public final AllocationSite to;
+    protected String BLUE = "#0CF8";
+
+    public PointsToEdge(DeclarationSite from, AllocationSite to) {
+        this.from = from;
+        this.to = to;
+    }
+
+    @Override
+    protected void drawArrow() {
+        drawArrow(from.getNode(), to.getNode(), BLUE);
+    }
+
+    @Override
+    public String toString() {
+        return "PointsTo: " + from + " -> " + to;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == this) return true;
+        if (!(o instanceof PointsToEdge)) return false;
+        PointsToEdge o2 = (PointsToEdge) o;
+        return o2.from == this.from && o2.to == this.to;
+    }
+
+    @Override
+    public final int hashCode() {
+        return from.hashCode() ^ to.hashCode();
+    }
+}
+
+public class InclusionEdge extends Edge {
+    public final DeclarationSite from;
+    public final DeclarationSite to;
+    protected String GREEN = "#2F08";
+
+    public InclusionEdge(DeclarationSite from, DeclarationSite to) {
+        if (from == null || to == null) throw new Error(String.format("from/to cannot be null, %s, %s", from, to));
+        this.from = from;
+        this.to = to;
+    }
+
+    @Override
+    public void drawArrow() {
+        drawArrow(from.getNode(), to.getNode(), GREEN);
+    }
+
+    @Override
+    public String toString() {
+        return "Inclusion: " + from + " -> " + to;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == this) return true;
+        if (getClass() != o.getClass()) return false;
+        InclusionEdge o2 = (InclusionEdge) o;
+        return o2.from.equals(this.from) && o2.to.equals(this.to);
+    }
+
+    @Override
+    public final int hashCode() {
+        return from.hashCode() ^ to.hashCode();
+    }
+}
+
+public class FieldStoreEdge extends InclusionEdge {
+    public final String field;
+    
+    public FieldStoreEdge(DeclarationSite from, DeclarationSite to, String field) {
+        super(from, to);
+
+        if (from == null || to == null) throw new Error("from/to cannot be null");
+        this.field = field;
+    }
+
+    @Override
+    public String toString() {
+        return "Inclusion: " + from  + " -> " + to + "." + field;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == this) return true;
+        if (getClass() != o.getClass()) return false;
+        FieldStoreEdge o2 = (FieldStoreEdge) o;
+        return o2.from.equals(this.from) 
+            && o2.to.equals(this.to)
+            && o2.field.equals(this.field);
+    }
+}
+
+public class FieldLoadEdge extends InclusionEdge {
+    public final String field;
+    
+    public FieldLoadEdge(DeclarationSite from, DeclarationSite to, String field) {
+        super(from, to);
+        this.field = field;
+    }
+
+    @Override
+    public String toString() {
+        return "Inclusion: " + from + "." + field + " -> " + to;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == this) return true;
+        if (getClass() != o.getClass()) return false;
+        FieldLoadEdge o2 = (FieldLoadEdge) o;
+        return o2.from.equals(this.from) 
+            && o2.to.equals(this.to)
+            && o2.field.equals(this.field);
+    }
+}
+
+public class GeneratedPointsToEdge extends PointsToEdge {
+    protected String CYAN = "#5ED8";
+    public GeneratedPointsToEdge(DeclarationSite from, AllocationSite to) {
+        super(from, to);
+    }
+
+    @Override
+    public void drawArrow() {
+        drawArrow(from.getNode(), to.getNode(), CYAN);
+    }
+}
+
+public class GeneratedInclusionEdge extends InclusionEdge {
+    protected String CYAN = "#5ED8";
+    public GeneratedInclusionEdge(DeclarationSite from, DeclarationSite to) {
+        super(from, to);
+    }
+
+    @Override
+    public void drawArrow() {
+        drawArrow(from.getNode(), to.getNode(), CYAN);
+    }
+}

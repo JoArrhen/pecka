@@ -1,0 +1,64 @@
+plugins {
+  id 'java'
+  id "org.sonarqube" version "3.0"
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'source'
+            
+        }
+    }    
+  dependencies {
+    compile fileTree(dir: 'lib', include: ['*.jar'])
+}
+  
+}
+
+
+import java.util.concurrent.TimeUnit
+// Log timings per task.
+class TimingsListener implements TaskExecutionListener, BuildListener {
+    private long startTime
+    private timings = []
+
+    @Override
+    void beforeExecute(Task task) {
+        startTime = System.nanoTime()
+    }
+
+    @Override
+    void afterExecute(Task task, TaskState taskState) {
+        def ms = TimeUnit.MILLISECONDS.convert(System.nanoTime() - startTime, TimeUnit.NANOSECONDS);
+        timings.add([ms, task.path])
+        task.project.logger.warn "${task.path} took ${ms}ms"
+    }
+
+    @Override
+    void buildFinished(BuildResult result) {
+        for (timing in timings) {
+            if (timing[0] >= 50 && timing[1].equals(":sonarqube")) {
+
+                File res = new File(System.getProperty("fileName").toString())
+                res.withWriterAppend{ out ->
+                out.println(String.format("%7s",timing[0]/1000))
+                }
+            }
+        }
+    }
+
+    @Override
+    void buildStarted(Gradle gradle) {}
+
+    @Override
+    void projectsEvaluated(Gradle gradle) {}
+
+    @Override
+    void projectsLoaded(Gradle gradle) {}
+
+    @Override
+    void settingsEvaluated(Settings settings) {}
+}
+
+gradle.addListener new TimingsListener()

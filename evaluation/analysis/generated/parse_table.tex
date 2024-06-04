@@ -1,0 +1,20 @@
+\begin{table}[ht]
+\centering
+\footnotesize
+\begin{tabular}{lcccccccccc}
+\toprule
+\multicolumn{2}{l}{} & \multicolumn{9}{c}{Mean times for different values of $k$ (s)} \\
+\cmidrule(lr){3-11}
+Project & Parse time (s) & $k$ = 0 & $k$ = 1 & $k$ = 2 & $k$ = 3 & $k$ = 4 & $k$ = 5 & $k$ = 6 & $k$ = 7 & $k$ = 8 \\
+\midrule
+\tool{commons-jxpath} & 0.31 & 0.10 & 0.22 & 0.24 & 0.40 & 1.46 & 2.50 & 3.29 & 3.75 & 4.10 \\
+\tool{antlr-2.7.2} & 0.45 & 0.13 & 0.31 & 0.41 & 0.85 & 1.94 & 2.64 & 2.89 & 2.93 & 2.94 \\
+\tool{fop-0.95} & 1.60 & 0.65 & 1.51 & 1.68 & 2.98 & 9.17 & 17.39 & 21.14 & 21.98 & 22.14 \\
+\tool{pmd-4.2.5} & 1.09 & 0.34 & 1.26 & 1.34 & 1.68 & 2.70 & 4.11 & 5.04 & 5.43 & 5.51 \\
+\tool{jfreechart-1.0.0} & 1.54 & 0.71 & 2.44 & 2.79 & 5.69 & 15.18 & 21.72 & 23.15 & 23.71 & 23.70 \\
+\tool{joda-time} & 1.70 & 0.57 & 1.64 & 2.54 & 7.04 & 23.64 & 28.15 & 29.81 & 30.27 & 30.81 \\
+\bottomrule
+\end{tabular}
+\caption{Parse times and time to retreive the points-to set for an average method as plotted in Figure~\ref{fig:mean_time} for the projects used in the benchmarks programs.}
+\label{tab:parse_times}
+\end{table}

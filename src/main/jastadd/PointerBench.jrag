@@ -1,0 +1,144 @@
+aspect pointerbench {
+
+    /*
+       The newExpr after a call to `Benchmark.alloc(x);` will have the
+       Allocation Site with id x
+
+       The call containing the request looks as follows: Benchmark.test("x",
+       "{allocId:1, mayAlias:[x], notMayAlias:[a,b,y], mustAlias:[x],
+        notMustAlias:[a,b,y]}");
+
+        This means that the variable x points to the allocation site with id 1, the
+        statement under Benchmark.alloc(1);
+     */
+
+    /*
+       Returns if the Stmt has the form Benchmark.test(..., ...)
+     */
+    syn boolean Stmt.isBenchmarkTest() = false;
+    syn boolean ExprStmt.isBenchmarkTest() = getExpr().isBenchmarkTest();
+    syn boolean Expr.isBenchmarkTest() = false;
+    syn boolean Dot.isBenchmarkTest() = isMethod("Benchmark", "test");
+
+    /*
+       Return one of the args of Benchmark.test(arg1, arg2). Returns null if isBenchmarkTest=false.
+     */
+    syn String Stmt.getTestArg(int arg) = null;
+    syn String Expr.getTestArg(int arg) = null;
+    syn String ExprStmt.getTestArg(int arg) = getExpr().getTestArg(arg);
+    syn String Dot.getTestArg(int arg) = getRight().getTestArg(arg);
+    syn String MethodAccess.getTestArg(int arg) = getArg(arg).getTestArg(arg);
+    syn String StringLiteral.getTestArg(int arg) = getLITERAL();
+    syn String AddExpr.getTestArg(int arg) = getLeftOperand().getTestArg(arg) + " " + getRightOperand().getTestArg(arg);
+
+
+    /*
+       Returns wheteher the Stmt has the form Benchmark.alloc(id)
+     */
+    syn boolean Stmt.isBenchmarkAlloc() = false;
+    syn boolean Expr.isBenchmarkAlloc() = false;
+    syn boolean ExprStmt.isBenchmarkAlloc() = getExpr().isBenchmarkAlloc();
+    syn boolean Dot.isBenchmarkAlloc() = isMethod("Benchmark", "alloc");
+
+    syn boolean Dot.isMethod(String classname, String methodname) {
+        return toString().equals(classname + "." + methodname + "()");
+    }
+
+    /*
+       Returns the ID that is specified inside Benchmark.alloc(...)
+       All statements will have the NULL_BENCHMARK_ID except the Benchmark.alloc Stmt
+     */
+    public int Program.NULL_BENCHMARK_ID = 0;
+    syn int Stmt.stmtID() = program().NULL_BENCHMARK_ID;
+    syn int Expr.stmtID() = program().NULL_BENCHMARK_ID;
+    syn int ExprStmt.stmtID() = getExpr().stmtID();
+    syn int Dot.stmtID() = getRight().stmtID();
+    syn int MethodAccess.stmtID() = getNumArg() > 0 ? getArg(0).stmtID() : program().NULL_BENCHMARK_ID;
+    syn int IntegerLiteral.stmtID() = Integer.valueOf(getLITERAL());
+
+    /*
+       Returns the allocID for an AllocationSite. The allocationsite will either be the 
+       allocID of the statment above it, or NULL_BENCHMARK_ID
+     */
+    syn int AllocationSite.allocID() = program().NULL_BENCHMARK_ID;
+    eq ClassInstanceExpr.allocID() {
+        if (enclosingStmt() != null && enclosingStmt().prevStmt() != null) {
+            return enclosingStmt().prevStmt().stmtID();
+        } else {
+            return program().NULL_BENCHMARK_ID;
+        }
+    }
+
+    inh Stmt Stmt.prevStmt();
+    eq Block.getStmt(int i).prevStmt() = i > 0 ? getStmt(i-1) : null;
+    eq Program.getChild().prevStmt() = null;
+
+
+    /*
+       Functions to collect the test for use in testing
+     */
+    coll Set<Map.Entry<String, String>> Program.benchmarkTests() [new HashSet<>()];
+    Stmt contributes new AbstractMap.SimpleEntry<>(getTestArg(0), toJson(getTestArg(1)))
+        when isBenchmarkTest()
+        to Program.benchmarkTests() for program();
+
+    syn String Stmt.toJson(String testArg) {
+        String regex = "\\b([a-zA-Z0-9\\.]+)\\b";
+        return "[" + testArg.replaceAll(regex, "\"$1\"") + "]";
+    }
+
+    syn Set<String> Program.benchmarkTestsTargets() = 
+        benchmarkTests()
+        .stream()
+        .map(Map.Entry::getKey)
+        .collect(Collectors.toSet());
+
+    coll Set<Pointer> Program.getTargetDeclaration() [new HashSet<>()];
+    VariableDeclarator contributes this
+        when inTestBlock() && program().benchmarkTestsTargets().contains(getID())
+        to Program.getTargetDeclaration() for program();
+
+    ParameterDeclaration contributes this
+        when inTestBlock() && program().benchmarkTestsTargets().contains(getID())
+        to Program.getTargetDeclaration() for program();
+
+    syn boolean VariableDeclarator.inTestBlock() = 
+        enclosingBodyDecl().isTestBlock();
+
+    syn boolean ParameterDeclaration.inTestBlock() = 
+        enclosingBodyDecl().isTestBlock();
+
+    syn boolean BodyDecl.isTestBlock() = false;
+    syn boolean MethodDecl.isTestBlock() {
+        if (getBlockOpt().getNumChild() > 0) {
+            return getBlockOpt().getChild(0).isTestBlock();
+        } else {
+            return false;
+        }
+    }
+
+    syn boolean Block.isTestBlock() {
+        for (Stmt stmt : getStmtList()) {
+            if (stmt.isBenchmarkTest()) {
+                return true;
+            } else if (stmt.isBlock()) {
+                return stmt.isTestBlock();
+            }
+        }
+        return false;
+    }
+
+    syn boolean Stmt.isBlock() = false;
+    syn boolean Stmt.isTestBlock() = false;
+    syn boolean TryStmt.isBlock() = true;
+    syn boolean TryStmt.isTestBlock() {
+        if (getBlock().isTestBlock()) {
+            return true;
+        }
+
+        for (CatchClause c : getCatchClauseList()) {
+            return c.getBlock().isTestBlock();
+        }
+        return false;
+    }
+}

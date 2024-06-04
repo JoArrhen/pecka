@@ -1,0 +1,150 @@
+aspect MethodCall {
+
+    syn Set<InclusionEdge> MethodAccess.inclusionEdges() {
+        Set<InclusionEdge> res = new HashSet<>();
+        List<Expr> arguments = getArgList();
+
+        for (InvocationTarget it : allDecls()) {
+            MethodDecl decl = (MethodDecl) it; // Should be safe since the declaration of a method access should always be a method declaration
+            List<ParameterDeclaration> parameters = decl.getParameterList();
+
+            for (int i = 0; i < arguments.getNumChild(); i++) {
+                int parameterIndex = Math.min(i, parameters.getNumChild() - 1); // To handle T... parameter
+                ParameterDeclaration parameter = parameters.getChild(parameterIndex);
+                if (arguments.getChild(i).hasDeclaration() && !parameter.isVariableArity()) {
+                    res.add(new InclusionEdge(arguments.getChild(i).getDeclaration(), parameter.getDeclaration()));
+                }
+                else if (arguments.getChild(i).hasDeclaration() && parameter.isVariableArity()) {
+                    res.add(new FieldLoadEdge(parameter.getDeclaration(), arguments.getChild(i).getDeclaration(), "-COLLECTION_ACCESS"));
+                }
+            }
+        }
+        return res;
+    }
+
+    MethodAccess contributes each inclusionEdges() to InvocationTarget.inclusionEdges() for each enclosingMethods();
+
+    syn Set<InclusionEdge> ClassInstanceExpr.inclusionEdges() {
+        Set<InclusionEdge> res = new HashSet<>();
+        List<Expr> arguments = getArgList();
+
+        for (InvocationTarget it : allDecls()) {
+            ConstructorDecl decl = (ConstructorDecl) it;
+            List<ParameterDeclaration> parameters = decl.getParameterList();
+
+            for (int i = 0; i < arguments.getNumChild(); i++) {
+                int parameterIndex = Math.min(i, parameters.getNumChild() - 1);
+                ParameterDeclaration parameter = parameters.getChild(parameterIndex);
+                if (arguments.getChild(i).hasDeclaration() && !parameter.isVariableArity()) {
+                    res.add(new InclusionEdge(arguments.getChild(i).getDeclaration(), parameters.getChild(parameterIndex).getDeclaration()));
+                }
+                else if (arguments.getChild(i).hasDeclaration() && parameter.isVariableArity()) {
+                    res.add(new FieldLoadEdge(parameter.getDeclaration(), arguments.getChild(i).getDeclaration(), "-COLLECTION_ACCESS"));
+                }
+            }
+        }
+        return res;
+    }
+
+    ClassInstanceExpr contributes each inclusionEdges() to InvocationTarget.inclusionEdges() for each enclosingMethods();
+
+    syn Set<InclusionEdge> SuperConstructorAccess.inclusionEdges() {
+        Set<InclusionEdge> res = new HashSet<>();
+        List<Expr> arguments = getArgList();
+
+        for (InvocationTarget it : allDecls()) {
+            ConstructorDecl decl = (ConstructorDecl) it;
+            List<ParameterDeclaration> parameters = decl.getParameterList();
+
+            for (int i = 0; i < arguments.getNumChild(); i++) {
+                int parameterIndex = Math.min(i, parameters.getNumChild() - 1);
+                ParameterDeclaration parameter = parameters.getChild(parameterIndex);
+                if (arguments.getChild(i).hasDeclaration() && !parameter.isVariableArity()) {
+                    res.add(new InclusionEdge(arguments.getChild(i).getDeclaration(), parameters.getChild(parameterIndex).getDeclaration()));
+                }
+                else if (arguments.getChild(i).hasDeclaration() && parameter.isVariableArity()) {
+                    res.add(new FieldLoadEdge(parameter.getDeclaration(), arguments.getChild(i).getDeclaration(), "-COLLECTION_ACCESS"));
+                }
+            }
+        }
+        return res;
+    }
+
+    SuperConstructorAccess contributes each inclusionEdges() to InvocationTarget.inclusionEdges() for each enclosingMethods();
+
+    syn Set<InclusionEdge> ConstructorAccess.inclusionEdges() {
+        Set<InclusionEdge> res = new HashSet<>();
+        List<Expr> arguments = getArgList();
+
+        for (InvocationTarget it : decls()) {
+            ConstructorDecl decl = (ConstructorDecl) it;
+            List<ParameterDeclaration> parameters = decl.getParameterList();
+
+            for (int i = 0; i < arguments.getNumChild(); i++) {
+                int parameterIndex = Math.min(i, parameters.getNumChild() - 1);
+                ParameterDeclaration parameter = parameters.getChild(parameterIndex);
+                if (arguments.getChild(i).hasDeclaration() && !parameter.isVariableArity()) {
+                    res.add(new InclusionEdge(arguments.getChild(i).getDeclaration(), parameters.getChild(parameterIndex).getDeclaration()));
+                }
+                else if (arguments.getChild(i).hasDeclaration() && parameter.isVariableArity()) {
+                    res.add(new FieldLoadEdge(parameter.getDeclaration(), arguments.getChild(i).getDeclaration(), "-COLLECTION_ACCESS"));
+                }
+            }
+        }
+        return res;
+    }
+
+    ConstructorAccess contributes each inclusionEdges() to InvocationTarget.inclusionEdges() for each enclosingMethods();
+
+    coll Set<Expr> MethodDecl.returnValues() [new HashSet<>()];
+
+    ReturnStmt contributes getResultOpt().getChild(0)
+        when !enclosingBodyDecl().isVoid()
+        to MethodDecl.returnValues()
+        for enclosingBodyDecl();
+
+    syn Set<InclusionEdge> MethodDecl.declarationReturnValues() =
+        returnValues()
+        .stream()
+        .filter(x -> x.hasDeclaration())
+        .map(x -> new InclusionEdge(x.getDeclaration(), this))
+        .collect(Collectors.toSet());
+
+    MethodDecl contributes each declarationReturnValues() to InvocationTarget.inclusionEdges() for this;
+    MethodDecl implements DeclarationSite;
+    syn ASTNode MethodDecl.getNode() = this;
+    eq MethodDecl.getDeclaration() = this;
+
+    MethodAccess implements AllocationSite, DeclarationSite;
+    syn ASTNode MethodAccess.getNode() = this;
+    eq MethodAccess.getDeclaration() {
+        return this;
+        //if (decl().isAnalyzable()) {
+        //    return this;
+        //} else {
+        //    if (decl().type().isPrimitive()) {
+        //        return null;
+        //    } else {
+        //        return null; // Should treat this case as allocation
+        //    }
+        //}
+    }
+
+    syn boolean MethodDecl.isAnalyzable() =
+        compilationUnit().fromSource()
+        || hostType().isMap()  && (getID().equals("put") || getID().equals("get"))
+        || hostType().isList() && (getID().equals("add") || getID().equals("get"));
+
+    //MethodAccess contributes new PointsToEdge(this, this) when !decl().isAnalyzable() to InvocationTarget.pointsToEdges() for each enclosingMethods();
+
+    MethodAccess contributes each
+            allDecls()
+            .stream()
+            .map(decl -> new InclusionEdge(((MethodDecl) decl).getDeclaration(), getDeclaration()))
+            .collect(Collectors.toSet())
+        to InvocationTarget.inclusionEdges() for each enclosingMethods();
+
+    Dot contributes new InclusionEdge(lastAccess().getDeclaration(), topDot().dotExpressionTemp())
+        when lastAccess().isMethodAccess()
+        to InvocationTarget.inclusionEdges() for each enclosingMethods();
+}
